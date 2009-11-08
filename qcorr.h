@@ -7,6 +7,7 @@
 
 class QImage;
 class QPainter;
+class QScrollBar;
 
 class Qcorr : public QMainWindow, private Ui::QcorrClass
 {
@@ -19,14 +20,16 @@ public:
 private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
-//    void convertImage();
-//    void updateOutputTextEdit();
-//    void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
-//    void processError(QProcess::ProcessError error);
     void displayImage(QImage *image, QLabel *label);
 private:
+    void createActions();
+    void setImageLabels();
+//    void adjustScrollBar(QScrollBar *scrollBar, double factor);
+
     QImage *m_leftImage;
     QImage *m_rightImage;
+    QLabel *leftImage_label;
+    QLabel *rightImage_label;
 };
 
 #endif // QCORR_H

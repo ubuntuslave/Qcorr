@@ -11,41 +11,41 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
+   <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>QCorr</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QFrame" name="main_frame">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>1</x>
       <y>0</y>
       <width>791</width>
-      <height>551</height>
+      <height>541</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="main_verticalLayout" stretch="0,0">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
      <item>
       <widget class="QSplitter" name="splitter">
-       <property name="frameShape">
-        <enum>QFrame::Panel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
-       <property name="midLineWidth">
-        <number>1</number>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
        <widget class="QWidget" name="layoutWidget">
-        <layout class="QVBoxLayout" name="left_verticalLayout">
+        <layout class="QVBoxLayout" name="left_verticalLayout" stretch="0,0">
          <item>
           <layout class="QHBoxLayout" name="leftImg_horizontalLayout">
            <property name="spacing">
@@ -78,51 +78,43 @@
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="leftImage_label">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+          <widget class="QScrollArea" name="leftImage_scrollArea">
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
            </property>
-           <property name="cursor">
-            <cursorShape>ArrowCursor</cursorShape>
-           </property>
-           <property name="mouseTracking">
+           <property name="widgetResizable">
             <bool>false</bool>
            </property>
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="scaledContents">
-            <bool>false</bool>
-           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>255</width>
+              <height>224</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </widget>
        <widget class="QWidget" name="layoutWidget">
         <layout class="QVBoxLayout" name="right_verticalLayout">
          <item>
-          <layout class="QHBoxLayout" name="leftImg_horizontalLayout_2">
+          <layout class="QHBoxLayout" name="rightImg_horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
            <item>
-            <widget class="QLineEdit" name="rightImage_lineEdit"/>
+            <widget class="QLineEdit" name="rightImage_lineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="rightBrowse_pushButton">
@@ -145,53 +137,34 @@
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="rightImage_label">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+          <widget class="QScrollArea" name="rightImage_scrollArea">
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
            </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="scaledContents">
+           <property name="widgetResizable">
             <bool>false</bool>
            </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>255</width>
+              <height>224</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </widget>
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+      <layout class="QHBoxLayout" name="bottom_horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
        </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="corr_pushButton">
          <property name="text">
@@ -249,23 +222,26 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>28</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Menu">
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <addaction name="action_Quit"/>
    </widget>
    <addaction name="menu_Menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>leftImage_lineEdit</tabstop>
-  <tabstop>leftBrowse_pushButton</tabstop>
-  <tabstop>rightImage_lineEdit</tabstop>
-  <tabstop>rightBrowse_pushButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>
