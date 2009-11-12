@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 11, 2009
  *      Author: carlos
+ *
+ *  Description: Subclassing QLabel in order to allow higher control of mouse-event positions and other properties.
  */
 
 #ifndef IMGLABEL_H_
@@ -10,6 +12,7 @@
 
 #include <QtGui/QLabel>
 class QMainWindow;
+class QRubberBand;
 class QPoint;
 
 class Qcorr;   // using this friend class
@@ -29,12 +32,16 @@ class ImgLabel : public QLabel
       QLabel *m_imgLabel;
       Qcorr *m_parentWindow;  // Pointer to Main Window Object (There should be only one on these)
 
-      QPoint *m_pixelPoint;
-
-      int m_xpos, m_ypos;
+      QRubberBand *m_rubberBand;
+      QPoint m_originPoint;
+      QPoint m_finalPoint;
+      bool m_bStartedTemplateSelection;
+      bool m_bMouseIsPressed;
 
    protected:
        void mousePressEvent(QMouseEvent *event);
+       void mouseMoveEvent(QMouseEvent *event);
+       void mouseReleaseEvent(QMouseEvent *event);
 };
 
 #endif /* IMGLABEL_H_ */
