@@ -35,8 +35,15 @@ class ImgLabel : public QLabel
       QRubberBand *m_rubberBand;
       QPoint m_originPoint;
       QPoint m_finalPoint;
-      bool m_bStartedTemplateSelection;
       bool m_bMouseIsPressed;
+      bool m_bStartedTemplateSelection;
+      bool m_bMouseInTemplateRegion;
+      bool m_bMouseAtTemplateTopEdge;
+      bool m_bMouseAtTemplateBottomEdge;
+      bool m_bMouseAtTemplateLeftEdge;
+      bool m_bMouseAtTemplateRightEdge;
+
+      void setTemplateFlags(bool status);
 
    protected:
        void mousePressEvent(QMouseEvent *event);
