@@ -35,6 +35,8 @@ class ImgLabel : public QLabel
       QRubberBand *m_rubberBand;
       QPoint m_originPoint;
       QPoint m_finalPoint;
+      QPoint m_currentPressedPoint;
+
       bool m_bMouseIsPressed;
       bool m_bStartedTemplateSelection;
       bool m_bMouseInTemplateRegion;
@@ -44,7 +46,8 @@ class ImgLabel : public QLabel
       bool m_bMouseAtTemplateRightEdge;
 
       void setTemplateFlags(bool status);
-
+      void checkTemplateRegions(int mouseX, int mouseY);
+      void displayCoordinatesOnStatusLabel(QPoint &point0, QPoint &point1);
    protected:
        void mousePressEvent(QMouseEvent *event);
        void mouseMoveEvent(QMouseEvent *event);
