@@ -55,6 +55,7 @@ void Qcorr::createActions()
    connect(quit_pushButton, SIGNAL(clicked()), this, SLOT(close()));
    connect(leftBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseLeftImage()));
    connect(rightBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseRightImage()));
+   connect(corr_pushButton, SIGNAL(clicked()), this, SLOT(correlate()));
 
    action_Quit->setShortcut(tr("Ctrl+Q"));
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
@@ -66,6 +67,7 @@ void Qcorr::createActions()
 //                            + ((factor - 1) * scrollBar->pageStep()/2)));
 //}
 
+// begin Q_SLOTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 void Qcorr::browseLeftImage()
 {
     QString initialName = leftImage_lineEdit->text();
@@ -121,6 +123,26 @@ void Qcorr::browseRightImage()
     }
 }
 
+void Qcorr::correlate()
+{
+   if(leftImage_label->m_rubberBand->isVisible())
+      {
+      m_templateImage = new QImage(m_leftImage->copy(leftImage_label->m_rubberBand->geometry()));
+      this->displayImage(m_templateImage, rightImage_label);   // Draw Template on Right Label
+      this->m_status_label->setText(
+                           "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
+                           + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+
+      }
+   else
+      {
+      this->m_status_label->setText("There is No template!");
+      }
+}
+
+// end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 void Qcorr::displayImage(QImage *image, QLabel *label)
 {
    label->setPixmap(QPixmap::fromImage(*image));
@@ -133,38 +155,3 @@ void Qcorr::displayImageLabel(QImage *image, ImgLabel *label)
    label->adjustSize();
 }
 
-/*void Qcorr::displayCoordinates(QLabel *label, QPointF *point)
-{
-//   label->setText(point->);
-//   QString xCoord = leftImage_label->
-//
-
-}
-*/
-
-/*
-void Qcorr::mousePressEvent(QMouseEvent *event)
-{
-   if (event->button() == Qt::LeftButton)
-   {
-     if(leftImage_label->hasFocus())
-        {
-//        QPoint p=leftImage_label->cursor().pos();
-//        QPoint p=leftImage_label->pos();
-//        int dx = leftImage_scrollArea->horizontalScrollBar()->x();
-//        m_status_label->setText(QString().sprintf("%d,%d", dx,p.y()));
-//        m_status_label->setText(QString::number(dx));
-        int left, right, top, bottom;
-//        const int x_offset = leftImage_label->getContentsMargins(&left, &top, &right, &bottom);  // 6px from the left margin
-//        leftImage_label->getContentsMargins(&left, &top, &right, &bottom);  // 6px from the left margin
-        leftImage_label->graphicsProxyWidget()->;  // 6px from the left margin
-//        int xpos = event->x() - x_offset - leftImage_label->x();//event->x() - 7;//leftImage_label->x();  // - rect().center();
-//        int xpos = event->x(); // - x_offset - leftImage_label->x();//event->x() - 7;//leftImage_label->x();  // - rect().center();
-//             m_status_label->setText("X: " + QString::number(xpos) + "px");
-             m_status_label->setText(QString::number(left));
-             //    displayCoordinates(m_status_label, &point);
-
-             update();
-         }
-   }
-}*/

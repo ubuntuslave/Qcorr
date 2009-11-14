@@ -18,22 +18,24 @@ public:
     Qcorr(QWidget *parent = 0);
     ~Qcorr();
 
-    friend class ImgLabel; // Make the ImgLabel class a friend of Qcorr
-                            // Thus, so members from Qcorr are accessible by an ImgLabel object
-
 private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
-    void displayImage(QImage *image, QLabel *label);
-    void displayImageLabel(QImage *image, ImgLabel *label);
+    void correlate();
 //    void displayCoordinates(QLabel *label, QPointF *point);
 private:
+    friend class ImgLabel; // Make the ImgLabel class a friend of Qcorr
+                           // Thus, all members from Qcorr are accessible by an ImgLabel object
+
+    void displayImage(QImage *image, QLabel *label);
+    void displayImageLabel(QImage *image, ImgLabel *label);
     void createActions();
     void setImageLabels();
 //    void adjustScrollBar(QScrollBar *scrollBar, double factor);
 
     QImage *m_leftImage;
     QImage *m_rightImage;
+    QImage *m_templateImage;
 //    QLabel *leftImage_label;
     ImgLabel *leftImage_label;
     QLabel *rightImage_label;

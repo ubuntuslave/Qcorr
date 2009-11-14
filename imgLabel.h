@@ -29,6 +29,9 @@ class ImgLabel : public QLabel
 
 
    private:
+      friend class Qcorr; // Make the Qcorr class a friend of this ImgLabel class
+                         // Thus, all members from ImgLabel are accessible by a Qcorr object
+
       QLabel *m_imgLabel;
       Qcorr *m_parentWindow;  // Pointer to Main Window Object (There should be only one on these)
 
