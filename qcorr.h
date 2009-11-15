@@ -5,6 +5,7 @@
 
 #include "ui_qcorr.h"
 #include "imgLabel.h"
+#include "corrmethod.h"
 
 class QImage;
 class QPainter;
@@ -31,8 +32,38 @@ private:
     void displayImageLabel(QImage *image, ImgLabel *label);
     void createActions();
     void setImageLabels();
-//    void adjustScrollBar(QScrollBar *scrollBar, double factor);
 
+    /** @brief  Cross-correlation of target image with template image.
+    * @note Correlation is performed on the first channel of the images only.
+    * @param imgTarget Array of bytes for the target image
+    * @param imgTemplate Aarray of bytes for the template image
+    * @param method Determines the selected method to be used in the correlation process. The method is a globally defined enumeration.
+    *       The available methods are:
+    *       CROSS_CORR (cross correlation):
+    *             C(u,v) = sum of {T(x,y) * I(x-u,y-v)}
+    *                      --------------------------------
+    *                      sqrt{ sum of {I(x-u,y-v)^2}}
+    *
+    *       SUM_SQ_DIFF (sum of squared differences):
+    *             C(u,v) = sum of {T(x,y)-I(x-u,y-v)}^2
+    *                      ------------------------------
+    *                      sqrt{ sum of {I(x-u,y-v)^2}}
+    *
+    *       CORR_COEFF (correlation coefficient):
+    *             C(u,v) = sum of {(T(x,y)-Tavg) * (I(x-u,y-v)-Iavg)}
+    *                      -----------------------------------------------------
+    *                      sqrt{sum{(T(x,y)-Tavg)^2} * sum{(I(x-u,y-v)-Iavg)^2}}
+    *
+    * @param multires Determines if multiresolution correlation should be applied, by making use of image pyramids.
+    *                 With multiresoltion, the correlation can be determined faster than direct correlation.
+    *  @returns the correlation number computed by method (directly).
+    *           Additionally, the (dx,dy) offset of the template for which there exists a best match.
+    */
+    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int method = 1, bool multires = false);
+
+    int m_nXoffset, m_nYoffset;
+
+    CorrMethod *m_corrMethodDialog;
     QImage *m_leftImage;
     QImage *m_rightImage;
     QImage *m_templateImage;
@@ -40,8 +71,6 @@ private:
     ImgLabel *leftImage_label;
     QLabel *rightImage_label;
     QLabel *m_status_label;
-    QLabel *m_location_label;
-
 
 
 //protected:

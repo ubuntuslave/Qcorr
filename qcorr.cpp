@@ -1,6 +1,7 @@
 #include <QtGui>
 
 #include "qcorr.h"
+#include "globals.h"
 
 Qcorr::Qcorr(QWidget *parent)
     : QMainWindow(parent)
@@ -12,7 +13,7 @@ Qcorr::Qcorr(QWidget *parent)
    createActions();
 
    this->setWindowTitle(tr("QCorr"));
-   this->setCentralWidget(main_frame);
+   this->setCentralWidget(main_frame); // Necessary for main frame to resize with main window
 //   resize(500, 400);
 }
 
@@ -46,8 +47,13 @@ void Qcorr::setImageLabels()
 
    m_status_label = new QLabel;
    m_status_label->setAlignment(Qt::AlignLeft);
-//   m_status_label->setMinimumSize(m_location_label->sizeHint());
    statusbar->addWidget(m_status_label);
+
+   corr_pushButton->setEnabled(false); // This button should be initially disabled because there's no target image to correlate to
+
+   // Create Correlation Method Dialog, which is initially hidden
+   m_corrMethodDialog = new CorrMethod(this);
+
 }
 
 void Qcorr::createActions()
@@ -120,6 +126,7 @@ void Qcorr::browseRightImage()
         }
 
         this->displayImage(m_rightImage, rightImage_label);   // Draw Right Image
+        corr_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
     }
 }
 
@@ -128,20 +135,38 @@ void Qcorr::correlate()
    if(leftImage_label->m_rubberBand->isVisible())
       {
       m_templateImage = new QImage(m_leftImage->copy(leftImage_label->m_rubberBand->geometry()));
+
+      m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
+                                    // Otherwise, a dialog is not modal if it's invoked using show()
+
+      float fCorrLevel = findCorrelation( m_rightImage->bits(),
+                                            m_templateImage->bits(),
+                                            &m_nXoffset, &m_nYoffset,
+                                            m_corrMethodDialog->getMethod(),
+                                            false);
+
       this->displayImage(m_templateImage, rightImage_label);   // Draw Template on Right Label
+
       this->m_status_label->setText(
                            "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
                            + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+
+      this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
       }
    else
       {
       this->m_status_label->setText("There is No template!");
+      this->corrResults_label->clear();
       }
 }
 
 // end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int method, bool multires)
+{
+   return 0;   //temp
+}
 
 void Qcorr::displayImage(QImage *image, QLabel *label)
 {
