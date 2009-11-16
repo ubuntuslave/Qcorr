@@ -24,30 +24,41 @@ Qcorr::~Qcorr()
 
 void Qcorr::setImageLabels()
 {
-//   leftImage_label = new QLabel(scrollAreaWidgetContents);
-//   leftImage_label = new QLabel;
-   leftImage_label = new ImgLabel(this);
-//   leftImage_label->setBackgroundRole(QPalette::Base);
-   leftImage_label->setBackgroundRole(QPalette::Dark);
-   leftImage_label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-   leftImage_label->setScaledContents(true);
-   leftImage_label->setMouseTracking(true);
+//   m_leftImage_label = new QLabel(scrollAreaWidgetContents);
+//   m_leftImage_label = new QLabel;
+   m_leftImage_label = new ImgLabel(this);
+//   m_leftImage_label->setBackgroundRole(QPalette::Base);
+   m_leftImage_label->setBackgroundRole(QPalette::Dark);
+   m_leftImage_label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+   m_leftImage_label->setScaledContents(true);
+   m_leftImage_label->setMouseTracking(true);
 
-   leftImage_scrollArea->setWidget(leftImage_label);
+   leftImage_scrollArea->setWidget(m_leftImage_label);
    leftImage_scrollArea->setBackgroundRole(QPalette::Dark);
 
-   rightImage_label = new QLabel;
+   m_targetImage_label = new TargetImgLabel(this);  // Draw Right Image
 //   rightImage_label->setBackgroundRole(QPalette::Base);
-   rightImage_label->setBackgroundRole(QPalette::Dark);
-   rightImage_label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-   rightImage_label->setScaledContents(true);
+   m_targetImage_label->setBackgroundRole(QPalette::Dark);
+   m_targetImage_label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+   m_targetImage_label->setScaledContents(true);
 
-   rightImage_scrollArea->setWidget(rightImage_label);
+   rightImage_scrollArea->setWidget(m_targetImage_label);
    rightImage_scrollArea->setBackgroundRole(QPalette::Dark);
 
+   // BEGIN Status label configuration: vvvvvvvvv
    m_status_label = new QLabel;
    m_status_label->setAlignment(Qt::AlignLeft);
+   QFont font;
+   font.setFamily(QString::fromUtf8("Arial"));
+   m_status_label->setFont(font);
+
+   QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+   sizePolicy.setHorizontalStretch(0);
+   sizePolicy.setVerticalStretch(0);
+   m_status_label->setSizePolicy(sizePolicy);
+
    statusbar->addWidget(m_status_label);
+   // END Status label configuration ^^^^^^
 
    corr_pushButton->setEnabled(false); // This button should be initially disabled because there's no target image to correlate to
 
@@ -66,12 +77,6 @@ void Qcorr::createActions()
    action_Quit->setShortcut(tr("Ctrl+Q"));
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
 }
-
-//void Qcorr::adjustScrollBar(QScrollBar *scrollBar, double factor)
-//{
-//    scrollBar->setValue(int(factor * scrollBar->value()
-//                            + ((factor - 1) * scrollBar->pageStep()/2)));
-//}
 
 // begin Q_SLOTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 void Qcorr::browseLeftImage()
@@ -95,11 +100,11 @@ void Qcorr::browseLeftImage()
             return;
         }
 
-        this->displayImageLabel(m_leftImage, leftImage_label);   // Draw Left Image
+        this->displayImageLabel(m_leftImage, m_leftImage_label);   // Draw Left Image
 
-        leftImage_label->setCursor(QCursor(Qt::CrossCursor));
-        leftImage_label->setMouseTracking(true);
-        leftImage_label->setFocusPolicy(Qt::ClickFocus);
+        m_leftImage_label->setCursor(QCursor(Qt::CrossCursor));
+        m_leftImage_label->setMouseTracking(true);
+        m_leftImage_label->setFocusPolicy(Qt::ClickFocus);
     }
 }
 
@@ -125,34 +130,54 @@ void Qcorr::browseRightImage()
             return;
         }
 
-        this->displayImage(m_rightImage, rightImage_label);   // Draw Right Image
+        m_targetImage_label->setImage(*m_rightImage);
+
+        update();
+
         corr_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
     }
 }
 
 void Qcorr::correlate()
 {
-   if(leftImage_label->m_rubberBand->isVisible())
+   if(m_leftImage_label->m_rubberBand->isVisible())
       {
-      m_templateImage = new QImage(m_leftImage->copy(leftImage_label->m_rubberBand->geometry()));
+      m_templateImage = new QImage(m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry()));
+
+      m_templateSize = m_templateImage->size();
 
       m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
                                     // Otherwise, a dialog is not modal if it's invoked using show()
 
-      float fCorrLevel = findCorrelation( m_rightImage->bits(),
-                                            m_templateImage->bits(),
-                                            &m_nXoffset, &m_nYoffset,
-                                            m_corrMethodDialog->getMethod(),
-                                            false);
+      if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
+         {
+         m_targetImage_label->eraseEnclosedMatch();
+         }
+      else
+         {
+         float fCorrLevel = findCorrelation( m_rightImage->bits(),
+                                                  m_templateImage->bits(),
+                                                  &m_nXoffset, &m_nYoffset,
+                                                  m_corrMethodDialog->getMethod(),
+                                                  false);
+            // CARLOS: just for testing:
+      //      this->displayImage(m_templateImage, rightImage_label);   // Draw Template on Right Label
 
-      this->displayImage(m_templateImage, rightImage_label);   // Draw Template on Right Label
+            this->m_status_label->setText(
+                                 "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
+                                 + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
 
-      this->m_status_label->setText(
-                           "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
-                           + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+            this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
-      this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
-
+            // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
+            if(fCorrLevel > 0)
+               {
+               m_matchingPoint = m_leftImage_label->m_rubberBand->pos();   // TEMP!!!!
+               m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+               }
+            else
+               m_targetImage_label->eraseEnclosedMatch();
+         }
       }
    else
       {
@@ -165,7 +190,7 @@ void Qcorr::correlate()
 
 float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int method, bool multires)
 {
-   return 0;   //temp
+   return 1.0;   //temp
 }
 
 void Qcorr::displayImage(QImage *image, QLabel *label)

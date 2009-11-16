@@ -11,7 +11,6 @@
 #define IMGLABEL_H_
 
 #include <QtGui/QLabel>
-class QMainWindow;
 class QRubberBand;
 class QPoint;
 
@@ -32,7 +31,6 @@ class ImgLabel : public QLabel
       friend class Qcorr; // Make the Qcorr class a friend of this ImgLabel class
                          // Thus, all members from ImgLabel are accessible by a Qcorr object
 
-      QLabel *m_imgLabel;
       Qcorr *m_parentWindow;  // Pointer to Main Window Object (There should be only one on these)
 
       QRubberBand *m_rubberBand;

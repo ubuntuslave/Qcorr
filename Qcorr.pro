@@ -2,12 +2,14 @@ TEMPLATE = app
 TARGET = Qcorr
 QT += core \
     gui
-HEADERS += corrmethod.h \
+HEADERS += targetImgLabel.h \
+    corrmethod.h \
     globals.h \
     corrmethod.h \
     imgLabel.h \
     qcorr.h
-SOURCES += corrmethod.cpp \
+SOURCES += targetImgLabel.cpp \
+    corrmethod.cpp \
     imgLabel.cpp \
     main.cpp \
     qcorr.cpp

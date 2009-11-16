@@ -13,7 +13,6 @@
 ImgLabel::ImgLabel(Qcorr *parentWindow, QWidget *parent) :
    QLabel(parent)
 {
-   m_imgLabel = new QLabel;
    m_parentWindow = parentWindow; // Point to the Qcorr MainWindow
 
    m_rubberBand = new QRubberBand(QRubberBand::Rectangle, this);

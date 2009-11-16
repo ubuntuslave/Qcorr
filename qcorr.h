@@ -5,11 +5,14 @@
 
 #include "ui_qcorr.h"
 #include "imgLabel.h"
+#include "targetImgLabel.h"
 #include "corrmethod.h"
 
 class QImage;
 class QPainter;
-class QScrollBar;
+class QSize;
+class QPoint;
+
 
 class Qcorr : public QMainWindow, private Ui::QcorrClass
 {
@@ -32,6 +35,10 @@ private:
     void displayImageLabel(QImage *image, ImgLabel *label);
     void createActions();
     void setImageLabels();
+
+    //Experimental:
+//    void displayPainter(QPainter *painter, QLabel *label);
+
 
     /** @brief  Cross-correlation of target image with template image.
     * @note Correlation is performed on the first channel of the images only.
@@ -67,14 +74,15 @@ private:
     QImage *m_leftImage;
     QImage *m_rightImage;
     QImage *m_templateImage;
-//    QLabel *leftImage_label;
-    ImgLabel *leftImage_label;
-    QLabel *rightImage_label;
+    ImgLabel *m_leftImage_label;
+    TargetImgLabel *m_targetImage_label;
     QLabel *m_status_label;
 
+    QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
+    QSize m_templateSize;
 
-//protected:
-//    void paintEvent(QPaintEvent *event);
+protected:
+//    void paintEvent(QPaintEvent *);
 //    void mousePressEvent(QMouseEvent *event);
 };
 
