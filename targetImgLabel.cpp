@@ -46,7 +46,7 @@ void TargetImgLabel::paintEvent(QPaintEvent * /* event */)
    if(m_bHasImage)
       {
       QPainter painter(this);
-      painter.setCompositionMode(QPainter::CompositionMode_Xor);
+//      painter.setCompositionMode(QPainter::CompositionMode_Xor);
       painter.drawImage(0, 0, *m_image);
 
        if(m_bHasCorrResults)

@@ -12,6 +12,7 @@ class QImage;
 class QPainter;
 class QSize;
 class QPoint;
+class QString;
 
 
 class Qcorr : public QMainWindow, private Ui::QcorrClass
@@ -26,7 +27,7 @@ private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
     void correlate();
-//    void displayCoordinates(QLabel *label, QPointF *point);
+
 private:
     friend class ImgLabel; // Make the ImgLabel class a friend of Qcorr
                            // Thus, all members from Qcorr are accessible by an ImgLabel object
@@ -66,7 +67,13 @@ private:
     *  @returns the correlation number computed by method (directly).
     *           Additionally, the (dx,dy) offset of the template for which there exists a best match.
     */
+
+    // images are passed with 1 channel already
     float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int method = 1, bool multires = false);
+    // casting float happens inside
+
+    void convertToGrayScale(QImage *image);
+    bool fileDumpQImage(const QString &fileName);
 
     int m_nXoffset, m_nYoffset;
 
@@ -80,6 +87,7 @@ private:
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
     QSize m_templateSize;
+
 
 protected:
 //    void paintEvent(QPaintEvent *);
