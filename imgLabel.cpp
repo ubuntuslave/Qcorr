@@ -201,8 +201,7 @@ void ImgLabel::checkTemplateRegions(int mouseX, int mouseY)
 void ImgLabel::displayCoordinatesOnStatusLabel(QPoint &point0, QPoint &point1)
 {
    m_parentWindow->m_status_label->setText(
-                  "[X0:" + QString::number(point0.x()) + "px, " + "Y0:" +
-                  QString::number(point0.y()) + "px]" + "<b> to </b>" +
-                  "[X1:" + QString::number(point1.x()) + "px, " + "Y1:"
-                  + QString::number(point1.y()) + "px]");
+                  "Template: (" + QString::number(point0.x()) + ", " +
+                  QString::number(point0.y()) + ")px " + "<b> to </b>" +
+                  " (" + QString::number(point1.x()) + ", " + QString::number(point1.y()) + ")px");
 }

@@ -169,7 +169,7 @@ void Qcorr::correlate()
          m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
          *m_templateImage = convertToGrayScale(m_templateImage);
 
-         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
+//         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
 
          float fCorrLevel = findCorrelation( m_grayRightImage->bits(),
@@ -177,6 +177,7 @@ void Qcorr::correlate()
                                             &m_nXoffset, &m_nYoffset,
                                             m_corrMethodDialog->getMethod(),
                                             false);
+
 
 
          // CARLOS: just for testing:
@@ -195,6 +196,8 @@ void Qcorr::correlate()
                            m_matchingPoint.setX(m_nXoffset);
                            m_matchingPoint.setY(m_nYoffset);
             m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
+            this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel));
             }
          else
             m_targetImage_label->eraseEnclosedMatch();
@@ -240,11 +243,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //      out << quint8(imgTarget[byteN]);
 //   }
 
-   QApplication::setOverrideCursor(Qt::WaitCursor);
+//   QApplication::setOverrideCursor(Qt::WaitCursor);
 
 
    int i, j, k, n, x, y, total;
    int xI, xT, yI, yT, mxlevel, lowres;
+   int nPixelNumber;
    float fSumTop, fSumBottom, fDiff, fCorr;
    float fAverage, fTemplatePower, fTargetPower;
    float *pfImgTarget, *pfImgTemplate, mag, *pfTraversingTarget, *pfTraversingTemplate;
@@ -364,17 +368,17 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
          switch (nMethod)
             {
             case CROSS_CORR: /* cross correlation */
+
                // slide Template across the Target (pixel-by-pixel)
                for (y = yI; y <= yT; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { // visit rows
                      for (x = xI; x <= xT; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                         { // visit columns
                            fSumTop = fSumBottom = 0;  // Clear sums to 0 for each Template-Target comparison
-                           pfTraversingTarget = pfImgTarget + (y * wI) + x; // Points to current position in target float array
-                           pfTraversingTemplate = pfImgTemplate;  // Always begins pointing to upper-left corner of template float array
 
-                           this->m_status_label->setText(
-                                          "Correlating pixel <b>(" + QString::number((y * wI) + x) + "</b>" );
+                           nPixelNumber = (y * wI) + x;
+                           pfTraversingTarget = pfImgTarget + nPixelNumber; // Points to current position in target float array
+                           pfTraversingTemplate = pfImgTemplate;  // Always begins pointing to upper-left corner of template float array
 
                            // pixel-by-pixel comparison loops:
                            // Comparing the Traversing Image's region (of Template Size) to the Template itself
@@ -403,23 +407,21 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   } //next row
 
                /* update search window or normalize final correlation value */
-//               if (n)
-//                  { /* set search window for next pyramid level  */
+               if (n)
+                  { // set search window for next pyramid level
 //                     xI = MAX(0, 2 * dx - n);
 //                     yI = MAX(0, 2 * dy - n);
 //                     xT = MIN(2 * wI, 2 * dx + n);
 //                     yT = MIN(2 * hI, 2 * dy + n);
-//                  }
-//               else
-//                  {
-
+                  }
+               else
+                  {
                // normalize correlation value at final level
-//                     total = wT * hT;
-//                     for (i = fTemplatePower = 0; i < total; i++)
-//                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-//                     fCorr = fMax / sqrt(fTemplatePower);
-
-//                  }
+                     total = wT * hT;
+                     for (i = fTemplatePower = 0; i < total; i++)
+                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
+                     fCorr = fMax / sqrt(fTemplatePower);
+                  }
                break;
 
 //            case SUM_SQ_DIFF: /* sum of squared differences */
@@ -610,9 +612,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //   *xx = dx;
 //   *yy = dy;
 
-   QApplication::restoreOverrideCursor();
+//   QApplication::restoreOverrideCursor();
 
-   return fCorr;
+//   return fCorr;
+   return fMax;
 }
 
 void Qcorr::displayImage(QImage *image, QLabel *label)
