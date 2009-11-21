@@ -130,14 +130,14 @@ void Qcorr::browseRightImage()
             return;
         }
 
-        m_targetImage_label->setImage(*m_rightImage);
+//        m_targetImage_label->setImage(*m_rightImage);
 
         // CARLOS: just for testing:
         // To verify if the data has been converted to grayscale,
         // and that QImage's bits() function uses only the data pixels without any formatting headers
-//        m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
-//
-//        m_targetImage_label->setImage(*m_grayRightImage);
+        m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
+
+        m_targetImage_label->setImage(*m_grayRightImage);
 //
 //        if(!fileDumpQImage(fileName + ".txt"))
 //            return;
@@ -636,7 +636,8 @@ QImage & Qcorr::convertToGrayScale(QImage *image)
 
    for(int i=0; i<= 255; i++)
       {
-         colorTab[i] = qRgb(i,i,i); // For a gray-scale color table
+//         colorTab[i] = qRgb(0,i,0); // For a gray-scale color table
+         colorTab[i] = qRgb(0,i,0); // For a green-channel color table
       }
    m_tempImage = new QImage(image->convertToFormat(QImage::Format_Indexed8, colorTab, Qt::ThresholdDither ));
 

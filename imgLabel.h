@@ -37,6 +37,8 @@ class ImgLabel : public QLabel
       QPoint m_originPoint;
       QPoint m_finalPoint;
       QPoint m_currentPressedPoint;
+      QPoint m_labelUpperLeftCornerPoint, m_labelLowerRightCornerPoint;
+      QPoint m_mousePosPoint1, m_mousePosPoint2;
 
       bool m_bMouseIsPressed;
       bool m_bStartedTemplateSelection;

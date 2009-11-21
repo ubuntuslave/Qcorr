@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'qcorr.ui'
 **
-** Created: Wed Nov 11 21:11:24 2009
+** Created: Sat Nov 21 17:15:53 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -192,12 +192,16 @@ public:
         sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(corrResults_label->sizePolicy().hasHeightForWidth());
         corrResults_label->setSizePolicy(sizePolicy4);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Arial"));
+        font1.setPointSize(11);
+        corrResults_label->setFont(font1);
         corrResults_label->setAutoFillBackground(true);
         corrResults_label->setScaledContents(true);
 
         bottom_horizontalLayout->addWidget(corrResults_label);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(5, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         bottom_horizontalLayout->addItem(horizontalSpacer);
 
@@ -212,7 +216,7 @@ public:
         QcorrClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(QcorrClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 28));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         menu_Menu = new QMenu(menubar);
         menu_Menu->setObjectName(QString::fromUtf8("menu_Menu"));
         QcorrClass->setMenuBar(menubar);

@@ -24,6 +24,9 @@ ImgLabel::ImgLabel(Qcorr *parentWindow, QWidget *parent) :
 
    setTemplateFlags(false);
 
+   m_labelUpperLeftCornerPoint = QPoint(0,0);
+   m_labelLowerRightCornerPoint = QPoint(this->width(), this->height());
+
 //   this->stackUnder(m_rubberBand);  //Places the widget under the rubberBand in the parent widget's stack.
 }
 
@@ -38,6 +41,8 @@ ImgLabel::mousePressEvent(QMouseEvent *event)
    m_bMouseIsPressed = true;
 
    m_currentPressedPoint = event->pos();
+   m_mousePosPoint1.setX(-1); // Reset the flag used to know when the mouse is being dragged around
+
 
    if (m_rubberBand->isHidden() && (m_bStartedTemplateSelection == false))
       {
@@ -63,16 +68,59 @@ ImgLabel::mouseMoveEvent(QMouseEvent *event)
 
          QPoint newOriginPoint = QPoint(0,0);
 
+//         if(m_bMouseInTemplateRegion)
+//            {
+//            newOriginPoint = m_currentPressedPoint - (m_finalPoint - event->pos());
+//
+//            // Validate position within the label only. Outside margins should not be allowed
+//            if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
+//                  && (newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
+//                  && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
+//                  && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
+//                  );
+//               {
+//               m_rubberBand->move(newOriginPoint);
+//
+//               QPoint movedFinalPoint;
+//
+//               movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
+//               movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
+//
+//               displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
+//               }
+//            }
          if(m_bMouseInTemplateRegion)
             {
-            newOriginPoint = m_currentPressedPoint - (m_finalPoint - event->pos());
-            m_rubberBand->move(newOriginPoint);
+            if(m_mousePosPoint1.x() < 0)
+               {
+                  m_mousePosPoint1 = event->pos(); // Sets to the position of the mouse position when it's dragged for the first time
+               }
+            else
+               {
+               m_mousePosPoint2 = event->pos();
 
-            QPoint movedFinalPoint;
-            movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
-            movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
+               QPoint offsetPoint = m_mousePosPoint1 - m_mousePosPoint2;
 
-            displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
+               newOriginPoint = m_originPoint - offsetPoint; //m_currentPressedPoint - (m_finalPoint - event->pos());
+
+               // Validate position within the label only. Outside margins should not be allowed
+               if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
+                     && (newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
+                     && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
+                     && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
+                     );
+                  {
+                  m_rubberBand->move(newOriginPoint);
+
+                  QPoint movedFinalPoint;
+
+                  movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
+                  movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
+
+                  displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
+                  }
+               }
+
             }
          else if(m_bMouseAtTemplateTopEdge)
             {
