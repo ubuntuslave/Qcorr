@@ -69,10 +69,10 @@ private:
     */
 
     // images are passed with 1 channel already
-    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int method = 1, bool multires = false);
+    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int nMethod, bool bMultires);
     // casting float happens inside
 
-    void convertToGrayScale(QImage *image);
+    QImage & convertToGrayScale(QImage *image);
     bool fileDumpQImage(const QString &fileName);
 
     int m_nXoffset, m_nYoffset;
@@ -81,6 +81,8 @@ private:
     QImage *m_leftImage;
     QImage *m_rightImage;
     QImage *m_templateImage;
+    QImage *m_grayRightImage;
+    QImage *m_tempImage;
     ImgLabel *m_leftImage_label;
     TargetImgLabel *m_targetImage_label;
     QLabel *m_status_label;
