@@ -45,7 +45,9 @@ private:
     /** @brief  Cross-correlation of target image with template image.
     * @note Correlation is performed on the first channel of the images only.
     * @param imgTarget Array of bytes for the target image
-    * @param imgTemplate Aarray of bytes for the template image
+    * @param imgTemplate Array of bytes for the template image
+    * @param dx X position where the highest level of correlation match is found (top-left corner of the match)
+    * @param dy Y position where the highest level of correlation match is found (top-left corner of the match)
     * @param method Determines the selected method to be used in the correlation process. The method is a globally defined enumeration.
     *       The available methods are:
     *       CROSS_CORR (cross correlation):

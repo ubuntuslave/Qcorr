@@ -220,7 +220,7 @@ void Qcorr::correlate()
 
 
          // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
-         if(fCorrLevel > 0)
+         if(fCorrLevel >= 0)
             {
 //            m_matchingPoint = m_leftImage_label->m_rubberBand->pos();   // TEMP!!!!
             // CARLOS: it should eventually done this way:
@@ -232,6 +232,7 @@ void Qcorr::correlate()
 //            m_targetImage_label->setImage(*m_corrMapImage);
 
             action_Correlation_Map->setEnabled(true);
+            emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
 
             }
          else
@@ -376,6 +377,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    /* init search window */
    xI = 0;
    yI = 0;
+   // CARLOS: changed/fixed the following relation (it was omitting the last pixel on the edge)
    nXTraverse = (wI - wT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
    nYTraverse = (hI - hT + 1) >> mxlevel;
 
@@ -484,18 +486,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   }
                else
                   {
-               // normalize correlation value at final level
-//                     total = wT * hT;
-//                     for (i = fTemplatePower = 0; i < total; i++)
-//                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-//                     fCorr = fMax / sqrt(fTemplatePower);
-
                   // normalize correlation value at final level
                   total = wT * hT;
                   for (i = fTemplatePower = 0; i < total; i++)
                      fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-                  fCorr = fMax / sqrt(fTemplatePower);
 
+                  float fSquareRootOfTemplatePower = sqrt(fTemplatePower);
+                  fCorr = fMax / fSquareRootOfTemplatePower;
 //                  std::cout << "Max: " << fMax << "  TemplatePower: " << fTemplatePower;
 
                   // Normalize fMax and fMin
@@ -510,7 +507,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                         for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
-                           afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / sqrt(fTemplatePower);
+                           afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
 
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
@@ -529,54 +526,97 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   }
                break;
 
-//            case SUM_SQ_DIFF: /* sum of squared differences */
-//               for (y = yI; y <= nYTraverse; y++)
-//                  { /* visit rows   */
-//                     for (x = xI; x <= nXTraverse; x++)
-//                        { /* slide window */
-//                           fSumTop = fSumBottom = 0;
-//                           pfTraversingTarget = pfImgTarget + y * wI + x;
-//                           pfTraversingTemplate = pfImgTemplate;
-//                           for (i = 0; i < hT; i++)
-//                              { /* convolution  */
-//                                 for (j = 0; j < wT; j++)
-//                                    {
-//                                       fDiff = pfTraversingTemplate[j] - pfTraversingTarget[j];
-//                                       fSumTop += (fDiff * fDiff);
-//                                       fSumBottom += (pfTraversingTarget[j] * pfTraversingTarget[j]);
-//                                    }
-//                                 pfTraversingTarget += wI;
-//                                 pfTraversingTemplate += wT;
-//                              }
-//                           if (fSumBottom == 0)
-//                              continue;
-//
-//                           fCorr = fSumTop / sqrt(fSumBottom);
-//                           if (fCorr < fMin)
-//                              {
-//                                 fMin = fCorr;
-//                                 dx = x;
-//                                 dy = y;
-//                              }
-//                        }
-//                  }
-//
-//               /* update search window or normalize final correlation value */
-//               if (n)
-//                  { /* set search window for next pyramid level  */
+            case SUM_SQ_DIFF: /* sum of squared differences */
+               for (y = yI; y <= nYTraverse; y++)  // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                  { /* visit rows   */
+                     for (x = xI; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
+                        { /* slide window */
+                           fSumTop = fSumBottom = 0;
+
+                           nPixelNumber = (y * wI) + x;
+                           pfTraversingTarget = pfImgTarget + nPixelNumber;
+                           pfTraversingTemplate = pfImgTemplate;
+                           for (i = 0; i < hT; i++)
+                              { /* convolution  */
+                                 for (j = 0; j < wT; j++)
+                                    {
+                                       fDiff = pfTraversingTemplate[j] - pfTraversingTarget[j];
+                                       fSumTop += (fDiff * fDiff);
+                                       fSumBottom += (pfTraversingTarget[j] * pfTraversingTarget[j]);
+                                    }
+                                 pfTraversingTarget += wI;
+                                 pfTraversingTemplate += wT;
+                              }
+                           if (fSumBottom == 0)
+                              continue;
+
+                           fCorr = fSumTop / sqrt(fSumBottom);
+                           if (fCorr < fMin)
+                              {
+                                 fMin = fCorr;
+                                 *dx = x;
+                                 *dy = y;
+                              }
+
+                            // Also, keep track of the maximum correlation found (for mapping purposes)
+                            if (fCorr > fMax)
+                               {
+                                  fMax = fCorr;
+                               }
+
+                            afCorrValues[nCorrCounter] = fCorr; // Save correlation value of this round
+
+ //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                            nCorrCounter++;
+                        } // next column
+                  } // next row
+
+               /* update search window or normalize final correlation value */
+               if (n)
+                  { /* set search window for next pyramid level  */
 //                     xI = MAX(0, 2 * dx - n);
 //                     yI = MAX(0, 2 * dy - n);
 //                     nXTraverse = MIN(2 * wI, 2 * dx + n);
 //                     nYTraverse = MIN(2 * hI, 2 * dy + n);
-//                  }
-//               else
-//                  { /* normalize correlation value at final level */
-//                     total = wT * hT;
-//                     for (i = fTemplatePower = 0; i < total; i++)
-//                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-//                     fCorr = fMin / sqrt(fTemplatePower);
-//                  }
-//               break;
+                  }
+               else
+                  { /* normalize correlation value at final level */
+                     total = wT * hT;
+                     for (i = fTemplatePower = 0; i < total; i++)
+                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
+                     float fSquareRootOfTemplatePower = sqrt(fTemplatePower);
+                     fCorr = fMin / fSquareRootOfTemplatePower;
+
+
+                     // Normalize fMax and fMin
+                     fMin = fCorr;  // because it's already normalized
+                     fMax = fMax / sqrt(fTemplatePower);
+
+                     nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
+
+                     // Normalize all the correlation values stored in the array afCorrValues
+                     for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                        { // visit rows
+                           for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                              { // visit columns
+                              // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
+                              afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
+
+                              // Interpolate values from 0 to 1 between fMin and fMax, where 0 in this case indicates a higher correlation level
+                              // x_normalized = [(min-x) / (max - min)] + 1
+                              afCorrValues[nCorrCounter] = ((fMin - afCorrValues[nCorrCounter]) / (fMax - fMin)) + 1;
+
+                              std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+
+                              // Paint pixel in gray-scale correlation map
+                              nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                              m_corrMapImage->setPixel(x, y, nValue);
+                              nCorrCounter++;
+                              }
+                           std::cout << std::endl;
+                        }
+                  }
+               break;
 //
 //            case CORR_COEFF: /* correlation coefficient */
 //               /* compute pfTraversingTemplate average */
