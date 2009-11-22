@@ -162,13 +162,31 @@ ImgLabel::mouseMoveEvent(QMouseEvent *event)
                }
             }
          else
-            {
-            m_finalPoint = event->pos();
-            m_rubberBand->setGeometry(
-                           QRect(m_currentPressedPoint, m_finalPoint).normalized());
-            setTemplateFlags(false);
-            displayCoordinatesOnStatusLabel(m_currentPressedPoint, m_finalPoint);
-            }
+            { // Making a selection with the rubber band
+            // Validate rubber-band selection to be within the label's margins
+              if((event->pos().x() >= m_labelUpperLeftCornerPoint.x())
+                    && (event->pos().x() <= m_labelLowerRightCornerPoint.x())
+                    )
+                 {
+                    m_nXNewPos = event->pos().x();
+                 }
+              if((event->pos().y() >= m_labelUpperLeftCornerPoint.y())
+                    && (event->pos().y() <= m_labelLowerRightCornerPoint.y())
+                    )
+                 {
+                    m_nYNewPos = event->pos().y();
+                 }
+
+   //            m_finalPoint = event->pos();
+               m_finalPoint.setX(m_nXNewPos);
+               m_finalPoint.setY(m_nYNewPos);
+
+
+               m_rubberBand->setGeometry(
+                              QRect(m_currentPressedPoint, m_finalPoint).normalized());
+               setTemplateFlags(false);
+               displayCoordinatesOnStatusLabel(m_currentPressedPoint, m_finalPoint);
+               }
       }
    else
       {

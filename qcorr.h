@@ -26,6 +26,7 @@ public:
 private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
+    void viewCorrMap();
     void correlate();
 
 private:
@@ -78,11 +79,13 @@ private:
     int m_nXoffset, m_nYoffset;
 
     CorrMethod *m_corrMethodDialog;
+    QString initialName;
     QImage *m_leftImage;
     QImage *m_rightImage;
     QImage *m_templateImage;
     QImage *m_grayRightImage;
     QImage *m_tempImage;
+    QImage *m_corrMapImage;
     ImgLabel *m_leftImage_label;
     TargetImgLabel *m_targetImage_label;
     QLabel *m_status_label;

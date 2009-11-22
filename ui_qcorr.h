@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'qcorr.ui'
 **
-** Created: Sat Nov 21 17:15:53 2009
+** Created: Sun Nov 22 12:30:30 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -36,6 +36,7 @@ class Ui_QcorrClass
 {
 public:
     QAction *action_Quit;
+    QAction *action_Correlation_Map;
     QWidget *centralwidget;
     QFrame *main_frame;
     QVBoxLayout *main_verticalLayout;
@@ -61,6 +62,7 @@ public:
     QPushButton *quit_pushButton;
     QMenuBar *menubar;
     QMenu *menu_Menu;
+    QMenu *menu_View;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *QcorrClass)
@@ -75,6 +77,8 @@ public:
         QcorrClass->setSizePolicy(sizePolicy);
         action_Quit = new QAction(QcorrClass);
         action_Quit->setObjectName(QString::fromUtf8("action_Quit"));
+        action_Correlation_Map = new QAction(QcorrClass);
+        action_Correlation_Map->setObjectName(QString::fromUtf8("action_Correlation_Map"));
         centralwidget = new QWidget(QcorrClass);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         main_frame = new QFrame(centralwidget);
@@ -219,13 +223,17 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 25));
         menu_Menu = new QMenu(menubar);
         menu_Menu->setObjectName(QString::fromUtf8("menu_Menu"));
+        menu_View = new QMenu(menubar);
+        menu_View->setObjectName(QString::fromUtf8("menu_View"));
         QcorrClass->setMenuBar(menubar);
         statusbar = new QStatusBar(QcorrClass);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         QcorrClass->setStatusBar(statusbar);
 
         menubar->addAction(menu_Menu->menuAction());
+        menubar->addAction(menu_View->menuAction());
         menu_Menu->addAction(action_Quit);
+        menu_View->addAction(action_Correlation_Map);
 
         retranslateUi(QcorrClass);
 
@@ -236,12 +244,14 @@ public:
     {
         QcorrClass->setWindowTitle(QApplication::translate("QcorrClass", "QCorr", 0, QApplication::UnicodeUTF8));
         action_Quit->setText(QApplication::translate("QcorrClass", "&Quit", 0, QApplication::UnicodeUTF8));
+        action_Correlation_Map->setText(QApplication::translate("QcorrClass", "&Correlation Map", 0, QApplication::UnicodeUTF8));
         leftBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Left Image", 0, QApplication::UnicodeUTF8));
         rightBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Right Image", 0, QApplication::UnicodeUTF8));
         corr_pushButton->setText(QApplication::translate("QcorrClass", "&Correlate", 0, QApplication::UnicodeUTF8));
         corrResults_label->setText(QString());
         quit_pushButton->setText(QApplication::translate("QcorrClass", "&Quit", 0, QApplication::UnicodeUTF8));
         menu_Menu->setTitle(QApplication::translate("QcorrClass", "&File", 0, QApplication::UnicodeUTF8));
+        menu_View->setTitle(QApplication::translate("QcorrClass", "&View", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

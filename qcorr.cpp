@@ -1,5 +1,9 @@
 #include <QtGui>
 
+#include <iostream>
+//#include <stdio.h>
+//#include <stdlib.h>
+
 #include "qcorr.h"
 #include "globals.h"
 
@@ -76,76 +80,102 @@ void Qcorr::createActions()
 
    action_Quit->setShortcut(tr("Ctrl+Q"));
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
+
+   action_Correlation_Map->setCheckable(true);
+   action_Correlation_Map->setEnabled(false);
+   connect(action_Correlation_Map, SIGNAL(triggered()), this, SLOT(viewCorrMap()));
 }
 
 // begin Q_SLOTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 void Qcorr::browseLeftImage()
 {
-    QString initialName = leftImage_lineEdit->text();
-    if (initialName.isEmpty())
-        initialName = QDir::homePath();
+   if (leftImage_lineEdit->text().isEmpty())
+      initialName =  rightImage_lineEdit->text(); // observes the path on the other panel
+   else
+      initialName = leftImage_lineEdit->text(); // observes its own path
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Choose File"),
-                                         initialName);
-    fileName = QDir::toNativeSeparators(fileName);
 
-    if (!fileName.isEmpty()) {
+   if (initialName.isEmpty())
+      initialName = QDir::homePath();
 
-        leftImage_lineEdit->setText(fileName);
-        m_leftImage = new QImage(fileName);
+   QString fileName = QFileDialog::getOpenFileName(this, tr("Choose File"),
+         initialName);
+   fileName = QDir::toNativeSeparators(fileName);
 
-        if (m_leftImage->isNull()) {
-            QMessageBox::information(this, tr("QCorr"),
-                                     tr("Cannot load %1.").arg(fileName));
-            return;
-        }
+   if (!fileName.isEmpty()) {
 
-        this->displayImageLabel(m_leftImage, m_leftImage_label);   // Draw Left Image
+      leftImage_lineEdit->setText(fileName);
+      m_leftImage = new QImage(fileName);
 
-        m_leftImage_label->setCursor(QCursor(Qt::CrossCursor));
-        m_leftImage_label->setMouseTracking(true);
-        m_leftImage_label->setFocusPolicy(Qt::ClickFocus);
-    }
+      if (m_leftImage->isNull()) {
+         QMessageBox::information(this, tr("QCorr"),
+               tr("Cannot load %1.").arg(fileName));
+         return;
+      }
+
+      this->displayImageLabel(m_leftImage, m_leftImage_label);   // Draw Left Image
+
+      m_leftImage_label->setCursor(QCursor(Qt::CrossCursor));
+      m_leftImage_label->setMouseTracking(true);
+      m_leftImage_label->setFocusPolicy(Qt::ClickFocus);
+   }
 }
 
 void Qcorr::browseRightImage()
 {
-    QString initialName = leftImage_lineEdit->text(); // Observes the Path of the Left Image most likely
-    if (initialName.isEmpty())
-        initialName = QDir::homePath();
+   if (rightImage_lineEdit->text().isEmpty())
+      initialName =  leftImage_lineEdit->text(); // observes the path on the other panel
+   else
+      initialName = rightImage_lineEdit->text(); // observes its own path
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Choose File"),
-                                         initialName);
-    fileName = QDir::toNativeSeparators(fileName);
+   if (initialName.isEmpty())
+      initialName = QDir::homePath();
 
-    if (!fileName.isEmpty()) {
+   QString fileName = QFileDialog::getOpenFileName(this, tr("Choose File"),
+         initialName);
+   fileName = QDir::toNativeSeparators(fileName);
+
+   if (!fileName.isEmpty()) {
 
 
-        rightImage_lineEdit->setText(fileName);
-        m_rightImage = new QImage(fileName);
+      rightImage_lineEdit->setText(fileName);
+      m_rightImage = new QImage(fileName);
 
-        if (m_rightImage->isNull()) {
-            QMessageBox::information(this, tr("QCorr"),
-                                     tr("Cannot load %1.").arg(fileName));
-            return;
-        }
+      if (m_rightImage->isNull()) {
+         QMessageBox::information(this, tr("QCorr"),
+               tr("Cannot load %1.").arg(fileName));
+         return;
+      }
 
-//        m_targetImage_label->setImage(*m_rightImage);
+      //        m_targetImage_label->setImage(*m_rightImage);
 
-        // CARLOS: just for testing:
-        // To verify if the data has been converted to grayscale,
-        // and that QImage's bits() function uses only the data pixels without any formatting headers
-        m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
+      // CARLOS: just for testing:
+      // To verify if the data has been converted to grayscale,
+      // and that QImage's bits() function uses only the data pixels without any formatting headers
+      m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
 
-        m_targetImage_label->setImage(*m_grayRightImage);
-//
-//        if(!fileDumpQImage(fileName + ".txt"))
-//            return;
+      m_targetImage_label->setImage(*m_grayRightImage);
+      //
+      //        if(!fileDumpQImage(fileName + ".txt"))
+      //            return;
 
-        update();
+      update();
 
-        corr_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
-    }
+      corr_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
+   }
+}
+
+void Qcorr::viewCorrMap()
+{
+   if(action_Correlation_Map->isChecked())
+      {
+      m_targetImage_label->setImage(*m_corrMapImage);
+      }
+   else
+      {
+      m_targetImage_label->setImage(*m_rightImage);
+      }
+
 }
 
 void Qcorr::correlate()
@@ -168,6 +198,7 @@ void Qcorr::correlate()
          // cast images to a 1-channel (conver them to grayscale images)
          m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
          *m_templateImage = convertToGrayScale(m_templateImage);
+
 
 //         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
@@ -198,6 +229,10 @@ void Qcorr::correlate()
             m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
 
             this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel));
+//            m_targetImage_label->setImage(*m_corrMapImage);
+
+            action_Correlation_Map->setEnabled(true);
+
             }
          else
             m_targetImage_label->eraseEnclosedMatch();
@@ -247,7 +282,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
 
    int i, j, k, n, x, y, total;
-   int xI, xT, yI, yT, mxlevel, lowres;
+   int xI, nXTraverse, yI, nYTraverse, mxlevel, lowres;
    int nPixelNumber;
    float fSumTop, fSumBottom, fDiff, fCorr;
    float fAverage, fTemplatePower, fTargetPower;
@@ -277,13 +312,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
       }
 
    // cast pfTraversingTarget into buffer of type float
-   float afImgTarget[sizeI];
+   float *afImgTarget = new float[sizeI];
    for (int byteN = 0; byteN < sizeI; ++byteN) {
       afImgTarget[byteN] = (float) imgTarget[byteN];
    }
 
    // cast pfTraversingTemplate into buffer of type float
-   float afImgTemplate[sizeT];
+//   float afImgTemplate[sizeT]; // it's better to allocate memory with "new", so big pictures don't cause segmentation faults
+   float *afImgTemplate = new float[sizeT];
    for (int byteN = 0; byteN < sizeT; ++byteN) {
       afImgTemplate[byteN] = (float) imgTemplate[byteN];
    }
@@ -340,8 +376,27 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    /* init search window */
    xI = 0;
    yI = 0;
-   xT = (wI - wT) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
-   yT = (hI - hT) >> mxlevel;
+   nXTraverse = (wI - wT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
+   nYTraverse = (hI - hT + 1) >> mxlevel;
+
+   // ---------------------------------------------
+   // To be used to display a brightness map based on correlation values at each evaluated pixel
+   m_corrMapImage = new QImage(nXTraverse+1, nYTraverse+1 , QImage::Format_Indexed8);
+   QVector<QRgb> colorTab(256);  // for an 8-bit scale color table
+   for(i=0; i<= 255; i++)
+      {
+         colorTab[i] = qRgb(i,i,i); // For a gray-scale color table
+      }
+   // If the image's format is either monochrome or 8-bit, the given index_or_rgb value must be an index in the image's color table
+   m_corrMapImage->setColorTable(colorTab);
+
+   float *afCorrValues = new float[(nXTraverse+1) * (nYTraverse+1)]; // Array to save results of each correlation operation at certain pixel
+                                                                     // Array size is correct based on the number of correlations to be performed on the target
+   int nCorrCounter = 0;
+   uint nValue;    // to paint the pixels of the correlation map image
+   // ---------------------------------------------
+
+
 
    /* multiresolution correlation: use results of lower-res correlation
     * (at the top of the pyramid) to narrow the search in the higher-res
@@ -370,9 +425,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
             case CROSS_CORR: /* cross correlation */
 
                // slide Template across the Target (pixel-by-pixel)
-               for (y = yI; y <= yT; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+               for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { // visit rows
-                     for (x = xI; x <= xT; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                     for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                         { // visit columns
                            fSumTop = fSumBottom = 0;  // Clear sums to 0 for each Template-Target comparison
 
@@ -403,7 +458,20 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                                  *dx = x;
                                  *dy = y;
                               }
+
+                           // Also, keep track of the minimum correlation found (for mapping purposes)
+                           if (fCorr < fMin)
+                              {
+                                 fMin = fCorr;
+                              }
+
+                           afCorrValues[nCorrCounter] = fCorr; // Save correlation value of this round
+
+//                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                           nCorrCounter++;
+
                         } //next column
+//                     std::cout << std::endl;
                   } //next row
 
                /* update search window or normalize final correlation value */
@@ -411,23 +479,60 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   { // set search window for next pyramid level
 //                     xI = MAX(0, 2 * dx - n);
 //                     yI = MAX(0, 2 * dy - n);
-//                     xT = MIN(2 * wI, 2 * dx + n);
-//                     yT = MIN(2 * hI, 2 * dy + n);
+//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
+//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
                   }
                else
                   {
                // normalize correlation value at final level
-                     total = wT * hT;
-                     for (i = fTemplatePower = 0; i < total; i++)
-                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-                     fCorr = fMax / sqrt(fTemplatePower);
+//                     total = wT * hT;
+//                     for (i = fTemplatePower = 0; i < total; i++)
+//                        fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
+//                     fCorr = fMax / sqrt(fTemplatePower);
+
+                  // normalize correlation value at final level
+                  total = wT * hT;
+                  for (i = fTemplatePower = 0; i < total; i++)
+                     fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
+                  fCorr = fMax / sqrt(fTemplatePower);
+
+//                  std::cout << "Max: " << fMax << "  TemplatePower: " << fTemplatePower;
+
+                  // Normalize fMax and fMin
+                  fMax = fCorr;  // because it's already normalized
+                  fMin = fMin / sqrt(fTemplatePower);
+
+                  nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
+
+                  // Normalize all the correlation values stored in the array afCorrValues
+                  for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                     { // visit rows
+                        for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                           { // visit columns
+                           // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
+                           afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / sqrt(fTemplatePower);
+
+                           // Interpolate values from 0 to 1 between fMin and fMax
+                           // x_normalized = (x - min) / (max - min)
+                           afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
+
+                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+
+                           // Paint pixel in gray-scale correlation map
+                           nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                           m_corrMapImage->setPixel(x, y, nValue);
+                           nCorrCounter++;
+                           }
+                        std::cout << std::endl;
+                     }
+
                   }
                break;
 
 //            case SUM_SQ_DIFF: /* sum of squared differences */
-//               for (y = yI; y <= yT; y++)
+//               for (y = yI; y <= nYTraverse; y++)
 //                  { /* visit rows   */
-//                     for (x = xI; x <= xT; x++)
+//                     for (x = xI; x <= nXTraverse; x++)
 //                        { /* slide window */
 //                           fSumTop = fSumBottom = 0;
 //                           pfTraversingTarget = pfImgTarget + y * wI + x;
@@ -461,8 +566,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //                  { /* set search window for next pyramid level  */
 //                     xI = MAX(0, 2 * dx - n);
 //                     yI = MAX(0, 2 * dy - n);
-//                     xT = MIN(2 * wI, 2 * dx + n);
-//                     yT = MIN(2 * hI, 2 * dy + n);
+//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
+//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
 //                  }
 //               else
 //                  { /* normalize correlation value at final level */
@@ -497,9 +602,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //               IP_subtractImage(pyramid1[n], Iblur, pyramid1[n]);
 //               IP_freeImage(Iblur);
 //
-//               for (y = yI; y <= yT; y++)
+//               for (y = yI; y <= nYTraverse; y++)
 //                  { /* visit rows   */
-//                     for (x = xI; x <= xT; x++)
+//                     for (x = xI; x <= nXTraverse; x++)
 //                        { /* slide window */
 //                           fSumTop = fSumBottom = 0;
 //                           pfTraversingTarget = pfImgTarget + y * wI + x;/* avgs  were  subtracted  */
@@ -534,8 +639,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //                  { /* set search window for next pyramid level */
 //                     xI = MAX(0, 2 * dx - n);
 //                     yI = MAX(0, 2 * dy - n);
-//                     xT = MIN(2 * wI, 2 * dx + n);
-//                     yT = MIN(2 * hI, 2 * dy + n);
+//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
+//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
 //                  }
 //               else
 //                  { /* set correlation value at final level */
@@ -614,6 +719,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
 //   QApplication::restoreOverrideCursor();
 
+
+// Deallocate arrays from memory
+   delete [] afImgTarget;
+   delete [] afImgTemplate;
+   delete [] afCorrValues;
+
    return fCorr;
 //   return fMax;
 }
@@ -638,10 +749,10 @@ QImage & Qcorr::convertToGrayScale(QImage *image)
 
    for(int i=0; i<= 255; i++)
       {
-//         colorTab[i] = qRgb(0,i,0); // For a gray-scale color table
-         colorTab[i] = qRgb(0,i,0); // For a green-channel color table
+         colorTab[i] = qRgb(i,i,i); // For a gray-scale color table
+//         colorTab[i] = qRgb(0,i,0); // For a green-channel color table
       }
-   m_tempImage = new QImage(image->convertToFormat(QImage::Format_Indexed8, colorTab, Qt::ThresholdDither ));
+   m_tempImage = new QImage(image->convertToFormat(QImage::Format_Indexed8, colorTab)); //, Qt::ThresholdDither ));
 
    return *m_tempImage;
 
