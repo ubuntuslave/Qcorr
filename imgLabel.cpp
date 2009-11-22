@@ -25,9 +25,9 @@ ImgLabel::ImgLabel(Qcorr *parentWindow, QWidget *parent) :
    setTemplateFlags(false);
 
    m_labelUpperLeftCornerPoint = QPoint(0,0);
-   m_labelLowerRightCornerPoint = QPoint(this->width(), this->height());
+   // m_labelLowerRightCornerPoint must be RESET from the parent (since the label size can dynamically change)
+//   m_labelUpperLeftCornerPoint = QPoint(this->width(), this->height());
 
-//   this->stackUnder(m_rubberBand);  //Places the widget under the rubberBand in the parent widget's stack.
 }
 
 ImgLabel::~ImgLabel()
@@ -68,29 +68,9 @@ ImgLabel::mouseMoveEvent(QMouseEvent *event)
 
          QPoint newOriginPoint = QPoint(0,0);
 
-//         if(m_bMouseInTemplateRegion)
-//            {
-//            newOriginPoint = m_currentPressedPoint - (m_finalPoint - event->pos());
-//
-//            // Validate position within the label only. Outside margins should not be allowed
-//            if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
-//                  && (newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
-//                  && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
-//                  && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
-//                  );
-//               {
-//               m_rubberBand->move(newOriginPoint);
-//
-//               QPoint movedFinalPoint;
-//
-//               movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
-//               movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
-//
-//               displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
-//               }
-//            }
          if(m_bMouseInTemplateRegion)
             {
+
             if(m_mousePosPoint1.x() < 0)
                {
                   m_mousePosPoint1 = event->pos(); // Sets to the position of the mouse position when it's dragged for the first time
@@ -103,48 +83,83 @@ ImgLabel::mouseMoveEvent(QMouseEvent *event)
 
                newOriginPoint = m_originPoint - offsetPoint; //m_currentPressedPoint - (m_finalPoint - event->pos());
 
-               // Validate position within the label only. Outside margins should not be allowed
+               QPoint movedFinalPoint;
+
+               movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
+               movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
+
+               // Validate new template's position to be within the label's margins
                if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
-                     && (newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
-                     && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
-                     && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
-                     );
+                     && (movedFinalPoint.x() <= m_labelLowerRightCornerPoint.x())
+                     )
                   {
-                  m_rubberBand->move(newOriginPoint);
-
-                  QPoint movedFinalPoint;
-
-                  movedFinalPoint.setX(newOriginPoint.x() + m_rubberBand->width());
-                  movedFinalPoint.setY(newOriginPoint.y() + m_rubberBand->height());
-
-                  displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
+                     m_nXNewPos = newOriginPoint.x();
                   }
-               }
+               if((newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
+                     && (movedFinalPoint.y() <= m_labelLowerRightCornerPoint.y())
+                     )
+                  {
+                     m_nYNewPos = newOriginPoint.y();
+                  }
 
+                  newOriginPoint.setX(m_nXNewPos);
+                  newOriginPoint.setY(m_nYNewPos);
+                  m_rubberBand->move(newOriginPoint);
+                  displayCoordinatesOnStatusLabel(newOriginPoint, movedFinalPoint);
+
+               }
             }
          else if(m_bMouseAtTemplateTopEdge)
             {
             newOriginPoint = QPoint(m_originPoint.x(), event->pos().y());
-            m_rubberBand->setGeometry(QRect(newOriginPoint, m_finalPoint).normalized());
-            displayCoordinatesOnStatusLabel(newOriginPoint, m_finalPoint);
+
+            // Validate new template's size to be within the label's margins
+            if((newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
+                   && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
+                   )
+               {
+               m_rubberBand->setGeometry(QRect(newOriginPoint, m_finalPoint).normalized());
+               displayCoordinatesOnStatusLabel(newOriginPoint, m_finalPoint);
+               }
             }
          else if(m_bMouseAtTemplateBottomEdge)
             {
             newOriginPoint = QPoint(m_finalPoint.x(), event->pos().y());
-            m_rubberBand->setGeometry(QRect(m_originPoint, newOriginPoint).normalized());
-            displayCoordinatesOnStatusLabel(m_originPoint, newOriginPoint);
+
+            // Validate new template's size to be within the label's margins
+            if((newOriginPoint.y() >= m_labelUpperLeftCornerPoint.y())
+                   && (newOriginPoint.y() <= m_labelLowerRightCornerPoint.y())
+                   )
+               {
+               m_rubberBand->setGeometry(QRect(m_originPoint, newOriginPoint).normalized());
+               displayCoordinatesOnStatusLabel(m_originPoint, newOriginPoint);
+               }
             }
          else if(m_bMouseAtTemplateLeftEdge)
             {
             newOriginPoint = QPoint(event->pos().x(), m_originPoint.y());
-            m_rubberBand->setGeometry(QRect(newOriginPoint, m_finalPoint).normalized());
-            displayCoordinatesOnStatusLabel(newOriginPoint, m_finalPoint);
+
+            // Validate new template's size to be within the label's margins
+            if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
+                  && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
+                  )
+               {
+               m_rubberBand->setGeometry(QRect(newOriginPoint, m_finalPoint).normalized());
+               displayCoordinatesOnStatusLabel(newOriginPoint, m_finalPoint);
+               }
             }
          else if(m_bMouseAtTemplateRightEdge)
             {
             newOriginPoint = QPoint(event->pos().x(), m_finalPoint.y());
-            m_rubberBand->setGeometry(QRect(m_originPoint, newOriginPoint).normalized());
-            displayCoordinatesOnStatusLabel(m_originPoint, newOriginPoint);
+
+            // Validate new template's size to be within the label's margins
+            if((newOriginPoint.x() >= m_labelUpperLeftCornerPoint.x())
+                  && (newOriginPoint.x() <= m_labelLowerRightCornerPoint.x())
+                  )
+               {
+               m_rubberBand->setGeometry(QRect(m_originPoint, newOriginPoint).normalized());
+               displayCoordinatesOnStatusLabel(m_originPoint, newOriginPoint);
+               }
             }
          else
             {
@@ -154,7 +169,6 @@ ImgLabel::mouseMoveEvent(QMouseEvent *event)
             setTemplateFlags(false);
             displayCoordinatesOnStatusLabel(m_currentPressedPoint, m_finalPoint);
             }
-
       }
    else
       {
@@ -186,15 +200,6 @@ ImgLabel::mouseReleaseEvent(QMouseEvent *event)
       m_finalPoint.setY(m_originPoint.y() + m_rubberBand->height());
 
       checkTemplateRegions(event->pos().x(), event->pos().y());
-      // ------------------------------------------------------------
-      //To process the rectangular regions, use something like:
-//      QImage::copy ( const QRect & rectangle = QRect() ) const
-      // for further processing
-      // It's missing QImage member function that was set as QPixmap on the MainWindow app (qcorr.cpp)
-      //----------------------------------------------------------
-         // determine selection, for example using QRect::intersects()
-         // and QRect::contains().
-
       }
 }
 
@@ -219,8 +224,8 @@ void ImgLabel::checkTemplateRegions(int mouseX, int mouseY)
          && (mouseX < m_finalPoint.x()) && (mouseY < m_finalPoint.y()) )
          || // When the region was selected from bottom to top
          ((mouseX < m_originPoint.x()) && (mouseY < m_originPoint.y())
-         && (mouseX > m_finalPoint.x()) && (mouseY > m_finalPoint.y()) )
-        )
+               && (mouseX > m_finalPoint.x()) && (mouseY > m_finalPoint.y()) )
+   )
       {
       this->setCursor(Qt::SizeAllCursor);
       m_bMouseInTemplateRegion = true;
@@ -230,14 +235,11 @@ void ImgLabel::checkTemplateRegions(int mouseX, int mouseY)
       {
       this->setCursor(Qt::SizeHorCursor);
       m_bMouseInTemplateRegion = false;
-      // TODO: Implement resize on the horizontal sides
       }
-//      else if((m_bMouseAtTemplateTopEdge = mouseY == m_originPoint.y()) || (mouseY == m_finalPoint.y()) )
    else if(m_bMouseAtTemplateTopEdge || m_bMouseAtTemplateBottomEdge )
       {
       this->setCursor(Qt::SizeVerCursor);
       m_bMouseInTemplateRegion = false;
-      // TODO: Implement resize on the horizontal sides
       }
    else
       {

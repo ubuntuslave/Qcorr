@@ -34,8 +34,8 @@ class ImgLabel : public QLabel
       Qcorr *m_parentWindow;  // Pointer to Main Window Object (There should be only one on these)
 
       QRubberBand *m_rubberBand;
-      QPoint m_originPoint;
-      QPoint m_finalPoint;
+      QPoint m_originPoint;   // rubber-band's top-left corner point
+      QPoint m_finalPoint;    // rubber-band's bottom-right corner point
       QPoint m_currentPressedPoint;
       QPoint m_labelUpperLeftCornerPoint, m_labelLowerRightCornerPoint;
       QPoint m_mousePosPoint1, m_mousePosPoint2;
@@ -47,6 +47,8 @@ class ImgLabel : public QLabel
       bool m_bMouseAtTemplateBottomEdge;
       bool m_bMouseAtTemplateLeftEdge;
       bool m_bMouseAtTemplateRightEdge;
+
+      int m_nXNewPos, m_nYNewPos;   // used in the rubber-band movement
 
       void setTemplateFlags(bool status);
       void checkTemplateRegions(int mouseX, int mouseY);

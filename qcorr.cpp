@@ -614,8 +614,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
 //   QApplication::restoreOverrideCursor();
 
-//   return fCorr;
-   return fMax;
+   return fCorr;
+//   return fMax;
 }
 
 void Qcorr::displayImage(QImage *image, QLabel *label)
@@ -628,6 +628,8 @@ void Qcorr::displayImageLabel(QImage *image, ImgLabel *label)
 {
    label->setPixmap(QPixmap::fromImage(*image));
    label->adjustSize();
+   // m_labelLowerRightCornerPoint must be set here (in the parent) because the label size can change dynamically
+   label->m_labelLowerRightCornerPoint = QPoint(label->width(), label->height());
 }
 
 QImage & Qcorr::convertToGrayScale(QImage *image)
