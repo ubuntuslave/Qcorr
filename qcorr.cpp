@@ -169,7 +169,7 @@ void Qcorr::viewCorrMap()
 {
    if(action_Correlation_Map->isChecked())
       {
-      m_targetImage_label->setImage(*m_corrMapImage);
+      m_targetImage_label->overlayImage(*m_corrMapImage);
       }
    else
       {
@@ -228,7 +228,10 @@ void Qcorr::correlate()
                            m_matchingPoint.setY(m_nYoffset);
             m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
 
-            this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel));
+            this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
+                                             + "\tat <b>(" + QString::number(m_nXoffset) + ", "
+                                             + QString::number(m_nYoffset) + ")px</b>"
+                                             );
 //            m_targetImage_label->setImage(*m_corrMapImage);
 
             action_Correlation_Map->setEnabled(true);
@@ -279,7 +282,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //      out << quint8(imgTarget[byteN]);
 //   }
 
-//   QApplication::setOverrideCursor(Qt::WaitCursor);
+   QApplication::setOverrideCursor(Qt::WaitCursor);
 
 
    int i, j, k, n, x, y, total;
@@ -292,7 +295,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    double dXSize, dYSize;
 
 
-//   imageP II1, II2, Ifft1, Ifft2, Iblur, pyramid1[8], pyramid2[8];
+//   QImage II1, II2, Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
+   QImage Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
 
    // temporarily here because dimensions are not passed directly
    // Target Image dimensions:
@@ -319,25 +323,26 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    }
 
    // cast pfTraversingTemplate into buffer of type float
-//   float afImgTemplate[sizeT]; // it's better to allocate memory with "new", so big pictures don't cause segmentation faults
+//   float afImgTemplate[sizeT];
+   // it's better to allocate memory with "new", so big pictures don't cause segmentation faults
    float *afImgTemplate = new float[sizeT];
    for (int byteN = 0; byteN < sizeT; ++byteN) {
       afImgTemplate[byteN] = (float) imgTemplate[byteN];
    }
 
 
-//   /*
-//    * create pfTraversingTarget and pfTraversingTemplate pyramids with original images at base;
-//    * if no multiresolution is used, pyramids consist of only one level.
-//    */
-//   pyramid1[0] = II1; /* base: original pfTraversingTarget    */
-//   pyramid2[0] = II2; /* base: original pfTraversingTemplate */
+   /*
+    * create pfTraversingTarget and pfTraversingTemplate pyramids with original images at base;
+    * if no multiresolution is used, pyramids consist of only one level.
+    */
+   pyramidTarget[0] = *m_grayRightImage; // base: original traversed target
+   pyramidTemplate[0] = *m_templateImage; // base: original traversing template
 
 // CARLOS: needs review from this point on... (and perhaps above, also) vvvvvvvvvvvvvv
 
    if (bMultires)
       {
-         /* set lowest resolution for pyramid1 (empirically tested) */
+         /* set lowest resolution for pyramidTarget (empirically tested) */
          switch (nMethod)
             {
             case CROSS_CORR:
@@ -352,7 +357,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //               break;
             }
 
-         /* update lowres if pyramid2 will become too small  */
+         /* update lowres if pyramidTemplate will become too small  */
          for (k = 1; (wI >> k) >= lowres && (hI >> k) >= lowres; k++)
             ;
          for (k--; (wT >> k) < 4 || (hT >> k) < 4; k--)
@@ -361,13 +366,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
          /* compute lower-res versions for remaining pyramid levels */
          for (k = 1; (wI >> k) >= lowres && (hI >> k) >= lowres; k++)
             {
-//               pyramid1[k] = NEWIMAGE;
-//               pyramid2[k] = NEWIMAGE;
+//               pyramidTarget[k] = NEWIMAGE;
+//               pyramidTemplate[k] = NEWIMAGE;
 //// !!!!!!!!!!
 //               // CARLOS: The resize must be done with a function (Perhaps, OpenCV)
-//               IP_resize(pyramid1[k - 1], wI >> k, hI >> k, TRIANGLE, pyramid1[k]);
-//               IP_resize(pyramid2[k - 1], wT >> k, hT >> k, TRIANGLE,
-//                     pyramid2[k]);
+//               IP_resize(pyramidTarget[k - 1], wI >> k, hI >> k, TRIANGLE, pyramidTarget[k]);
+//               IP_resize(pyramidTemplate[k - 1], wT >> k, hT >> k, TRIANGLE,
+//                     pyramidTemplate[k]);
             }
          mxlevel = k - 1;
       }
@@ -407,14 +412,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    for (n = mxlevel; n >= 0; n--)
       {
 //         /* init vars based on pyramid at level n */
-//         wI = pyramid1[n]->width;
-//         hI = pyramid1[n]->height;
-//         wT = pyramid2[n]->width;
-//         hT = pyramid2[n]->height;
+//         wI = pyramidTarget[n]->width;
+//         hI = pyramidTarget[n]->height;
+//         wT = pyramidTemplate[n]->width;
+//         hT = pyramidTemplate[n]->height;
 
          /* pointers to pfTraversingTarget and pfTraversingTemplate data */
-//         pfImgTarget = (float *) pyramid1[n]->buf[0]; /* pfTraversingTarget    ptr */
-//         pfImgTemplate = (float *) pyramid2[n]->buf[0]; /* pfTraversingTemplate ptr */
+//         pfImgTarget = (float *) pyramidTarget[n]->buf[0]; /* pfTraversingTarget    ptr */
+//         pfImgTemplate = (float *) pyramidTemplate[n]->buf[0]; /* pfTraversingTemplate ptr */
          pfImgTarget = afImgTarget; //[0]; /* pfTraversingTarget    ptr */
          pfImgTemplate = afImgTemplate; //[0]; /* pfTraversingTemplate ptr */
 
@@ -424,7 +429,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
          switch (nMethod)
             {
-            case CROSS_CORR: /* cross correlation */
+            case CROSS_CORR:
+               /*  CROSS_CORR (cross correlation):
+                *             C(u,v) = sum of {T(x,y) * I(x-u,y-v)}
+                *                      --------------------------------
+                *                      sqrt{ sum of {I(x-u,y-v)^2}}
+                */
 
                // slide Template across the Target (pixel-by-pixel)
                for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
@@ -526,7 +536,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   }
                break;
 
-            case SUM_SQ_DIFF: /* sum of squared differences */
+            case SUM_SQ_DIFF:
+               /*  SUM_SQ_DIFF (sum of squared differences):
+                *             C(u,v) = sum of {T(x,y)-I(x-u,y-v)}^2
+                *                      ------------------------------
+                *                      sqrt{ sum of {I(x-u,y-v)^2}}
+                */
                for (y = yI; y <= nYTraverse; y++)  // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { /* visit rows   */
                      for (x = xI; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
@@ -565,8 +580,6 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                                }
 
                             afCorrValues[nCorrCounter] = fCorr; // Save correlation value of this round
-
- //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
                             nCorrCounter++;
                         } // next column
                   } // next row
@@ -617,76 +630,127 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                         }
                   }
                break;
-//
-//            case CORR_COEFF: /* correlation coefficient */
-//               /* compute pfTraversingTemplate average */
-//               total = wT * hT;
-//               for (i = fAverage = 0; i < total; i++)
-//                  fAverage += pfImgTemplate[i];
-//               fAverage /= total;
-//
-//               /* subtract average from template */
-//               for (i = 0; i < total; i++)
-//                  pfImgTemplate[i] -= fAverage;
-//
-//               /* compute template power */
-//               for (i = fTemplatePower = 0; i < total; i++)
-//                  fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
-//
+
+            case CORR_COEFF:
+               /* CORR_COEFF (correlation coefficient):
+                *             C(u,v) = sum of {(T(x,y)-Tavg) * (I(x-u,y-v)-Iavg)}
+                *                      -----------------------------------------------------
+                *                      sqrt{sum{(T(x,y)-Tavg)^2} * sum{(I(x-u,y-v)-Iavg)^2}}
+                */
+
+                /* compute pfTraversingTemplate average */
+               total = wT * hT;
+               for (i = fAverage = 0; i < total; i++)
+                  fAverage += pfImgTemplate[i];
+               fAverage /= total;
+
+               /* subtract average from template */
+               for (i = 0; i < total; i++)
+                  pfImgTemplate[i] -= fAverage;
+
+               /* compute template power */
+               for (i = fTemplatePower = 0; i < total; i++)
+                  fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
+
+               // CARLOS: this following averaging process of the Target Image is done in individual segments inside the loops
 //               /* compute local pfTraversingTarget average: blur with box filter */
 //               dXSize = wT + !(wT % 2); /* make filter width  odd */
 //               dYSize = hT + !(hT % 2); /* make filter height odd */
-//               IP_blur(pyramid1[n], dXSize, dYSize, Iblur = NEWIMAGE);
+//               IP_blur(pyramidTarget[n], dXSize, dYSize, Iblur = NEWIMAGE);
 //
 //               /* subtract local pfTraversingTarget averages from pixels */
-//               IP_subtractImage(pyramid1[n], Iblur, pyramid1[n]);
+//               IP_subtractImage(pyramidTarget[n], Iblur, pyramidTarget[n]);
 //               IP_freeImage(Iblur);
-//
-//               for (y = yI; y <= nYTraverse; y++)
-//                  { /* visit rows   */
-//                     for (x = xI; x <= nXTraverse; x++)
-//                        { /* slide window */
-//                           fSumTop = fSumBottom = 0;
-//                           pfTraversingTarget = pfImgTarget + y * wI + x;/* avgs  were  subtracted  */
-//                           pfTraversingTemplate = pfImgTemplate; /* from pfTraversingTarget and pfTraversingTemplate */
-//
-//                           fTargetPower = 0;
-//                           pfTraversingTarget = pfImgTarget + y * wI + x;
-//                           for (i = 0; i < hT; i++)
-//                              { /* convolution  */
-//                                 for (j = 0; j < wT; j++)
-//                                    {
-//                                       fSumTop += (pfTraversingTemplate[j] * pfTraversingTarget[j]);
-//                                       fTargetPower += (pfTraversingTarget[j] * pfTraversingTarget[j]);
-//                                    }
-//                                 pfTraversingTarget += wI;
-//                                 pfTraversingTemplate += wT;
-//                              }
-//
-//                           fSumBottom = fTargetPower * fTemplatePower;
-//                           fCorr = fSumTop / sqrt(fSumBottom);
-//                           if (fCorr > fMax)
-//                              {
-//                                 fMax = fCorr;
-//                                 dx = x;
-//                                 dy = y;
-//                              }
-//                        }
-//                  }
-//
-//               /* update search window or set final correlation value */
-//               if (n)
-//                  { /* set search window for next pyramid level */
-//                     xI = MAX(0, 2 * dx - n);
-//                     yI = MAX(0, 2 * dy - n);
-//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
-//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
-//                  }
-//               else
-//                  { /* set correlation value at final level */
-//                     fCorr = fMax;
-//                  }
-//               break;
+
+               for (y = yI; y <= nYTraverse; y++)
+                  { /* visit rows   */
+                  for (x = xI; x <= nXTraverse; x++)
+                     { /* slide window */
+
+                     fSumTop = fSumBottom = 0;
+                     pfTraversingTarget = pfImgTarget + (y * wI) + x;/* avgs  were  subtracted  */
+                     pfTraversingTemplate = pfImgTemplate; /* from pfTraversingTarget and pfTraversingTemplate */
+
+                     // compute average on the traversed target image segment
+                     for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
+                        fAverage += pfTraversingTarget[i];
+
+                     fAverage /= total;
+
+                     // subtract average on the traversed target image segment
+                     for (i = 0; i < total; i++)
+                        pfTraversingTarget[i] -= fAverage;
+
+                     fTargetPower = 0;
+                     //                           pfTraversingTarget = pfImgTarget + y * wI + x;
+                     for (i = 0; i < hT; i++)
+                        { /* convolution  */
+                        for (j = 0; j < wT; j++)
+                           {
+                           fSumTop += (pfTraversingTemplate[j] * pfTraversingTarget[j]);
+                           fTargetPower += (pfTraversingTarget[j] * pfTraversingTarget[j]);
+                           }
+                        pfTraversingTarget += wI;
+                        pfTraversingTemplate += wT;
+                        }
+
+                     fSumBottom = fTargetPower * fTemplatePower;
+                     fCorr = fSumTop / sqrt(fSumBottom);
+                     if (fCorr > fMax)
+                        {
+                        fMax = fCorr;
+                        *dx = x;
+                        *dy = y;
+                        }
+                     // Also, keep track of the minimum correlation found (for mapping purposes)
+                     if (fCorr < fMin)
+                        {
+                           fMin = fCorr;
+                        }
+
+                     afCorrValues[nCorrCounter] = fCorr; // Save correlation value of this round
+                     nCorrCounter++;
+                     } // next column
+                  } // next row
+
+               /* update search window or set final correlation value */
+               if (n)
+                  { /* set search window for next pyramid level */
+//                  xI = MAX(0, 2 * dx - n);
+//                  yI = MAX(0, 2 * dy - n);
+//                  nXTraverse = MIN(2 * wI, 2 * dx + n);
+//                  nYTraverse = MIN(2 * hI, 2 * dy + n);
+                  }
+               else
+                  { /* set correlation value at final level */
+                  fCorr = fMax;
+
+                  nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
+
+                  // The correlation values stored in the array afCorrValues are already normalized
+                  // there is no need to divide by the square root of the powers
+                  for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                     { // visit rows
+                        for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                           { // visit columns
+                           // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
+//                           afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
+
+                           // Interpolate values from 0 to 1 between fMin and fMax
+                           // x_normalized = (x - min) / (max - min)
+                           afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
+
+                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+
+                           // Paint pixel in gray-scale correlation map
+                           nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                           m_corrMapImage->setPixel(x, y, nValue);
+                           nCorrCounter++;
+                           }
+                        std::cout << std::endl;
+                     }
+                  }
+               break;
 //
 //            case PHASE_CORR: /* Fourier phase correlation */
 //               IP_crop(I2, 0, 0, wI, hI, II2); /* pad template      */
@@ -750,14 +814,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //      IP_freeImage(II2);
 //   for (n = 1; n <= mxlevel; n++)
 //      {
-//         IP_freeImage(pyramid1[n]);
-//         IP_freeImage(pyramid2[n]);
+//         IP_freeImage(pyramidTarget[n]);
+//         IP_freeImage(pyramidTemplate[n]);
 //      }
 
 //   *xx = dx;
 //   *yy = dy;
 
-//   QApplication::restoreOverrideCursor();
+   QApplication::restoreOverrideCursor();
 
 
 // Deallocate arrays from memory

@@ -23,16 +23,19 @@ class TargetImgLabel : public QLabel
       virtual
       ~TargetImgLabel();
       void setImage(const QImage &labelImage);
+      void overlayImage(const QImage &otherImage);
       void drawEnclosedMatch(const QPoint originPoint, const QSize rectSize);
       void eraseEnclosedMatch();
 
    private:
       QImage *m_image;
+      QImage *m_overlayImage;
       QPoint m_originPoint;
       QSize m_rectSize;
 
       bool m_bHasCorrResults;
       bool m_bHasImage;
+      bool m_bHasOverlayImage;
 
    protected:
 //       void mousePressEvent(QMouseEvent *event);
