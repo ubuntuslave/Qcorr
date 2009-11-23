@@ -51,6 +51,7 @@ ImgLabel::mousePressEvent(QMouseEvent *event)
       }
    else
       {
+         this->setCursor(Qt::CrossCursor);
          m_rubberBand->hide();
       }
 

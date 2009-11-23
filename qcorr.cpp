@@ -147,14 +147,14 @@ void Qcorr::browseRightImage()
          return;
       }
 
-      //        m_targetImage_label->setImage(*m_rightImage);
+     m_targetImage_label->setImage(*m_rightImage);
 
       // CARLOS: just for testing:
       // To verify if the data has been converted to grayscale,
       // and that QImage's bits() function uses only the data pixels without any formatting headers
-      m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
-
-      m_targetImage_label->setImage(*m_grayRightImage);
+//      m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
+//
+//      m_targetImage_label->setImage(*m_grayRightImage);
       //
       //        if(!fileDumpQImage(fileName + ".txt"))
       //            return;
@@ -191,14 +191,14 @@ void Qcorr::correlate()
 
       if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
          {
-         m_targetImage_label->eraseEnclosedMatch();
+         if(!m_leftImage_label->m_rubberBand->isVisible())
+            m_targetImage_label->eraseEnclosedMatch();
          }
       else
          {
          // cast images to a 1-channel (conver them to grayscale images)
          m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
          *m_templateImage = convertToGrayScale(m_templateImage);
-
 
 //         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
@@ -208,9 +208,6 @@ void Qcorr::correlate()
                                             &m_nXoffset, &m_nYoffset,
                                             m_corrMethodDialog->getMethod(),
                                             false);
-
-
-
          // CARLOS: just for testing:
 //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
 //
@@ -220,12 +217,12 @@ void Qcorr::correlate()
 
 
          // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
-         if(fCorrLevel >= 0)
+         if(fCorrLevel >= 0.0)
             {
-//            m_matchingPoint = m_leftImage_label->m_rubberBand->pos();   // TEMP!!!!
-            // CARLOS: it should eventually done this way:
-                           m_matchingPoint.setX(m_nXoffset);
-                           m_matchingPoint.setY(m_nYoffset);
+            m_targetImage_label->setImage(*m_rightImage);   // reset Image
+
+            m_matchingPoint.setX(m_nXoffset);
+            m_matchingPoint.setY(m_nYoffset);
             m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
 
             this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
@@ -310,9 +307,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    int sizeT = wT*hT;
 
    /* error checking: size of pfTraversingTarget I1 must be >= than pfTraversingTemplate I2 */
-   if (!(wT <= wI && hT <= hI))
+   if ((wT > wI) || (hT > hI))
       {
-      QMessageBox::warning(this, tr("QCorr"), tr("pfTraversingTarget is smaller than pfTraversingTemplate\n"));
+      QMessageBox::warning(this, tr("QCorr"), tr("Traversed Target Image is smaller than Traversing Template\n"));
+      QApplication::restoreOverrideCursor();
       return 0.;
       }
 
@@ -434,6 +432,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 *             C(u,v) = sum of {T(x,y) * I(x-u,y-v)}
                 *                      --------------------------------
                 *                      sqrt{ sum of {I(x-u,y-v)^2}}
+                *     Levels:
+                *             C = 1 Perfect Match
+                *             0 < C < 1: Some Match (closer to 1 is higher)
+                *             C = 0: No Match       *
                 */
 
                // slide Template across the Target (pixel-by-pixel)
@@ -507,7 +509,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
                   // Normalize fMax and fMin
                   fMax = fCorr;  // because it's already normalized
-                  fMin = fMin / sqrt(fTemplatePower);
+                  fMin = fMin / fSquareRootOfTemplatePower;
 
                   nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
@@ -521,12 +523,15 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
-                           afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
+                           if( afCorrValues[nCorrCounter] < 0)
+                              afCorrValues[nCorrCounter] = 0;
+                           else
+                              afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
                            std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                            // Paint pixel in gray-scale correlation map
-                           nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                           nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                            m_corrMapImage->setPixel(x, y, nValue);
                            nCorrCounter++;
                            }
@@ -541,6 +546,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 *             C(u,v) = sum of {T(x,y)-I(x-u,y-v)}^2
                 *                      ------------------------------
                 *                      sqrt{ sum of {I(x-u,y-v)^2}}
+                *     Levels:
+                *             C = 0 Perfect Match
+                *             0 < C < 1: Some Match (closer to 0 is higher)
+                *             C = 1: No Match
                 */
                for (y = yI; y <= nYTraverse; y++)  // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { /* visit rows   */
@@ -622,7 +631,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                               std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                               // Paint pixel in gray-scale correlation map
-                              nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                              nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                               m_corrMapImage->setPixel(x, y, nValue);
                               nCorrCounter++;
                               }
@@ -636,6 +645,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 *             C(u,v) = sum of {(T(x,y)-Tavg) * (I(x-u,y-v)-Iavg)}
                 *                      -----------------------------------------------------
                 *                      sqrt{sum{(T(x,y)-Tavg)^2} * sum{(I(x-u,y-v)-Iavg)^2}}
+                *     Levels:
+                *             C = 1 Perfect Match
+                *             C = 0: No Match
+                *             -1 < C < 0: Mismatch
                 */
 
                 /* compute pfTraversingTemplate average */
@@ -652,7 +665,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                for (i = fTemplatePower = 0; i < total; i++)
                   fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
 
-               // CARLOS: this following averaging process of the Target Image is done in individual segments inside the loops
+               // CARLOS: this following averaging process of the Target Image is done in a similar way as with the template
 //               /* compute local pfTraversingTarget average: blur with box filter */
 //               dXSize = wT + !(wT % 2); /* make filter width  odd */
 //               dYSize = hT + !(hT % 2); /* make filter height odd */
@@ -661,6 +674,19 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //               /* subtract local pfTraversingTarget averages from pixels */
 //               IP_subtractImage(pyramidTarget[n], Iblur, pyramidTarget[n]);
 //               IP_freeImage(Iblur);
+
+               // compute average on the entire traversed target image segment
+               //     Not sure if the average has to be taken from the whole image
+               total = wI * hI;
+                  for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
+                     fAverage += pfImgTarget[i];
+
+                  fAverage /= total;
+
+                  // subtract average on the traversed target image segment
+                  for (i = 0; i < total; i++)
+                     pfImgTarget[i] -= fAverage;
+
 
                for (y = yI; y <= nYTraverse; y++)
                   { /* visit rows   */
@@ -671,15 +697,16 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      pfTraversingTarget = pfImgTarget + (y * wI) + x;/* avgs  were  subtracted  */
                      pfTraversingTemplate = pfImgTemplate; /* from pfTraversingTarget and pfTraversingTemplate */
 
-                     // compute average on the traversed target image segment
-                     for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
-                        fAverage += pfTraversingTarget[i];
-
-                     fAverage /= total;
-
-                     // subtract average on the traversed target image segment
-                     for (i = 0; i < total; i++)
-                        pfTraversingTarget[i] -= fAverage;
+//                     // compute average on the traversed target image segment
+                     // which is wrong, so it's commented out!
+//                     for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
+//                        fAverage += pfTraversingTarget[i];
+//
+//                     fAverage /= total;
+//
+//                     // subtract average on the traversed target image segment
+//                     for (i = 0; i < total; i++)
+//                        pfTraversingTarget[i] -= fAverage;
 
                      fTargetPower = 0;
                      //                           pfTraversingTarget = pfImgTarget + y * wI + x;
@@ -733,17 +760,19 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      { // visit rows
                         for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
-                           // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
-//                           afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
-
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
-                           afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
+                           if(afCorrValues[nCorrCounter] <= 0.0)
+                              afCorrValues[nCorrCounter] = 0.0;  // Lowest normalized value. There is no correlation match
+                           // All other values are already normalized between 0 and 1
+                           // Just interpolate them:
+                           else
+                              afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
                            std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                            // Paint pixel in gray-scale correlation map
-                           nValue = (int)(afCorrValues[nCorrCounter] * 255); // normalized correlation value for a grayscale
+                           nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                            m_corrMapImage->setPixel(x, y, nValue);
                            nCorrCounter++;
                            }

@@ -24,9 +24,9 @@ TargetImgLabel::~TargetImgLabel()
 
 void TargetImgLabel::setImage(const QImage &labelImage)
 {
-//   m_image = new QImage(labelImage);   //, QImage::Format_ARGB32_Premultiplied);
-   m_image = new QImage(labelImage.size(), QImage::Format_ARGB32_Premultiplied);
-   *m_image = labelImage;
+   m_image = new QImage(labelImage);
+//   m_image = new QImage(labelImage.size(), QImage::Format_ARGB32_Premultiplied);
+//   *m_image = labelImage;
 
    this->resize(m_image->size());
    m_bHasImage = true;
@@ -36,12 +36,12 @@ void TargetImgLabel::setImage(const QImage &labelImage)
 }
 void TargetImgLabel::overlayImage(const QImage &otherImage)
 {
-   m_overlayImage = new QImage(otherImage.size(), QImage::Format_ARGB32_Premultiplied);
-   *m_overlayImage = otherImage;
+   m_overlayImage = new QImage(otherImage);
+//   m_overlayImage = new QImage(otherImage.size(), QImage::Format_ARGB32_Premultiplied);
+//   *m_overlayImage = otherImage;
 
 //   this->resize(m_overlayImage->size());
    m_bHasOverlayImage = true;
-
    update();
 }
 // CARLOS: just for testing
@@ -76,7 +76,7 @@ void TargetImgLabel::paintEvent(QPaintEvent * /* event */)
       if(m_bHasOverlayImage)
          {
 //         painter.setCompositionMode(QPainter::CompositionMode_SourceOver);  // Opaque image
-//         painter.setCompositionMode(QPainter::CompositionMode_Exclusion);   // Cool transparency overlay
+//         painter.setCompositionMode(QPainter::CompositionMode_Exclusion);   // Bluish transparency overlay
          painter.setCompositionMode(QPainter::CompositionMode_Screen);
          painter.drawImage(0, 0, *m_overlayImage);
          }
@@ -115,6 +115,7 @@ void TargetImgLabel::drawEnclosedMatch(const QPoint originPoint, const QSize rec
 void TargetImgLabel::eraseEnclosedMatch()
 {
    m_bHasCorrResults = false;
+   m_bHasOverlayImage = false;
 }
 
 
