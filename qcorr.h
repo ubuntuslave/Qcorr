@@ -72,7 +72,7 @@ private:
     */
 
     // images are passed with 1 channel already
-    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int nMethod, bool bMultires);
+    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int &dx, int &dy, int nMethod, bool bMultires);
     // casting float happens inside
 
     QImage & convertToGrayScale(QImage *image);

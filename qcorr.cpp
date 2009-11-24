@@ -205,7 +205,7 @@ void Qcorr::correlate()
 
          float fCorrLevel = findCorrelation( m_grayRightImage->bits(),
                                             m_templateImage->bits(),
-                                            &m_nXoffset, &m_nYoffset,
+                                            m_nXoffset, m_nYoffset,
                                             m_corrMethodDialog->getMethod(),
                                             false);
          // CARLOS: just for testing:
@@ -248,7 +248,7 @@ void Qcorr::correlate()
 
 // end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int *dx, int *dy, int nMethod, bool bMultires)
+float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int &dx, int &dy, int nMethod, bool bMultires)
 {
    // Helped to test that the bits dumped by QImage's bits() function
    // is the actual data (pixels) of the image without any header.
@@ -283,7 +283,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
 
    int i, j, k, n, x, y, total;
-   int xI, nXTraverse, yI, nYTraverse, mxlevel, lowres;
+   int nXTraverse, nYTraverse, mxlevel, lowres;
    int nPixelNumber;
    float fSumTop, fSumBottom, fDiff, fCorr;
    float fAverage, fTemplatePower, fTargetPower;
@@ -364,6 +364,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
          /* compute lower-res versions for remaining pyramid levels */
          for (k = 1; (wI >> k) >= lowres && (hI >> k) >= lowres; k++)
             {
+//               pyramidTarget[k] = m_grayRightImage->scaled(wI, hI,)
+
+
 //               pyramidTarget[k] = NEWIMAGE;
 //               pyramidTemplate[k] = NEWIMAGE;
 //// !!!!!!!!!!
@@ -377,12 +380,11 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    else
       mxlevel = 0;
 
-   /* init search window */
-   xI = 0;
-   yI = 0;
    // CARLOS: changed/fixed the following relation (it was omitting the last pixel on the edge)
-   nXTraverse = (wI - wT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
-   nYTraverse = (hI - hT + 1) >> mxlevel;
+//   nXTraverse = (wI - wT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
+//   nYTraverse = (hI - hT + 1) >> mxlevel;
+   nXTraverse = (wI - wT) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
+   nYTraverse = (hI - hT) >> mxlevel;
 
    // ---------------------------------------------
    // To be used to display a brightness map based on correlation values at each evaluated pixel
@@ -439,9 +441,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 */
 
                // slide Template across the Target (pixel-by-pixel)
-               for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+               for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { // visit rows
-                     for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                     for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                         { // visit columns
                            fSumTop = fSumBottom = 0;  // Clear sums to 0 for each Template-Target comparison
 
@@ -469,8 +471,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            if (fCorr > fMax)
                               {
                                  fMax = fCorr;
-                                 *dx = x;
-                                 *dy = y;
+                                 dx = x;
+                                 dy = y;
                               }
 
                            // Also, keep track of the minimum correlation found (for mapping purposes)
@@ -514,9 +516,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
                   // Normalize all the correlation values stored in the array afCorrValues
-                  for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                  for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                      { // visit rows
-                        for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                        for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
                            afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
@@ -551,9 +553,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 *             0 < C < 1: Some Match (closer to 0 is higher)
                 *             C = 1: No Match
                 */
-               for (y = yI; y <= nYTraverse; y++)  // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+               for (y = 0; y <= nYTraverse; y++)  // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { /* visit rows   */
-                     for (x = xI; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
+                     for (x = 0; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
                         { /* slide window */
                            fSumTop = fSumBottom = 0;
 
@@ -578,8 +580,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            if (fCorr < fMin)
                               {
                                  fMin = fCorr;
-                                 *dx = x;
-                                 *dy = y;
+                                 dx = x;
+                                 dy = y;
                               }
 
                             // Also, keep track of the maximum correlation found (for mapping purposes)
@@ -617,9 +619,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
                      // Normalize all the correlation values stored in the array afCorrValues
-                     for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                     for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                         { // visit rows
-                           for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                           for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                               { // visit columns
                               // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
                               afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
@@ -688,16 +690,16 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      pfImgTarget[i] -= fAverage;
 
 
-               for (y = yI; y <= nYTraverse; y++)
+               for (y = 0; y <= nYTraverse; y++)
                   { /* visit rows   */
-                  for (x = xI; x <= nXTraverse; x++)
+                  for (x = 0; x <= nXTraverse; x++)
                      { /* slide window */
 
                      fSumTop = fSumBottom = 0;
                      pfTraversingTarget = pfImgTarget + (y * wI) + x;/* avgs  were  subtracted  */
                      pfTraversingTemplate = pfImgTemplate; /* from pfTraversingTarget and pfTraversingTemplate */
 
-//                     // compute average on the traversed target image segment
+                     // compute average on the traversed target image segment
                      // which is wrong, so it's commented out!
 //                     for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
 //                        fAverage += pfTraversingTarget[i];
@@ -726,8 +728,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      if (fCorr > fMax)
                         {
                         fMax = fCorr;
-                        *dx = x;
-                        *dy = y;
+                        dx = x;
+                        dy = y;
                         }
                      // Also, keep track of the minimum correlation found (for mapping purposes)
                      if (fCorr < fMin)
@@ -756,9 +758,9 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 
                   // The correlation values stored in the array afCorrValues are already normalized
                   // there is no need to divide by the square root of the powers
-                  for (y = yI; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                  for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                      { // visit rows
-                        for (x = xI; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                        for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
