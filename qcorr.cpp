@@ -203,53 +203,73 @@ void Qcorr::correlate()
       else
          {
          // cast images to an 8-bit channel (convert them to gray-scale images)
-         m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
-
-         *m_templateImage = convertToGrayScale(m_templateImage);
-
-//         std::cout << "Gray Scale Template Image depth: " <<  m_templateImage->depth() << "-bit" << std::endl;
-//         std::cout << "Number of Bytes: " << m_templateImage->numBytes() << "\tNumber of Colors: " << m_grayRightImage->numColors() << std::endl;
+//         m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
 //
-//         std::cout << "Gray Scale Image depth: " <<  m_grayRightImage->depth() << "-bit" << std::endl;
+//         m_grayTemplateImage = new QImage(convertToGrayScale(m_templateImage));
+//
+//         std::cout << "Gray Scale Template Image depth: " <<  m_grayTemplateImage->depth() << "-bit" << std::endl;
+//         std::cout << "Number of Bytes: " << m_grayTemplateImage->numBytes() << "\tNumber of Colors: " << m_grayTemplateImage->numColors() << std::endl;
+//         std::cout << "W = " << m_grayTemplateImage->width() << "\tH = " << m_grayTemplateImage->height() << std::endl;
+//         std::cout << "Template Image depth: " <<  m_templateImage->depth() << "-bit" << std::endl;
+//         std::cout << "Number of Bytes: " << m_templateImage->numBytes() << "\tNumber of Colors: " << m_templateImage->numColors() << std::endl;
+//         std::cout << "W = " << m_templateImage->width() << "\tH = " << m_templateImage->height() << std::endl;
+//
+//         std::cout << "Gray Scale Right Image depth: " <<  m_grayRightImage->depth() << "-bit" << std::endl;
 //         std::cout << "Number of Bytes: " << m_grayRightImage->numBytes() << "\tNumber of Colors: " << m_grayRightImage->numColors() << std::endl;
+//         std::cout << "W = " << m_grayRightImage->width() << "\tH = " << m_grayRightImage->height() << std::endl;
+//         std::cout << "Right Image depth: " <<  m_rightImage->depth() << "-bit" << std::endl;
+//         std::cout << "Number of Bytes: " << m_rightImage->numBytes() << "\tNumber of Colors: " << m_rightImage->numColors() << std::endl;
+//         std::cout << "W = " << m_rightImage->width() << "\tH = " << m_rightImage->height() << std::endl;
 
 //         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
+//         if(m_grayRightImage->isGrayscale() && m_grayTemplateImage->isGrayscale())
+//            {
+//            float fCorrLevel = findCorrelation( m_grayRightImage->bits(),
+//                                                m_grayTemplateImage->bits(),
+//                                                m_nXoffset, m_nYoffset,
+//                                                m_corrMethodDialog->getMethod(),
+//                                                false);
+         // TODO: pass more parameters such as width, height, and depth
+         //       in order to become a QT independent procedure
+            float fCorrLevel = findCorrelation( m_rightImage->bits(),
+                                                m_templateImage->bits(),
+                                                m_nXoffset, m_nYoffset,
+                                                m_corrMethodDialog->getMethod(),
+                                                false);
 
-         float fCorrLevel = findCorrelation( m_grayRightImage->bits(),
-                                            m_templateImage->bits(),
-                                            m_nXoffset, m_nYoffset,
-                                            m_corrMethodDialog->getMethod(),
-                                            false);
-         // CARLOS: just for testing:
-//         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
-//
-//         this->m_status_label->setText(
-//               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
-//               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+
+            // CARLOS: just for testing:
+   //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
+   //
+   //         this->m_status_label->setText(
+   //               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
+   //               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
 
 
-         // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
-         if(fCorrLevel >= 0.0)
-            {
-            m_targetImage_label->setImage(*m_rightImage);   // reset Image
+            // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
+            if(fCorrLevel >= 0.0)
+               {
+               m_targetImage_label->setImage(*m_rightImage);   // reset Image
 
-            m_matchingPoint.setX(m_nXoffset);
-            m_matchingPoint.setY(m_nYoffset);
-            m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+               m_matchingPoint.setX(m_nXoffset);
+               m_matchingPoint.setY(m_nYoffset);
+               m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
 
-            this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
-                                             + "\tat <b>(" + QString::number(m_nXoffset) + ", "
-                                             + QString::number(m_nYoffset) + ")px</b>"
-                                             );
-//            m_targetImage_label->setImage(*m_corrMapImage);
+               this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
+                                                + "\tat <b>(" + QString::number(m_nXoffset) + ", "
+                                                + QString::number(m_nYoffset) + ")px</b>"
+                                                );
+   //            m_targetImage_label->setImage(*m_corrMapImage);
 
-            action_Correlation_Map->setEnabled(true);
-            emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
+               action_Correlation_Map->setEnabled(true);
+               emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
 
-            }
-         else
-            m_targetImage_label->eraseEnclosedMatch();
+               }
+            else
+               m_targetImage_label->eraseEnclosedMatch();
+
+//            }
          }
       }
    else
@@ -313,11 +333,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    int wI = m_rightImage->width();
    int hI = m_rightImage->height();
    int sizeI = wI*hI;
+   int depthI = m_rightImage->depth();
 
    // Template Image dimensions:
    int wT = m_templateImage->width();
    int hT = m_templateImage->height();
    int sizeT = wT*hT;
+   int depthT = m_templateImage->depth();
 
    /* error checking: size of pfTraversedTarget I1 must be >= than pfTraversingTemplate I2 */
    if ((wT > wI) || (hT > hI))
@@ -327,27 +349,28 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
       return 0.;
       }
 
-   // cast pfTraversedTarget into buffer of type float
-   float *afImgTarget = new float[sizeI];
-   for (int byteN = 0; byteN < sizeI; ++byteN) {
-      afImgTarget[byteN] = (float) (imgTarget[byteN]);
-   }
+   // cast pfTraversedTarget into buffer of type float as a Gray-Scale image
+   float *afImgTarget = convertToGrayScaleFloat(imgTarget, sizeI, depthI);
+//   float *afImgTarget = new float[sizeI];
+//   for (int byteN = 0; byteN < sizeI; ++byteN) {
+//      afImgTarget[byteN] = (float) (imgTarget[byteN]);
+//   }
 
-   // cast pfTraversingTemplate into buffer of type float
-//   float afImgTemplate[sizeT];
+   // cast pfTraversingTemplate into buffer of type float s a Gray-Scale image
+   float *afImgTemplate = convertToGrayScaleFloat(imgTemplate, sizeT, depthT);
    // it's better to allocate memory with "new", so big pictures don't cause segmentation faults
-   float *afImgTemplate = new float[sizeT];
-   for (int byteN = 0; byteN < sizeT; ++byteN) {
-      afImgTemplate[byteN] = (float) (imgTemplate[byteN]);
-   }
+//   float *afImgTemplate = new float[sizeT];
+//   for (int byteN = 0; byteN < sizeT; ++byteN) {
+//      afImgTemplate[byteN] = (float) (imgTemplate[byteN]);
+//   }
 
 
    /*
     * create pfTraversedTarget and pfTraversingTemplate pyramids with original images at base;
     * if no multiresolution is used, pyramids consist of only one level.
     */
-   pyramidTarget[0] = *m_grayRightImage; // base: original traversed target
-   pyramidTemplate[0] = *m_templateImage; // base: original traversing template
+//   pyramidTarget[0] = *m_grayRightImage; // base: original traversed target
+//   pyramidTemplate[0] = *m_templateImage; // base: original traversing template
 
 // CARLOS: needs review from this point on... (and perhaps above, also) vvvvvvvvvvvvvv
 
@@ -543,14 +566,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            else
                               afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
-                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+//                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                            // Paint pixel in gray-scale correlation map
                            nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                            m_corrMapImage->setPixel(x, y, nValue);
                            nCorrCounter++;
                            }
-                        std::cout << std::endl;
+//                        std::cout << std::endl;
                      }
 
                   }
@@ -891,23 +914,29 @@ void Qcorr::displayImageLabel(QImage *image, ImgLabel *label)
    label->m_labelLowerRightCornerPoint = QPoint(label->width(), label->height());
 }
 
-QImage & Qcorr::convertToGrayScale(QImage *image)
+float * Qcorr::convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth )
 {
-   QVector<QRgb> colorTab(256);  // for an 8-bit scale color table
+   int offsetBytes = nDepth / 8;
 
-   for(int i=0; i<= 255; i++)
-      {
-         colorTab[i] = qRgb(i,i,i); // For a gray-scale color table
-//         colorTab[i] = qRgb(0,i,0); // For a green-channel color table
-      }
-   m_tempImage = new QImage(image->convertToFormat(QImage::Format_Indexed8, colorTab, Qt::ThresholdDither ));
+   float * afImgGrayBits = new float[nSize];
+   float grayValue = 0.0;
 
-   return *m_tempImage;
+   switch (nDepth) {
+      case 32:
+         for(int i =0; i<nSize; i++)
+            {
+            grayValue = pchImgOriginalBits[i*offsetBytes + 1] * 0.30;  // Red channel
+            grayValue += pchImgOriginalBits[i*offsetBytes + 2] * 0.59;  // Green channel
+            grayValue += pchImgOriginalBits[i*offsetBytes + 3] * 0.11; // Blue channel
+            afImgGrayBits[i] = grayValue;
+            }
+         break;
+      default:
+         break;
+   }
 
-//   this->m_status_label->setText(
-//                                    "GRAY SCALE image has: <b>(" + QString::number(image->numBytes()) +
-//                                    "</b> bytes and <b> " + QString::number(image->numColors()) + "</b> colors"
-//                                    );
+
+   return afImgGrayBits;
 }
 
 // Temp:

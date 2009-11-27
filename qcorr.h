@@ -75,7 +75,7 @@ private:
     float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int &dx, int &dy, int nMethod, bool bMultires);
     // casting float happens inside
 
-    QImage & convertToGrayScale(QImage *image);
+    float * convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth);
     bool fileDumpQImage(const QString &fileName);
 
     int m_nXoffset, m_nYoffset;
@@ -86,6 +86,7 @@ private:
     QImage *m_rightImage;
     QImage *m_templateImage;
     QImage *m_grayRightImage;
+    QImage *m_grayTemplateImage;
     QImage *m_tempImage;
     QImage *m_corrMapImage;
     ImgLabel *m_leftImage_label;
