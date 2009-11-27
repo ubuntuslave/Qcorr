@@ -1,10 +1,6 @@
 #include <QtGui>
 
 #include <iostream>
-//#include <stdio.h>
-//#include <stdlib.h>
-
-//#include <math.h>
 
 #include "qcorr.h"
 #include "globals.h"
@@ -202,38 +198,21 @@ void Qcorr::correlate()
          }
       else
          {
-         // cast images to an 8-bit channel (convert them to gray-scale images)
-//         m_grayRightImage = new QImage(convertToGrayScale(m_rightImage));
-//
-//         m_grayTemplateImage = new QImage(convertToGrayScale(m_templateImage));
-//
-//         std::cout << "Gray Scale Template Image depth: " <<  m_grayTemplateImage->depth() << "-bit" << std::endl;
-//         std::cout << "Number of Bytes: " << m_grayTemplateImage->numBytes() << "\tNumber of Colors: " << m_grayTemplateImage->numColors() << std::endl;
-//         std::cout << "W = " << m_grayTemplateImage->width() << "\tH = " << m_grayTemplateImage->height() << std::endl;
-//         std::cout << "Template Image depth: " <<  m_templateImage->depth() << "-bit" << std::endl;
-//         std::cout << "Number of Bytes: " << m_templateImage->numBytes() << "\tNumber of Colors: " << m_templateImage->numColors() << std::endl;
-//         std::cout << "W = " << m_templateImage->width() << "\tH = " << m_templateImage->height() << std::endl;
-//
-//         std::cout << "Gray Scale Right Image depth: " <<  m_grayRightImage->depth() << "-bit" << std::endl;
-//         std::cout << "Number of Bytes: " << m_grayRightImage->numBytes() << "\tNumber of Colors: " << m_grayRightImage->numColors() << std::endl;
-//         std::cout << "W = " << m_grayRightImage->width() << "\tH = " << m_grayRightImage->height() << std::endl;
-//         std::cout << "Right Image depth: " <<  m_rightImage->depth() << "-bit" << std::endl;
-//         std::cout << "Number of Bytes: " << m_rightImage->numBytes() << "\tNumber of Colors: " << m_rightImage->numColors() << std::endl;
-//         std::cout << "W = " << m_rightImage->width() << "\tH = " << m_rightImage->height() << std::endl;
-
 //         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
 
-//         if(m_grayRightImage->isGrayscale() && m_grayTemplateImage->isGrayscale())
-//            {
-//            float fCorrLevel = findCorrelation( m_grayRightImage->bits(),
-//                                                m_grayTemplateImage->bits(),
-//                                                m_nXoffset, m_nYoffset,
-//                                                m_corrMethodDialog->getMethod(),
-//                                                false);
-         // TODO: pass more parameters such as width, height, and depth
-         //       in order to become a QT independent procedure
-            float fCorrLevel = findCorrelation( m_rightImage->bits(),
-                                                m_templateImage->bits(),
+
+         // Target Image dimensions:
+         int wI = m_rightImage->width();
+         int hI = m_rightImage->height();
+         int depthI = m_rightImage->depth();
+
+         // Template Image dimensions:
+         int wT = m_templateImage->width();
+         int hT = m_templateImage->height();
+         int depthT = m_templateImage->depth();
+
+            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
+                                                m_templateImage->bits(), wT, hT, depthT,
                                                 m_nXoffset, m_nYoffset,
                                                 m_corrMethodDialog->getMethod(),
                                                 false);
@@ -269,7 +248,6 @@ void Qcorr::correlate()
             else
                m_targetImage_label->eraseEnclosedMatch();
 
-//            }
          }
       }
    else
@@ -281,7 +259,8 @@ void Qcorr::correlate()
 
 // end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int &dx, int &dy, int nMethod, bool bMultires)
+float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
+      const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT, int &rnDx, int &rnDy, int nMethod, bool bMultires)
 {
    // Helped to test that the bits dumped by QImage's bits() function
    // is the actual data (pixels) of the image without any header.
@@ -328,42 +307,22 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //   QImage II1, II2, Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
    QImage Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
 
-   // temporarily here because dimensions are not passed directly
-   // Target Image dimensions:
-   int wI = m_rightImage->width();
-   int hI = m_rightImage->height();
-   int sizeI = wI*hI;
-   int depthI = m_rightImage->depth();
-
-   // Template Image dimensions:
-   int wT = m_templateImage->width();
-   int hT = m_templateImage->height();
-   int sizeT = wT*hT;
-   int depthT = m_templateImage->depth();
+   // Images' size:
+   int sizeI = nWI*nHI;
+   int sizeT = nWT*nHT;
 
    /* error checking: size of pfTraversedTarget I1 must be >= than pfTraversingTemplate I2 */
-   if ((wT > wI) || (hT > hI))
+   if ((nWT > nWI) || (nHT > nHI))
       {
       QMessageBox::warning(this, tr("QCorr"), tr("Traversed Target Image is smaller than Traversing Template\n"));
       QApplication::restoreOverrideCursor();
       return 0.;
       }
 
-   // cast pfTraversedTarget into buffer of type float as a Gray-Scale image
-   float *afImgTarget = convertToGrayScaleFloat(imgTarget, sizeI, depthI);
-//   float *afImgTarget = new float[sizeI];
-//   for (int byteN = 0; byteN < sizeI; ++byteN) {
-//      afImgTarget[byteN] = (float) (imgTarget[byteN]);
-//   }
+   // cast images to an 8-bit channel (convert them to gray-scale images) as floats:
+   float *afImgTarget = convertToGrayScaleFloat(imgTarget, sizeI, nDepthI);
 
-   // cast pfTraversingTemplate into buffer of type float s a Gray-Scale image
-   float *afImgTemplate = convertToGrayScaleFloat(imgTemplate, sizeT, depthT);
-   // it's better to allocate memory with "new", so big pictures don't cause segmentation faults
-//   float *afImgTemplate = new float[sizeT];
-//   for (int byteN = 0; byteN < sizeT; ++byteN) {
-//      afImgTemplate[byteN] = (float) (imgTemplate[byteN]);
-//   }
-
+   float *afImgTemplate = convertToGrayScaleFloat(imgTemplate, sizeT, nDepthT);
 
    /*
     * create pfTraversedTarget and pfTraversingTemplate pyramids with original images at base;
@@ -387,28 +346,28 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                lowres = 128;
                break;
 //            case PHASE_CORR:
-//               lowres = MAX(wI, hI); /* disable bMultires */
+//               lowres = MAX(nWI, nHI); /* disable bMultires */
 //               break;
             }
 
          /* update lowres if pyramidTemplate will become too small  */
-         for (k = 1; (wI >> k) >= lowres && (hI >> k) >= lowres; k++)
+         for (k = 1; (nWI >> k) >= lowres && (nHI >> k) >= lowres; k++)
             ;
-         for (k--; (wT >> k) < 4 || (hT >> k) < 4; k--)
+         for (k--; (nWT >> k) < 4 || (nHT >> k) < 4; k--)
             lowres *= 2;
 
          /* compute lower-res versions for remaining pyramid levels */
-         for (k = 1; (wI >> k) >= lowres && (hI >> k) >= lowres; k++)
+         for (k = 1; (nWI >> k) >= lowres && (nHI >> k) >= lowres; k++)
             {
-//               pyramidTarget[k] = m_grayRightImage->scaled(wI, hI,)
+//               pyramidTarget[k] = m_grayRightImage->scaled(nWI, nHI,)
 
 
 //               pyramidTarget[k] = NEWIMAGE;
 //               pyramidTemplate[k] = NEWIMAGE;
 //// !!!!!!!!!!
 //               // CARLOS: The resize must be done with a function (Perhaps, OpenCV)
-//               IP_resize(pyramidTarget[k - 1], wI >> k, hI >> k, TRIANGLE, pyramidTarget[k]);
-//               IP_resize(pyramidTemplate[k - 1], wT >> k, hT >> k, TRIANGLE,
+//               IP_resize(pyramidTarget[k - 1], nWI >> k, nHI >> k, TRIANGLE, pyramidTarget[k]);
+//               IP_resize(pyramidTemplate[k - 1], nWT >> k, nHT >> k, TRIANGLE,
 //                     pyramidTemplate[k]);
             }
          mxlevel = k - 1;
@@ -417,10 +376,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
       mxlevel = 0;
 
    // CARLOS: changed/fixed the following relation (it was omitting the last pixel on the edge)
-//   nXTraverse = (wI - wT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
-//   nYTraverse = (hI - hT + 1) >> mxlevel;
-   nXTraverse = (wI - wT) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
-   nYTraverse = (hI - hT) >> mxlevel;
+//   nXTraverse = (nWI - nWT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
+//   nYTraverse = (nHI - nHT + 1) >> mxlevel;
+   nXTraverse = (nWI - nWT) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
+   nYTraverse = (nHI - nHT) >> mxlevel;
 
    // ---------------------------------------------
    // To be used to display a brightness map based on correlation values at each evaluated pixel
@@ -448,10 +407,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
    for (n = mxlevel; n >= 0; n--)
       {
 //         /* init vars based on pyramid at level n */
-//         wI = pyramidTarget[n]->width;
-//         hI = pyramidTarget[n]->height;
-//         wT = pyramidTemplate[n]->width;
-//         hT = pyramidTemplate[n]->height;
+//         nWI = pyramidTarget[n]->width;
+//         nHI = pyramidTarget[n]->height;
+//         nWT = pyramidTemplate[n]->width;
+//         nHT = pyramidTemplate[n]->height;
 
          /* pointers to pfTraversedTarget and pfTraversingTemplate data */
 //         pfImgTarget = (float *) pyramidTarget[n]->buf[0]; /* pfTraversedTarget    ptr */
@@ -483,21 +442,21 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                         { // visit columns
                            fSumTop = fSumBottom = 0;  // Clear sums to 0 for each Template-Target comparison
 
-                           nPixelNumber = (y * wI) + x;
+                           nPixelNumber = (y * nWI) + x;
                            pfTraversedTarget = pfImgTarget + nPixelNumber; // Points to current position in target float array
                            pfTraversingTemplate = pfImgTemplate;  // Always begins pointing to upper-left corner of template float array
 
                            // pixel-by-pixel comparison loops:
                            // Comparing the Traversing Image's region (of Template Size) to the Template itself
-                           for (i = 0; i < hT; i++)
+                           for (i = 0; i < nHT; i++)
                               { // Similar to convolution
-                                 for (j = 0; j < wT; j++)
+                                 for (j = 0; j < nWT; j++)
                                     {
                                        fSumTop += (pfTraversingTemplate[j] * pfTraversedTarget[j]);
                                        fSumBottom += (pfTraversedTarget[j] * pfTraversedTarget[j]);
                                     }
-                                 pfTraversedTarget += wI;  // move to next row relative to Target
-                                 pfTraversingTemplate += wT;   // move to next row in the Template
+                                 pfTraversedTarget += nWI;  // move to next row relative to Target
+                                 pfTraversingTemplate += nWT;   // move to next row in the Template
                               }
 
                            if (fSumBottom == 0)
@@ -507,8 +466,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            if (fCorr > fMax)
                               {
                                  fMax = fCorr;
-                                 dx = x;
-                                 dy = y;
+                                 rnDx = x;
+                                 rnDy = y;
                               }
 
                            // Also, keep track of the minimum correlation found (for mapping purposes)
@@ -529,15 +488,15 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                /* update search window or normalize final correlation value */
                if (n)
                   { // set search window for next pyramid level
-//                     xI = MAX(0, 2 * dx - n);
-//                     yI = MAX(0, 2 * dy - n);
-//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
-//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
+//                     xI = MAX(0, 2 * rnDx - n);
+//                     yI = MAX(0, 2 * rnDy - n);
+//                     nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
+//                     nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
                   }
                else
                   {
                   // normalize correlation value at final level
-                  total = wT * hT;
+                  total = nWT * nHT;
                   for (i = fTemplatePower = 0; i < total; i++)
                      fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
 
@@ -595,19 +554,19 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                         { /* slide window */
                            fSumTop = fSumBottom = 0;
 
-                           nPixelNumber = (y * wI) + x;
+                           nPixelNumber = (y * nWI) + x;
                            pfTraversedTarget = pfImgTarget + nPixelNumber;
                            pfTraversingTemplate = pfImgTemplate;
-                           for (i = 0; i < hT; i++)
+                           for (i = 0; i < nHT; i++)
                               { /* convolution  */
-                                 for (j = 0; j < wT; j++)
+                                 for (j = 0; j < nWT; j++)
                                     {
                                        fDiff = pfTraversingTemplate[j] - pfTraversedTarget[j];
                                        fSumTop += (fDiff * fDiff);
                                        fSumBottom += (pfTraversedTarget[j] * pfTraversedTarget[j]);
                                     }
-                                 pfTraversedTarget += wI;
-                                 pfTraversingTemplate += wT;
+                                 pfTraversedTarget += nWI;
+                                 pfTraversingTemplate += nWT;
                               }
                            if (fSumBottom == 0)
                               continue;
@@ -616,8 +575,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            if (fCorr < fMin)
                               {
                                  fMin = fCorr;
-                                 dx = x;
-                                 dy = y;
+                                 rnDx = x;
+                                 rnDy = y;
                               }
 
                             // Also, keep track of the maximum correlation found (for mapping purposes)
@@ -634,14 +593,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                /* update search window or normalize final correlation value */
                if (n)
                   { /* set search window for next pyramid level  */
-//                     xI = MAX(0, 2 * dx - n);
-//                     yI = MAX(0, 2 * dy - n);
-//                     nXTraverse = MIN(2 * wI, 2 * dx + n);
-//                     nYTraverse = MIN(2 * hI, 2 * dy + n);
+//                     xI = MAX(0, 2 * rnDx - n);
+//                     yI = MAX(0, 2 * rnDy - n);
+//                     nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
+//                     nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
                   }
                else
                   { /* normalize correlation value at final level */
-                     total = wT * hT;
+                     total = nWT * nHT;
                      for (i = fTemplatePower = 0; i < total; i++)
                         fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
                      float fSquareRootOfTemplatePower = sqrt(fTemplatePower);
@@ -666,14 +625,14 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                               // x_normalized = [(min-x) / (max - min)] + 1
                               afCorrValues[nCorrCounter] = ((fMin - afCorrValues[nCorrCounter]) / (fMax - fMin)) + 1;
 
-                              std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+//                              std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                               // Paint pixel in gray-scale correlation map
                               nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                               m_corrMapImage->setPixel(x, y, nValue);
                               nCorrCounter++;
                               }
-                           std::cout << std::endl;
+//                           std::cout << std::endl;
                         }
                   }
                break;
@@ -686,11 +645,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                 *     Levels:
                 *             C = 1 Perfect Match
                 *             C = 0: No Match
+                *             0 < C < 1: Some Match (closer to 1 is better)
                 *             -1 < C < 0: Mismatch
                 */
 
                 /* compute pfTraversingTemplate average */
-               total = wT * hT;
+               total = nWT * nHT;
                for (i = fAverage = 0; i < total; i++)
                   fAverage += pfImgTemplate[i];
                fAverage /= total;
@@ -703,27 +663,27 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                for (i = fTemplatePower = 0; i < total; i++)
                   fTemplatePower += (pfImgTemplate[i] * pfImgTemplate[i]);
 
-               // CARLOS: this following averaging process of the Target Image is done in a similar way as with the template
+               // CARLOS: this following averaging process of the Target Image is done next in a similar way as with the template
 //               /* compute local pfTraversedTarget average: blur with box filter */
-//               dXSize = wT + !(wT % 2); /* make filter width  odd */
-//               dYSize = hT + !(hT % 2); /* make filter height odd */
+//               dXSize = nWT + !(nWT % 2); /* make filter width  odd */
+//               dYSize = nHT + !(nHT % 2); /* make filter height odd */
 //               IP_blur(pyramidTarget[n], dXSize, dYSize, Iblur = NEWIMAGE);
 //
 //               /* subtract local pfTraversedTarget averages from pixels */
 //               IP_subtractImage(pyramidTarget[n], Iblur, pyramidTarget[n]);
 //               IP_freeImage(Iblur);
 
-               // compute average on the entire traversed target image segment
-               //     Not sure if the average has to be taken from the whole image
-               total = wI * hI;
-                  for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
-                     fAverage += pfImgTarget[i];
+               // compute average on the entire traversed target image
+               //     Not sure if the average has to be taken from the whole image (or the traversed window)
+               total = nWI * nHI;
+               for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
+                  fAverage += pfImgTarget[i];
 
-                  fAverage /= total;
+               fAverage /= total;
 
-                  // subtract average on the traversed target image segment
-                  for (i = 0; i < total; i++)
-                     pfImgTarget[i] -= fAverage;
+               // subtract average on the traversed target image segment
+               for (i = 0; i < total; i++)
+                  pfImgTarget[i] -= fAverage;
 
 
                for (y = 0; y <= nYTraverse; y++)
@@ -731,12 +691,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                   for (x = 0; x <= nXTraverse; x++)
                      { /* slide window */
 
-                     fSumTop = fSumBottom = 0;
-                     pfTraversedTarget = pfImgTarget + (y * wI) + x;/* avgs  were  subtracted  */
+                     fSumTop = fSumBottom = fTargetPower = 0;  // Reset sums
+                     pfTraversedTarget = pfImgTarget + (y * nWI) + x;/* avgs  were  subtracted  */
                      pfTraversingTemplate = pfImgTemplate; /* from pfTraversedTarget and pfTraversingTemplate */
 
-                     // compute average on the traversed target image segment
-                     // which is wrong, so it's commented out!
+                     // compute average on the window of the traversed target image
+                     // which is wrong because it must be the average of the whole image,
+                     // so the following it's commented out!
 //                     for (i = fAverage = 0; i < total; i++)  // total is the same for both templates and target samples
 //                        fAverage += pfTraversedTarget[i];
 //
@@ -746,17 +707,15 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //                     for (i = 0; i < total; i++)
 //                        pfTraversedTarget[i] -= fAverage;
 
-                     fTargetPower = 0;
-                     //                           pfTraversedTarget = pfImgTarget + y * wI + x;
-                     for (i = 0; i < hT; i++)
+                     for (i = 0; i < nHT; i++)
                         { /* convolution  */
-                        for (j = 0; j < wT; j++)
+                        for (j = 0; j < nWT; j++)
                            {
                            fSumTop += (pfTraversingTemplate[j] * pfTraversedTarget[j]);
                            fTargetPower += (pfTraversedTarget[j] * pfTraversedTarget[j]);
                            }
-                        pfTraversedTarget += wI;
-                        pfTraversingTemplate += wT;
+                        pfTraversedTarget += nWI;
+                        pfTraversingTemplate += nWT;
                         }
 
                      fSumBottom = fTargetPower * fTemplatePower;
@@ -764,8 +723,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                      if (fCorr > fMax)
                         {
                         fMax = fCorr;
-                        dx = x;
-                        dy = y;
+                        rnDx = x;
+                        rnDy = y;
                         }
                      // Also, keep track of the minimum correlation found (for mapping purposes)
                      if (fCorr < fMin)
@@ -781,10 +740,10 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                /* update search window or set final correlation value */
                if (n)
                   { /* set search window for next pyramid level */
-//                  xI = MAX(0, 2 * dx - n);
-//                  yI = MAX(0, 2 * dy - n);
-//                  nXTraverse = MIN(2 * wI, 2 * dx + n);
-//                  nYTraverse = MIN(2 * hI, 2 * dy + n);
+//                  xI = MAX(0, 2 * rnDx - n);
+//                  yI = MAX(0, 2 * rnDy - n);
+//                  nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
+//                  nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
                   }
                else
                   { /* set correlation value at final level */
@@ -807,27 +766,27 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
                            else
                               afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
-                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+//                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                            // Paint pixel in gray-scale correlation map
                            nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                            m_corrMapImage->setPixel(x, y, nValue);
                            nCorrCounter++;
                            }
-                        std::cout << std::endl;
+//                        std::cout << std::endl;
                      }
                   }
                break;
 //
 //            case PHASE_CORR: /* Fourier phase correlation */
-//               IP_crop(I2, 0, 0, wI, hI, II2); /* pad template      */
+//               IP_crop(I2, 0, 0, nWI, nHI, II2); /* pad template      */
 //               IP_fft2D(II1, 1, Ifft1 = NEWIMAGE); /* pfTraversedTarget    FFT (F1) */
 //               IP_fft2D(II2, 1, Ifft2 = NEWIMAGE); /* template FFT (F2) */
 //               IP_complexConjugate(Ifft2, Ifft2); /* F2* is cmplx conj */
 //               IP_multiplyCmplx(Ifft1, Ifft2, Ifft1); /* F1 x F2*      */
 //
 //               /* divide F1 x F2* by the magnitude of (F1 x F2*) */
-//               total = wI * hI;
+//               total = nWI * nHI;
 //               pfImgTarget = (float *) Ifft1->buf[0];
 //               pfImgTemplate = (float *) Ifft1->buf[1];
 //               for (i = 0; i < total; i++)
@@ -841,16 +800,16 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //               IP_fft2D(Ifft1, -1, Ifft2);
 //               pfImgTarget = (float *) Ifft2->buf[0];
 //               pfImgTemplate = (float *) Ifft2->buf[1];
-//               for (y = 0; y < hI; y++)
+//               for (y = 0; y < nHI; y++)
 //                  {
-//                     for (x = 0; x < wI; x++)
+//                     for (x = 0; x < nWI; x++)
 //                        {
 //                           mag = MAG(*pfImgTarget, *pfImgTemplate);
 //                           if (mag > fMax)
 //                              {
 //                                 fMax = mag;
-//                                 dx = x;
-//                                 dy = y;
+//                                 rnDx = x;
+//                                 rnDy = y;
 //                              }
 //                           pfImgTarget++;
 //                           pfImgTemplate++;
@@ -859,11 +818,11 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //               IP_freeImage(Ifft1);
 //               IP_freeImage(Ifft2);
 //
-//               /* update position to avoid wrap-around; allow for -dx or -dy */
-//               if (dx > wI / 2)
-//                  dx -= wI;
-//               if (dy > hI / 2)
-//                  dy -= hI;
+//               /* update position to avoid wrap-around; allow for -rnDx or -rnDy */
+//               if (rnDx > nWI / 2)
+//                  rnDx -= nWI;
+//               if (rnDy > nHI / 2)
+//                  rnDy -= nHI;
 //               fCorr = mag;
 //               break;
 
@@ -885,8 +844,8 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const unsigned cha
 //         IP_freeImage(pyramidTemplate[n]);
 //      }
 
-//   *xx = dx;
-//   *yy = dy;
+//   *xx = rnDx;
+//   *yy = rnDy;
 
    QApplication::restoreOverrideCursor();
 
@@ -916,22 +875,39 @@ void Qcorr::displayImageLabel(QImage *image, ImgLabel *label)
 
 float * Qcorr::convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth )
 {
-   int offsetBytes = nDepth / 8;
-
    float * afImgGrayBits = new float[nSize];
    float grayValue = 0.0;
+   int offsetBytes, pixNumber;
 
    switch (nDepth) {
-      case 32:
+      case 32: // ARGB image (alpha and color channels)
+         offsetBytes = nDepth / 8;
          for(int i =0; i<nSize; i++)
             {
-            grayValue = pchImgOriginalBits[i*offsetBytes + 1] * 0.30;  // Red channel
-            grayValue += pchImgOriginalBits[i*offsetBytes + 2] * 0.59;  // Green channel
-            grayValue += pchImgOriginalBits[i*offsetBytes + 3] * 0.11; // Blue channel
+            pixNumber = i*offsetBytes;
+            grayValue = pchImgOriginalBits[pixNumber + 1] * 0.30;  // Red value
+            grayValue += pchImgOriginalBits[pixNumber + 2] * 0.59;  // Green value
+            grayValue += pchImgOriginalBits[pixNumber + 3] * 0.11; // Blue value
+            afImgGrayBits[i] = grayValue;
+            }
+         break;
+      case 24: // RGB image (3 color channels only)
+         offsetBytes = nDepth / 8;
+         for(int i =0; i<nSize; i++)
+            {
+            pixNumber = i*offsetBytes;
+            grayValue = pchImgOriginalBits[pixNumber] * 0.30;  // Red value
+            grayValue += pchImgOriginalBits[pixNumber + 1] * 0.59;  // Green value
+            grayValue += pchImgOriginalBits[pixNumber + 2] * 0.11; // Blue value
             afImgGrayBits[i] = grayValue;
             }
          break;
       default:
+         // 1-bit monochrome and 8-bit grayscale images
+         for(int i =0; i<nSize; i++)
+            {
+            afImgGrayBits[i] = (float) pchImgOriginalBits[i];
+            }
          break;
    }
 
@@ -958,10 +934,10 @@ bool Qcorr::fileDumpQImage(const QString &fileName)
    // Helped to test that the bits dumped by QImage's bits() function
    // is the actual data (pixels) of the image without any header.
    // ...just pure pixel data!
-   const unsigned char * imgTarget = m_grayRightImage->bits();
+   const unsigned char * imgTarget = m_rightImage->bits();
 
    int mysalt = 0;  // just to see if the image has extra bytes that might be missing
-   int imgBytes = m_grayRightImage->numBytes() + mysalt;
+   int imgBytes = m_rightImage->numBytes() + mysalt;
 
    for (int byteN = 0; byteN < imgBytes; ++byteN) {
       out << quint8(imgTarget[byteN]);

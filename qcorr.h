@@ -45,9 +45,15 @@ private:
     /** @brief  Cross-correlation of target image with template image.
     * @note Correlation is performed on the first channel of the images only.
     * @param imgTarget Array of bytes for the target image
+    * @param nWI Width of target image
+    * @param nHI Height of target image
+    * @param nDepthI Pixel depth of target image
     * @param imgTemplate Array of bytes for the template image
-    * @param dx X position where the highest level of correlation match is found (top-left corner of the match)
-    * @param dy Y position where the highest level of correlation match is found (top-left corner of the match)
+    * @param nWT Width of target image
+    * @param nHT Height of target image
+    * @param nDepthT Pixel depth of target image
+    * @param rnDx X position where the highest level of correlation match is found (top-left corner of the match)
+    * @param rnDy Y position where the highest level of correlation match is found (top-left corner of the match)
     * @param method Determines the selected method to be used in the correlation process. The method is a globally defined enumeration.
     *       The available methods are:
     *       CROSS_CORR (cross correlation):
@@ -72,7 +78,9 @@ private:
     */
 
     // images are passed with 1 channel already
-    float findCorrelation(const unsigned char * imgTarget, const unsigned char * imgTemplate, int &dx, int &dy, int nMethod, bool bMultires);
+    float findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
+          const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT,
+          int &rnDx, int &rnDy, int nMethod, bool bMultires);
     // casting float happens inside
 
     float * convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth);
@@ -85,9 +93,6 @@ private:
     QImage *m_leftImage;
     QImage *m_rightImage;
     QImage *m_templateImage;
-    QImage *m_grayRightImage;
-    QImage *m_grayTemplateImage;
-    QImage *m_tempImage;
     QImage *m_corrMapImage;
     ImgLabel *m_leftImage_label;
     TargetImgLabel *m_targetImage_label;
