@@ -1,0 +1,32 @@
+\contentsline {chapter}{\numberline {1}Todo List}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Bug List}{3}{chapter.2}
+\contentsline {chapter}{\numberline {3}Module Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Modules}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Class Index}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Class List}{9}{section.5.1}
+\contentsline {chapter}{\numberline {6}Module Documentation}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Qcorr}{11}{section.6.1}
+\contentsline {chapter}{\numberline {7}Class Documentation}{13}{chapter.7}
+\contentsline {section}{\numberline {7.1}CorrMethod Class Reference}{13}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{13}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Member Function Documentation}{13}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}getMethod}{13}{subsubsection.7.1.2.1}
+\contentsline {section}{\numberline {7.2}Ui::CorrMethodClass Class Reference}{15}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{15}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}ImgLabel Class Reference}{16}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{17}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.4}Qcorr Class Reference}{18}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{19}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Member Function Documentation}{19}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}convertToGrayScaleFloat}{19}{subsubsection.7.4.2.1}
+\contentsline {subsubsection}{\numberline {7.4.2.2}findCorrelation}{20}{subsubsection.7.4.2.2}
+\contentsline {section}{\numberline {7.5}Ui::QcorrClass Class Reference}{22}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{22}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.6}TargetImgLabel Class Reference}{23}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{23}{subsection.7.6.1}
+\contentsline {section}{\numberline {7.7}Ui\_\discretionary {-}{}{}CorrMethodClass Class Reference}{24}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{24}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.8}Ui\_\discretionary {-}{}{}QcorrClass Class Reference}{25}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{26}{subsection.7.8.1}

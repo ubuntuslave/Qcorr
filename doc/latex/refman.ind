@@ -1,0 +1,39 @@
+\begin{theindex}
+
+  \item {convertToGrayScaleFloat}
+    \subitem {Qcorr}, \hyperpage{19}
+  \item {CorrMethod}, \hyperpage{13}
+    \subitem {getMethod}, \hyperpage{13}
+
+  \indexspace
+
+  \item {findCorrelation}
+    \subitem {Qcorr}, \hyperpage{20}
+
+  \indexspace
+
+  \item {getMethod}
+    \subitem {CorrMethod}, \hyperpage{13}
+
+  \indexspace
+
+  \item {ImgLabel}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Qcorr}, \hyperpage{11}, \hyperpage{18}
+    \subitem {convertToGrayScaleFloat}, \hyperpage{19}
+    \subitem {findCorrelation}, \hyperpage{20}
+
+  \indexspace
+
+  \item {TargetImgLabel}, \hyperpage{23}
+
+  \indexspace
+
+  \item {Ui::CorrMethodClass}, \hyperpage{15}
+  \item {Ui::QcorrClass}, \hyperpage{22}
+  \item {Ui\_\discretionary {-}{}{}CorrMethodClass}, \hyperpage{24}
+  \item {Ui\_\discretionary {-}{}{}QcorrClass}, \hyperpage{25}
+
+\end{theindex}
