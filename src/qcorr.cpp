@@ -62,11 +62,15 @@ void Qcorr::setImageLabels()
    statusbar->addWidget(m_status_label);
    // END Status label configuration ^^^^^^
 
-   corr_pushButton->setEnabled(false); // This button should be initially disabled because there's no target image to correlate to
+   start_pushButton->setEnabled(false); // This button should be initially disabled because there's no target image to correlate to
 
    // Create Correlation Method Dialog, which is initially hidden
    m_corrMethodDialog = new CorrMethod(this);
 
+   modes_actionGroup = new QActionGroup(menu_Mode);
+   modes_actionGroup->addAction(actionTemplate_Matching);
+   modes_actionGroup->addAction(action_Disparity_Finder);
+   actionTemplate_Matching->setChecked(true);
 }
 
 void Qcorr::createActions()
@@ -74,15 +78,20 @@ void Qcorr::createActions()
    connect(quit_pushButton, SIGNAL(clicked()), this, SLOT(close()));
    connect(leftBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseLeftImage()));
    connect(rightBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseRightImage()));
-   connect(corr_pushButton, SIGNAL(clicked()), this, SLOT(correlate()));
+   connect(start_pushButton, SIGNAL(clicked()), this, SLOT(correlate()));
 
    action_Quit->setShortcut(tr("Ctrl+Q"));
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
 
-   action_Correlation_Map->setCheckable(true);
-   action_Correlation_Map->setEnabled(false);
+   // View menu:
    connect(action_Correlation_Map, SIGNAL(triggered()), this, SLOT(viewCorrMap()));
+
+   // Mode menu:
+   connect(actionTemplate_Matching, SIGNAL(triggered()), this, SLOT(changeMouse()));
+   connect(action_Disparity_Finder, SIGNAL(triggered()), this, SLOT(changeMouse()));
+
 }
+
 
 // begin Q_SLOTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 void Qcorr::browseLeftImage()
@@ -113,7 +122,9 @@ void Qcorr::browseLeftImage()
 
       this->displayImageLabel(m_leftImage, m_leftImage_label);   // Draw Left Image
 
-      m_leftImage_label->setCursor(QCursor(Qt::CrossCursor));
+      this->changeMouse();
+//      m_leftImage_label->setCursor(QCursor(Qt::CrossCursor));
+
       m_leftImage_label->setMouseTracking(true);
       m_leftImage_label->setFocusPolicy(Qt::ClickFocus);
    }
@@ -163,8 +174,20 @@ void Qcorr::browseRightImage()
 
       update();
 
-      corr_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
+      start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
    }
+}
+
+void Qcorr::changeMouse()
+{
+   if(actionTemplate_Matching->isChecked())
+      {
+      m_leftImage_label->setSelectable(true);
+      }
+   else if(action_Disparity_Finder->isChecked())
+      {
+      m_leftImage_label->setSelectable(false);
+      }
 }
 
 void Qcorr::viewCorrMap()
@@ -182,85 +205,156 @@ void Qcorr::viewCorrMap()
 
 void Qcorr::correlate()
 {
-   if(m_leftImage_label->m_rubberBand->isVisible())
+   if(actionTemplate_Matching->isChecked())
       {
-      m_templateImage = new QImage(m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry()));
-
-      m_templateSize = m_templateImage->size();
-
-      m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
-                                    // Otherwise, a dialog is not modal if it's invoked using show()
-
-      if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
+      if(m_leftImage_label->m_rubberBand->isVisible())
          {
-         if(!m_leftImage_label->m_rubberBand->isVisible())
-            m_targetImage_label->eraseEnclosedMatch();
+         m_templateImage = new QImage(m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry()));
+
+         m_templateSize = m_templateImage->size();
+
+         m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
+                                       // Otherwise, a dialog is not modal if it's invoked using show()
+
+         if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
+            {
+            if(!m_leftImage_label->m_rubberBand->isVisible())
+               m_targetImage_label->eraseEnclosedMatch();
+            }
+         else
+            {
+   //         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
+
+
+            // Target Image dimensions:
+            int wI = m_rightImage->width();
+            int hI = m_rightImage->height();
+            int depthI = m_rightImage->depth();
+
+            // Template Image dimensions:
+            int wT = m_templateImage->width();
+            int hT = m_templateImage->height();
+            int depthT = m_templateImage->depth();
+
+               float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
+                                                   m_templateImage->bits(), wT, hT, depthT,
+                                                   m_nXCorrelationCoordinate, m_nYCorrelationCoordinate,
+                                                   m_corrMethodDialog->getMethod(),
+                                                   false);
+
+
+               // CARLOS: just for testing:
+      //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
+      //
+      //         this->m_status_label->setText(
+      //               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
+      //               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+
+
+               // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
+               if(fCorrLevel >= 0.0)
+                  {
+                  m_targetImage_label->setImage(*m_rightImage);   // reset Image
+
+                  m_matchingPoint.setX(m_nXCorrelationCoordinate);
+                  m_matchingPoint.setY(m_nYCorrelationCoordinate);
+                  m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
+                  this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
+                                                   + "\tat <b>(" + QString::number(m_nXCorrelationCoordinate) + ", "
+                                                   + QString::number(m_nYCorrelationCoordinate) + ")px</b>"
+                                                   );
+      //            m_targetImage_label->setImage(*m_corrMapImage);
+
+                  action_Correlation_Map->setEnabled(true);
+                  emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
+
+                  }
+               else
+                  m_targetImage_label->eraseEnclosedMatch();
+
+            }
          }
       else
          {
-//         this->corrResults_label->setText( "Method: " + QString::number(m_corrMethodDialog->getMethod()));
-
-
-         // Target Image dimensions:
-         int wI = m_rightImage->width();
-         int hI = m_rightImage->height();
-         int depthI = m_rightImage->depth();
-
-         // Template Image dimensions:
-         int wT = m_templateImage->width();
-         int hT = m_templateImage->height();
-         int depthT = m_templateImage->depth();
-
-            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
-                                                m_templateImage->bits(), wT, hT, depthT,
-                                                m_nXoffset, m_nYoffset,
-                                                m_corrMethodDialog->getMethod(),
-                                                false);
-
-
-            // CARLOS: just for testing:
-   //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
-   //
-   //         this->m_status_label->setText(
-   //               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
-   //               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
-
-
-            // TO DO: Validate the results before allowing to draw the enclosing rectangle around the match
-            if(fCorrLevel >= 0.0)
-               {
-               m_targetImage_label->setImage(*m_rightImage);   // reset Image
-
-               m_matchingPoint.setX(m_nXoffset);
-               m_matchingPoint.setY(m_nYoffset);
-               m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
-
-               this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
-                                                + "\tat <b>(" + QString::number(m_nXoffset) + ", "
-                                                + QString::number(m_nYoffset) + ")px</b>"
-                                                );
-   //            m_targetImage_label->setImage(*m_corrMapImage);
-
-               action_Correlation_Map->setEnabled(true);
-               emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
-
-               }
-            else
-               m_targetImage_label->eraseEnclosedMatch();
-
+         this->m_status_label->setText("There is No template!");
+         this->corrResults_label->clear();
          }
       }
-   else
+
+   if(action_Disparity_Finder->isChecked())
       {
-      this->m_status_label->setText("There is No template!");
-      this->corrResults_label->clear();
+      disparity();
       }
+
+}
+
+void Qcorr::disparity()
+{
+   // Target Image dimensions:
+   int wI = m_rightImage->width();
+   int hI = m_rightImage->height();
+   int depthI = m_rightImage->depth();
+
+   // Template Image dimensions:
+   int wT = 20;   // Arbitrary value, but it should be asked to the user
+   int hT = 20;   // Arbitrary value
+   int depthT = m_leftImage->depth();
+
+   // Define the maximum width and height of the correlation area
+   int nXTraverse = (wI - wT);
+   int nYTraverse = (hI - hT);
+
+   // Store the disparities along the rows of pixels
+   int *anDisparityXValues = new int[(nXTraverse+1) * (nYTraverse+1)]; // Array to save the disparity values for each pixel
+
+   // Using QT to extract the template   vvvvvvvvvvvvvvvvvvvvv
+   // TODO: must be QT independent in the future
+   m_templateImage = new QImage();
+
+   m_templateSize.setHeight(hT);
+   m_templateSize.setWidth(wT);
+
+   QPoint templateCoordsPoint;
+
+   // Correlate every pixel of the reference (left) and target(right) images with respect to rows only
+   // The template traverses an entire row, and then a new template at the next pixel is created and traversed on the raw
+   // This process repeats for all the pixels in the row, and then correlate the next row's pixels in the same fashion.
+   for (int y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+      { // visit rows
+         for (int x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+            { // visit columns
+
+            // Set template coordinates
+            templateCoordsPoint.setX(x);
+            templateCoordsPoint.setY(y);
+            // Draw rubber band to indicate current template correlation
+            m_leftImage_label->m_rubberBand->setGeometry(QRect(templateCoordsPoint,m_templateSize));
+
+            // Create current template image
+            *m_templateImage = m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry());
+
+            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hT, depthI,  // force to correlate 1 row of the height of the template
+                                                m_templateImage->bits(), wT, hT, depthT,
+                                                m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
+                                                CROSS_CORR,//m_corrMethodDialog->getMethod(),
+                                                false, x, y);
+
+            // Store disparity of current pixel in question
+            anDisparityXValues[(y * nXTraverse) + x] = m_nXCorrelationCoordinate - x;
+
+            }
+      }
+
+   // Draw disparity map
+
 }
 
 // end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
-      const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT, int &rnDx, int &rnDy, int nMethod, bool bMultires)
+      const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT, int &rnDx, int &rnDy,
+      int nMethod, bool bMultires, int nInitialXPosition, int nInitialYPosition)
 {
    // Helped to test that the bits dumped by QImage's bits() function
    // is the actual data (pixels) of the image without any header.
@@ -375,9 +469,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
    else
       mxlevel = 0;
 
-   // CARLOS: changed/fixed the following relation (it was omitting the last pixel on the edge)
-//   nXTraverse = (nWI - nWT + 1) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
-//   nYTraverse = (nHI - nHT + 1) >> mxlevel;
+   // Define the maximum width and height of the correlation area
    nXTraverse = (nWI - nWT) >> mxlevel;  // >> means: shift bit (divide by 2*mxlevel times)
    nYTraverse = (nHI - nHT) >> mxlevel;
 
@@ -438,11 +530,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                // slide Template across the Target (pixel-by-pixel)
                for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                   { // visit rows
-                     for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                     for (x = 0 + nInitialXPosition; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                         { // visit columns
                            fSumTop = fSumBottom = 0;  // Clear sums to 0 for each Template-Target comparison
 
-                           nPixelNumber = (y * nWI) + x;
+//                           nPixelNumber = (y * nWI) + x;
+//                           pfTraversedTarget = pfImgTarget + nPixelNumber; // Points to current position in target float array
+                           nPixelNumber = ((y+nInitialYPosition) * nWI) + x; // Start at desired pixel coordinates
                            pfTraversedTarget = pfImgTarget + nPixelNumber; // Points to current position in target float array
                            pfTraversingTemplate = pfImgTemplate;  // Always begins pointing to upper-left corner of template float array
 
@@ -467,7 +561,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                               {
                                  fMax = fCorr;
                                  rnDx = x;
-                                 rnDy = y;
+                                 rnDy = y + nInitialYPosition;
                               }
 
                            // Also, keep track of the minimum correlation found (for mapping purposes)

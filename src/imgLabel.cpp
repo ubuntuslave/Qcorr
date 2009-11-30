@@ -16,8 +16,12 @@ ImgLabel::ImgLabel(Qcorr *parentWindow, QWidget *parent) :
    m_parentWindow = parentWindow; // Point to the Qcorr MainWindow
 
    m_rubberBand = new QRubberBand(QRubberBand::Rectangle, this);
-   m_rubberBand->setCursor(Qt::SizeAllCursor);
+//   m_rubberBand->setCursor(Qt::CrossCursor);
+   this->setSelectable(false);
+
    m_rubberBand->setMouseTracking(true);
+
+   setSelectable(false);
 
    m_bStartedTemplateSelection = false;
    m_bMouseIsPressed = false;
@@ -33,6 +37,20 @@ ImgLabel::ImgLabel(Qcorr *parentWindow, QWidget *parent) :
 ImgLabel::~ImgLabel()
 {
    // TODO Auto-generated destructor stub
+}
+
+void ImgLabel::setSelectable(bool bHasRubberBand)
+{
+   // TODO: needs reviewing (it's just a place holder for now)
+   m_bHasRubberBand = bHasRubberBand;
+   if(m_bHasRubberBand)
+      this->setCursor(Qt::CrossCursor);
+   else
+      {
+      this->setCursor(Qt::ArrowCursor);
+      m_rubberBand->hide();
+      }
+
 }
 
 void
@@ -51,8 +69,14 @@ ImgLabel::mousePressEvent(QMouseEvent *event)
       }
    else
       {
+      if(m_bHasRubberBand)
          this->setCursor(Qt::CrossCursor);
-         m_rubberBand->hide();
+      else
+         {
+         this->setCursor(Qt::ArrowCursor);
+         }
+//         this->setCursor(Qt::CrossCursor);
+      m_rubberBand->hide();
       }
 
    update();
@@ -61,7 +85,7 @@ ImgLabel::mousePressEvent(QMouseEvent *event)
 void
 ImgLabel::mouseMoveEvent(QMouseEvent *event)
 {
-   if (m_bMouseIsPressed)
+   if (m_bMouseIsPressed && m_bHasRubberBand)
       {
          m_rubberBand->show();
 

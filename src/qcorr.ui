@@ -166,9 +166,9 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QPushButton" name="corr_pushButton">
+        <widget class="QPushButton" name="start_pushButton">
          <property name="text">
-          <string>&amp;Correlate</string>
+          <string>&amp;Start</string>
          </property>
         </widget>
        </item>
@@ -243,8 +243,16 @@
     </property>
     <addaction name="action_Correlation_Map"/>
    </widget>
+   <widget class="QMenu" name="menu_Mode">
+    <property name="title">
+     <string>&amp;Mode</string>
+    </property>
+    <addaction name="actionTemplate_Matching"/>
+    <addaction name="action_Disparity_Finder"/>
+   </widget>
    <addaction name="menu_Menu"/>
    <addaction name="menu_View"/>
+   <addaction name="menu_Mode"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_Quit">
@@ -255,6 +263,22 @@
   <action name="action_Correlation_Map">
    <property name="text">
     <string>&amp;Correlation Map</string>
+   </property>
+  </action>
+  <action name="actionTemplate_Matching">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Template &amp;Matching</string>
+   </property>
+  </action>
+  <action name="action_Disparity_Finder">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Disparity Finder</string>
    </property>
   </action>
  </widget>

@@ -2,7 +2,7 @@
 #define QCORR_H
 
 #include <QtGui/QMainWindow>
-#include "ui_qcorr.h"
+#include "../ui_qcorr.h"   // UIC is always spiting out this form header files on the root of the project folder
 #include "imgLabel.h"
 #include "targetImgLabel.h"
 #include "corrmethod.h"
@@ -12,6 +12,7 @@ class QPainter;
 class QSize;
 class QPoint;
 class QString;
+class QActionGroup;
 
 /** @ingroup classes */
 /** @{ */
@@ -56,8 +57,10 @@ public:
 private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
+    void changeMouse(); ///< change mouse pointer according to operation mode
     void viewCorrMap();
     void correlate();
+    void disparity();
 
 private:
     friend class ImgLabel; // Make the ImgLabel class a friend of Qcorr
@@ -78,9 +81,9 @@ private:
     * @param nWT Width of target image
     * @param nHT Height of target image
     * @param nDepthT Pixel depth of target image
-    * @param rnDx X position where the highest level of correlation match is found (top-left corner of the match)
-    * @param rnDy Y position where the highest level of correlation match is found (top-left corner of the match)
-    * @param method Determines the selected method to be used in the correlation process. The method is a globally defined enumeration.
+    * @param rnDx x-coordinate where the highest level of correlation match is found (top-left corner of the match)
+    * @param rnDy y-coordinate where the highest level of correlation match is found (top-left corner of the match)
+    * @param nMethod Determines the selected method to be used in the correlation process. The method is a globally defined enumeration.
     *       The available methods are:
     *       - CROSS_CORR (cross correlation):
     *        \f[
@@ -101,13 +104,16 @@ private:
     *                      {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}}
     *                      {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}}
     *        \f]
-    * @param multires Determines if multiresolution correlation should be applied, by making use of image pyramids.
+    * @param bMultires Determines if multiresolution correlation should be applied, by making use of image pyramids.
     *                 With multiresoltion, the correlation can be determined faster than direct correlation.
+    *                 Default is false.
+    * @param nInitialXPosition Indicates the x-coordinate of the pixel on the target image where correlation should start. Default is 0
+    * @param nInitialYPosition Indicates the y-coordinate of the pixel on the target image where correlation should start. Default is 0
     * @returns a float array resulting from the conversion of the source image into an 8-bit gray-scale image.
     */
     float findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
           const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT,
-          int &rnDx, int &rnDy, int nMethod, bool bMultires);
+          int &rnDx, int &rnDy, int nMethod, bool bMultires = false, int nInitialXPosition = 0, int nInitialYPosition = 0);
 
     /** @brief  Cast images to an 8-bit gray-scale channel of type float
       * @param pchImgOriginalBits Buffer of unsigned characters as the source image
@@ -119,7 +125,7 @@ private:
     float * convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth);
     bool fileDumpQImage(const QString &fileName);
 
-    int m_nXoffset, m_nYoffset;
+    int m_nXCorrelationCoordinate, m_nYCorrelationCoordinate;
 
     CorrMethod *m_corrMethodDialog;
     QString initialName;
@@ -133,7 +139,7 @@ private:
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
     QSize m_templateSize;
-
+    QActionGroup *modes_actionGroup;
 
 protected:
 //    void paintEvent(QPaintEvent *);

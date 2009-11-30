@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'qcorr.ui'
 **
-** Created: Fri Nov 27 19:36:19 2009
+** Created: Sun Nov 29 18:45:51 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -37,6 +37,8 @@ class Ui_QcorrClass
 public:
     QAction *action_Quit;
     QAction *action_Correlation_Map;
+    QAction *actionTemplate_Matching;
+    QAction *action_Disparity_Finder;
     QWidget *centralwidget;
     QFrame *main_frame;
     QVBoxLayout *main_verticalLayout;
@@ -56,13 +58,14 @@ public:
     QScrollArea *rightImage_scrollArea;
     QWidget *scrollAreaWidgetContents_2;
     QHBoxLayout *bottom_horizontalLayout;
-    QPushButton *corr_pushButton;
+    QPushButton *start_pushButton;
     QLabel *corrResults_label;
     QSpacerItem *horizontalSpacer;
     QPushButton *quit_pushButton;
     QMenuBar *menubar;
     QMenu *menu_Menu;
     QMenu *menu_View;
+    QMenu *menu_Mode;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *QcorrClass)
@@ -79,6 +82,12 @@ public:
         action_Quit->setObjectName(QString::fromUtf8("action_Quit"));
         action_Correlation_Map = new QAction(QcorrClass);
         action_Correlation_Map->setObjectName(QString::fromUtf8("action_Correlation_Map"));
+        actionTemplate_Matching = new QAction(QcorrClass);
+        actionTemplate_Matching->setObjectName(QString::fromUtf8("actionTemplate_Matching"));
+        actionTemplate_Matching->setCheckable(true);
+        action_Disparity_Finder = new QAction(QcorrClass);
+        action_Disparity_Finder->setObjectName(QString::fromUtf8("action_Disparity_Finder"));
+        action_Disparity_Finder->setCheckable(true);
         centralwidget = new QWidget(QcorrClass);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         main_frame = new QFrame(centralwidget);
@@ -184,10 +193,10 @@ public:
         bottom_horizontalLayout = new QHBoxLayout();
         bottom_horizontalLayout->setSpacing(0);
         bottom_horizontalLayout->setObjectName(QString::fromUtf8("bottom_horizontalLayout"));
-        corr_pushButton = new QPushButton(main_frame);
-        corr_pushButton->setObjectName(QString::fromUtf8("corr_pushButton"));
+        start_pushButton = new QPushButton(main_frame);
+        start_pushButton->setObjectName(QString::fromUtf8("start_pushButton"));
 
-        bottom_horizontalLayout->addWidget(corr_pushButton);
+        bottom_horizontalLayout->addWidget(start_pushButton);
 
         corrResults_label = new QLabel(main_frame);
         corrResults_label->setObjectName(QString::fromUtf8("corrResults_label"));
@@ -225,6 +234,8 @@ public:
         menu_Menu->setObjectName(QString::fromUtf8("menu_Menu"));
         menu_View = new QMenu(menubar);
         menu_View->setObjectName(QString::fromUtf8("menu_View"));
+        menu_Mode = new QMenu(menubar);
+        menu_Mode->setObjectName(QString::fromUtf8("menu_Mode"));
         QcorrClass->setMenuBar(menubar);
         statusbar = new QStatusBar(QcorrClass);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -232,8 +243,11 @@ public:
 
         menubar->addAction(menu_Menu->menuAction());
         menubar->addAction(menu_View->menuAction());
+        menubar->addAction(menu_Mode->menuAction());
         menu_Menu->addAction(action_Quit);
         menu_View->addAction(action_Correlation_Map);
+        menu_Mode->addAction(actionTemplate_Matching);
+        menu_Mode->addAction(action_Disparity_Finder);
 
         retranslateUi(QcorrClass);
 
@@ -245,13 +259,16 @@ public:
         QcorrClass->setWindowTitle(QApplication::translate("QcorrClass", "QCorr", 0, QApplication::UnicodeUTF8));
         action_Quit->setText(QApplication::translate("QcorrClass", "&Quit", 0, QApplication::UnicodeUTF8));
         action_Correlation_Map->setText(QApplication::translate("QcorrClass", "&Correlation Map", 0, QApplication::UnicodeUTF8));
+        actionTemplate_Matching->setText(QApplication::translate("QcorrClass", "Template &Matching", 0, QApplication::UnicodeUTF8));
+        action_Disparity_Finder->setText(QApplication::translate("QcorrClass", "&Disparity Finder", 0, QApplication::UnicodeUTF8));
         leftBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Left Image", 0, QApplication::UnicodeUTF8));
         rightBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Right Image", 0, QApplication::UnicodeUTF8));
-        corr_pushButton->setText(QApplication::translate("QcorrClass", "&Correlate", 0, QApplication::UnicodeUTF8));
+        start_pushButton->setText(QApplication::translate("QcorrClass", "&Start", 0, QApplication::UnicodeUTF8));
         corrResults_label->setText(QString());
         quit_pushButton->setText(QApplication::translate("QcorrClass", "&Quit", 0, QApplication::UnicodeUTF8));
         menu_Menu->setTitle(QApplication::translate("QcorrClass", "&File", 0, QApplication::UnicodeUTF8));
         menu_View->setTitle(QApplication::translate("QcorrClass", "&View", 0, QApplication::UnicodeUTF8));
+        menu_Mode->setTitle(QApplication::translate("QcorrClass", "&Mode", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -2,7 +2,7 @@
 #define CORRMETHOD_H
 
 #include <QtGui/QDialog>
-#include "ui_corrmethod.h"
+#include "../ui_corrmethod.h" // UIC is always spiting out this form header files on the root of the project folder
 
 class CorrMethod : public QDialog
 {

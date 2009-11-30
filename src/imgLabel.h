@@ -26,6 +26,8 @@ class ImgLabel : public QLabel
       virtual
       ~ImgLabel();
 
+      void setSelectable(bool bHasRubberBand);
+
 
    private:
       friend class Qcorr; // Make the Qcorr class a friend of this ImgLabel class
@@ -47,6 +49,7 @@ class ImgLabel : public QLabel
       bool m_bMouseAtTemplateBottomEdge;
       bool m_bMouseAtTemplateLeftEdge;
       bool m_bMouseAtTemplateRightEdge;
+      bool m_bHasRubberBand;
 
       int m_nXNewPos, m_nYNewPos;   // used in the rubber-band movement
 
