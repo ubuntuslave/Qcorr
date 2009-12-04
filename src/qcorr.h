@@ -13,6 +13,8 @@ class QSize;
 class QPoint;
 class QString;
 class QActionGroup;
+#include <QtCore/QVector>
+#include <QtGui/QRgb>
 
 /** @ingroup classes */
 /** @{ */
@@ -136,6 +138,8 @@ private:
     ImgLabel *m_leftImage_label;
     TargetImgLabel *m_targetImage_label;
     QLabel *m_status_label;
+
+    QVector<QRgb> *m_grayColorTab;  ///< 8-bit gray-scale color table
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
     QSize m_templateSize;

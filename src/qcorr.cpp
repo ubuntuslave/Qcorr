@@ -71,6 +71,19 @@ void Qcorr::setImageLabels()
    modes_actionGroup->addAction(actionTemplate_Matching);
    modes_actionGroup->addAction(action_Disparity_Finder);
    actionTemplate_Matching->setChecked(true);
+
+
+   // Color Tables:
+   // Gray-scale Color Table
+   m_grayColorTab = new QVector<QRgb>(256); // for an 8-bit scale color table
+
+   QVector<QRgb> fillerGrayColorTab(256);
+   for(int i=0; i<= 255; i++)
+      {
+      fillerGrayColorTab[i] = qRgb(i,i,i); // For a gray-scale color table
+      }
+   *m_grayColorTab = fillerGrayColorTab;
+
 }
 
 void Qcorr::createActions()
@@ -187,6 +200,11 @@ void Qcorr::changeMouse()
    else if(action_Disparity_Finder->isChecked())
       {
       m_leftImage_label->setSelectable(false);
+      m_targetImage_label->eraseEnclosedMatch();
+
+      action_Correlation_Map->setEnabled(false);   // Disable Correlation Map View
+      m_targetImage_label->setImage(*m_rightImage);   // Clear Correlation Image
+
       }
 }
 
@@ -236,7 +254,7 @@ void Qcorr::correlate()
             int hT = m_templateImage->height();
             int depthT = m_templateImage->depth();
 
-               float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
+            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
                                                    m_templateImage->bits(), wT, hT, depthT,
                                                    m_nXCorrelationCoordinate, m_nYCorrelationCoordinate,
                                                    m_corrMethodDialog->getMethod(),
@@ -297,8 +315,8 @@ void Qcorr::disparity()
    int depthI = m_rightImage->depth();
 
    // Template Image dimensions:
-   int wT = 20;   // Arbitrary value, but it should be asked to the user
-   int hT = 20;   // Arbitrary value
+   int wT = 10;   // Arbitrary value, but it should be asked to the user
+   int hT = 10;   // Arbitrary value
    int depthT = m_leftImage->depth();
 
    // Define the maximum width and height of the correlation area
@@ -306,7 +324,8 @@ void Qcorr::disparity()
    int nYTraverse = (hI - hT);
 
    // Store the disparities along the rows of pixels
-   int *anDisparityXValues = new int[(nXTraverse+1) * (nYTraverse+1)]; // Array to save the disparity values for each pixel
+   int nDispArraySize = (nXTraverse+1) * (nYTraverse+1);
+   int *anDisparityXValues = new int[nDispArraySize]; // Array to save the disparity values for each pixel
 
    // Using QT to extract the template   vvvvvvvvvvvvvvvvvvvvv
    // TODO: must be QT independent in the future
@@ -314,6 +333,8 @@ void Qcorr::disparity()
 
    m_templateSize.setHeight(hT);
    m_templateSize.setWidth(wT);
+
+   unsigned char * achRightImage_bits = m_rightImage->bits();
 
    QPoint templateCoordsPoint;
 
@@ -334,18 +355,27 @@ void Qcorr::disparity()
             // Create current template image
             *m_templateImage = m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry());
 
-            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hT, depthI,  // force to correlate 1 row of the height of the template
+            float fCorrLevel = findCorrelation( achRightImage_bits, wI, hT, depthI,  // force to correlate 1 row of the height of the template
                                                 m_templateImage->bits(), wT, hT, depthT,
                                                 m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
                                                 CROSS_CORR,//m_corrMethodDialog->getMethod(),
                                                 false, x, y);
+//            m_targetImage_label->setImage(*m_rightImage);   // reset Image
+//            m_matchingPoint.setX(m_nXCorrelationCoordinate);
+//            m_matchingPoint.setY(m_nYCorrelationCoordinate);
+//            m_matchingPoint.setX(x);
+//            m_matchingPoint.setY(y);
+//            m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
 
             // Store disparity of current pixel in question
             anDisparityXValues[(y * nXTraverse) + x] = m_nXCorrelationCoordinate - x;
-
             }
       }
 
+      for(int i=0; i<nDispArraySize ;i++)
+         {
+         std::cout << anDisparityXValues[i] << " : ";
+         }
    // Draw disparity map
 
 }
@@ -475,17 +505,15 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
 
    // ---------------------------------------------
    // To be used to display a brightness map based on correlation values at each evaluated pixel
-   m_corrMapImage = new QImage(nXTraverse+1, nYTraverse+1 , QImage::Format_Indexed8);
-   QVector<QRgb> colorTab(256);  // for an 8-bit scale color table
-   for(i=0; i<= 255; i++)
+   if((nInitialXPosition == 0) && (nInitialYPosition == 0))
       {
-         colorTab[i] = qRgb(i,i,i); // For a gray-scale color table
-      }
-   // If the image's format is either monochrome or 8-bit, the given index_or_rgb value must be an index in the image's color table
-   m_corrMapImage->setColorTable(colorTab);
+      m_corrMapImage = new QImage(nXTraverse+1, nYTraverse+1 , QImage::Format_Indexed8);
 
+      // If the image's format is either monochrome or 8-bit, the given index_or_rgb value must be an index in the image's color table
+      m_corrMapImage->setColorTable(*m_grayColorTab);
+      }
+   // Array size is correct based on the number of correlations to be performed on the target
    float *afCorrValues = new float[(nXTraverse+1) * (nYTraverse+1)]; // Array to save results of each correlation operation at certain pixel
-                                                                     // Array size is correct based on the number of correlations to be performed on the target
    int nCorrCounter = 0;
    uint nValue;    // to paint the pixels of the correlation map image
    // ---------------------------------------------
@@ -596,7 +624,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
 
                   float fSquareRootOfTemplatePower = sqrt(fTemplatePower);
                   fCorr = fMax / fSquareRootOfTemplatePower;
-//                  std::cout << "Max: " << fMax << "  TemplatePower: " << fTemplatePower;
+                  //                  std::cout << "Max: " << fMax << "  TemplatePower: " << fTemplatePower;
 
                   // Normalize fMax and fMin
                   fMax = fCorr;  // because it's already normalized
@@ -604,9 +632,12 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
 
                   nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
-                  // Normalize all the correlation values stored in the array afCorrValues
-                  for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
-                     { // visit rows
+                  if((nInitialXPosition == 0) && (nInitialYPosition == 0))
+                     {
+                     // Normalize all the correlation values stored in the array afCorrValues
+                     //                  for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                     for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                        { // visit rows
                         for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
@@ -619,14 +650,16 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                            else
                               afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
-//                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                           //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
                            // Paint pixel in gray-scale correlation map
                            nValue = (int)(afCorrValues[nCorrCounter] * 255.0); // normalized correlation value for a grayscale
                            m_corrMapImage->setPixel(x, y, nValue);
                            nCorrCounter++;
                            }
-//                        std::cout << std::endl;
+                        //                        std::cout << std::endl;
+                        }
+
                      }
 
                   }

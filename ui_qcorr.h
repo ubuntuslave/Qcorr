@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'qcorr.ui'
 **
-** Created: Sun Nov 29 18:45:51 2009
+** Created: Mon Nov 30 17:08:58 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -82,6 +82,8 @@ public:
         action_Quit->setObjectName(QString::fromUtf8("action_Quit"));
         action_Correlation_Map = new QAction(QcorrClass);
         action_Correlation_Map->setObjectName(QString::fromUtf8("action_Correlation_Map"));
+        action_Correlation_Map->setCheckable(true);
+        action_Correlation_Map->setEnabled(false);
         actionTemplate_Matching = new QAction(QcorrClass);
         actionTemplate_Matching->setObjectName(QString::fromUtf8("actionTemplate_Matching"));
         actionTemplate_Matching->setCheckable(true);
@@ -229,7 +231,7 @@ public:
         QcorrClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(QcorrClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 25));
+        menubar->setGeometry(QRect(0, 0, 800, 28));
         menu_Menu = new QMenu(menubar);
         menu_Menu->setObjectName(QString::fromUtf8("menu_Menu"));
         menu_View = new QMenu(menubar);
