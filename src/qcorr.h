@@ -53,24 +53,41 @@ class Qcorr : public QMainWindow, private Ui::QcorrClass
     Q_OBJECT
 
 public:
-    Qcorr(QWidget *parent = 0);
+    Qcorr(QWidget *parent = 0);  ///< Constructor of the Qcorr class
     ~Qcorr();
 
 private Q_SLOTS:
-    void browseLeftImage();
-    void browseRightImage();
-    void changeMouse(); ///< change mouse pointer according to operation mode
-    void viewMap();
-    void correlate();
-    void disparity();
+    void browseLeftImage(); ///< Q_SLOT that allows to browse and load an image on the left panel
+    void browseRightImage();///< Q_SLOT that allows to browse and load an image on the right panel
+    void changeMouse(); ///< Q_SLOT used to change the mouse pointer according to the current operation mode
+    void viewMap();  ///< Q_SLOT that selectively provides the appropriate existent map of results from correlation (template matching) or pixel disparity
+    void correlate(); ///< Q_SLOT that process the correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image.
+    void disparity(); ///< Q_SLOT that is connected in the pixel-disparity finding operation mode. It should be mainly be used with dataset stereo images that get correlated row-by-row by using findCorrelation() with the pertinent parameters and the appropriate Q_SLOT function implementation.
 
 private:
-    friend class ImgLabel; // Make the ImgLabel class a friend of Qcorr
-                           // Thus, all members from Qcorr are accessible by an ImgLabel object
+    /** @class ImgLabel
+      * @brief  the ImgLabel class is a friend of Qcorr in order to make all members of Qcorr accessible by an ImgLabel object
+      */
+    friend class ImgLabel;
 
+    /** @brief  Displays any QImage on a Qlabel
+        * @param image Pointer to a QImage instance
+        * @param label Pointer to a QLabel instance
+        */
     void displayImage(QImage *image, QLabel *label);
+
+    /** @brief  Displays the reference image on the left panel's label. which is a sub-classed widget.
+        * @param image Pointer to a QImage instance
+        * @param label Pointer to a ImgLabel class instance
+        */
     void displayImageLabel(QImage *image, ImgLabel *label);
+
+    /** @brief  Sets up actions and Q_SIGNAL-Q_SLOT connections
+        */
     void createActions();
+
+    /** @brief  Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself
+        */
     void setImageLabels();
 
     /** @brief  Cross-correlation of target image with template image.
@@ -127,26 +144,32 @@ private:
       *           Additionally, the (dx,dy) offset of the template for which there exists a best match.
       */
     float * convertToGrayScaleFloat(const unsigned char * pchImgOriginalBits, int nSize, int nDepth);
+
+    /** @brief Used for testing and investing the bits stored in QImages or other Qt Widgets.
+      * @param fileName a QString reference to the file-name as which the raw bits will be storedpchImgOriginalBits Buffer of unsigned characters as the source image
+      * @returns true if the bits were properly dumped to the specified fileName
+      */
     bool fileDumpQImage(const QString &fileName);
 
-    int m_nXCorrelationCoordinate, m_nYCorrelationCoordinate;
+    int m_nXCorrelationCoordinate; ///< the resulting x-coordinate match obtained from correlation of a template against a target
+    int m_nYCorrelationCoordinate;  ///< the resulting y-coordinate match obtained from correlation of a template against a target
 
-    CorrMethod *m_corrMethodDialog;
-    QString initialName;
-    QImage *m_leftImage;
-    QImage *m_rightImage;
-    QImage *m_templateImage;
-    QImage *m_corrMapImage;
-    QImage *m_disparityMapImage;
-    ImgLabel *m_leftImage_label;
-    TargetImgLabel *m_targetImage_label;
-    QLabel *m_status_label;
+    CorrMethod *m_corrMethodDialog; ///< Dialog Box to choose a correlation method
+    QString initialName;   ///< String that saves the path for the first file image that has been loaded
+    QImage *m_leftImage;   ///< Left Panel's Image (a.k.a. "reference image" when performing template matching through correlation)
+    QImage *m_rightImage;  ///< Right Panel's Image (a.k.a "target image")
+    QImage *m_templateImage;  ///< Template Image that is selected from the reference image (in the left panel) that will be matched against
+    QImage *m_corrMapImage;   ///< Correlation Map resulting from the Template Matching action
+    QImage *m_disparityMapImage; ///< Disparity Map that results from the pixel disparities found between the left and right images
+    ImgLabel *m_leftImage_label; ///< label used to display the left image. This is sub-classed widget implemented with the functionality of allowing template selection by a rectangular rubber-band
+    TargetImgLabel *m_targetImage_label;  ///< a sub-classed label widget implemented with the purpose of displaying the target image in the right panel with added functionality such as the visualization of the found match
+    QLabel *m_status_label;   ///< status label that updates the mouse-pointer's position coordinates as it moves and selects templates. It also provides other types of information when required.
 
     QVector<QRgb> *m_grayColorTab;  ///< 8-bit gray-scale color table
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
-    QSize m_templateSize;
-    QActionGroup *modes_actionGroup;
+    QSize m_templateSize;  ///< the current template size as a QSize object
+    QActionGroup *modes_actionGroup;   ///< group of menu actions for the mode of operation.
 
     bool m_bHasLeftImage;  ///< indicates that an image is loaded in the left panel
     bool m_bHasRightImage; ///< indicates that an image is loaded in the right panel

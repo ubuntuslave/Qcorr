@@ -2,239 +2,329 @@
 \section{Qcorr Class Reference}
 \label{classQcorr}\index{Qcorr@{Qcorr}}
 }
-
-
 A Digital Image Correlation Program (Template Matcher) implemented in QT4.  
 
 
-{\ttfamily \#include $<$src/qcorr.h$>$}Inheritance diagram for Qcorr::\begin{figure}[H]
+{\tt \#include $<$src/qcorr.h$>$}
+
+Inheritance diagram for Qcorr::\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2cm]{classQcorr}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classQcorr_a3b5d03aed21bfd00497ff265d898e45b}{
-{\bfseries Qcorr} (QWidget $\ast$parent=0)}
-\label{classQcorr_a3b5d03aed21bfd00497ff265d898e45b}
+\hypertarget{classQcorr_3b5d03aed21bfd00497ff265d898e45b}{
+\hyperlink{classQcorr_3b5d03aed21bfd00497ff265d898e45b}{Qcorr} (QWidget $\ast$parent=0)}
+\label{classQcorr_3b5d03aed21bfd00497ff265d898e45b}
 
-\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em Constructor of the \hyperlink{classQcorr}{Qcorr} class. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Private Slots}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classQcorr_adb32e7bfe6afb84f306a9eb5bcd9b322}{
-void {\bfseries browseLeftImage} ()}
-\label{classQcorr_adb32e7bfe6afb84f306a9eb5bcd9b322}
+\hypertarget{classQcorr_db32e7bfe6afb84f306a9eb5bcd9b322}{
+void \hyperlink{classQcorr_db32e7bfe6afb84f306a9eb5bcd9b322}{browseLeftImage} ()}
+\label{classQcorr_db32e7bfe6afb84f306a9eb5bcd9b322}
 
-\item 
-\hypertarget{classQcorr_a60583105115d8d14c5fa2a959dc0f285}{
-void {\bfseries browseRightImage} ()}
-\label{classQcorr_a60583105115d8d14c5fa2a959dc0f285}
+\begin{CompactList}\small\item\em Q\_\-SLOT that allows to browse and load an image on the left panel. \item\end{CompactList}\item 
+\hypertarget{classQcorr_60583105115d8d14c5fa2a959dc0f285}{
+void \hyperlink{classQcorr_60583105115d8d14c5fa2a959dc0f285}{browseRightImage} ()}
+\label{classQcorr_60583105115d8d14c5fa2a959dc0f285}
 
-\item 
-\hypertarget{classQcorr_aa038b382c62558414f6d4592cd039158}{
-void {\bfseries viewCorrMap} ()}
-\label{classQcorr_aa038b382c62558414f6d4592cd039158}
+\begin{CompactList}\small\item\em Q\_\-SLOT that allows to browse and load an image on the right panel. \item\end{CompactList}\item 
+\hypertarget{classQcorr_3f27a3e9b548f80998a0266c9c4165a8}{
+void \hyperlink{classQcorr_3f27a3e9b548f80998a0266c9c4165a8}{changeMouse} ()}
+\label{classQcorr_3f27a3e9b548f80998a0266c9c4165a8}
 
-\item 
-\hypertarget{classQcorr_ace91b9d83b34887735737323bac5431e}{
-void {\bfseries correlate} ()}
-\label{classQcorr_ace91b9d83b34887735737323bac5431e}
+\begin{CompactList}\small\item\em Q\_\-SLOT used to change the mouse pointer according to the current operation mode. \item\end{CompactList}\item 
+\hypertarget{classQcorr_3275244fd6183a4fef92b85578fea864}{
+void \hyperlink{classQcorr_3275244fd6183a4fef92b85578fea864}{viewMap} ()}
+\label{classQcorr_3275244fd6183a4fef92b85578fea864}
 
-\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em Q\_\-SLOT that selectively provides the appropriate existent map of results from correlation (template matching) or pixel disparity. \item\end{CompactList}\item 
+\hypertarget{classQcorr_ce91b9d83b34887735737323bac5431e}{
+void \hyperlink{classQcorr_ce91b9d83b34887735737323bac5431e}{correlate} ()}
+\label{classQcorr_ce91b9d83b34887735737323bac5431e}
+
+\begin{CompactList}\small\item\em Q\_\-SLOT that process the correlation of the selected template against the target image. It calls \hyperlink{classQcorr_05dcc1b0be4596b355df235264180da4}{findCorrelation()} with the appropriate parameters to do a single template correlation across the entire target image. \item\end{CompactList}\item 
+\hypertarget{classQcorr_640ee4c76350e5886deddbf4f0d50594}{
+void \hyperlink{classQcorr_640ee4c76350e5886deddbf4f0d50594}{disparity} ()}
+\label{classQcorr_640ee4c76350e5886deddbf4f0d50594}
+
+\begin{CompactList}\small\item\em Q\_\-SLOT that is connected in the pixel-disparity finding operation mode. It should be mainly be used with dataset stereo images that get correlated row-by-row by using \hyperlink{classQcorr_05dcc1b0be4596b355df235264180da4}{findCorrelation()} with the pertinent parameters and the appropriate Q\_\-SLOT function implementation. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classQcorr_a925b0715143a0afa981851547f8b9256}{
-void {\bfseries displayImage} (QImage $\ast$image, QLabel $\ast$label)}
-\label{classQcorr_a925b0715143a0afa981851547f8b9256}
+void \hyperlink{classQcorr_925b0715143a0afa981851547f8b9256}{displayImage} (QImage $\ast$image, QLabel $\ast$label)
+\begin{CompactList}\small\item\em Displays any QImage on a Qlabel. \item\end{CompactList}\item 
+void \hyperlink{classQcorr_fddb022a6024a32be3b47016308d6c50}{displayImageLabel} (QImage $\ast$image, ImgLabel $\ast$label)
+\begin{CompactList}\small\item\em Displays the reference image on the left panel's label. which is a sub-classed widget. \item\end{CompactList}\item 
+\hypertarget{classQcorr_54af608880477563fa8ebcb0d066b447}{
+void \hyperlink{classQcorr_54af608880477563fa8ebcb0d066b447}{createActions} ()}
+\label{classQcorr_54af608880477563fa8ebcb0d066b447}
 
-\item 
-\hypertarget{classQcorr_afddb022a6024a32be3b47016308d6c50}{
-void {\bfseries displayImageLabel} (QImage $\ast$image, \hyperlink{classImgLabel}{ImgLabel} $\ast$label)}
-\label{classQcorr_afddb022a6024a32be3b47016308d6c50}
+\begin{CompactList}\small\item\em Sets up actions and Q\_\-SIGNAL-Q\_\-SLOT connections. \item\end{CompactList}\item 
+\hypertarget{classQcorr_17beb7cf946cdd82f587e3b4e5ee7f19}{
+void \hyperlink{classQcorr_17beb7cf946cdd82f587e3b4e5ee7f19}{setImageLabels} ()}
+\label{classQcorr_17beb7cf946cdd82f587e3b4e5ee7f19}
 
-\item 
-\hypertarget{classQcorr_a54af608880477563fa8ebcb0d066b447}{
-void {\bfseries createActions} ()}
-\label{classQcorr_a54af608880477563fa8ebcb0d066b447}
-
-\item 
-\hypertarget{classQcorr_a17beb7cf946cdd82f587e3b4e5ee7f19}{
-void {\bfseries setImageLabels} ()}
-\label{classQcorr_a17beb7cf946cdd82f587e3b4e5ee7f19}
-
-\item 
-float \hyperlink{classQcorr_aa867dbbe79fe720631216eec154a12e2}{findCorrelation} (const unsigned char $\ast$imgTarget, const int nWI, const int nHI, const int nDepthI, const unsigned char $\ast$imgTemplate, const int nWT, const int nHT, const int nDepthT, int \&rnDx, int \&rnDy, int nMethod, bool bMultires)
-\begin{DoxyCompactList}\small\item\em Cross-\/correlation of target image with template image. \item\end{DoxyCompactList}\item 
-float $\ast$ \hyperlink{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat} (const unsigned char $\ast$pchImgOriginalBits, int nSize, int nDepth)
-\begin{DoxyCompactList}\small\item\em Cast images to an 8-\/bit gray-\/scale channel of type float. \item\end{DoxyCompactList}\item 
-\hypertarget{classQcorr_a87229fc918fa4011e96fbadb325fd52e}{
-bool {\bfseries fileDumpQImage} (const QString \&fileName)}
-\label{classQcorr_a87229fc918fa4011e96fbadb325fd52e}
-
-\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself. \item\end{CompactList}\item 
+float \hyperlink{classQcorr_05dcc1b0be4596b355df235264180da4}{findCorrelation} (const unsigned char $\ast$imgTarget, const int nWI, const int nHI, const int nDepthI, const unsigned char $\ast$imgTemplate, const int nWT, const int nHT, const int nDepthT, int \&rnDx, int \&rnDy, int nMethod, bool bMultires=false, int nInitialXPosition=0, int nInitialYPosition=0, int nNumberOfRows=0)
+\begin{CompactList}\small\item\em Cross-correlation of target image with template image. \item\end{CompactList}\item 
+float $\ast$ \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat} (const unsigned char $\ast$pchImgOriginalBits, int nSize, int nDepth)
+\begin{CompactList}\small\item\em Cast images to an 8-bit gray-scale channel of type float. \item\end{CompactList}\item 
+bool \hyperlink{classQcorr_87229fc918fa4011e96fbadb325fd52e}{fileDumpQImage} (const QString \&fileName)
+\begin{CompactList}\small\item\em Used for testing and investing the bits stored in QImages or other Qt Widgets. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classQcorr_a49ad0fbdccdce18062eb17bb3ead20ce}{
-int {\bfseries m\_\-nXoffset}}
-\label{classQcorr_a49ad0fbdccdce18062eb17bb3ead20ce}
+\hypertarget{classQcorr_53798525ce189307cf597e71aabca91b}{
+int \hyperlink{classQcorr_53798525ce189307cf597e71aabca91b}{m\_\-nXCorrelationCoordinate}}
+\label{classQcorr_53798525ce189307cf597e71aabca91b}
 
-\item 
-\hypertarget{classQcorr_a882514fa3899bfa373660f643ee85cf7}{
-int {\bfseries m\_\-nYoffset}}
-\label{classQcorr_a882514fa3899bfa373660f643ee85cf7}
+\begin{CompactList}\small\item\em the resulting x-coordinate match obtained from correlation of a template against a target \item\end{CompactList}\item 
+\hypertarget{classQcorr_29f34cc7b765d5a64856696c48bfc191}{
+int \hyperlink{classQcorr_29f34cc7b765d5a64856696c48bfc191}{m\_\-nYCorrelationCoordinate}}
+\label{classQcorr_29f34cc7b765d5a64856696c48bfc191}
 
-\item 
-\hypertarget{classQcorr_a6509fcbf4cd8925aa109cc53e638b69a}{
-\hyperlink{classCorrMethod}{CorrMethod} $\ast$ {\bfseries m\_\-corrMethodDialog}}
-\label{classQcorr_a6509fcbf4cd8925aa109cc53e638b69a}
+\begin{CompactList}\small\item\em the resulting y-coordinate match obtained from correlation of a template against a target \item\end{CompactList}\item 
+\hypertarget{classQcorr_6509fcbf4cd8925aa109cc53e638b69a}{
+CorrMethod $\ast$ \hyperlink{classQcorr_6509fcbf4cd8925aa109cc53e638b69a}{m\_\-corrMethodDialog}}
+\label{classQcorr_6509fcbf4cd8925aa109cc53e638b69a}
 
-\item 
-\hypertarget{classQcorr_a3430716ddbe203f677095c163da87f86}{
-QString {\bfseries initialName}}
-\label{classQcorr_a3430716ddbe203f677095c163da87f86}
+\begin{CompactList}\small\item\em Dialog Box to choose a correlation method. \item\end{CompactList}\item 
+\hypertarget{classQcorr_3430716ddbe203f677095c163da87f86}{
+QString \hyperlink{classQcorr_3430716ddbe203f677095c163da87f86}{initialName}}
+\label{classQcorr_3430716ddbe203f677095c163da87f86}
 
-\item 
-\hypertarget{classQcorr_ae8bdd4be8a0c3023be34a1301b28c913}{
-QImage $\ast$ {\bfseries m\_\-leftImage}}
-\label{classQcorr_ae8bdd4be8a0c3023be34a1301b28c913}
+\begin{CompactList}\small\item\em String that saves the path for the first file image that has been loaded. \item\end{CompactList}\item 
+\hypertarget{classQcorr_e8bdd4be8a0c3023be34a1301b28c913}{
+QImage $\ast$ \hyperlink{classQcorr_e8bdd4be8a0c3023be34a1301b28c913}{m\_\-leftImage}}
+\label{classQcorr_e8bdd4be8a0c3023be34a1301b28c913}
 
-\item 
-\hypertarget{classQcorr_aae1695d731f191c694186e00b96f469e}{
-QImage $\ast$ {\bfseries m\_\-rightImage}}
-\label{classQcorr_aae1695d731f191c694186e00b96f469e}
+\begin{CompactList}\small\item\em Left Panel's Image (a.k.a. \char`\"{}reference image\char`\"{} when performing template matching through correlation). \item\end{CompactList}\item 
+\hypertarget{classQcorr_ae1695d731f191c694186e00b96f469e}{
+QImage $\ast$ \hyperlink{classQcorr_ae1695d731f191c694186e00b96f469e}{m\_\-rightImage}}
+\label{classQcorr_ae1695d731f191c694186e00b96f469e}
 
-\item 
-\hypertarget{classQcorr_a5594d939890f10991da0009e4c32bea3}{
-QImage $\ast$ {\bfseries m\_\-templateImage}}
-\label{classQcorr_a5594d939890f10991da0009e4c32bea3}
+\begin{CompactList}\small\item\em Right Panel's Image (a.k.a \char`\"{}target image\char`\"{}). \item\end{CompactList}\item 
+\hypertarget{classQcorr_5594d939890f10991da0009e4c32bea3}{
+QImage $\ast$ \hyperlink{classQcorr_5594d939890f10991da0009e4c32bea3}{m\_\-templateImage}}
+\label{classQcorr_5594d939890f10991da0009e4c32bea3}
 
-\item 
-\hypertarget{classQcorr_ac7dc2785613864bea2d8bb0b5f009f36}{
-QImage $\ast$ {\bfseries m\_\-corrMapImage}}
-\label{classQcorr_ac7dc2785613864bea2d8bb0b5f009f36}
+\begin{CompactList}\small\item\em Template Image that is selected from the reference image (in the left panel) that will be matched against. \item\end{CompactList}\item 
+\hypertarget{classQcorr_c7dc2785613864bea2d8bb0b5f009f36}{
+QImage $\ast$ \hyperlink{classQcorr_c7dc2785613864bea2d8bb0b5f009f36}{m\_\-corrMapImage}}
+\label{classQcorr_c7dc2785613864bea2d8bb0b5f009f36}
 
-\item 
-\hypertarget{classQcorr_acadb3032fbf41f8f1b27067c2784efef}{
-\hyperlink{classImgLabel}{ImgLabel} $\ast$ {\bfseries m\_\-leftImage\_\-label}}
-\label{classQcorr_acadb3032fbf41f8f1b27067c2784efef}
+\begin{CompactList}\small\item\em Correlation Map resulting from the Template Matching action. \item\end{CompactList}\item 
+\hypertarget{classQcorr_731915641051962d6a03a31b772640d4}{
+QImage $\ast$ \hyperlink{classQcorr_731915641051962d6a03a31b772640d4}{m\_\-disparityMapImage}}
+\label{classQcorr_731915641051962d6a03a31b772640d4}
 
-\item 
-\hypertarget{classQcorr_a8d1e1ab866a811003c435c45de1e958e}{
-\hyperlink{classTargetImgLabel}{TargetImgLabel} $\ast$ {\bfseries m\_\-targetImage\_\-label}}
-\label{classQcorr_a8d1e1ab866a811003c435c45de1e958e}
+\begin{CompactList}\small\item\em Disparity Map that results from the pixel disparities found between the left and right images. \item\end{CompactList}\item 
+\hypertarget{classQcorr_cadb3032fbf41f8f1b27067c2784efef}{
+ImgLabel $\ast$ \hyperlink{classQcorr_cadb3032fbf41f8f1b27067c2784efef}{m\_\-leftImage\_\-label}}
+\label{classQcorr_cadb3032fbf41f8f1b27067c2784efef}
 
-\item 
-\hypertarget{classQcorr_a1bf4a70aa6c4e171f2e0613109bb57e9}{
-QLabel $\ast$ {\bfseries m\_\-status\_\-label}}
-\label{classQcorr_a1bf4a70aa6c4e171f2e0613109bb57e9}
+\begin{CompactList}\small\item\em label used to display the left image. This is sub-classed widget implemented with the functionality of allowing template selection by a rectangular rubber-band \item\end{CompactList}\item 
+\hypertarget{classQcorr_8d1e1ab866a811003c435c45de1e958e}{
+TargetImgLabel $\ast$ \hyperlink{classQcorr_8d1e1ab866a811003c435c45de1e958e}{m\_\-targetImage\_\-label}}
+\label{classQcorr_8d1e1ab866a811003c435c45de1e958e}
 
-\item 
-\hypertarget{classQcorr_a8a7f00160ae46441cef038149cf28bdc}{
-QPoint \hyperlink{classQcorr_a8a7f00160ae46441cef038149cf28bdc}{m\_\-matchingPoint}}
-\label{classQcorr_a8a7f00160ae46441cef038149cf28bdc}
+\begin{CompactList}\small\item\em a sub-classed label widget implemented with the purpose of displaying the target image in the right panel with added functionality such as the visualization of the found match \item\end{CompactList}\item 
+\hypertarget{classQcorr_1bf4a70aa6c4e171f2e0613109bb57e9}{
+QLabel $\ast$ \hyperlink{classQcorr_1bf4a70aa6c4e171f2e0613109bb57e9}{m\_\-status\_\-label}}
+\label{classQcorr_1bf4a70aa6c4e171f2e0613109bb57e9}
 
-\begin{DoxyCompactList}\small\item\em upper-\/left corner point where the correlation match was found \item\end{DoxyCompactList}\item 
-\hypertarget{classQcorr_abc48bdd2110cfdaf7b98dde1cdf42f18}{
-QSize {\bfseries m\_\-templateSize}}
-\label{classQcorr_abc48bdd2110cfdaf7b98dde1cdf42f18}
+\begin{CompactList}\small\item\em status label that updates the mouse-pointer's position coordinates as it moves and selects templates. It also provides other types of information when required. \item\end{CompactList}\item 
+\hypertarget{classQcorr_fa1be55387e39ce5b81e72ecab75b5bc}{
+QVector$<$ QRgb $>$ $\ast$ \hyperlink{classQcorr_fa1be55387e39ce5b81e72ecab75b5bc}{m\_\-grayColorTab}}
+\label{classQcorr_fa1be55387e39ce5b81e72ecab75b5bc}
 
-\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em 8-bit gray-scale color table \item\end{CompactList}\item 
+\hypertarget{classQcorr_8a7f00160ae46441cef038149cf28bdc}{
+QPoint \hyperlink{classQcorr_8a7f00160ae46441cef038149cf28bdc}{m\_\-matchingPoint}}
+\label{classQcorr_8a7f00160ae46441cef038149cf28bdc}
+
+\begin{CompactList}\small\item\em upper-left corner point where the correlation match was found \item\end{CompactList}\item 
+\hypertarget{classQcorr_bc48bdd2110cfdaf7b98dde1cdf42f18}{
+QSize \hyperlink{classQcorr_bc48bdd2110cfdaf7b98dde1cdf42f18}{m\_\-templateSize}}
+\label{classQcorr_bc48bdd2110cfdaf7b98dde1cdf42f18}
+
+\begin{CompactList}\small\item\em the current template size as a QSize object \item\end{CompactList}\item 
+\hypertarget{classQcorr_3a964df80562c062d5f1f4f6cbf841bb}{
+QActionGroup $\ast$ \hyperlink{classQcorr_3a964df80562c062d5f1f4f6cbf841bb}{modes\_\-actionGroup}}
+\label{classQcorr_3a964df80562c062d5f1f4f6cbf841bb}
+
+\begin{CompactList}\small\item\em group of menu actions for the mode of operation. \item\end{CompactList}\item 
+\hypertarget{classQcorr_b5325b11a64e24eeb6b9bdc27a77d0ad}{
+bool \hyperlink{classQcorr_b5325b11a64e24eeb6b9bdc27a77d0ad}{m\_\-bHasLeftImage}}
+\label{classQcorr_b5325b11a64e24eeb6b9bdc27a77d0ad}
+
+\begin{CompactList}\small\item\em indicates that an image is loaded in the left panel \item\end{CompactList}\item 
+\hypertarget{classQcorr_a4afa1daa72ecf6caae74f6ced4ec251}{
+bool \hyperlink{classQcorr_a4afa1daa72ecf6caae74f6ced4ec251}{m\_\-bHasRightImage}}
+\label{classQcorr_a4afa1daa72ecf6caae74f6ced4ec251}
+
+\begin{CompactList}\small\item\em indicates that an image is loaded in the right panel \item\end{CompactList}\item 
+\hypertarget{classQcorr_40e40bfd5cc79d8abf6e7b41465f440e}{
+bool \hyperlink{classQcorr_40e40bfd5cc79d8abf6e7b41465f440e}{m\_\-bHasCorrMap}}
+\label{classQcorr_40e40bfd5cc79d8abf6e7b41465f440e}
+
+\begin{CompactList}\small\item\em indicates that a correlation map exists \item\end{CompactList}\item 
+\hypertarget{classQcorr_42ef5dadd6c1ff9f560de8cb1f43c2c6}{
+bool \hyperlink{classQcorr_42ef5dadd6c1ff9f560de8cb1f43c2c6}{m\_\-bHasDisparityMap}}
+\label{classQcorr_42ef5dadd6c1ff9f560de8cb1f43c2c6}
+
+\begin{CompactList}\small\item\em indicates that a disparity map exists \item\end{CompactList}\end{CompactItemize}
 \subsection*{Friends}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classQcorr_a5b4b2caf4c596b601dd096785e4a32b9}{
-class \hyperlink{classQcorr_a5b4b2caf4c596b601dd096785e4a32b9}{ImgLabel}}
-\label{classQcorr_a5b4b2caf4c596b601dd096785e4a32b9}
+\hypertarget{classQcorr_5b4b2caf4c596b601dd096785e4a32b9}{
+class \hyperlink{classQcorr_5b4b2caf4c596b601dd096785e4a32b9}{ImgLabel}}
+\label{classQcorr_5b4b2caf4c596b601dd096785e4a32b9}
 
-\end{DoxyCompactItemize}
+\end{CompactItemize}
 
 
 \subsection{Detailed Description}
-A Digital Image Correlation Program (Template Matcher) implemented in QT4. This class combines all other sub-\/classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure \hyperlink{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()}
+A Digital Image Correlation Program (Template Matcher) implemented in QT4. 
 
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
-Correlation is performed on gray-\/scale (1 channel image) that are computed in this procedure through the \hyperlink{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()} function.
-
-\begin{DoxyParagraph}{Compile-\/time dependencies}
-
-\end{DoxyParagraph}
-
-\begin{DoxyItemize}
-\item The QT4 Framework
-\end{DoxyItemize}
+This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()}
 
 \begin{Desc}
-\item[\hyperlink{bug__bug000001}{Bug}]
-\begin{DoxyItemize}
-\item Perhaps a few, but not noticed so far.
-\end{DoxyItemize}\end{Desc}
+\item[Note:]\end{Desc}
+Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()} function.
+
 \begin{Desc}
-\item[\hyperlink{todo__todo000001}{Todo}]
-\begin{DoxyItemize}
-\item Add Stereo functionality to obtain disparity maps
-\end{DoxyItemize}\end{Desc}
-\begin{DoxyAuthor}{Author}
-Carlos Jaramillo 
-
-Joel Gonzalez 
-\end{DoxyAuthor}
+\item[Compile-time dependencies]\end{Desc}
+\begin{itemize}
+\item The QT4 Framework\end{itemize}
 
 
-Definition at line 48 of file qcorr.h.
+\begin{Desc}
+\item[\hyperlink{bug__bug000001}{Bug}]\begin{itemize}
+\item Perhaps a few, but not noticed so far.\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]\begin{itemize}
+\item Add Stereo functionality to obtain disparity maps\end{itemize}
+\end{Desc}
+\begin{Desc}
+\item[Author:]Carlos Jaramillo 
+
+Joel Gonzalez \end{Desc}
+
+
+Definition at line 51 of file qcorr.h.
 
 \subsection{Member Function Documentation}
-\hypertarget{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}{
+\hypertarget{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{
 \index{Qcorr@{Qcorr}!convertToGrayScaleFloat@{convertToGrayScaleFloat}}
 \index{convertToGrayScaleFloat@{convertToGrayScaleFloat}!Qcorr@{Qcorr}}
-\subsubsection[{convertToGrayScaleFloat}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Qcorr::convertToGrayScaleFloat (const unsigned char $\ast$ {\em pchImgOriginalBits}, \/  int {\em nSize}, \/  int {\em nDepth})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}
+\subsubsection[{convertToGrayScaleFloat}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Qcorr::convertToGrayScaleFloat (const unsigned char $\ast$ {\em pchImgOriginalBits}, \/  int {\em nSize}, \/  int {\em nDepth})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}
 
 
-Cast images to an 8-\/bit gray-\/scale channel of type float. 
-\begin{DoxyParams}{Parameters}
-\item[{\em pchImgOriginalBits}]Buffer of unsigned characters as the source image \item[{\em nSize}]Number of pixels in the source image \item[{\em nDepth}]Pixel depth of the source image \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-the correlation number computed by method (directly). Additionally, the (dx,dy) offset of the template for which there exists a best match. 
-\end{DoxyReturn}
+Cast images to an 8-bit gray-scale channel of type float. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pchImgOriginalBits}]Buffer of unsigned characters as the source image \item[{\em nSize}]Number of pixels in the source image \item[{\em nDepth}]Pixel depth of the source image \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the correlation number computed by method (directly). Additionally, the (dx,dy) offset of the template for which there exists a best match. \end{Desc}
 
 
-Definition at line 876 of file qcorr.cpp.
+Definition at line 1318 of file qcorr.cpp.
 
-Referenced by findCorrelation().\hypertarget{classQcorr_aa867dbbe79fe720631216eec154a12e2}{
+Referenced by findCorrelation().\hypertarget{classQcorr_925b0715143a0afa981851547f8b9256}{
+\index{Qcorr@{Qcorr}!displayImage@{displayImage}}
+\index{displayImage@{displayImage}!Qcorr@{Qcorr}}
+\subsubsection[{displayImage}]{\setlength{\rightskip}{0pt plus 5cm}void Qcorr::displayImage (QImage $\ast$ {\em image}, \/  QLabel $\ast$ {\em label})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classQcorr_925b0715143a0afa981851547f8b9256}
+
+
+Displays any QImage on a Qlabel. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em image}]Pointer to a QImage instance \item[{\em label}]Pointer to a QLabel instance \end{description}
+\end{Desc}
+
+
+Definition at line 1304 of file qcorr.cpp.\hypertarget{classQcorr_fddb022a6024a32be3b47016308d6c50}{
+\index{Qcorr@{Qcorr}!displayImageLabel@{displayImageLabel}}
+\index{displayImageLabel@{displayImageLabel}!Qcorr@{Qcorr}}
+\subsubsection[{displayImageLabel}]{\setlength{\rightskip}{0pt plus 5cm}void Qcorr::displayImageLabel (QImage $\ast$ {\em image}, \/  ImgLabel $\ast$ {\em label})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classQcorr_fddb022a6024a32be3b47016308d6c50}
+
+
+Displays the reference image on the left panel's label. which is a sub-classed widget. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em image}]Pointer to a QImage instance \item[{\em label}]Pointer to a \hyperlink{classImgLabel}{ImgLabel} class instance \end{description}
+\end{Desc}
+
+
+Definition at line 1310 of file qcorr.cpp.
+
+Referenced by browseLeftImage().\hypertarget{classQcorr_87229fc918fa4011e96fbadb325fd52e}{
+\index{Qcorr@{Qcorr}!fileDumpQImage@{fileDumpQImage}}
+\index{fileDumpQImage@{fileDumpQImage}!Qcorr@{Qcorr}}
+\subsubsection[{fileDumpQImage}]{\setlength{\rightskip}{0pt plus 5cm}bool Qcorr::fileDumpQImage (const QString \& {\em fileName})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classQcorr_87229fc918fa4011e96fbadb325fd52e}
+
+
+Used for testing and investing the bits stored in QImages or other Qt Widgets. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fileName}]a QString reference to the file-name as which the raw bits will be storedpchImgOriginalBits Buffer of unsigned characters as the source image \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true if the bits were properly dumped to the specified fileName \end{Desc}
+
+
+Definition at line 1361 of file qcorr.cpp.
+
+References m\_\-rightImage.\hypertarget{classQcorr_05dcc1b0be4596b355df235264180da4}{
 \index{Qcorr@{Qcorr}!findCorrelation@{findCorrelation}}
 \index{findCorrelation@{findCorrelation}!Qcorr@{Qcorr}}
-\subsubsection[{findCorrelation}]{\setlength{\rightskip}{0pt plus 5cm}float Qcorr::findCorrelation (const unsigned char $\ast$ {\em imgTarget}, \/  const int {\em nWI}, \/  const int {\em nHI}, \/  const int {\em nDepthI}, \/  const unsigned char $\ast$ {\em imgTemplate}, \/  const int {\em nWT}, \/  const int {\em nHT}, \/  const int {\em nDepthT}, \/  int \& {\em rnDx}, \/  int \& {\em rnDy}, \/  int {\em nMethod}, \/  bool {\em bMultires})\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
-\label{classQcorr_aa867dbbe79fe720631216eec154a12e2}
+\subsubsection[{findCorrelation}]{\setlength{\rightskip}{0pt plus 5cm}float Qcorr::findCorrelation (const unsigned char $\ast$ {\em imgTarget}, \/  const int {\em nWI}, \/  const int {\em nHI}, \/  const int {\em nDepthI}, \/  const unsigned char $\ast$ {\em imgTemplate}, \/  const int {\em nWT}, \/  const int {\em nHT}, \/  const int {\em nDepthT}, \/  int \& {\em rnDx}, \/  int \& {\em rnDy}, \/  int {\em nMethod}, \/  bool {\em bMultires} = {\tt false}, \/  int {\em nInitialXPosition} = {\tt 0}, \/  int {\em nInitialYPosition} = {\tt 0}, \/  int {\em nNumberOfRows} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classQcorr_05dcc1b0be4596b355df235264180da4}
 
 
-Cross-\/correlation of target image with template image. \begin{DoxyNote}{Note}
-Correlation is performed on gray-\/scale (1 channel image) that are computed in this procedure through the \hyperlink{classQcorr_ad1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()} function. 
-\end{DoxyNote}
+Cross-correlation of target image with template image. 
 
-\begin{DoxyParams}{Parameters}
-\item[{\em imgTarget}]Buffer of unsigned characters containing the target image where correlation match is to be found \item[{\em nWI}]Width of target image \item[{\em nHI}]Height of target image \item[{\em nDepthI}]Pixel depth of target image \item[{\em imgTemplate}]Buffer of unsigned characters containing the template image \item[{\em nWT}]Width of target image \item[{\em nHT}]Height of target image \item[{\em nDepthT}]Pixel depth of target image \item[{\em rnDx}]X position where the highest level of correlation match is found (top-\/left corner of the match) \item[{\em rnDy}]Y position where the highest level of correlation match is found (top-\/left corner of the match) \item[{\em method}]Determines the selected method to be used in the correlation process. The method is a globally defined enumeration. The available methods are:
-\begin{DoxyItemize}
-\item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]
-\item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]
-\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \] 
-\end{DoxyItemize}\item[{\em multires}]Determines if multiresolution correlation should be applied, by making use of image pyramids. With multiresoltion, the correlation can be determined faster than direct correlation. \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-a float array resulting from the conversion of the source image into an 8-\/bit gray-\/scale image. 
-\end{DoxyReturn}
+\begin{Desc}
+\item[Note:]Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()} function. \end{Desc}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em imgTarget}]Buffer of unsigned characters containing the target image where correlation match is to be found \item[{\em nWI}]Width of target image \item[{\em nHI}]Height of target image \item[{\em nDepthI}]Pixel depth of target image \item[{\em imgTemplate}]Buffer of unsigned characters containing the template image \item[{\em nWT}]Width of target image \item[{\em nHT}]Height of target image \item[{\em nDepthT}]Pixel depth of target image \item[{\em rnDx}]x-coordinate where the highest level of correlation match is found (top-left corner of the match) \item[{\em rnDy}]y-coordinate where the highest level of correlation match is found (top-left corner of the match) \item[{\em nMethod}]Determines the selected method to be used in the correlation process. The method is a globally defined enumeration. The available methods are:\begin{itemize}
+\item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]\item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \] \end{itemize}
+\item[{\em bMultires}]Determines if multiresolution correlation should be applied, by making use of image pyramids. With multiresoltion, the correlation can be determined faster than direct correlation. Default is false. \item[{\em nInitialXPosition}]Indicates the x-coordinate of the pixel on the target image where correlation should start. Default is 0 \item[{\em nInitialYPosition}]Indicates the y-coordinate of the pixel on the target image where correlation should start. Default is 0 \item[{\em nNumberOfRows}]Indicates the number of rows on the target image to be scanned. Default is 0, which means all of them. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a float array resulting from the conversion of the source image into an 8-bit gray-scale image. \end{Desc}
 
 
-Definition at line 262 of file qcorr.cpp.
+Definition at line 694 of file qcorr.cpp.
 
-References convertToGrayScaleFloat().
+References convertToGrayScaleFloat(), m\_\-corrMapImage, and m\_\-grayColorTab.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Referenced by correlate(), and disparity().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
 src/qcorr.h\item 
-src/qcorr.cpp\end{DoxyCompactItemize}
+src/qcorr.cpp\end{CompactItemize}
