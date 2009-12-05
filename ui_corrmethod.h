@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'corrmethod.ui'
 **
-** Created: Fri Nov 27 19:36:19 2009
+** Created: Fri Dec 4 20:54:10 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

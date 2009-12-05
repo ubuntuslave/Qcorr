@@ -97,7 +97,7 @@ void Qcorr::createActions()
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
 
    // View menu:
-   connect(action_Correlation_Map, SIGNAL(triggered()), this, SLOT(viewCorrMap()));
+   connect(action_Map, SIGNAL(triggered()), this, SLOT(viewMap()));
 
    // Mode menu:
    connect(actionTemplate_Matching, SIGNAL(triggered()), this, SLOT(changeMouse()));
@@ -202,22 +202,28 @@ void Qcorr::changeMouse()
       m_leftImage_label->setSelectable(false);
       m_targetImage_label->eraseEnclosedMatch();
 
-      action_Correlation_Map->setEnabled(false);   // Disable Correlation Map View
+      action_Map->setEnabled(false);   // Disable Correlation Map View
       m_targetImage_label->setImage(*m_rightImage);   // Clear Correlation Image
 
       }
 }
 
-void Qcorr::viewCorrMap()
+void Qcorr::viewMap()
 {
-   if(action_Correlation_Map->isChecked())
+
+   if(actionTemplate_Matching->isChecked() && action_Map->isChecked())
       {
-      m_targetImage_label->overlayImage(*m_corrMapImage);
+      m_targetImage_label->overlayImage(*m_corrMapImage); // Display Correlation Level Map over Right Panel's Image
+      }
+   else if(action_Disparity_Finder->isChecked() && action_Map->isChecked())
+      {
+      m_targetImage_label->setImage(*m_disparityMapImage);  // Display Disparity Map on the Right Panel
       }
    else
       {
-      m_targetImage_label->setImage(*m_rightImage);
+      m_targetImage_label->setImage(*m_rightImage);   // Display Right Image
       }
+
 
 }
 
@@ -284,8 +290,8 @@ void Qcorr::correlate()
                                                    );
       //            m_targetImage_label->setImage(*m_corrMapImage);
 
-                  action_Correlation_Map->setEnabled(true);
-                  emit this->viewCorrMap();  // emit this signal so it refreshes the correlation map automatically
+                  action_Map->setEnabled(true);
+                  emit this->viewMap();  // emit this signal so it refreshes the correlation map automatically
 
                   }
                else
@@ -309,6 +315,115 @@ void Qcorr::correlate()
 
 void Qcorr::disparity()
 {
+   // Target Image dimensions:
+   int wI = m_rightImage->width();
+   int hI = m_rightImage->height();
+   int depthI = m_rightImage->depth();
+
+   // Template Image dimensions:
+   int wT = 20;   // Arbitrary value, but it should be asked to the user
+   int hT = 20;   // Arbitrary value
+   int depthT = m_leftImage->depth();
+
+   // Traverse a number of times determined by the number of templates that could be fit side-by-side on the target image
+   int nXTraverse = (wI / wT);
+   int nYTraverse = (hI / hT);
+
+   // Store the disparities along the rows of pixels
+   int nDispArraySize = nXTraverse * nYTraverse;
+   int *anDisparityXValues = new int[nDispArraySize]; // Array to save the disparity values for each pixel
+
+   // Using QT to extract the template   vvvvvvvvvvvvvvvvvvvvv
+   // TODO: must be QT independent in the future
+   m_templateImage = new QImage();
+
+   m_templateSize.setHeight(hT);
+   m_templateSize.setWidth(wT);
+
+   unsigned char * achRightImage_bits = m_rightImage->bits();
+
+   QPoint templateCoordsPoint;
+
+   QImage *resultImage = new QImage(nXTraverse, nYTraverse, QImage::Format_Indexed8);  // Empty Image
+   // For now, using only gray-scale color table
+   resultImage->setColorTable(*m_grayColorTab);
+
+   int nPixelDisparity; // used to temporarily store the disparity result from each iteration
+   int nIndexYOffset;   // Used to save up recalculation of y-index offset for each row
+   float fCorrLevel;    // correlation level
+   // Traverse the template of the reference (left) and target(right) images with respect to rows only
+   // The template traverses an entire row, and then a new template at the next pixel is created and traversed on the raw
+   // This process repeats for all the pixels in the row, and then correlate the next row's pixels in the same fashion.
+   for (int y = 0, yIndex = 0; y < nYTraverse; y++, yIndex += hT ) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+      { // visit rows
+      m_nXCorrelationCoordinate = 0;   // Reset to 0 at the beginning of each row
+      fCorrLevel = 0.0;       // Also, clear to 0.0 the correlation level
+      nIndexYOffset = y * nXTraverse;
+      for (int x = 0, xIndex=0; x < nXTraverse; x++, xIndex += wT )    // Traverses the width until the template's right edge is on the right edge of the target
+         { // visit columns
+
+         // Set template coordinates
+         templateCoordsPoint.setX(xIndex);
+         templateCoordsPoint.setY(yIndex);
+         // Draw rubber band to indicate current template correlation
+         m_leftImage_label->m_rubberBand->setGeometry(QRect(templateCoordsPoint,m_templateSize));
+
+         // Create current template image
+         *m_templateImage = m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry());
+
+         // the next correlation position on the line has to pay attention to the correlation level return,
+         // so when the previous match is not perfect (in this case 1.0), the line should be scanned from the beginning
+         if(fCorrLevel < 0.9)
+            {
+            m_nXCorrelationCoordinate = 0;   // The previous template matching was not perfect, so start from the beginning of the row
+            }
+
+         fCorrLevel = findCorrelation( achRightImage_bits, wI, hI, depthI,  // force to correlate 1 row of the height of the template
+               m_templateImage->bits(), wT, hT, depthT,
+               m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
+               CORR_COEFF,// this correlation method is the most accurate
+               false, m_nXCorrelationCoordinate, y, 1);     // in order to save time,
+                                                         // nInitialXPosition can be the last pixel matched in the prior step
+         //            m_targetImage_label->setImage(*m_rightImage);   // reset Image
+         //            m_matchingPoint.setX(m_nXCorrelationCoordinate);
+         //            m_matchingPoint.setY(m_nYCorrelationCoordinate);
+         //            m_matchingPoint.setX(x);
+         //            m_matchingPoint.setY(y);
+         //            m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
+         // Store disparity of current pixel in question
+         if(fCorrLevel < 0.5) // below an average match (value is arbitrarily chosen)
+            {
+            nPixelDisparity = 0;
+            }
+         else
+            {
+            nPixelDisparity = xIndex - m_nXCorrelationCoordinate;
+            }
+
+         anDisparityXValues[nIndexYOffset + x] = nPixelDisparity;
+         resultImage->setPixel(x, y, nPixelDisparity);
+         }
+      }
+
+   for(int i=0; i<nDispArraySize ;i++)
+      {
+      std::cout << anDisparityXValues[i] << " : ";
+      //         qDebug() << anDisparityXValues[i] << " : ";
+      }
+   // Draw disparity map
+   // TODO: add toggles to see either the right image or the disparity map....Just like with correlation
+   //       perhaps, call it in the View, just Show Map
+   // Should be eventually scaled uniformly from the smaller result disparity image
+      m_disparityMapImage = new QImage(resultImage->scaledToWidth(wI,Qt::FastTransformation)); // also, try Qt::SmoothTransformation
+   // Draw disparity map:
+      action_Map->setChecked(true);
+      action_Map->setEnabled(true);
+      emit this->viewMap();  // emit this signal so it refreshes the correlation map automatically
+//      m_targetImage_label->setImage(*m_disparityMapImage);
+
+      // SCANNING ALL PIXELS (one-by-one)...way too slow!
+/*
    // Target Image dimensions:
    int wI = m_rightImage->width();
    int hI = m_rightImage->height();
@@ -404,12 +519,14 @@ void Qcorr::disparity()
       std::cout << anDisparityXValues[i] << " : ";
       //         qDebug() << anDisparityXValues[i] << " : ";
       }
-   // Draw disparity map
-   // TODO: add toggles to see either the right image or the disparity map....Just like with correlation
-   //       perhaps, call it in the View, just Show Map
-      m_targetImage_label->setImage(*m_disparityMapImage);
+   // Draw disparity map:
+      action_Map->setChecked(true);
+      action_Map->setEnabled(true);
+      emit this->viewMap();  // emit this signal so it refreshes the correlation map automatically
+//      m_targetImage_label->setImage(*m_disparityMapImage);
+*/
 
-   // SECOND APPROACH (Skipping the template's width each time)
+      // SECOND APPROACH (Skipping the template's width each time)
 /*
    // Target Image dimensions:
    int wI = m_rightImage->width();

@@ -60,7 +60,7 @@ private Q_SLOTS:
     void browseLeftImage();
     void browseRightImage();
     void changeMouse(); ///< change mouse pointer according to operation mode
-    void viewCorrMap();
+    void viewMap();
     void correlate();
     void disparity();
 

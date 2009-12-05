@@ -241,7 +241,7 @@
     <property name="title">
      <string>&amp;View</string>
     </property>
-    <addaction name="action_Correlation_Map"/>
+    <addaction name="action_Map"/>
    </widget>
    <widget class="QMenu" name="menu_Mode">
     <property name="title">
@@ -260,7 +260,7 @@
     <string>&amp;Quit</string>
    </property>
   </action>
-  <action name="action_Correlation_Map">
+  <action name="action_Map">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -268,7 +268,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Correlation Map</string>
+    <string>&amp;Map</string>
    </property>
   </action>
   <action name="actionTemplate_Matching">
