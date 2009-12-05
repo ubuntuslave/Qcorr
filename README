@@ -1,9 +1,12 @@
 Senior Capstone Project.
 
-This Project is totally useless, so please don't even bother to look at it.
+This Project is not thoroughly implemented, so please don't even bother looking at it. The functionality is very basic and requires a lot of work on its actual usability.
 
-Nothing really works. We are just learing and I could say that we're still wearing diapers.
+Some basic methods of image correlation are implemented from the graceful source-code from Prof. G. Wolberg's IP_correlation procedure used in his extensive Image Processing Suite.
+
+Please, send comments to ubuntuslave@gmail.com
 
 Regards,
 
-Mr. U. Slave
+Mr. Ubuntu Slave
+

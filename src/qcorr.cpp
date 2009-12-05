@@ -68,10 +68,15 @@ void Qcorr::setImageLabels()
    statusbar->addWidget(m_status_label);
    // END Status label configuration ^^^^^^
 
-   start_pushButton->setEnabled(false); // This button should be initially disabled because there's no target image to correlate to
+   // This buttons should be initially disabled because there's no target image to correlate to
+   start_pushButton->setEnabled(false);
+   controls_pushButton->setEnabled(false);
 
    // Create Correlation Method Dialog, which is initially hidden
    m_corrMethodDialog = new CorrMethod(this);
+
+   // Create Controls Window, which is initially hidden
+   m_controlsWindow = new ControlsWindow(this);
 
    modes_actionGroup = new QActionGroup(menu_Mode);
    modes_actionGroup->addAction(actionTemplate_Matching);
@@ -97,6 +102,7 @@ void Qcorr::createActions()
    connect(leftBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseLeftImage()));
    connect(rightBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseRightImage()));
    connect(start_pushButton, SIGNAL(clicked()), this, SLOT(correlate()));
+   connect(controls_pushButton, SIGNAL(clicked()), m_controlsWindow, SLOT(show()));
 
    action_Quit->setShortcut(tr("Ctrl+Q"));
    connect(action_Quit, SIGNAL(triggered()), this, SLOT(close()));
@@ -110,6 +116,14 @@ void Qcorr::createActions()
 
 }
 
+void Qcorr::setEnableActions(bool bEnable)
+{
+    this->changeMouse();
+    start_pushButton->setEnabled(bEnable);
+    controls_pushButton->setEnabled(bEnable);
+    actionTemplate_Matching->setEnabled(bEnable);
+    action_Disparity_Finder->setEnabled(bEnable);
+}
 
 // begin Q_SLOTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 void Qcorr::browseLeftImage()
@@ -149,13 +163,7 @@ void Qcorr::browseLeftImage()
       m_bHasLeftImage = true;
 
       if(m_bHasRightImage)
-         {
-         this->changeMouse();
-         start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
-         // Enable actions from the Mode menu
-         actionTemplate_Matching->setEnabled(true);
-         action_Disparity_Finder->setEnabled(true);
-         }
+         setEnableActions(true);
       }
 }
 
@@ -190,13 +198,7 @@ void Qcorr::browseRightImage()
      m_bHasRightImage = true;
 
      if(m_bHasLeftImage)
-        {
-        this->changeMouse();
-        start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
-        // Enable actions from the Mode menu
-        actionTemplate_Matching->setEnabled(true);
-        action_Disparity_Finder->setEnabled(true);
-        }
+        setEnableActions(true);
 
       // CARLOS: just for testing:
       // To verify if the data has been converted to grayscale,
@@ -363,8 +365,8 @@ void Qcorr::disparity()
    int depthI = m_rightImage->depth();
 
    // Template Image dimensions:
-   int wT = 80;   // Arbitrary value, but it should be asked to the user
-   int hT = 80;   // Arbitrary value
+   int wT = 32;   // Arbitrary value, but it should be asked to the user
+   int hT = 32;   // Arbitrary value
    int depthT = m_leftImage->depth();
 
    // TODO: allow user to change the following interval
@@ -442,14 +444,14 @@ void Qcorr::disparity()
 
 
          // Store disparity of current pixel in question
-         if(fCorrLevel < 0.3) // below an average match (value is arbitrarily chosen)
+         nPixelDisparity = xIndex - m_nXCorrelationCoordinate;
+         if(nPixelDisparity < 0) // below an average match (value is arbitrarily chosen)
             {
             nPixelDisparity = 0;
             }
-         else
-            {
-            nPixelDisparity = xIndex - m_nXCorrelationCoordinate;
-            }
+
+
+         std::cout << "Xl=" << xIndex << ":" << "Xr=" << m_nXCorrelationCoordinate << "Yr=" << m_nYCorrelationCoordinate << " : ";
 
          anDisparityXValues[nIndexYOffset + x] = nPixelDisparity;
          resultImage->setPixel(x, y, nPixelDisparity);

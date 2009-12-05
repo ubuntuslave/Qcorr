@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'qcorr.ui'
 **
-** Created: Fri Dec 4 22:31:29 2009
+** Created: Sat Dec 5 17:18:27 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -58,6 +58,7 @@ public:
     QScrollArea *rightImage_scrollArea;
     QWidget *scrollAreaWidgetContents_2;
     QHBoxLayout *bottom_horizontalLayout;
+    QPushButton *controls_pushButton;
     QPushButton *start_pushButton;
     QLabel *corrResults_label;
     QSpacerItem *horizontalSpacer;
@@ -197,6 +198,11 @@ public:
         bottom_horizontalLayout = new QHBoxLayout();
         bottom_horizontalLayout->setSpacing(0);
         bottom_horizontalLayout->setObjectName(QString::fromUtf8("bottom_horizontalLayout"));
+        controls_pushButton = new QPushButton(main_frame);
+        controls_pushButton->setObjectName(QString::fromUtf8("controls_pushButton"));
+
+        bottom_horizontalLayout->addWidget(controls_pushButton);
+
         start_pushButton = new QPushButton(main_frame);
         start_pushButton->setObjectName(QString::fromUtf8("start_pushButton"));
 
@@ -218,7 +224,7 @@ public:
 
         bottom_horizontalLayout->addWidget(corrResults_label);
 
-        horizontalSpacer = new QSpacerItem(5, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(1, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         bottom_horizontalLayout->addItem(horizontalSpacer);
 
@@ -233,7 +239,7 @@ public:
         QcorrClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(QcorrClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 28));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         menu_Menu = new QMenu(menubar);
         menu_Menu->setObjectName(QString::fromUtf8("menu_Menu"));
         menu_View = new QMenu(menubar);
@@ -267,6 +273,7 @@ public:
         action_Disparity_Finder->setText(QApplication::translate("QcorrClass", "&Disparity Finder", 0, QApplication::UnicodeUTF8));
         leftBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Left Image", 0, QApplication::UnicodeUTF8));
         rightBrowse_pushButton->setText(QApplication::translate("QcorrClass", "Browse &Right Image", 0, QApplication::UnicodeUTF8));
+        controls_pushButton->setText(QApplication::translate("QcorrClass", "&Controls", 0, QApplication::UnicodeUTF8));
         start_pushButton->setText(QApplication::translate("QcorrClass", "&Start", 0, QApplication::UnicodeUTF8));
         corrResults_label->setText(QString());
         quit_pushButton->setText(QApplication::translate("QcorrClass", "&Quit", 0, QApplication::UnicodeUTF8));

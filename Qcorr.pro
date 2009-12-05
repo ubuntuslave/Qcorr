@@ -2,16 +2,19 @@ TEMPLATE = app
 TARGET = Qcorr
 QT += core \
     gui
-HEADERS += src/corrmethod.h \
+HEADERS += src/controlswindow.h \
+    src/corrmethod.h \
     src/globals.h \
     src/imgLabel.h \
     src/qcorr.h \
     src/targetImgLabel.h
-SOURCES += src/corrmethod.cpp \
+SOURCES += src/controlswindow.cpp \
+    src/corrmethod.cpp \
     src/imgLabel.cpp \
     src/main.cpp \
     src/qcorr.cpp \
     src/targetImgLabel.cpp
-FORMS += src/corrmethod.ui \
+FORMS += src/controlswindow.ui \
+    src/corrmethod.ui \
     src/qcorr.ui
 RESOURCES += 

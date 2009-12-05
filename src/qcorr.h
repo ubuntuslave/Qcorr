@@ -6,6 +6,7 @@
 #include "imgLabel.h"
 #include "targetImgLabel.h"
 #include "corrmethod.h"
+#include "controlswindow.h"
 
 class QImage;
 class QPainter;
@@ -70,6 +71,11 @@ private:
       */
     friend class ImgLabel;
 
+    /** @class ControlsWindow
+      * @brief  allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of Qcorr.
+      */
+    friend class ControlsWindow;
+
     /** @brief  Displays any QImage on a Qlabel
         * @param image Pointer to a QImage instance
         * @param label Pointer to a QLabel instance
@@ -86,6 +92,10 @@ private:
         */
     void createActions();
 
+    /** @brief  Enables/Disables operation modes actions related widgets
+      * @param bEnable boolean flag to enable or disable the operation mode's actions widgets as well as the related widgets such as, start_pushButton and controls_pushButton
+      */
+    void setEnableActions(bool bEnable);
     /** @brief  Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself
         */
     void setImageLabels();
@@ -155,6 +165,7 @@ private:
     int m_nYCorrelationCoordinate;  ///< the resulting y-coordinate match obtained from correlation of a template against a target
 
     CorrMethod *m_corrMethodDialog; ///< Dialog Box to choose a correlation method
+    ControlsWindow *m_controlsWindow; ///< Dialog Box to modify correlation parameters such as template size and scan interval
     QString initialName;   ///< String that saves the path for the first file image that has been loaded
     QImage *m_leftImage;   ///< Left Panel's Image (a.k.a. "reference image" when performing template matching through correlation)
     QImage *m_rightImage;  ///< Right Panel's Image (a.k.a "target image")
