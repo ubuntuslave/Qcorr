@@ -150,6 +150,8 @@ private:
 
     bool m_bHasLeftImage;  ///< indicates that an image is loaded in the left panel
     bool m_bHasRightImage; ///< indicates that an image is loaded in the right panel
+    bool m_bHasCorrMap;    ///< indicates that a correlation map exists
+    bool m_bHasDisparityMap;    ///< indicates that a disparity map exists
 
 protected:
 //    void paintEvent(QPaintEvent *);
