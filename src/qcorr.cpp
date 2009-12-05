@@ -393,9 +393,10 @@ void Qcorr::disparity()
    // For now, using only gray-scale color table
    resultImage->setColorTable(*m_grayColorTab);
 
+   m_leftImage_label->m_rubberBand->show();  // to visualize the template traversal
+
    int nPixelDisparity; // used to temporarily store the disparity result from each iteration
    int nIndexYOffset;   // Used to save up recalculation of y-index offset for each row
-//   float fLevel_CorrCoeff, fLevel_CrossCorr;    // correlation levels for the respective methods
    float fCorrLevel;      // to temporarily store the strongest level of correlation
    // Traverse the template of the reference (left) and target(right) images with respect to rows only
    // The template traverses an entire row, and then a new template at the next pixel is created and traversed on the raw
@@ -418,6 +419,11 @@ void Qcorr::disparity()
          // Create current template image
          *m_templateImage = m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry());
 
+         qApp->processEvents(QEventLoop::ExcludeUserInputEvents); // Stay Responsive
+         // Visualize the template traversal across the images
+         m_leftImage_label->m_rubberBand->setGeometry(QRect(templateCoordsPoint, m_templateSize));
+         m_targetImage_label->drawEnclosedMatch(templateCoordsPoint, m_templateSize);
+
          // the next correlation position on the line has to pay attention to the correlation level return,
          // so when the previous match is not perfect (in this case 1.0), the line should be scanned from the beginning
          if(fCorrLevel < 0.9)
@@ -432,37 +438,8 @@ void Qcorr::disparity()
                                     false, m_nXCorrelationCoordinate, yIndex, 1);     // in order to save time,
                                  // nInitialXPosition can be the previously matched pixel
 
-         // The following is a trial-workaround to deal with the continuous sequence of mismatches when using a unique correlation method.
-         // Since there is no perfect correlation method that works under all circumstances,
-         // we will do the match using two different methods, and we'll choose the strongest level as the winner
-         // and continue using the winner method until it falls under the minimum set threshold.
-//
-//         if(fLevel_CorrCoeff >= fLevel_CrossCorr)
-//            {
-//            fLevel_CorrCoeff = findCorrelation( achRightImage_bits, wI, hI, depthI,  // force to correlate 1 row of the height of the template
-//                                                m_templateImage->bits(), wT, hT, depthT,
-//                                                m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
-//                                                CORR_COEFF, // correlation method
-//                                                false, m_nXCorrelationCoordinate, yIndex, 1);     // in order to save time,
-//                                             // nInitialXPosition can be the previously matched pixel
-//            fLastHighestCorrLevel = fLevel_CorrCoeff;
-//            }
-//         else
-//            {
-//            fLevel_CrossCorr = findCorrelation( achRightImage_bits, wI, hI, depthI,  // force to correlate 1 row of the height of the template
-//                                                m_templateImage->bits(), wT, hT, depthT,
-//                                                m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
-//                                                CROSS_CORR, // correlation method
-//                                                false, m_nXCorrelationCoordinate, yIndex, 1);     // in order to save time,
-//                                             // nInitialXPosition can be the previously matched pixel
-//            fLastHighestCorrLevel = fLevel_CrossCorr;
-//            }
          //            m_targetImage_label->setImage(*m_rightImage);   // reset Image
-         //            m_matchingPoint.setX(m_nXCorrelationCoordinate);
-         //            m_matchingPoint.setY(m_nYCorrelationCoordinate);
-         //            m_matchingPoint.setX(x);
-         //            m_matchingPoint.setY(y);
-         //            m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
 
          // Store disparity of current pixel in question
          if(fCorrLevel < 0.3) // below an average match (value is arbitrarily chosen)
@@ -478,6 +455,9 @@ void Qcorr::disparity()
          resultImage->setPixel(x, y, nPixelDisparity);
          }
       }
+   // Clean up enclosing visualizations of template traversal
+   m_targetImage_label->eraseEnclosedMatch();
+   m_leftImage_label->m_rubberBand->hide();
 
    for(int i=0; i<nDispArraySize ;i++)
       {
