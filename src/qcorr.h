@@ -111,11 +111,13 @@ private:
     *                 Default is false.
     * @param nInitialXPosition Indicates the x-coordinate of the pixel on the target image where correlation should start. Default is 0
     * @param nInitialYPosition Indicates the y-coordinate of the pixel on the target image where correlation should start. Default is 0
+    * @param nNumberOfRows Indicates the number of rows on the target image to be scanned. Default is 0, which means all of them.
     * @returns a float array resulting from the conversion of the source image into an 8-bit gray-scale image.
     */
     float findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
           const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT,
-          int &rnDx, int &rnDy, int nMethod, bool bMultires = false, int nInitialXPosition = 0, int nInitialYPosition = 0);
+          int &rnDx, int &rnDy, int nMethod,
+          bool bMultires = false, int nInitialXPosition = 0, int nInitialYPosition = 0, int nNumberOfRows = 0);
 
     /** @brief  Cast images to an 8-bit gray-scale channel of type float
       * @param pchImgOriginalBits Buffer of unsigned characters as the source image
@@ -135,6 +137,7 @@ private:
     QImage *m_rightImage;
     QImage *m_templateImage;
     QImage *m_corrMapImage;
+    QImage *m_disparityMapImage;
     ImgLabel *m_leftImage_label;
     TargetImgLabel *m_targetImage_label;
     QLabel *m_status_label;
