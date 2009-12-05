@@ -148,6 +148,9 @@ private:
     QSize m_templateSize;
     QActionGroup *modes_actionGroup;
 
+    bool m_bHasLeftImage;  ///< indicates that an image is loaded in the left panel
+    bool m_bHasRightImage; ///< indicates that an image is loaded in the right panel
+
 protected:
 //    void paintEvent(QPaintEvent *);
 //    void mousePressEvent(QMouseEvent *event);

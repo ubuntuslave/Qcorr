@@ -47,6 +47,10 @@ void Qcorr::setImageLabels()
    rightImage_scrollArea->setWidget(m_targetImage_label);
    rightImage_scrollArea->setBackgroundRole(QPalette::Dark);
 
+   // set flags for load-status of images
+   m_bHasLeftImage = false;
+   m_bHasRightImage = false;
+
    // BEGIN Status label configuration: vvvvvvvvv
    m_status_label = new QLabel;
    m_status_label->setAlignment(Qt::AlignLeft);
@@ -140,7 +144,17 @@ void Qcorr::browseLeftImage()
 
       m_leftImage_label->setMouseTracking(true);
       m_leftImage_label->setFocusPolicy(Qt::ClickFocus);
-   }
+
+      m_bHasLeftImage = true;
+
+      if(m_bHasRightImage)
+         {
+         start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
+         // Enable actions from the Mode menu
+         actionTemplate_Matching->setEnabled(true);
+         action_Disparity_Finder->setEnabled(true);
+         }
+      }
 }
 
 void Qcorr::browseRightImage()
@@ -171,6 +185,16 @@ void Qcorr::browseRightImage()
 
      m_targetImage_label->setImage(*m_rightImage);
 
+     m_bHasRightImage = true;
+
+     if(m_bHasLeftImage)
+        {
+        start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
+        // Enable actions from the Mode menu
+        actionTemplate_Matching->setEnabled(true);
+        action_Disparity_Finder->setEnabled(true);
+        }
+
       // CARLOS: just for testing:
       // To verify if the data has been converted to grayscale,
       // and that QImage's bits() function uses only the data pixels without any formatting headers
@@ -187,7 +211,6 @@ void Qcorr::browseRightImage()
 
       update();
 
-      start_pushButton->setEnabled(true); // Now, this button can be enabled because a target image exists to correlate to
    }
 }
 
@@ -204,9 +227,9 @@ void Qcorr::changeMouse()
 
       action_Map->setEnabled(false);   // Disable Correlation Map View
       m_targetImage_label->setImage(*m_rightImage);   // Clear Correlation Image
-
       }
 }
+
 
 void Qcorr::viewMap()
 {
@@ -321,13 +344,16 @@ void Qcorr::disparity()
    int depthI = m_rightImage->depth();
 
    // Template Image dimensions:
-   int wT = 20;   // Arbitrary value, but it should be asked to the user
-   int hT = 20;   // Arbitrary value
+   int wT = 40;   // Arbitrary value, but it should be asked to the user
+   int hT = 40;   // Arbitrary value
    int depthT = m_leftImage->depth();
 
-   // Traverse a number of times determined by the number of templates that could be fit side-by-side on the target image
-   int nXTraverse = (wI / wT);
-   int nYTraverse = (hI / hT);
+   // TODO: allow user to change the following interval
+   int nIntervalPixels = 10;  // Arbitrary interval of traversal
+
+   // Traverse a number of times determined by the number of intervals that fit on the target image
+   int nXTraverse = (wI - wT) / nIntervalPixels;
+   int nYTraverse = (hI - hT) / nIntervalPixels;
 
    // Store the disparities along the rows of pixels
    int nDispArraySize = nXTraverse * nYTraverse;
@@ -354,12 +380,12 @@ void Qcorr::disparity()
    // Traverse the template of the reference (left) and target(right) images with respect to rows only
    // The template traverses an entire row, and then a new template at the next pixel is created and traversed on the raw
    // This process repeats for all the pixels in the row, and then correlate the next row's pixels in the same fashion.
-   for (int y = 0, yIndex = 0; y < nYTraverse; y++, yIndex += hT ) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+   for (int y = 0, yIndex = 0; y < nYTraverse; y++, yIndex += nIntervalPixels ) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
       { // visit rows
       m_nXCorrelationCoordinate = 0;   // Reset to 0 at the beginning of each row
       fCorrLevel = 0.0;       // Also, clear to 0.0 the correlation level
       nIndexYOffset = y * nXTraverse;
-      for (int x = 0, xIndex=0; x < nXTraverse; x++, xIndex += wT )    // Traverses the width until the template's right edge is on the right edge of the target
+      for (int x = 0, xIndex=0; x < nXTraverse; x++, xIndex += nIntervalPixels )    // Traverses a row of the target
          { // visit columns
 
          // Set template coordinates
@@ -415,7 +441,8 @@ void Qcorr::disparity()
    // TODO: add toggles to see either the right image or the disparity map....Just like with correlation
    //       perhaps, call it in the View, just Show Map
    // Should be eventually scaled uniformly from the smaller result disparity image
-      m_disparityMapImage = new QImage(resultImage->scaledToWidth(wI,Qt::FastTransformation)); // also, try Qt::SmoothTransformation
+      m_disparityMapImage = new QImage(resultImage->scaledToWidth(wI, Qt::SmoothTransformation));
+                                                                     // ^^^^ either Qt::FastTransformation or Qt::SmoothTransformation
    // Draw disparity map:
       action_Map->setChecked(true);
       action_Map->setEnabled(true);
