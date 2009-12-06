@@ -30,14 +30,13 @@ class ImgLabel : public QLabel
 
 
    private:
-      friend class Qcorr; // Make the Qcorr class a friend of this ImgLabel class
-                         // Thus, all members from ImgLabel are accessible by a Qcorr object
+      friend class Qcorr; ///< @class Qcorr is a friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr object
 
-      Qcorr *m_parentWindow;  // Pointer to Main Window Object (There should be only one on these)
+      Qcorr *m_parentWindow;  ///< Pointer to Main Window Object (There should be only one on these)
 
       QRubberBand *m_rubberBand;
-      QPoint m_originPoint;   // rubber-band's top-left corner point
-      QPoint m_finalPoint;    // rubber-band's bottom-right corner point
+      QPoint m_originPoint;   ///< rubber-band's top-left corner point
+      QPoint m_finalPoint;    ///< rubber-band's bottom-right corner point
       QPoint m_currentPressedPoint;
       QPoint m_labelUpperLeftCornerPoint, m_labelLowerRightCornerPoint;
       QPoint m_mousePosPoint1, m_mousePosPoint2;
@@ -51,7 +50,7 @@ class ImgLabel : public QLabel
       bool m_bMouseAtTemplateRightEdge;
       bool m_bHasRubberBand;
 
-      int m_nXNewPos, m_nYNewPos;   // used in the rubber-band movement
+      int m_nXNewPos, m_nYNewPos;   ///< used in the rubber-band movement
 
       void setTemplateFlags(bool status);
       void checkTemplateRegions(int mouseX, int mouseY);

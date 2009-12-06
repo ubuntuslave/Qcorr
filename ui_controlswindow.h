@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'controlswindow.ui'
 **
-** Created: Sat Dec 5 17:07:09 2009
+** Created: Sun Dec 6 00:10:18 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -14,7 +14,6 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QFrame>
 #include <QtGui/QHBoxLayout>
@@ -22,6 +21,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
+#include <QtGui/QSpinBox>
 #include <QtGui/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -33,10 +33,10 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *scanInterval_horizontalLayout;
     QLabel *scanInterval_label;
-    QComboBox *scanInterval_comboBox;
+    QSpinBox *scanInterval_spinBox;
     QHBoxLayout *templateSize_horizontalLayout;
     QLabel *templateSize_label;
-    QComboBox *templateSize_comboBox;
+    QSpinBox *templateSize_spinBox;
     QSpacerItem *verticalSpacer;
     QPushButton *close_pushButton;
 
@@ -69,11 +69,18 @@ public:
 
         scanInterval_horizontalLayout->addWidget(scanInterval_label);
 
-        scanInterval_comboBox = new QComboBox(controlsWindow_frame);
-        scanInterval_comboBox->setObjectName(QString::fromUtf8("scanInterval_comboBox"));
-        scanInterval_comboBox->setEnabled(false);
+        scanInterval_spinBox = new QSpinBox(controlsWindow_frame);
+        scanInterval_spinBox->setObjectName(QString::fromUtf8("scanInterval_spinBox"));
+        scanInterval_spinBox->setEnabled(false);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(scanInterval_spinBox->sizePolicy().hasHeightForWidth());
+        scanInterval_spinBox->setSizePolicy(sizePolicy1);
+        scanInterval_spinBox->setMinimum(1);
+        scanInterval_spinBox->setValue(10);
 
-        scanInterval_horizontalLayout->addWidget(scanInterval_comboBox);
+        scanInterval_horizontalLayout->addWidget(scanInterval_spinBox);
 
 
         verticalLayout->addLayout(scanInterval_horizontalLayout);
@@ -89,11 +96,14 @@ public:
 
         templateSize_horizontalLayout->addWidget(templateSize_label);
 
-        templateSize_comboBox = new QComboBox(controlsWindow_frame);
-        templateSize_comboBox->setObjectName(QString::fromUtf8("templateSize_comboBox"));
-        templateSize_comboBox->setEnabled(false);
+        templateSize_spinBox = new QSpinBox(controlsWindow_frame);
+        templateSize_spinBox->setObjectName(QString::fromUtf8("templateSize_spinBox"));
+        templateSize_spinBox->setEnabled(false);
+        sizePolicy1.setHeightForWidth(templateSize_spinBox->sizePolicy().hasHeightForWidth());
+        templateSize_spinBox->setSizePolicy(sizePolicy1);
+        templateSize_spinBox->setValue(32);
 
-        templateSize_horizontalLayout->addWidget(templateSize_comboBox);
+        templateSize_horizontalLayout->addWidget(templateSize_spinBox);
 
 
         verticalLayout->addLayout(templateSize_horizontalLayout);
@@ -116,12 +126,16 @@ public:
     void retranslateUi(QDialog *ControlsWindowClass)
     {
         ControlsWindowClass->setWindowTitle(QApplication::translate("ControlsWindowClass", "Qcorr Controls", 0, QApplication::UnicodeUTF8));
-        scanInterval_label->setText(QApplication::translate("ControlsWindowClass", "Scan Interval", 0, QApplication::UnicodeUTF8));
+        scanInterval_label->setText(QApplication::translate("ControlsWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Scan Interval:</p></body></html>", 0, QApplication::UnicodeUTF8));
         templateSize_label->setText(QApplication::translate("ControlsWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Template Size</p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Template Size:</p></body></html>", 0, QApplication::UnicodeUTF8));
         close_pushButton->setText(QApplication::translate("ControlsWindowClass", "&Close", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(ControlsWindowClass);
     } // retranslateUi

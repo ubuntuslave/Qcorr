@@ -26,7 +26,7 @@
 <h1>debug/moc_qcorr.cpp</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">** Meta object code from reading C++ file &apos;qcorr.h&apos;</span>
 <a name="l00003"></a>00003 <span class="comment">**</span>
-<a name="l00004"></a>00004 <span class="comment">** Created: Fri Nov 27 19:36:40 2009</span>
+<a name="l00004"></a>00004 <span class="comment">** Created: Sun Dec 6 00:10:35 2009</span>
 <a name="l00005"></a>00005 <span class="comment">**      by: The Qt Meta Object Compiler version 61 (Qt 4.5.0)</span>
 <a name="l00006"></a>00006 <span class="comment">**</span>
 <a name="l00007"></a>00007 <span class="comment">** WARNING! All changes made in this file will be lost!</span>
@@ -48,63 +48,75 @@
 <a name="l00023"></a>00023        2,       <span class="comment">// revision</span>
 <a name="l00024"></a>00024        0,       <span class="comment">// classname</span>
 <a name="l00025"></a>00025        0,    0, <span class="comment">// classinfo</span>
-<a name="l00026"></a>00026        4,   12, <span class="comment">// methods</span>
+<a name="l00026"></a>00026        9,   12, <span class="comment">// methods</span>
 <a name="l00027"></a>00027        0,    0, <span class="comment">// properties</span>
 <a name="l00028"></a>00028        0,    0, <span class="comment">// enums/sets</span>
 <a name="l00029"></a>00029        0,    0, <span class="comment">// constructors</span>
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031  <span class="comment">// slots: signature, parameters, type, tag, flags</span>
 <a name="l00032"></a>00032        7,    6,    6,    6, 0x08,
-<a name="l00033"></a>00033       25,    6,    6,    6, 0x08,
-<a name="l00034"></a>00034       44,    6,    6,    6, 0x08,
-<a name="l00035"></a>00035       58,    6,    6,    6, 0x08,
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        0        <span class="comment">// eod</span>
-<a name="l00038"></a>00038 };
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> qt_meta_stringdata_Qcorr[] = {
-<a name="l00041"></a>00041     <span class="stringliteral">&quot;Qcorr\0\0browseLeftImage()\0browseRightImage()\0&quot;</span>
-<a name="l00042"></a>00042     <span class="stringliteral">&quot;viewCorrMap()\0correlate()\0&quot;</span>
+<a name="l00033"></a>00033       22,    6,    6,    6, 0x08,
+<a name="l00034"></a>00034       43,    6,    6,    6, 0x08,
+<a name="l00035"></a>00035       61,    6,    6,    6, 0x08,
+<a name="l00036"></a>00036       80,    6,    6,    6, 0x08,
+<a name="l00037"></a>00037       94,    6,    6,    6, 0x08,
+<a name="l00038"></a>00038      104,    6,    6,    6, 0x08,
+<a name="l00039"></a>00039      116,    6,    6,    6, 0x08,
+<a name="l00040"></a>00040      128,    6,    6,    6, 0x08,
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042        0        <span class="comment">// eod</span>
 <a name="l00043"></a>00043 };
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">const</span> QMetaObject Qcorr::staticMetaObject = {
-<a name="l00046"></a>00046     { &amp;QMainWindow::staticMetaObject, qt_meta_stringdata_Qcorr,
-<a name="l00047"></a>00047       qt_meta_data_Qcorr, 0 }
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">const</span> QMetaObject *Qcorr::metaObject()<span class="keyword"> const</span>
-<a name="l00051"></a>00051 <span class="keyword"></span>{
-<a name="l00052"></a>00052     <span class="keywordflow">return</span> &amp;staticMetaObject;
-<a name="l00053"></a>00053 }
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="keywordtype">void</span> *Qcorr::qt_metacast(<span class="keyword">const</span> <span class="keywordtype">char</span> *_clname)
-<a name="l00056"></a>00056 {
-<a name="l00057"></a>00057     <span class="keywordflow">if</span> (!_clname) <span class="keywordflow">return</span> 0;
-<a name="l00058"></a>00058     <span class="keywordflow">if</span> (!strcmp(_clname, qt_meta_stringdata_Qcorr))
-<a name="l00059"></a>00059         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<span class="keyword">const_cast&lt;</span> <a class="code" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher) implemented in QT4.">Qcorr</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>));
-<a name="l00060"></a>00060     <span class="keywordflow">return</span> QMainWindow::qt_metacast(_clname);
-<a name="l00061"></a>00061 }
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keywordtype">int</span> Qcorr::qt_metacall(QMetaObject::Call _c, <span class="keywordtype">int</span> _id, <span class="keywordtype">void</span> **_a)
-<a name="l00064"></a>00064 {
-<a name="l00065"></a>00065     _id = QMainWindow::qt_metacall(_c, _id, _a);
-<a name="l00066"></a>00066     <span class="keywordflow">if</span> (_id &lt; 0)
-<a name="l00067"></a>00067         <span class="keywordflow">return</span> _id;
-<a name="l00068"></a>00068     <span class="keywordflow">if</span> (_c == QMetaObject::InvokeMetaMethod) {
-<a name="l00069"></a>00069         <span class="keywordflow">switch</span> (_id) {
-<a name="l00070"></a>00070         <span class="keywordflow">case</span> 0: browseLeftImage(); <span class="keywordflow">break</span>;
-<a name="l00071"></a>00071         <span class="keywordflow">case</span> 1: browseRightImage(); <span class="keywordflow">break</span>;
-<a name="l00072"></a>00072         <span class="keywordflow">case</span> 2: viewCorrMap(); <span class="keywordflow">break</span>;
-<a name="l00073"></a>00073         <span class="keywordflow">case</span> 3: correlate(); <span class="keywordflow">break</span>;
-<a name="l00074"></a>00074         <span class="keywordflow">default</span>: ;
-<a name="l00075"></a>00075         }
-<a name="l00076"></a>00076         _id -= 4;
-<a name="l00077"></a>00077     }
-<a name="l00078"></a>00078     <span class="keywordflow">return</span> _id;
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 QT_END_MOC_NAMESPACE
+<a name="l00045"></a>00045 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> qt_meta_stringdata_Qcorr[] = {
+<a name="l00046"></a>00046     <span class="stringliteral">&quot;Qcorr\0\0closeWindows()\0showControlsWindow()\0&quot;</span>
+<a name="l00047"></a>00047     <span class="stringliteral">&quot;browseLeftImage()\0browseRightImage()\0&quot;</span>
+<a name="l00048"></a>00048     <span class="stringliteral">&quot;changeMouse()\0viewMap()\0correlate()\0&quot;</span>
+<a name="l00049"></a>00049     <span class="stringliteral">&quot;disparity()\0abortOperation()\0&quot;</span>
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="keyword">const</span> QMetaObject Qcorr::staticMetaObject = {
+<a name="l00053"></a>00053     { &amp;QMainWindow::staticMetaObject, qt_meta_stringdata_Qcorr,
+<a name="l00054"></a>00054       qt_meta_data_Qcorr, 0 }
+<a name="l00055"></a>00055 };
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">const</span> QMetaObject *Qcorr::metaObject()<span class="keyword"> const</span>
+<a name="l00058"></a>00058 <span class="keyword"></span>{
+<a name="l00059"></a>00059     <span class="keywordflow">return</span> &amp;staticMetaObject;
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keywordtype">void</span> *Qcorr::qt_metacast(<span class="keyword">const</span> <span class="keywordtype">char</span> *_clname)
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064     <span class="keywordflow">if</span> (!_clname) <span class="keywordflow">return</span> 0;
+<a name="l00065"></a>00065     <span class="keywordflow">if</span> (!strcmp(_clname, qt_meta_stringdata_Qcorr))
+<a name="l00066"></a>00066         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<span class="keyword">const_cast&lt;</span> <a class="code" href="classQcorr.html">Qcorr</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>));
+<a name="l00067"></a>00067     <span class="keywordflow">return</span> QMainWindow::qt_metacast(_clname);
+<a name="l00068"></a>00068 }
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keywordtype">int</span> Qcorr::qt_metacall(QMetaObject::Call _c, <span class="keywordtype">int</span> _id, <span class="keywordtype">void</span> **_a)
+<a name="l00071"></a>00071 {
+<a name="l00072"></a>00072     _id = QMainWindow::qt_metacall(_c, _id, _a);
+<a name="l00073"></a>00073     <span class="keywordflow">if</span> (_id &lt; 0)
+<a name="l00074"></a>00074         <span class="keywordflow">return</span> _id;
+<a name="l00075"></a>00075     <span class="keywordflow">if</span> (_c == QMetaObject::InvokeMetaMethod) {
+<a name="l00076"></a>00076         <span class="keywordflow">switch</span> (_id) {
+<a name="l00077"></a>00077         <span class="keywordflow">case</span> 0: <a class="code" href="classQcorr.html#a395de1dc21d85fa766fb6558c5e302e5" title="Q_SLOT that closes the main Qcorr window and the controls Window;.">closeWindows</a>(); <span class="keywordflow">break</span>;
+<a name="l00078"></a>00078         <span class="keywordflow">case</span> 1: showControlsWindow(); <span class="keywordflow">break</span>;
+<a name="l00079"></a>00079         <span class="keywordflow">case</span> 2: <a class="code" href="classQcorr.html#adb32e7bfe6afb84f306a9eb5bcd9b322" title="Q_SLOT that shows the controls window and raises it to the foreground if already...">browseLeftImage</a>(); <span class="keywordflow">break</span>;
+<a name="l00080"></a>00080         <span class="keywordflow">case</span> 3: <a class="code" href="classQcorr.html#a60583105115d8d14c5fa2a959dc0f285" title="Q_SLOT that allows to browse and load an image on the right panel.">browseRightImage</a>(); <span class="keywordflow">break</span>;
+<a name="l00081"></a>00081         <span class="keywordflow">case</span> 4: <a class="code" href="classQcorr.html#a3f27a3e9b548f80998a0266c9c4165a8" title="Q_SLOT used to change the mouse pointer according to the current operation mode.">changeMouse</a>(); <span class="keywordflow">break</span>;
+<a name="l00082"></a>00082         <span class="keywordflow">case</span> 5: <a class="code" href="classQcorr.html#a3275244fd6183a4fef92b85578fea864" title="Q_SLOT that selectively provides the appropriate existent map of results from correlation...">viewMap</a>(); <span class="keywordflow">break</span>;
+<a name="l00083"></a>00083         <span class="keywordflow">case</span> 6: <a class="code" href="classQcorr.html#ace91b9d83b34887735737323bac5431e" title="Q_SLOT that process the correlation of the selected template against the target image...">correlate</a>(); <span class="keywordflow">break</span>;
+<a name="l00084"></a>00084         <span class="keywordflow">case</span> 7: <a class="code" href="classQcorr.html#a640ee4c76350e5886deddbf4f0d50594" title="Q_SLOT that is connected in the pixel-disparity finding operation mode. It should...">disparity</a>(); <span class="keywordflow">break</span>;
+<a name="l00085"></a>00085         <span class="keywordflow">case</span> 8: <a class="code" href="classQcorr.html#ad6e0fb9461faffd01afbf62e1a0be4c3" title="Q_SLOT triggers the flag to abort the current operation.">abortOperation</a>(); <span class="keywordflow">break</span>;
+<a name="l00086"></a>00086         <span class="keywordflow">default</span>: ;
+<a name="l00087"></a>00087         }
+<a name="l00088"></a>00088         _id -= 9;
+<a name="l00089"></a>00089     }
+<a name="l00090"></a>00090     <span class="keywordflow">return</span> _id;
+<a name="l00091"></a>00091 }
+<a name="l00092"></a>00092 QT_END_MOC_NAMESPACE
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Nov 27 19:37:42 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 00:22:28 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

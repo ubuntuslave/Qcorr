@@ -55,15 +55,18 @@ class Qcorr : public QMainWindow, private Ui::QcorrClass
 
 public:
     Qcorr(QWidget *parent = 0);  ///< Constructor of the Qcorr class
-    ~Qcorr();
+    ~Qcorr();  ///< Destructor: House keeping that should be done when the Qcorr main window is closed -- specifically, it closes the controlsWindow;
 
 private Q_SLOTS:
+   void closeWindows(); ///< Q_SLOT that closes the main Qcorr window and the controls Window;
+   void showControlsWindow(); ///Q_SLOT that shows the controls window and raises it to the foreground if already open.
     void browseLeftImage(); ///< Q_SLOT that allows to browse and load an image on the left panel
     void browseRightImage();///< Q_SLOT that allows to browse and load an image on the right panel
     void changeMouse(); ///< Q_SLOT used to change the mouse pointer according to the current operation mode
     void viewMap();  ///< Q_SLOT that selectively provides the appropriate existent map of results from correlation (template matching) or pixel disparity
     void correlate(); ///< Q_SLOT that process the correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image.
     void disparity(); ///< Q_SLOT that is connected in the pixel-disparity finding operation mode. It should be mainly be used with dataset stereo images that get correlated row-by-row by using findCorrelation() with the pertinent parameters and the appropriate Q_SLOT function implementation.
+    void abortOperation(); ///< Q_SLOT triggers the flag to abort the current operation
 
 private:
     /** @class ImgLabel
@@ -72,8 +75,8 @@ private:
     friend class ImgLabel;
 
     /** @class ControlsWindow
-      * @brief  allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of Qcorr.
-      */
+          * @brief  allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of Qcorr.
+          */
     friend class ControlsWindow;
 
     /** @brief  Displays any QImage on a Qlabel
@@ -99,6 +102,9 @@ private:
     /** @brief  Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself
         */
     void setImageLabels();
+
+    void setEStop(); ///<  emergency stop to abort the disparity operation process
+
 
     /** @brief  Cross-correlation of target image with template image.
     * @note Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the convertToGrayScaleFloat() function.
@@ -133,6 +139,11 @@ private:
     *                      {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}}
     *                      {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}}
     *        \f]
+    *        Remark:
+    *          The square root of the sum of the squares (RSS) is being used to
+    *          calculate the aggregate accuracy of a measurement when the accuracies of the all the measuring devices are known.
+    *          The average accuracy is not merely the arithmetic average of the accuracies (or uncertainties), nor is it the sum of them.
+    *          Note how the RSS result in this case is greater than the largest of the values under the radical.
     * @param bMultires Determines if multiresolution correlation should be applied, by making use of image pyramids.
     *                 With multiresoltion, the correlation can be determined faster than direct correlation.
     *                 Default is false.
@@ -179,13 +190,17 @@ private:
     QVector<QRgb> *m_grayColorTab;  ///< 8-bit gray-scale color table
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
-    QSize m_templateSize;  ///< the current template size as a QSize object
+    QSize m_templateSize;  ///< the current template's size as a QSize object
     QActionGroup *modes_actionGroup;   ///< group of menu actions for the mode of operation.
+
+    QDialogButtonBox *m_eStopDialog;   ///< A dialogue to stop the current correlation process
 
     bool m_bHasLeftImage;  ///< indicates that an image is loaded in the left panel
     bool m_bHasRightImage; ///< indicates that an image is loaded in the right panel
     bool m_bHasCorrMap;    ///< indicates that a correlation map exists
     bool m_bHasDisparityMap;    ///< indicates that a disparity map exists
+    bool m_bEstop;   ///< emergency stop for the
+    int m_nScanInterval;   ///< interval of scan traversal by the template
 
 protected:
 //    void paintEvent(QPaintEvent *);

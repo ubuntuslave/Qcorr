@@ -39,54 +39,56 @@
 <a name="l00014"></a>00014 <span class="keyword">class </span>QRubberBand;
 <a name="l00015"></a>00015 <span class="keyword">class </span>QPoint;
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">class </span><a class="code" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher) implemented in QT4.">Qcorr</a>;   <span class="comment">// using this friend class</span>
+<a name="l00017"></a>00017 <span class="keyword">class </span><a class="code" href="classQcorr.html">Qcorr</a>;   <span class="comment">// using this friend class</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a><a class="code" href="classImgLabel.html">00019</a> <span class="keyword">class </span><a class="code" href="classImgLabel.html">ImgLabel</a> : <span class="keyword">public</span> QLabel
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021    Q_OBJECT
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023    <span class="keyword">public</span>:
-<a name="l00024"></a>00024       <a class="code" href="classImgLabel.html">ImgLabel</a>(<a class="code" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher) implemented in QT4.">Qcorr</a> *parentWindow, QWidget *parent = 0);
+<a name="l00024"></a>00024       <a class="code" href="classImgLabel.html">ImgLabel</a>(<a class="code" href="classQcorr.html">Qcorr</a> *parentWindow, QWidget *parent = 0);
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026       <span class="keyword">virtual</span>
 <a name="l00027"></a>00027       ~<a class="code" href="classImgLabel.html">ImgLabel</a>();
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030    <span class="keyword">private</span>:
-<a name="l00031"></a>00031       <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher) implemented in QT4.">Qcorr</a>; <span class="comment">// Make the Qcorr class a friend of this ImgLabel class</span>
-<a name="l00032"></a>00032                          <span class="comment">// Thus, all members from ImgLabel are accessible by a Qcorr object</span>
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034       <a class="code" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher) implemented in QT4.">Qcorr</a> *m_parentWindow;  <span class="comment">// Pointer to Main Window Object (There should be only one on these)</span>
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036       QRubberBand *m_rubberBand;
-<a name="l00037"></a>00037       QPoint m_originPoint;   <span class="comment">// rubber-band&apos;s top-left corner point</span>
-<a name="l00038"></a>00038       QPoint m_finalPoint;    <span class="comment">// rubber-band&apos;s bottom-right corner point</span>
-<a name="l00039"></a>00039       QPoint m_currentPressedPoint;
-<a name="l00040"></a>00040       QPoint m_labelUpperLeftCornerPoint, m_labelLowerRightCornerPoint;
-<a name="l00041"></a>00041       QPoint m_mousePosPoint1, m_mousePosPoint2;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043       <span class="keywordtype">bool</span> m_bMouseIsPressed;
-<a name="l00044"></a>00044       <span class="keywordtype">bool</span> m_bStartedTemplateSelection;
-<a name="l00045"></a>00045       <span class="keywordtype">bool</span> m_bMouseInTemplateRegion;
-<a name="l00046"></a>00046       <span class="keywordtype">bool</span> m_bMouseAtTemplateTopEdge;
-<a name="l00047"></a>00047       <span class="keywordtype">bool</span> m_bMouseAtTemplateBottomEdge;
-<a name="l00048"></a>00048       <span class="keywordtype">bool</span> m_bMouseAtTemplateLeftEdge;
-<a name="l00049"></a>00049       <span class="keywordtype">bool</span> m_bMouseAtTemplateRightEdge;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051       <span class="keywordtype">int</span> m_nXNewPos, m_nYNewPos;   <span class="comment">// used in the rubber-band movement</span>
+<a name="l00029"></a>00029       <span class="keywordtype">void</span> setSelectable(<span class="keywordtype">bool</span> bHasRubberBand);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032    <span class="keyword">private</span>:
+<a name="l00033"></a><a class="code" href="classImgLabel.html#abf77749e36bca018728bde2fc9a974eb">00033</a>       <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classQcorr.html">Qcorr</a>; 
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035       <a class="code" href="classQcorr.html">Qcorr</a> *<a class="code" href="classImgLabel.html#abf77749e36bca018728bde2fc9a974eb" title="Pointer to Main Window Object (There should be only one on these).">m_parentWindow</a>;  
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037       QRubberBand *m_rubberBand;
+<a name="l00038"></a><a class="code" href="classImgLabel.html#afbbcbd660b7ef7c6048286ac5e350343">00038</a>       QPoint <a class="code" href="classImgLabel.html#afbbcbd660b7ef7c6048286ac5e350343" title="rubber-band&amp;#39;s top-left corner point">m_originPoint</a>;   
+<a name="l00039"></a><a class="code" href="classImgLabel.html#a6309ebb41fd14f64eb552e772c3bad25">00039</a>       QPoint <a class="code" href="classImgLabel.html#a6309ebb41fd14f64eb552e772c3bad25" title="rubber-band&amp;#39;s bottom-right corner point">m_finalPoint</a>;    
+<a name="l00040"></a>00040       QPoint m_currentPressedPoint;
+<a name="l00041"></a>00041       QPoint m_labelUpperLeftCornerPoint, m_labelLowerRightCornerPoint;
+<a name="l00042"></a>00042       QPoint m_mousePosPoint1, m_mousePosPoint2;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044       <span class="keywordtype">bool</span> m_bMouseIsPressed;
+<a name="l00045"></a>00045       <span class="keywordtype">bool</span> m_bStartedTemplateSelection;
+<a name="l00046"></a>00046       <span class="keywordtype">bool</span> m_bMouseInTemplateRegion;
+<a name="l00047"></a>00047       <span class="keywordtype">bool</span> m_bMouseAtTemplateTopEdge;
+<a name="l00048"></a>00048       <span class="keywordtype">bool</span> m_bMouseAtTemplateBottomEdge;
+<a name="l00049"></a>00049       <span class="keywordtype">bool</span> m_bMouseAtTemplateLeftEdge;
+<a name="l00050"></a>00050       <span class="keywordtype">bool</span> m_bMouseAtTemplateRightEdge;
+<a name="l00051"></a>00051       <span class="keywordtype">bool</span> m_bHasRubberBand;
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053       <span class="keywordtype">void</span> setTemplateFlags(<span class="keywordtype">bool</span> status);
-<a name="l00054"></a>00054       <span class="keywordtype">void</span> checkTemplateRegions(<span class="keywordtype">int</span> mouseX, <span class="keywordtype">int</span> mouseY);
-<a name="l00055"></a>00055       <span class="keywordtype">void</span> displayCoordinatesOnStatusLabel(QPoint &amp;point0, QPoint &amp;point1);
-<a name="l00056"></a>00056    <span class="keyword">protected</span>:
-<a name="l00057"></a>00057        <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *event);
-<a name="l00058"></a>00058        <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent *event);
-<a name="l00059"></a>00059        <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent *event);
-<a name="l00060"></a>00060 };
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="preprocessor">#endif </span><span class="comment">/* IMGLABEL_H_ */</span>
+<a name="l00053"></a><a class="code" href="classImgLabel.html#a2060dad81295d4e6f87328108f97d15f">00053</a>       <span class="keywordtype">int</span> m_nXNewPos, <a class="code" href="classImgLabel.html#a2060dad81295d4e6f87328108f97d15f" title="used in the rubber-band movement">m_nYNewPos</a>;   
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055       <span class="keywordtype">void</span> setTemplateFlags(<span class="keywordtype">bool</span> status);
+<a name="l00056"></a>00056       <span class="keywordtype">void</span> checkTemplateRegions(<span class="keywordtype">int</span> mouseX, <span class="keywordtype">int</span> mouseY);
+<a name="l00057"></a>00057       <span class="keywordtype">void</span> displayCoordinatesOnStatusLabel(QPoint &amp;point0, QPoint &amp;point1);
+<a name="l00058"></a>00058    <span class="keyword">protected</span>:
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *event);
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent *event);
+<a name="l00061"></a>00061        <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent *event);
+<a name="l00062"></a>00062 };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif </span><span class="comment">/* IMGLABEL_H_ */</span>
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Nov 27 19:37:43 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 00:22:28 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
