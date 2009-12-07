@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="bug" kind="page">
+    <compoundname>bug</compoundname>
+    <title>Bug List</title>
+    <detaileddescription>
+<para><anchor id="bug_1_bug000001"/> <variablelist>
+<varlistentry><term>Class <ref refid="classQcorr" kindref="compound">Qcorr</ref>  </term></varlistentry>
+<listitem><para><itemizedlist>
+<listitem><para>Perhaps a few around the rubberBand functionality, and others not noticed yet.</para></listitem></itemizedlist>
+</para><para></para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

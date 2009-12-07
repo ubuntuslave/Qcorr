@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classUi_1_1QcorrClass" kind="class" prot="public">
+    <compoundname>Ui::QcorrClass</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Ui_QcorrClass</basecompoundref>
+    <derivedcompoundref refid="classQcorr" prot="private" virt="non-virtual">Qcorr</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>Qcorr</label>
+        <link refid="classQcorr"/>
+        <childnode refid="50" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Ui_QcorrClass</label>
+      </node>
+      <node id="50">
+        <label>Ui::QcorrClass</label>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>Ui_QcorrClass</label>
+      </node>
+      <node id="53">
+        <label>Ui::QcorrClass</label>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="288" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="288" bodyend="288"/>
+    <listofallmembers>
+      <member refid="classUi__QcorrClass_1f3eff626499d6ad7b19db0a828a5794a" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>action_Disparity_Finder</name></member>
+      <member refid="classUi__QcorrClass_1a2e514c1c784f746eec5abed0bf57190" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>action_Map</name></member>
+      <member refid="classUi__QcorrClass_1e725a71d3bb44a43e2d65ce4d1284b85" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>action_Quit</name></member>
+      <member refid="classUi__QcorrClass_134a38652dc16add16ee2ca325c1e4b31" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>actionTemplate_Matching</name></member>
+      <member refid="classUi__QcorrClass_1a4247652a1ed71c6b6704aa3273544bd" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>bottom_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1885bdbbc4267078f102878ad126b23bb" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>centralwidget</name></member>
+      <member refid="classUi__QcorrClass_1c0e4a500d8e9364fc22f9386d7ca3e9a" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>controls_pushButton</name></member>
+      <member refid="classUi__QcorrClass_14ddf4aae819f6b25476a5a3e76c600d7" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>corrResults_label</name></member>
+      <member refid="classUi__QcorrClass_180762eea1a44f16ceffed065d0459a69" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>horizontalSpacer</name></member>
+      <member refid="classUi__QcorrClass_181e59812852e521cced5e1f912bffb99" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>layoutWidget</name></member>
+      <member refid="classUi__QcorrClass_124caba38fd151a2ab5b577b1425bd07c" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>layoutWidget1</name></member>
+      <member refid="classUi__QcorrClass_1e7eb5196b5e392a40fa3e3a77f40c3cc" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>left_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_1e05243dcb19bfd6fd6d1c3257f25338a" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>leftBrowse_pushButton</name></member>
+      <member refid="classUi__QcorrClass_112d1c71e330c76e65484418502338a31" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>leftImage_lineEdit</name></member>
+      <member refid="classUi__QcorrClass_1cb12117880660e7d8fec35de7eee51c6" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>leftImage_scrollArea</name></member>
+      <member refid="classUi__QcorrClass_1aad53db0cbf018c38d75aebbe78959b3" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>leftImg_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1cb93f5008511c2654ac8a51c17dc11ef" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>main_frame</name></member>
+      <member refid="classUi__QcorrClass_1fd1d2aad88a740a9f33d9f91370c7ea9" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>main_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_11d52a371f0d1e29cdf70d1be2a85a45e" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>menu_Menu</name></member>
+      <member refid="classUi__QcorrClass_134c81836d3bddde0adb968fe98fba156" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>menu_Mode</name></member>
+      <member refid="classUi__QcorrClass_18c1dd90b9ea2130b6fe6e8e6553fbf13" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>menu_View</name></member>
+      <member refid="classUi__QcorrClass_18567acdc882322bab775dd04569433da" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>menubar</name></member>
+      <member refid="classUi__QcorrClass_1d032c2f5b8f1aed8decad689900d7017" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>quit_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1defed69462e2297254f0d5bce3131e05" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>retranslateUi</name></member>
+      <member refid="classUi__QcorrClass_1232c26905d00f6608b8ba97a6546daa0" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>right_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_15018f953d94c196394a638212a45fd9d" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>rightBrowse_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1690e51bd7f4916ca89f876f39afee05d" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>rightImage_lineEdit</name></member>
+      <member refid="classUi__QcorrClass_1227cae34e275c9e0713ee279435f41cc" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>rightImage_scrollArea</name></member>
+      <member refid="classUi__QcorrClass_16885fe1dcc883e2f927c2fb943b206e0" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>rightImg_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1bf4b50d1ea6274629f687ac66ce12e80" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>scrollAreaWidgetContents_2</name></member>
+      <member refid="classUi__QcorrClass_1ab5ae2e7dc3baefb6ada5e1a758e826f" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>scrollAreaWidgetContents_3</name></member>
+      <member refid="classUi__QcorrClass_180aee2ed06f3c4f9b1f516405d888c13" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>setupUi</name></member>
+      <member refid="classUi__QcorrClass_1b4e96571e7dd58d9ec798cf6ede3cbe6" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>splitter</name></member>
+      <member refid="classUi__QcorrClass_1d0993e39276097fdfa4553fce89cea71" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>start_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1e220680c312c600f015f0413ad6cd2cf" prot="public" virt="non-virtual"><scope>Ui::QcorrClass</scope><name>statusbar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

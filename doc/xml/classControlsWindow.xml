@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classControlsWindow" kind="class" prot="public">
+    <compoundname>ControlsWindow</compoundname>
+    <includes refid="controlswindow_8h" local="no">src/controlswindow.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" prot="private" static="no" mutable="no">
+        <type>Ui::ControlsWindowClass</type>
+        <definition>Ui::ControlsWindowClass ControlsWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>The Qt GUI form for this class, so its widgets can be accessed and manipulated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="54" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+        <referencedby refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" compoundref="controlswindow_8cpp" startline="30" endline="40">createActions</referencedby>
+        <referencedby refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" compoundref="controlswindow_8cpp" startline="43" endline="59">setEnableSpinBoxes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" prot="private" static="no" mutable="no">
+        <type><ref refid="classQcorr" kindref="compound">Qcorr</ref> *</type>
+        <definition>Qcorr* ControlsWindow::m_parentWindow</definition>
+        <argsstring></argsstring>
+        <name>m_parentWindow</name>
+        <briefdescription>
+<para>Pointer to Main Window Object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="60" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+        <referencedby refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" compoundref="controlswindow_8cpp" startline="43" endline="59">setEnableSpinBoxes</referencedby>
+        <referencedby refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">updateParentStatusLabel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControlsWindow::m_nScanInterval</definition>
+        <argsstring></argsstring>
+        <name>m_nScanInterval</name>
+        <briefdescription>
+<para>interval of scan traversal by the template </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="61" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+        <referencedby refid="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" compoundref="controlswindow_8h" startline="31" endline="34">getScanInterval</referencedby>
+        <referencedby refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" compoundref="controlswindow_8cpp" startline="63" endline="68">setScanInterval</referencedby>
+        <referencedby refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">updateParentStatusLabel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControlsWindow::m_nTemplateSize</definition>
+        <argsstring></argsstring>
+        <name>m_nTemplateSize</name>
+        <briefdescription>
+<para>the template&apos;s size (for the width) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="62" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+        <referencedby refid="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" compoundref="controlswindow_8h" startline="41" endline="44">getTemplateSize</referencedby>
+        <referencedby refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" compoundref="controlswindow_8cpp" startline="71" endline="76">setTemplateSize</referencedby>
+        <referencedby refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">updateParentStatusLabel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ControlsWindow::ControlsWindow</definition>
+        <argsstring>(Qcorr *parentWindow, QWidget *parent=0)</argsstring>
+        <name>ControlsWindow</name>
+        <param>
+          <type><ref refid="classQcorr" kindref="compound">Qcorr</ref> *</type>
+          <declname>parentWindow</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor of <ref refid="classControlsWindow" kindref="compound">ControlsWindow</ref> class must point to a <ref refid="classQcorr" kindref="compound">Qcorr</ref> parentWindow. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="18" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="4" bodyend="21"/>
+        <references refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" compoundref="controlswindow_8cpp" startline="30" endline="40">createActions</references>
+        <references refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" compoundref="controlswindow_8h" startline="61">m_nScanInterval</references>
+        <references refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" compoundref="controlswindow_8h" startline="62">m_nTemplateSize</references>
+        <references refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" compoundref="controlswindow_8h" startline="60">m_parentWindow</references>
+        <references refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" compoundref="controlswindow_8cpp" startline="43" endline="59">setEnableSpinBoxes</references>
+        <references refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" compoundref="controlswindow_8h" startline="54">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="classControlsWindow_1e95b3f485ea3006bb7b1884e70f8873d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ControlsWindow::~ControlsWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~ControlsWindow</name>
+        <briefdescription>
+<para>Closes and Destroys itself. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="19" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlsWindow::setEnableSpinBoxes</definition>
+        <argsstring>(bool bEnable)</argsstring>
+        <name>setEnableSpinBoxes</name>
+        <param>
+          <type>bool</type>
+          <declname>bEnable</declname>
+        </param>
+        <briefdescription>
+<para>Enables/Disables control spinBoxes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bEnable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean flag to enable or disable the spinBoxes for controlling correlation parameters of the <ref refid="classQcorr" kindref="compound">Qcorr</ref> class Set enable spinBoxes including the maximum values based on the m_parentWindow&apos;s size of its right image </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="25" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="43" bodyend="59"/>
+        <references refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" compoundref="controlswindow_8h" startline="60">m_parentWindow</references>
+        <references refid="classQcorr_1ae1695d731f191c694186e00b96f469e" compoundref="qcorr_8h" startline="210">Qcorr::m_rightImage</references>
+        <references refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" compoundref="controlswindow_8h" startline="54">ui</references>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ControlsWindow::getScanInterval</definition>
+        <argsstring>()</argsstring>
+        <name>getScanInterval</name>
+        <briefdescription>
+<para>to obtain the scan Interval set in the spin box </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the scan interval value (in pixels) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="32" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="31" bodyend="34"/>
+        <references refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" compoundref="controlswindow_8h" startline="61">m_nScanInterval</references>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ControlsWindow::getTemplateSize</definition>
+        <argsstring>()</argsstring>
+        <name>getTemplateSize</name>
+        <briefdescription>
+<para>to obtain the template&apos;s size value (as width) set in the spin box </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the scan template&apos;s size value (in pixels) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="41" bodyend="44"/>
+        <references refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" compoundref="controlswindow_8h" startline="62">m_nTemplateSize</references>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlsWindow::setScanInterval</definition>
+        <argsstring>(int nValue)</argsstring>
+        <name>setScanInterval</name>
+        <param>
+          <type>int</type>
+          <declname>nValue</declname>
+        </param>
+        <briefdescription>
+<para>Q_SLOT that sets scan interval parameter in its friend <ref refid="classQcorr" kindref="compound">Qcorr</ref> class according to the corresponding spinBox&apos;s value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="49" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="63" bodyend="68"/>
+        <references refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" compoundref="controlswindow_8h" startline="61">m_nScanInterval</references>
+        <references refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">updateParentStatusLabel</references>
+        <referencedby refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" compoundref="controlswindow_8cpp" startline="30" endline="40">createActions</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="classControlsWindow_12324bca2db040b73ffb9411102a26abf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlsWindow::setTemplateSize</definition>
+        <argsstring>(int nValue)</argsstring>
+        <name>setTemplateSize</name>
+        <param>
+          <type>int</type>
+          <declname>nValue</declname>
+        </param>
+        <briefdescription>
+<para>Q_SLOT that sets template size parameter in its friend <ref refid="classQcorr" kindref="compound">Qcorr</ref> class according to the corresponding spinBox&apos;s value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="51" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="71" bodyend="76"/>
+        <references refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" compoundref="controlswindow_8h" startline="62">m_nTemplateSize</references>
+        <references refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">updateParentStatusLabel</references>
+        <referencedby refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" compoundref="controlswindow_8cpp" startline="30" endline="40">createActions</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classControlsWindow_1166eabd008e63fc846798eba267bac24" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlsWindow::createActions</definition>
+        <argsstring>()</argsstring>
+        <name>createActions</name>
+        <briefdescription>
+<para>Create Signal-Slot connections. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="56" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="30" bodyend="40"/>
+        <references refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" compoundref="controlswindow_8cpp" startline="63" endline="68">setScanInterval</references>
+        <references refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" compoundref="controlswindow_8cpp" startline="71" endline="76">setTemplateSize</references>
+        <references refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" compoundref="controlswindow_8h" startline="54">ui</references>
+        <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControlsWindow::updateParentStatusLabel</definition>
+        <argsstring>()</argsstring>
+        <name>updateParentStatusLabel</name>
+        <briefdescription>
+<para>Updates Parent&apos;s status bar with the corresponding values from the control spin boxes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="58" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp" bodystart="80" bodyend="86"/>
+        <references refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" compoundref="controlswindow_8h" startline="61">m_nScanInterval</references>
+        <references refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" compoundref="controlswindow_8h" startline="62">m_nTemplateSize</references>
+        <references refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" compoundref="controlswindow_8h" startline="60">m_parentWindow</references>
+        <references refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" compoundref="qcorr_8h" startline="216">Qcorr::m_status_label</references>
+        <referencedby refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" compoundref="controlswindow_8cpp" startline="63" endline="68">setScanInterval</referencedby>
+        <referencedby refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" compoundref="controlswindow_8cpp" startline="71" endline="76">setTemplateSize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <ref refid="classQcorr" kindref="compound">Qcorr</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="2">
+        <label>Qcorr</label>
+        <link refid="classQcorr"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_leftImage_label</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_corrMethodDialog</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_targetImage_label</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>m_controlsWindow</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ImgLabel</label>
+        <link refid="classImgLabel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_parentWindow</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Ui_QcorrClass</label>
+      </node>
+      <node id="11">
+        <label>Ui_ControlsWindowClass</label>
+      </node>
+      <node id="9">
+        <label>TargetImgLabel</label>
+        <link refid="classTargetImgLabel"/>
+      </node>
+      <node id="3">
+        <label>Ui::QcorrClass</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CorrMethod</label>
+        <link refid="classCorrMethod"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>ui</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ControlsWindow</label>
+        <link refid="classControlsWindow"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_parentWindow</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>ui</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Ui::ControlsWindowClass</label>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="14" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="13" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" prot="public" virt="non-virtual"><scope>ControlsWindow</scope><name>ControlsWindow</name></member>
+      <member refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>createActions</name></member>
+      <member refid="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" prot="public" virt="non-virtual"><scope>ControlsWindow</scope><name>getScanInterval</name></member>
+      <member refid="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" prot="public" virt="non-virtual"><scope>ControlsWindow</scope><name>getTemplateSize</name></member>
+      <member refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>m_nScanInterval</name></member>
+      <member refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>m_nTemplateSize</name></member>
+      <member refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>m_parentWindow</name></member>
+      <member refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" prot="public" virt="non-virtual"><scope>ControlsWindow</scope><name>setEnableSpinBoxes</name></member>
+      <member refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>setScanInterval</name></member>
+      <member refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>setTemplateSize</name></member>
+      <member refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>ui</name></member>
+      <member refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" prot="private" virt="non-virtual"><scope>ControlsWindow</scope><name>updateParentStatusLabel</name></member>
+      <member refid="classControlsWindow_1e95b3f485ea3006bb7b1884e70f8873d" prot="public" virt="non-virtual"><scope>ControlsWindow</scope><name>~ControlsWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

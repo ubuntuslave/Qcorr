@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="corrmethod_8cpp" kind="file">
+    <compoundname>corrmethod.cpp</compoundname>
+    <includes refid="corrmethod_8h" local="yes">corrmethod.h</includes>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <incdepgraph>
+      <node id="72">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="71">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="65">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="66">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="58">
+        <label>corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>src/corrmethod.cpp</label>
+        <link refid="corrmethod.cpp"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="63">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="59">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="73">
+        <label>globals.h</label>
+        <link refid="globals_8h-source"/>
+      </node>
+      <node id="61">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="69">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="62">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="67">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="64">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="68">
+        <label>QtGui/QHeaderView</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;corrmethod.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" refkind="member"><highlight class="normal"><ref refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" kindref="member" tooltip="Constructor for the CorrMethod class.">CorrMethod::CorrMethod</ref>(QWidget<sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/>QDialog(parent)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>this-&gt;setMinimumSize(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.dialog_Frame-&gt;size());</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>N0_CORR_METHOD;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/>connect(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.buttonBox,<sp/>SIGNAL(rejected()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" kindref="member" tooltip="Q_SLOT to cancel the method selection dialog.">cancelMethod</ref>()));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>connect(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.buttonBox,<sp/>SIGNAL(accepted()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" kindref="member" tooltip="Q_SLOT to store the method selection from the dialog.">chooseMethod</ref>()));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">CorrMethod::~CorrMethod()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" refkind="member"><highlight class="normal"><ref refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" kindref="member" tooltip="Retrieve the selected method to be used in the correlation process.">CorrMethod::getMethod</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>begin<sp/>Q_SLOTS<sp/>vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" refkind="member"><highlight class="normal"><ref refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" kindref="member" tooltip="Q_SLOT to cancel the method selection dialog.">CorrMethod::cancelMethod</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>N0_CORR_METHOD;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>emit<sp/>reject();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" refkind="member"><highlight class="normal"><ref refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" kindref="member" tooltip="Q_SLOT to store the method selection from the dialog.">CorrMethod::chooseMethod</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.method1_radioButton-&gt;isChecked())</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>CROSS_CORR;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>accept();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.method2_radioButton-&gt;isChecked())</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>SUM_SQ_DIFF;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>accept();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.method3_radioButton-&gt;isChecked())</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>CORR_COEFF;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>accept();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kindref="member">m_nChosenMethod</ref><sp/>=<sp/>N0_CORR_METHOD;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>end<sp/>Q_SLOTS<sp/>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp"/>
+  </compounddef>
+</doxygen>

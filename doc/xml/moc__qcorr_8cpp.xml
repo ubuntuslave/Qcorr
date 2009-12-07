@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="moc__qcorr_8cpp" kind="file">
+    <compoundname>moc_qcorr.cpp</compoundname>
+    <includes refid="qcorr_8h" local="yes">../src/qcorr.h</includes>
+    <incdepgraph>
+      <node id="58">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="55">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="40">
+        <label>QtGui/QMainWindow</label>
+      </node>
+      <node id="65">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="46">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="62">
+        <label>corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>QtGui/QSpinBox</label>
+      </node>
+      <node id="41">
+        <label>../ui_qcorr.h</label>
+        <link refid="ui__qcorr_8h-source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>QtGui/QLineEdit</label>
+      </node>
+      <node id="67">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="44">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="53">
+        <label>QtGui/QPushButton</label>
+      </node>
+      <node id="63">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="42">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="71">
+        <label>QtCore/QVector</label>
+      </node>
+      <node id="59">
+        <label>QtGui/QWidget</label>
+      </node>
+      <node id="52">
+        <label>QtGui/QMenuBar</label>
+      </node>
+      <node id="56">
+        <label>QtGui/QSplitter</label>
+      </node>
+      <node id="61">
+        <label>targetImgLabel.h</label>
+        <link refid="targetImgLabel_8h-source"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="43">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="66">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="54">
+        <label>QtGui/QScrollArea</label>
+      </node>
+      <node id="72">
+        <label>QtGui/QRgb</label>
+      </node>
+      <node id="51">
+        <label>QtGui/QMenu</label>
+      </node>
+      <node id="39">
+        <label>../src/qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="68">
+        <label>controlswindow.h</label>
+        <link refid="controlswindow_8h-source"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>../ui_controlswindow.h</label>
+        <link refid="ui__controlswindow_8h-source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>debug/moc_qcorr.cpp</label>
+        <link refid="moc_qcorr.cpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>QtGui/QStatusBar</label>
+      </node>
+      <node id="60">
+        <label>imgLabel.h</label>
+        <link refid="imgLabel_8h-source"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>QtGui/QHeaderView</label>
+      </node>
+      <node id="47">
+        <label>QtGui/QHBoxLayout</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="moc__qcorr_8cpp_1712e59e48c5a6da93419f6d10063e038" prot="public" static="yes" mutable="no">
+        <type>QT_BEGIN_MOC_NAMESPACE const uint</type>
+        <definition>QT_BEGIN_MOC_NAMESPACE const uint qt_meta_data_Qcorr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>qt_meta_data_Qcorr</name>
+        <initializer> {
+
+ 
+       2,       
+       0,       
+       0,    0, 
+       8,   12, 
+       0,    0, 
+       0,    0, 
+       0,    0, 
+
+ 
+       7,    6,    6,    6, 0x08,
+      22,    6,    6,    6, 0x08,
+      43,    6,    6,    6, 0x08,
+      61,    6,    6,    6, 0x08,
+      80,    6,    6,    6, 0x08,
+      94,    6,    6,    6, 0x08,
+     104,    6,    6,    6, 0x08,
+     114,    6,    6,    6, 0x08,
+
+       0        
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_qcorr.cpp" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_qcorr.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="moc__qcorr_8cpp_1cd0246aa13d8ce4d9a183ca2a2bbe41e" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char qt_meta_stringdata_Qcorr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>qt_meta_stringdata_Qcorr</name>
+        <initializer> {
+    &quot;Qcorr\0\0closeWindows()\0showControlsWindow()\0&quot;
+    &quot;browseLeftImage()\0browseRightImage()\0&quot;
+    &quot;changeMouse()\0viewMap()\0operate()\0&quot;
+    &quot;abortOperation()\0&quot;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_qcorr.cpp" line="49" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_qcorr.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Meta<sp/>object<sp/>code<sp/>from<sp/>reading<sp/>C++<sp/>file<sp/>&apos;qcorr.h&apos;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Mon<sp/>Dec<sp/>7<sp/>00:26:26<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>Meta<sp/>Object<sp/>Compiler<sp/>version<sp/>61<sp/>(Qt<sp/>4.5.0)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/qcorr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(Q_MOC_OUTPUT_REVISION)</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;The<sp/>header<sp/>file<sp/>&apos;qcorr.h&apos;<sp/>doesn&apos;t<sp/>include<sp/>&lt;QObject&gt;.&quot;</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#elif<sp/>Q_MOC_OUTPUT_REVISION<sp/>!=<sp/>61</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;This<sp/>file<sp/>was<sp/>generated<sp/>using<sp/>the<sp/>moc<sp/>from<sp/>4.5.0.<sp/>It&quot;</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;cannot<sp/>be<sp/>used<sp/>with<sp/>the<sp/>include<sp/>files<sp/>from<sp/>this<sp/>version<sp/>of<sp/>Qt.&quot;</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;(The<sp/>moc<sp/>has<sp/>changed<sp/>too<sp/>much.)&quot;</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">QT_BEGIN_MOC_NAMESPACE</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint<sp/>qt_meta_data_Qcorr[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>content:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>revision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>classname</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>classinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/><sp/><sp/>12,<sp/></highlight><highlight class="comment">//<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>enums/sets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>slots:<sp/>signature,<sp/>parameters,<sp/>type,<sp/>tag,<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>22,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>43,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>61,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>80,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>94,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>104,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>114,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/><sp/><sp/><sp/>6,<sp/>0x08,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>eod</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qt_meta_stringdata_Qcorr[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Qcorr\0\0closeWindows()\0showControlsWindow()\0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;browseLeftImage()\0browseRightImage()\0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;changeMouse()\0viewMap()\0operate()\0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;abortOperation()\0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QMetaObject<sp/>Qcorr::staticMetaObject<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>&amp;QMainWindow::staticMetaObject,<sp/>qt_meta_stringdata_Qcorr,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>qt_meta_data_Qcorr,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QMetaObject<sp/>*Qcorr::metaObject()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="57"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;staticMetaObject;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*Qcorr::qt_metacast(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_clname)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_clname)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(_clname,<sp/>qt_meta_stringdata_Qcorr))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QMainWindow::qt_metacast(_clname);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Qcorr::qt_metacall(QMetaObject::Call<sp/>_c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**_a)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>_id<sp/>=<sp/>QMainWindow::qt_metacall(_c,<sp/>_id,<sp/>_a);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_id<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_id;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_c<sp/>==<sp/>QMetaObject::InvokeMetaMethod)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(_id)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><ref refid="classQcorr_1395de1dc21d85fa766fb6558c5e302e5" kindref="member" tooltip="Q_SLOT that closes the main Qcorr window and the controls Window;.">closeWindows</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/><ref refid="classQcorr_101b57fcc6bedf40f5c175c3fb4667a94" kindref="member" tooltip="Q_SLOT that shows the controls window and raises it to the foreground if already...">showControlsWindow</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/><ref refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" kindref="member" tooltip="Q_SLOT that allows to browse and load an image on the left panel.">browseLeftImage</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:<sp/><ref refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" kindref="member" tooltip="Q_SLOT that allows to browse and load an image on the right panel.">browseRightImage</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:<sp/><ref refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" kindref="member" tooltip="Q_SLOT used to change the mouse pointer according to the current operation mode.">changeMouse</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:<sp/><ref refid="classQcorr_13275244fd6183a4fef92b85578fea864" kindref="member" tooltip="Q_SLOT that selectively provides the appropriate existent map of results from correlation...">viewMap</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:<sp/><ref refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" kindref="member" tooltip="Q_SLOT that starts the chosen operation according to the mode chosen, either template...">operate</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>7:<sp/><ref refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" kindref="member" tooltip="Q_SLOT triggers the flag to abort the current operation.">abortOperation</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_id<sp/>-=<sp/>8;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_id;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">QT_END_MOC_NAMESPACE</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_qcorr.cpp"/>
+  </compounddef>
+</doxygen>

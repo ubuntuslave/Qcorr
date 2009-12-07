@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classUi_1_1ControlsWindowClass" kind="class" prot="public">
+    <compoundname>Ui::ControlsWindowClass</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Ui_ControlsWindowClass</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>Ui_ControlsWindowClass</label>
+      </node>
+      <node id="12">
+        <label>Ui::ControlsWindowClass</label>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>Ui_ControlsWindowClass</label>
+      </node>
+      <node id="14">
+        <label>Ui::ControlsWindowClass</label>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_controlswindow.h" line="150" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_controlswindow.h" bodystart="150" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classUi__ControlsWindowClass_131b8b23a08edb9b25122282b84a40257" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>close_pushButton</name></member>
+      <member refid="classUi__ControlsWindowClass_1b9c538ac65c9cde77821b2e16262ac08" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>controlsWindow_frame</name></member>
+      <member refid="classUi__ControlsWindowClass_1ef87f449396ab0e6eaf7d430cd0d3181" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>retranslateUi</name></member>
+      <member refid="classUi__ControlsWindowClass_12566822b1b666eca772c08120403c735" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>scanInterval_horizontalLayout</name></member>
+      <member refid="classUi__ControlsWindowClass_1326222f9ba3635e166e17716a09765be" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>scanInterval_label</name></member>
+      <member refid="classUi__ControlsWindowClass_1cc5285944728dd361279698067c3738b" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>scanInterval_spinBox</name></member>
+      <member refid="classUi__ControlsWindowClass_10d781c408d52051d9ae2e182059035a3" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>setupUi</name></member>
+      <member refid="classUi__ControlsWindowClass_1279c17270b9965a086a7614253a55574" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>templateSize_horizontalLayout</name></member>
+      <member refid="classUi__ControlsWindowClass_1d8764ef289d5848062ac9e642eeec403" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>templateSize_label</name></member>
+      <member refid="classUi__ControlsWindowClass_18d56994b33173ceda3d35f55100dfaf1" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>templateSize_spinBox</name></member>
+      <member refid="classUi__ControlsWindowClass_10f06d7355126dcfe25d7567991bba33d" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>verticalLayout</name></member>
+      <member refid="classUi__ControlsWindowClass_15312f5cf8c04075ce10d31f02a049e6f" prot="public" virt="non-virtual"><scope>Ui::ControlsWindowClass</scope><name>verticalSpacer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

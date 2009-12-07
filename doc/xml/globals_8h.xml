@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="globals_8h" kind="file">
+    <compoundname>globals.h</compoundname>
+    <includedby refid="corrmethod_8cpp" local="yes">src/corrmethod.cpp</includedby>
+    <includedby refid="qcorr_8cpp" local="yes">src/qcorr.cpp</includedby>
+    <invincdepgraph>
+      <node id="99">
+        <label>src/corrmethod.cpp</label>
+        <link refid="corrmethod_8cpp-source"/>
+      </node>
+      <node id="98">
+        <label>src/globals.h</label>
+        <link refid="globals.h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>src/qcorr.cpp</label>
+        <link refid="qcorr_8cpp-source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e" prot="public" static="no">
+        <name>MethodOfCorrelation</name>
+        <enumvalue id="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e0feec759d07d0eb4b63f2adf16ffeb4d" prot="public">
+          <name>N0_CORR_METHOD</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e71056184cf3a134611ccfea3e38bb9d9" prot="public">
+          <name>CROSS_CORR</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3edff1aff6a0d75f20ea2f494524362fdc" prot="public">
+          <name>SUM_SQ_DIFF</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e9d7c918a0ed81725beca0ab457d4b313" prot="public">
+          <name>CORR_COEFF</name>
+          <initializer> 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Provides a global enumeration for the implemented methods of digital image correlation in the <ref refid="classQcorr" kindref="compound">Qcorr</ref> class. The enumerated correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/globals.h" line="16" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/globals.h" bodystart="16" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>globals.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>14,<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>carlos</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Description:<sp/>For<sp/>global<sp/>variables<sp/>used<sp/>throughout<sp/>the<sp/>program</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GLOBALS_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GLOBALS_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="16"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>MethodOfCorrelation{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>N0_CORR_METHOD<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CROSS_CORR<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SUM_SQ_DIFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CORR_COEFF<sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GLOBALS_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/globals.h"/>
+  </compounddef>
+</doxygen>

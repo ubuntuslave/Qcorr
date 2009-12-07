@@ -1,39 +1,94 @@
 \begin{theindex}
 
+  \item {checkTemplateRegions}
+    \subitem {ImgLabel}, \hyperpage{21}
+  \item {ControlsWindow}, \hyperpage{13}
+    \subitem {getScanInterval}, \hyperpage{14}
+    \subitem {getTemplateSize}, \hyperpage{14}
+    \subitem {Qcorr}, \hyperpage{30}
+    \subitem {setEnableSpinBoxes}, \hyperpage{15}
   \item {convertToGrayScaleFloat}
-    \subitem {Qcorr}, \hyperpage{19}
-  \item {CorrMethod}, \hyperpage{13}
-    \subitem {getMethod}, \hyperpage{13}
+    \subitem {Qcorr}, \hyperpage{27}
+  \item {CorrMethod}, \hyperpage{16}
+    \subitem {getMethod}, \hyperpage{17}
+    \subitem {m\_\discretionary {-}{}{}nChosenMethod}, \hyperpage{17}
 
   \indexspace
 
+  \item {displayCoordinatesOnStatusLabel}
+    \subitem {ImgLabel}, \hyperpage{21}
+  \item {displayImage}
+    \subitem {Qcorr}, \hyperpage{27}
+  \item {displayImageLabel}
+    \subitem {Qcorr}, \hyperpage{28}
+  \item {drawEnclosedMatch}
+    \subitem {TargetImgLabel}, \hyperpage{32}
+
+  \indexspace
+
+  \item {fileDumpQImage}
+    \subitem {Qcorr}, \hyperpage{28}
   \item {findCorrelation}
-    \subitem {Qcorr}, \hyperpage{20}
+    \subitem {Qcorr}, \hyperpage{28}
 
   \indexspace
 
   \item {getMethod}
-    \subitem {CorrMethod}, \hyperpage{13}
+    \subitem {CorrMethod}, \hyperpage{17}
+  \item {getScanInterval}
+    \subitem {ControlsWindow}, \hyperpage{14}
+  \item {getTemplateSize}
+    \subitem {ControlsWindow}, \hyperpage{14}
 
   \indexspace
 
-  \item {ImgLabel}, \hyperpage{16}
+  \item {ImgLabel}, \hyperpage{19}
+    \subitem {checkTemplateRegions}, \hyperpage{21}
+    \subitem {displayCoordinatesOnStatusLabel}, \hyperpage{21}
+    \subitem {Qcorr}, \hyperpage{30}
+    \subitem {setSelectable}, \hyperpage{21}
+    \subitem {setTemplateFlags}, \hyperpage{22}
 
   \indexspace
 
-  \item {Qcorr}, \hyperpage{11}, \hyperpage{18}
-    \subitem {convertToGrayScaleFloat}, \hyperpage{19}
-    \subitem {findCorrelation}, \hyperpage{20}
+  \item {m\_\discretionary {-}{}{}nChosenMethod}
+    \subitem {CorrMethod}, \hyperpage{17}
 
   \indexspace
 
-  \item {TargetImgLabel}, \hyperpage{23}
+  \item {overlayImage}
+    \subitem {TargetImgLabel}, \hyperpage{32}
 
   \indexspace
 
-  \item {Ui::CorrMethodClass}, \hyperpage{15}
-  \item {Ui::QcorrClass}, \hyperpage{22}
-  \item {Ui\_\discretionary {-}{}{}CorrMethodClass}, \hyperpage{24}
-  \item {Ui\_\discretionary {-}{}{}QcorrClass}, \hyperpage{25}
+  \item {Qcorr}, \hyperpage{11}, \hyperpage{23}
+    \subitem {ControlsWindow}, \hyperpage{30}
+    \subitem {convertToGrayScaleFloat}, \hyperpage{27}
+    \subitem {displayImage}, \hyperpage{27}
+    \subitem {displayImageLabel}, \hyperpage{28}
+    \subitem {fileDumpQImage}, \hyperpage{28}
+    \subitem {findCorrelation}, \hyperpage{28}
+    \subitem {ImgLabel}, \hyperpage{30}
+    \subitem {setEnableActions}, \hyperpage{29}
+
+  \indexspace
+
+  \item {setEnableActions}
+    \subitem {Qcorr}, \hyperpage{29}
+  \item {setEnableSpinBoxes}
+    \subitem {ControlsWindow}, \hyperpage{15}
+  \item {setImage}
+    \subitem {TargetImgLabel}, \hyperpage{32}
+  \item {setSelectable}
+    \subitem {ImgLabel}, \hyperpage{21}
+  \item {setTemplateFlags}
+    \subitem {ImgLabel}, \hyperpage{22}
+
+  \indexspace
+
+  \item {TargetImgLabel}, \hyperpage{31}
+    \subitem {drawEnclosedMatch}, \hyperpage{32}
+    \subitem {overlayImage}, \hyperpage{32}
+    \subitem {setImage}, \hyperpage{32}
 
 \end{theindex}

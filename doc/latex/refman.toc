@@ -1,5 +1,5 @@
-\contentsline {chapter}{\numberline {1}Todo List}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Bug List}{3}{chapter.2}
+\contentsline {chapter}{\numberline {1}Bug List}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Todo List}{3}{chapter.2}
 \contentsline {chapter}{\numberline {3}Module Index}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Modules}{5}{section.3.1}
 \contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}
@@ -9,24 +9,40 @@
 \contentsline {chapter}{\numberline {6}Module Documentation}{11}{chapter.6}
 \contentsline {section}{\numberline {6.1}Qcorr}{11}{section.6.1}
 \contentsline {chapter}{\numberline {7}Class Documentation}{13}{chapter.7}
-\contentsline {section}{\numberline {7.1}CorrMethod Class Reference}{13}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{13}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Member Function Documentation}{13}{subsection.7.1.2}
-\contentsline {subsubsection}{\numberline {7.1.2.1}getMethod}{13}{subsubsection.7.1.2.1}
-\contentsline {section}{\numberline {7.2}Ui::CorrMethodClass Class Reference}{15}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{15}{subsection.7.2.1}
-\contentsline {section}{\numberline {7.3}ImgLabel Class Reference}{16}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{17}{subsection.7.3.1}
-\contentsline {section}{\numberline {7.4}Qcorr Class Reference}{18}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{19}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Member Function Documentation}{19}{subsection.7.4.2}
-\contentsline {subsubsection}{\numberline {7.4.2.1}convertToGrayScaleFloat}{19}{subsubsection.7.4.2.1}
-\contentsline {subsubsection}{\numberline {7.4.2.2}findCorrelation}{20}{subsubsection.7.4.2.2}
-\contentsline {section}{\numberline {7.5}Ui::QcorrClass Class Reference}{22}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{22}{subsection.7.5.1}
-\contentsline {section}{\numberline {7.6}TargetImgLabel Class Reference}{23}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{23}{subsection.7.6.1}
-\contentsline {section}{\numberline {7.7}Ui\_\discretionary {-}{}{}CorrMethodClass Class Reference}{24}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{24}{subsection.7.7.1}
-\contentsline {section}{\numberline {7.8}Ui\_\discretionary {-}{}{}QcorrClass Class Reference}{25}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{26}{subsection.7.8.1}
+\contentsline {section}{\numberline {7.1}ControlsWindow Class Reference}{13}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{14}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Member Function Documentation}{14}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}getScanInterval}{14}{subsubsection.7.1.2.1}
+\contentsline {subsubsection}{\numberline {7.1.2.2}getTemplateSize}{14}{subsubsection.7.1.2.2}
+\contentsline {subsubsection}{\numberline {7.1.2.3}setEnableSpinBoxes}{15}{subsubsection.7.1.2.3}
+\contentsline {section}{\numberline {7.2}CorrMethod Class Reference}{16}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{17}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Member Function Documentation}{17}{subsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2.1}getMethod}{17}{subsubsection.7.2.2.1}
+\contentsline {subsection}{\numberline {7.2.3}Member Data Documentation}{17}{subsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.3.1}m\_\discretionary {-}{}{}nChosenMethod}{17}{subsubsection.7.2.3.1}
+\contentsline {section}{\numberline {7.3}ImgLabel Class Reference}{19}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{21}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Member Function Documentation}{21}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}checkTemplateRegions}{21}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}displayCoordinatesOnStatusLabel}{21}{subsubsection.7.3.2.2}
+\contentsline {subsubsection}{\numberline {7.3.2.3}setSelectable}{22}{subsubsection.7.3.2.3}
+\contentsline {subsubsection}{\numberline {7.3.2.4}setTemplateFlags}{22}{subsubsection.7.3.2.4}
+\contentsline {section}{\numberline {7.4}Qcorr Class Reference}{23}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{26}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Member Function Documentation}{27}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}convertToGrayScaleFloat}{27}{subsubsection.7.4.2.1}
+\contentsline {subsubsection}{\numberline {7.4.2.2}displayImage}{27}{subsubsection.7.4.2.2}
+\contentsline {subsubsection}{\numberline {7.4.2.3}displayImageLabel}{28}{subsubsection.7.4.2.3}
+\contentsline {subsubsection}{\numberline {7.4.2.4}fileDumpQImage}{28}{subsubsection.7.4.2.4}
+\contentsline {subsubsection}{\numberline {7.4.2.5}findCorrelation}{28}{subsubsection.7.4.2.5}
+\contentsline {subsubsection}{\numberline {7.4.2.6}setEnableActions}{30}{subsubsection.7.4.2.6}
+\contentsline {subsection}{\numberline {7.4.3}Friends And Related Function Documentation}{30}{subsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.3.1}ControlsWindow}{30}{subsubsection.7.4.3.1}
+\contentsline {subsubsection}{\numberline {7.4.3.2}ImgLabel}{30}{subsubsection.7.4.3.2}
+\contentsline {section}{\numberline {7.5}TargetImgLabel Class Reference}{31}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{32}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Member Function Documentation}{32}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}drawEnclosedMatch}{32}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}overlayImage}{32}{subsubsection.7.5.2.2}
+\contentsline {subsubsection}{\numberline {7.5.2.3}setImage}{33}{subsubsection.7.5.2.3}

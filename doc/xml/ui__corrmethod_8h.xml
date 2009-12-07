@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="ui__corrmethod_8h" kind="file">
+    <compoundname>ui_corrmethod.h</compoundname>
+    <includes local="no">QtCore/QVariant</includes>
+    <includes local="no">QtGui/QAction</includes>
+    <includes local="no">QtGui/QApplication</includes>
+    <includes local="no">QtGui/QButtonGroup</includes>
+    <includes local="no">QtGui/QDialog</includes>
+    <includes local="no">QtGui/QDialogButtonBox</includes>
+    <includes local="no">QtGui/QFrame</includes>
+    <includes local="no">QtGui/QGroupBox</includes>
+    <includes local="no">QtGui/QHeaderView</includes>
+    <includes local="no">QtGui/QLabel</includes>
+    <includes local="no">QtGui/QRadioButton</includes>
+    <includes local="no">QtGui/QSpacerItem</includes>
+    <includes local="no">QtGui/QVBoxLayout</includes>
+    <includedby refid="corrmethod_8h" local="yes">src/corrmethod.h</includedby>
+    <incdepgraph>
+      <node id="310">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="309">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="303">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="304">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="297">
+        <label>ui_corrmethod.h</label>
+        <link refid="ui_corrmethod.h"/>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="300">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="302">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="298">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="307">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="299">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="305">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="301">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="306">
+        <label>QtGui/QHeaderView</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="312">
+        <label>src/corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>ui_corrmethod.h</label>
+        <link refid="ui_corrmethod.h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+      </node>
+      <node id="316">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp-source"/>
+      </node>
+      <node id="318">
+        <label>src/corrmethod.cpp</label>
+        <link refid="corrmethod_8cpp-source"/>
+      </node>
+      <node id="315">
+        <label>src/imgLabel.cpp</label>
+        <link refid="imgLabel_8cpp-source"/>
+      </node>
+      <node id="317">
+        <label>src/qcorr.cpp</label>
+        <link refid="qcorr_8cpp-source"/>
+      </node>
+      <node id="314">
+        <label>src/controlswindow.cpp</label>
+        <link refid="controlswindow_8cpp-source"/>
+      </node>
+      <node id="313">
+        <label>src/qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classUi__CorrMethodClass" prot="public">Ui_CorrMethodClass</innerclass>
+    <innerclass refid="classUi_1_1CorrMethodClass" prot="public">Ui::CorrMethodClass</innerclass>
+    <innernamespace refid="namespaceUi">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Form<sp/>generated<sp/>from<sp/>reading<sp/>ui<sp/>file<sp/>&apos;corrmethod.ui&apos;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Sun<sp/>Dec<sp/>6<sp/>22:55:07<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>Qt<sp/>User<sp/>Interface<sp/>Compiler<sp/>version<sp/>4.5.0</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost<sp/>when<sp/>recompiling<sp/>ui<sp/>file!</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UI_CORRMETHOD_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UI_CORRMETHOD_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QVariant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QAction&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QButtonGroup&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QDialogButtonBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QFrame&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QGroupBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QHeaderView&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QLabel&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QRadioButton&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QSpacerItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QVBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">QT_BEGIN_NAMESPACE</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Ui_CorrMethodClass</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QFrame<sp/>*dialog_Frame;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*verticalLayout;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*selectMethod_label;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>QGroupBox<sp/>*methods_groupBox;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadioButton<sp/>*method3_radioButton;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadioButton<sp/>*method2_radioButton;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadioButton<sp/>*method1_radioButton;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialogButtonBox<sp/>*buttonBox;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>QSpacerItem<sp/>*verticalSpacer;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setupUi(QDialog<sp/>*CorrMethodClass)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(CorrMethodClass-&gt;objectName().isEmpty())</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CorrMethodClass-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CorrMethodClass-&gt;resize(247,<sp/>194);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSizePolicy<sp/>sizePolicy(QSizePolicy::Preferred,<sp/>QSizePolicy::Preferred);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setHorizontalStretch(0);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setVerticalStretch(0);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setHeightForWidth(CorrMethodClass-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CorrMethodClass-&gt;setSizePolicy(sizePolicy);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CorrMethodClass-&gt;setModal(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dialog_Frame<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QFrame(CorrMethodClass);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dialog_Frame-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;dialog_Frame&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dialog_Frame-&gt;setGeometry(QRect(10,<sp/>10,<sp/>231,<sp/>181));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSizePolicy<sp/>sizePolicy1(QSizePolicy::Expanding,<sp/>QSizePolicy::Expanding);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setHorizontalStretch(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setVerticalStretch(0);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setHeightForWidth(dialog_Frame-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dialog_Frame-&gt;setSizePolicy(sizePolicy1);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QVBoxLayout(dialog_Frame);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setSpacing(6);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setMargin(11);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;verticalLayout&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectMethod_label<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QLabel(dialog_Frame);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectMethod_label-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;selectMethod_label&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QFont<sp/>font;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setFamily(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setPointSize(10);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setBold(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setWeight(75);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectMethod_label-&gt;setFont(font);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addWidget(selectMethod_label);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>methods_groupBox<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QGroupBox(dialog_Frame);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>methods_groupBox-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;methods_groupBox&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSizePolicy<sp/>sizePolicy2(QSizePolicy::Expanding,<sp/>QSizePolicy::Expanding);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy2.setHorizontalStretch(0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy2.setVerticalStretch(1);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy2.setHeightForWidth(methods_groupBox-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>methods_groupBox-&gt;setSizePolicy(sizePolicy2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QFont<sp/>font1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font1.setFamily(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>methods_groupBox-&gt;setFont(font1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method3_radioButton<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QRadioButton(methods_groupBox);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method3_radioButton-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;method3_radioButton&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method3_radioButton-&gt;setGeometry(QRect(10,<sp/>70,<sp/>211,<sp/>24));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method2_radioButton<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QRadioButton(methods_groupBox);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method2_radioButton-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;method2_radioButton&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method2_radioButton-&gt;setGeometry(QRect(10,<sp/>40,<sp/>211,<sp/>24));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method1_radioButton<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QRadioButton(methods_groupBox);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method1_radioButton-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;method1_radioButton&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method1_radioButton-&gt;setGeometry(QRect(10,<sp/>10,<sp/>131,<sp/>24));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addWidget(methods_groupBox);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttonBox<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QDialogButtonBox(dialog_Frame);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttonBox-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;buttonBox&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttonBox-&gt;setOrientation(Qt::Horizontal);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttonBox-&gt;setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addWidget(buttonBox);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalSpacer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSpacerItem(20,<sp/>1,<sp/>QSizePolicy::Minimum,<sp/>QSizePolicy::Minimum);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addItem(verticalSpacer);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QWidget::setTabOrder(method1_radioButton,<sp/>method2_radioButton);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QWidget::setTabOrder(method2_radioButton,<sp/>method3_radioButton);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QWidget::setTabOrder(method3_radioButton,<sp/>buttonBox);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retranslateUi(CorrMethodClass);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QMetaObject::connectSlotsByName(CorrMethodClass);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>setupUi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>retranslateUi(QDialog<sp/>*CorrMethodClass)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CorrMethodClass-&gt;setWindowTitle(QApplication::translate(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Correlation<sp/>Methods&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectMethod_label-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Select<sp/>Correlation<sp/>Method:&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>methods_groupBox-&gt;setTitle(QString());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method3_radioButton-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Correlation<sp/>Coefficient&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method2_radioButton-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Sum<sp/>of<sp/>Squared<sp/>Differences&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method1_radioButton-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;CorrMethodClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Cross<sp/>Correlation&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q_UNUSED(CorrMethodClass);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>retranslateUi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Ui<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CorrMethodClass:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Ui_CorrMethodClass<sp/>{};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Ui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">QT_END_NAMESPACE</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>UI_CORRMETHOD_H</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h"/>
+  </compounddef>
+</doxygen>

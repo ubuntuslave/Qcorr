@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="imgLabel_8h" kind="file">
+    <compoundname>imgLabel.h</compoundname>
+    <includes local="no">QtGui/QLabel</includes>
+    <includedby refid="qcorr_8h" local="yes">src/qcorr.h</includedby>
+    <includedby refid="imgLabel_8cpp" local="yes">src/imgLabel.cpp</includedby>
+    <incdepgraph>
+      <node id="139">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="138">
+        <label>src/imgLabel.h</label>
+        <link refid="imgLabel.h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="144">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp-source"/>
+      </node>
+      <node id="143">
+        <label>src/imgLabel.cpp</label>
+        <link refid="imgLabel_8cpp-source"/>
+      </node>
+      <node id="145">
+        <label>src/qcorr.cpp</label>
+        <link refid="qcorr_8cpp-source"/>
+      </node>
+      <node id="142">
+        <label>src/controlswindow.cpp</label>
+        <link refid="controlswindow_8cpp-source"/>
+      </node>
+      <node id="141">
+        <label>src/qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>src/imgLabel.h</label>
+        <link refid="imgLabel.h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classImgLabel" prot="public">ImgLabel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>imgLabel.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>11,<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>carlos</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Description:<sp/>Sub-classing<sp/>QLabel<sp/>in<sp/>order<sp/>to<sp/>allow<sp/>higher<sp/>control<sp/>of<sp/>mouse-event<sp/>positions<sp/>and<sp/>other<sp/>properties.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IMGLABEL_H_</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IMGLABEL_H_</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QLabel&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QRubberBand;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QPoint;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref>;<sp/></highlight><highlight class="comment">//<sp/>using<sp/>this<sp/>friend<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classImgLabel" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QLabel</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" kindref="member" tooltip="Constructor of ImgLabel class must point to a Qcorr parentWindow.">ImgLabel</ref>(<ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>*parentWindow,<sp/>QWidget<sp/>*parent<sp/>=<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="classImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_13e5988fc63515a300e69593c9236e126" kindref="member" tooltip="Allows to enable/disable the ImgLabel&amp;#39;s rubberBand selection functionality.">setSelectable</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bHasRubberBand);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classImgLabel_1e86bc9b92f374c5f78097881af49364d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref>;<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>*<ref refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" kindref="member" tooltip="Pointer to Main Window Object (There should be only one on these).">m_parentWindow</ref>;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QRubberBand<sp/>*<ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>;<sp/></highlight></codeline>
+<codeline lineno="47" refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="48" refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="49" refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="52" refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kindref="member" tooltip="First mouse position point of the template selection.">m_mousePosPoint1</ref>;<sp/></highlight></codeline>
+<codeline lineno="54" refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" kindref="member" tooltip="Final mouse position point of the template selection.">m_mousePosPoint2</ref>;<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kindref="member" tooltip="indicates whether the mouse is currently being pressed (held-down)">m_bMouseIsPressed</ref>;<sp/></highlight></codeline>
+<codeline lineno="57" refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref>;<sp/></highlight></codeline>
+<codeline lineno="58" refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref>;<sp/></highlight></codeline>
+<codeline lineno="59" refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kindref="member" tooltip="indicates whether the mouse pointer is at the top edge of the rubberBand selection...">m_bMouseAtTemplateTopEdge</ref>;<sp/></highlight></codeline>
+<codeline lineno="60" refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kindref="member" tooltip="indicates whether the mouse pointer is at the bottom edge of the rubberBand selection...">m_bMouseAtTemplateBottomEdge</ref>;<sp/></highlight></codeline>
+<codeline lineno="61" refid="classImgLabel_1921c1163775a86236d44d84e11172177" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1921c1163775a86236d44d84e11172177" kindref="member" tooltip="indicates whether the mouse pointer is at the left edge of the rubberBand selection...">m_bMouseAtTemplateLeftEdge</ref>;<sp/></highlight></codeline>
+<codeline lineno="62" refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kindref="member" tooltip="indicates whether the mouse pointer is at the right edge of the rubberBand selection...">m_bMouseAtTemplateRightEdge</ref>;<sp/></highlight></codeline>
+<codeline lineno="63" refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref>;<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kindref="member" tooltip="X-value used in the rubberBand movement.">m_nXNewPos</ref>;<sp/></highlight></codeline>
+<codeline lineno="66" refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kindref="member" tooltip="Y-value used in the rubberBand movement.">m_nYNewPos</ref>;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">setTemplateFlags</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bStatus);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" kindref="member" tooltip="Used to check the mouse pointer in relation to the template&amp;#39;s region and edges...">checkTemplateRegions</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouseX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouseY);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(QPoint<sp/>&amp;point0,<sp/>QPoint<sp/>&amp;point1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" kindref="member" tooltip="press mouse event handler">mousePressEvent</ref>(QMouseEvent<sp/>*event);<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" kindref="member" tooltip="move mouse event handler">mouseMoveEvent</ref>(QMouseEvent<sp/>*event);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" kindref="member" tooltip="release mouse event handler">mouseReleaseEvent</ref>(QMouseEvent<sp/>*event);<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IMGLABEL_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h"/>
+  </compounddef>
+</doxygen>

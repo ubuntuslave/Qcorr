@@ -2,18 +2,247 @@
 \section{ImgLabel Class Reference}
 \label{classImgLabel}\index{ImgLabel@{ImgLabel}}
 }
+A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel.  
 
 
-A sub-\/classed label widget implemented with the purpose of displaying the reference image on the left panel.  
+{\tt \#include $<$src/imgLabel.h$>$}
 
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classImgLabel_69e37830ecfccbd824166d03fc9c248d}{
+\hyperlink{classImgLabel_69e37830ecfccbd824166d03fc9c248d}{ImgLabel} (\hyperlink{classQcorr}{Qcorr} $\ast$parentWindow, QWidget $\ast$parent=0)}
+\label{classImgLabel_69e37830ecfccbd824166d03fc9c248d}
 
-{\ttfamily \#include $<$src/imgLabel.h$>$}
+\begin{CompactList}\small\item\em Constructor of \hyperlink{classImgLabel}{ImgLabel} class must point to a \hyperlink{classQcorr}{Qcorr} parentWindow. \item\end{CompactList}\item 
+void \hyperlink{classImgLabel_3e5988fc63515a300e69593c9236e126}{setSelectable} (bool bHasRubberBand)
+\begin{CompactList}\small\item\em Allows to enable/disable the ImgLabel's rubberBand selection functionality. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classImgLabel_20d52d626aa1a1d6cebe3f7e2c33e295}{
+void \hyperlink{classImgLabel_20d52d626aa1a1d6cebe3f7e2c33e295}{mousePressEvent} (QMouseEvent $\ast$event)}
+\label{classImgLabel_20d52d626aa1a1d6cebe3f7e2c33e295}
+
+\begin{CompactList}\small\item\em press mouse event handler \item\end{CompactList}\item 
+\hypertarget{classImgLabel_935514f1ec077f7c817fb057a16d8c4d}{
+void \hyperlink{classImgLabel_935514f1ec077f7c817fb057a16d8c4d}{mouseMoveEvent} (QMouseEvent $\ast$event)}
+\label{classImgLabel_935514f1ec077f7c817fb057a16d8c4d}
+
+\begin{CompactList}\small\item\em move mouse event handler \item\end{CompactList}\item 
+\hypertarget{classImgLabel_ccc9e0b19e5e7873a8493f0d7e03c65b}{
+void \hyperlink{classImgLabel_ccc9e0b19e5e7873a8493f0d7e03c65b}{mouseReleaseEvent} (QMouseEvent $\ast$event)}
+\label{classImgLabel_ccc9e0b19e5e7873a8493f0d7e03c65b}
+
+\begin{CompactList}\small\item\em release mouse event handler \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classImgLabel_1d35f5565e1f0fd6234667b40386b2a4}{setTemplateFlags} (bool bStatus)
+\begin{CompactList}\small\item\em Sets a group of flags used for the mouse pointer in relation to the template's region and edges. \item\end{CompactList}\item 
+void \hyperlink{classImgLabel_a71c0202c48be349b4fb0813891df43a}{checkTemplateRegions} (int mouseX, int mouseY)
+\begin{CompactList}\small\item\em Used to check the mouse pointer in relation to the template's region and edges. \item\end{CompactList}\item 
+void \hyperlink{classImgLabel_f8fb1abf00b305d1ba4d8b4745b59692}{displayCoordinatesOnStatusLabel} (QPoint \&point0, QPoint \&point1)
+\begin{CompactList}\small\item\em Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates of the mouse pointer (relative to the \hyperlink{classImgLabel}{ImgLabel}) in the status bar of the friend-parent's main window. It only display the mouse pointer coordinate information if rubberBand actions are enabled. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classImgLabel_bf77749e36bca018728bde2fc9a974eb}{
+\hyperlink{classQcorr}{Qcorr} $\ast$ \hyperlink{classImgLabel_bf77749e36bca018728bde2fc9a974eb}{m\_\-parentWindow}}
+\label{classImgLabel_bf77749e36bca018728bde2fc9a974eb}
+
+\begin{CompactList}\small\item\em Pointer to Main Window Object (There should be only one on these). \item\end{CompactList}\item 
+\hypertarget{classImgLabel_a62e5311b110d0551158c93c6c90e4cf}{
+QRubberBand $\ast$ \hyperlink{classImgLabel_a62e5311b110d0551158c93c6c90e4cf}{m\_\-rubberBand}}
+\label{classImgLabel_a62e5311b110d0551158c93c6c90e4cf}
+
+\begin{CompactList}\small\item\em the rubberBand object. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_fbbcbd660b7ef7c6048286ac5e350343}{
+QPoint \hyperlink{classImgLabel_fbbcbd660b7ef7c6048286ac5e350343}{m\_\-originPoint}}
+\label{classImgLabel_fbbcbd660b7ef7c6048286ac5e350343}
+
+\begin{CompactList}\small\item\em rubberBand's top-left corner point \item\end{CompactList}\item 
+\hypertarget{classImgLabel_6309ebb41fd14f64eb552e772c3bad25}{
+QPoint \hyperlink{classImgLabel_6309ebb41fd14f64eb552e772c3bad25}{m\_\-finalPoint}}
+\label{classImgLabel_6309ebb41fd14f64eb552e772c3bad25}
+
+\begin{CompactList}\small\item\em rubberBand's bottom-right corner point \item\end{CompactList}\item 
+\hypertarget{classImgLabel_24136f0f97b3f157721c07091a8261ac}{
+QPoint \hyperlink{classImgLabel_24136f0f97b3f157721c07091a8261ac}{m\_\-currentPressedPoint}}
+\label{classImgLabel_24136f0f97b3f157721c07091a8261ac}
+
+\begin{CompactList}\small\item\em the coordinates of the current mouse pointer when it's pressed (held-down) \item\end{CompactList}\item 
+\hypertarget{classImgLabel_5818aa44b47111a75d4f1d4b749f6ba1}{
+QPoint \hyperlink{classImgLabel_5818aa44b47111a75d4f1d4b749f6ba1}{m\_\-labelUpperLeftCornerPoint}}
+\label{classImgLabel_5818aa44b47111a75d4f1d4b749f6ba1}
+
+\begin{CompactList}\small\item\em Top-left corner of the label. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_e9c219000c7ccb81a73f9784ba9df23b}{
+QPoint \hyperlink{classImgLabel_e9c219000c7ccb81a73f9784ba9df23b}{m\_\-labelLowerRightCornerPoint}}
+\label{classImgLabel_e9c219000c7ccb81a73f9784ba9df23b}
+
+\begin{CompactList}\small\item\em Bottom-right corner of the label. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_d58eb83a86663876080a2e24ad016b39}{
+QPoint \hyperlink{classImgLabel_d58eb83a86663876080a2e24ad016b39}{m\_\-mousePosPoint1}}
+\label{classImgLabel_d58eb83a86663876080a2e24ad016b39}
+
+\begin{CompactList}\small\item\em First mouse position point of the template selection. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_5d8c18646dda1aaf5c574ed88b63b0ee}{
+QPoint \hyperlink{classImgLabel_5d8c18646dda1aaf5c574ed88b63b0ee}{m\_\-mousePosPoint2}}
+\label{classImgLabel_5d8c18646dda1aaf5c574ed88b63b0ee}
+
+\begin{CompactList}\small\item\em Final mouse position point of the template selection. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_b7550fba92f0346edd4a61c1a84eee4d}{
+bool \hyperlink{classImgLabel_b7550fba92f0346edd4a61c1a84eee4d}{m\_\-bMouseIsPressed}}
+\label{classImgLabel_b7550fba92f0346edd4a61c1a84eee4d}
+
+\begin{CompactList}\small\item\em indicates whether the mouse is currently being pressed (held-down) \item\end{CompactList}\item 
+\hypertarget{classImgLabel_45fe85b4d6b6da14b556c13284624145}{
+bool \hyperlink{classImgLabel_45fe85b4d6b6da14b556c13284624145}{m\_\-bStartedTemplateSelection}}
+\label{classImgLabel_45fe85b4d6b6da14b556c13284624145}
+
+\begin{CompactList}\small\item\em indicates whether the template selection has begun \item\end{CompactList}\item 
+\hypertarget{classImgLabel_990abf371f11243a65aa323bfad1cf10}{
+bool \hyperlink{classImgLabel_990abf371f11243a65aa323bfad1cf10}{m\_\-bMouseInTemplateRegion}}
+\label{classImgLabel_990abf371f11243a65aa323bfad1cf10}
+
+\begin{CompactList}\small\item\em indicates whether the mouse pointer is inside the rubberBand selection area \item\end{CompactList}\item 
+\hypertarget{classImgLabel_d4858784cd8aa7a53f948bb42ae7b996}{
+bool \hyperlink{classImgLabel_d4858784cd8aa7a53f948bb42ae7b996}{m\_\-bMouseAtTemplateTopEdge}}
+\label{classImgLabel_d4858784cd8aa7a53f948bb42ae7b996}
+
+\begin{CompactList}\small\item\em indicates whether the mouse pointer is at the top edge of the rubberBand selection area \item\end{CompactList}\item 
+\hypertarget{classImgLabel_6d005e4bb487858c70d4d14564e4a095}{
+bool \hyperlink{classImgLabel_6d005e4bb487858c70d4d14564e4a095}{m\_\-bMouseAtTemplateBottomEdge}}
+\label{classImgLabel_6d005e4bb487858c70d4d14564e4a095}
+
+\begin{CompactList}\small\item\em indicates whether the mouse pointer is at the bottom edge of the rubberBand selection area \item\end{CompactList}\item 
+\hypertarget{classImgLabel_921c1163775a86236d44d84e11172177}{
+bool \hyperlink{classImgLabel_921c1163775a86236d44d84e11172177}{m\_\-bMouseAtTemplateLeftEdge}}
+\label{classImgLabel_921c1163775a86236d44d84e11172177}
+
+\begin{CompactList}\small\item\em indicates whether the mouse pointer is at the left edge of the rubberBand selection area \item\end{CompactList}\item 
+\hypertarget{classImgLabel_fa3d9dc393d218e31b71f3e34bc79f9c}{
+bool \hyperlink{classImgLabel_fa3d9dc393d218e31b71f3e34bc79f9c}{m\_\-bMouseAtTemplateRightEdge}}
+\label{classImgLabel_fa3d9dc393d218e31b71f3e34bc79f9c}
+
+\begin{CompactList}\small\item\em indicates whether the mouse pointer is at the right edge of the rubberBand selection area \item\end{CompactList}\item 
+\hypertarget{classImgLabel_e9d9356f7e968bd4416d2b875efcf535}{
+bool \hyperlink{classImgLabel_e9d9356f7e968bd4416d2b875efcf535}{m\_\-bHasRubberBand}}
+\label{classImgLabel_e9d9356f7e968bd4416d2b875efcf535}
+
+\begin{CompactList}\small\item\em indicates whether the rubberBand is enabled/disabled. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_8440c20742b16b7b2bdceebe3e9f3302}{
+int \hyperlink{classImgLabel_8440c20742b16b7b2bdceebe3e9f3302}{m\_\-nXNewPos}}
+\label{classImgLabel_8440c20742b16b7b2bdceebe3e9f3302}
+
+\begin{CompactList}\small\item\em X-value used in the rubberBand movement. \item\end{CompactList}\item 
+\hypertarget{classImgLabel_2060dad81295d4e6f87328108f97d15f}{
+int \hyperlink{classImgLabel_2060dad81295d4e6f87328108f97d15f}{m\_\-nYNewPos}}
+\label{classImgLabel_2060dad81295d4e6f87328108f97d15f}
+
+\begin{CompactList}\small\item\em Y-value used in the rubberBand movement. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hypertarget{classImgLabel_e86bc9b92f374c5f78097881af49364d}{
+class \hyperlink{classImgLabel_e86bc9b92f374c5f78097881af49364d}{Qcorr}}
+\label{classImgLabel_e86bc9b92f374c5f78097881af49364d}
+
+\begin{CompactList}\small\item\em \hyperlink{classQcorr}{Qcorr} is a friend class of this \hyperlink{classImgLabel}{ImgLabel} class, so all members from \hyperlink{classImgLabel}{ImgLabel} are accessible by a \hyperlink{classQcorr}{Qcorr} object. \item\end{CompactList}\end{CompactItemize}
+
 
 \subsection{Detailed Description}
-A sub-\/classed label widget implemented with the purpose of displaying the reference image on the left panel. A sub-\/classed label widget implemented with the purpose of displaying the reference image on the left panel with added functionality such as the rubberBand selection and coordinate tracking of the mouse pointer. 
+A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel. 
 
-Definition at line 24 of file imgLabel.h.
+A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel with added functionality such as the rubberBand selection and coordinate tracking of the mouse pointer. 
 
-The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+Definition at line 25 of file imgLabel.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classImgLabel_a71c0202c48be349b4fb0813891df43a}{
+\index{ImgLabel@{ImgLabel}!checkTemplateRegions@{checkTemplateRegions}}
+\index{checkTemplateRegions@{checkTemplateRegions}!ImgLabel@{ImgLabel}}
+\subsubsection[{checkTemplateRegions}]{\setlength{\rightskip}{0pt plus 5cm}void ImgLabel::checkTemplateRegions (int {\em mouseX}, \/  int {\em mouseY})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classImgLabel_a71c0202c48be349b4fb0813891df43a}
+
+
+Used to check the mouse pointer in relation to the template's region and edges. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em mouseX}]X-coordinates of the mouse pointer \item[{\em mouseY}]Y-coordinates of the mouse pointer \end{description}
+\end{Desc}
+
+
+Definition at line 267 of file imgLabel.cpp.
+
+References m\_\-bMouseAtTemplateBottomEdge, m\_\-bMouseAtTemplateLeftEdge, m\_\-bMouseAtTemplateRightEdge, m\_\-bMouseAtTemplateTopEdge, m\_\-bMouseInTemplateRegion, m\_\-finalPoint, m\_\-originPoint, and setTemplateFlags().
+
+Referenced by mouseMoveEvent(), and mouseReleaseEvent().\hypertarget{classImgLabel_f8fb1abf00b305d1ba4d8b4745b59692}{
+\index{ImgLabel@{ImgLabel}!displayCoordinatesOnStatusLabel@{displayCoordinatesOnStatusLabel}}
+\index{displayCoordinatesOnStatusLabel@{displayCoordinatesOnStatusLabel}!ImgLabel@{ImgLabel}}
+\subsubsection[{displayCoordinatesOnStatusLabel}]{\setlength{\rightskip}{0pt plus 5cm}void ImgLabel::displayCoordinatesOnStatusLabel (QPoint \& {\em point0}, \/  QPoint \& {\em point1})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classImgLabel_f8fb1abf00b305d1ba4d8b4745b59692}
+
+
+Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates of the mouse pointer (relative to the \hyperlink{classImgLabel}{ImgLabel}) in the status bar of the friend-parent's main window. It only display the mouse pointer coordinate information if rubberBand actions are enabled. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em point0}]the coordinates of the origin point of the rubberBand selection \item[{\em point1}]the coordinates of the final point of the rubberBand selection \end{description}
+\end{Desc}
+
+
+Definition at line 302 of file imgLabel.cpp.
+
+References m\_\-bHasRubberBand, m\_\-parentWindow, and Qcorr::m\_\-status\_\-label.
+
+Referenced by mouseMoveEvent().\hypertarget{classImgLabel_3e5988fc63515a300e69593c9236e126}{
+\index{ImgLabel@{ImgLabel}!setSelectable@{setSelectable}}
+\index{setSelectable@{setSelectable}!ImgLabel@{ImgLabel}}
+\subsubsection[{setSelectable}]{\setlength{\rightskip}{0pt plus 5cm}void ImgLabel::setSelectable (bool {\em bHasRubberBand})}}
+\label{classImgLabel_3e5988fc63515a300e69593c9236e126}
+
+
+Allows to enable/disable the ImgLabel's rubberBand selection functionality. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bHasRubberBand}]boolean flag to enable or disable the rubberBand selection functionality. \end{description}
+\end{Desc}
+
+
+Definition at line 43 of file imgLabel.cpp.
+
+References m\_\-bHasRubberBand, and m\_\-rubberBand.
+
+Referenced by Qcorr::changeMouse(), and ImgLabel().\hypertarget{classImgLabel_1d35f5565e1f0fd6234667b40386b2a4}{
+\index{ImgLabel@{ImgLabel}!setTemplateFlags@{setTemplateFlags}}
+\index{setTemplateFlags@{setTemplateFlags}!ImgLabel@{ImgLabel}}
+\subsubsection[{setTemplateFlags}]{\setlength{\rightskip}{0pt plus 5cm}void ImgLabel::setTemplateFlags (bool {\em bStatus})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classImgLabel_1d35f5565e1f0fd6234667b40386b2a4}
+
+
+Sets a group of flags used for the mouse pointer in relation to the template's region and edges. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bStatus}]template region's status \end{description}
+\end{Desc}
+
+
+Definition at line 257 of file imgLabel.cpp.
+
+References m\_\-bMouseAtTemplateBottomEdge, m\_\-bMouseAtTemplateLeftEdge, m\_\-bMouseAtTemplateRightEdge, m\_\-bMouseAtTemplateTopEdge, and m\_\-bMouseInTemplateRegion.
+
+Referenced by checkTemplateRegions(), ImgLabel(), and mouseMoveEvent().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
-src/imgLabel.h\end{DoxyCompactItemize}
+src/imgLabel.h\item 
+src/imgLabel.cpp\end{CompactItemize}

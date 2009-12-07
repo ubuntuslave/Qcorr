@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="targetImgLabel_8cpp" kind="file">
+    <compoundname>targetImgLabel.cpp</compoundname>
+    <includes local="no">QtGui</includes>
+    <includes refid="targetImgLabel_8h" local="yes">targetImgLabel.h</includes>
+    <incdepgraph>
+      <node id="262">
+        <label>src/targetImgLabel.cpp</label>
+        <link refid="targetImgLabel.cpp"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>targetImgLabel.h</label>
+        <link refid="targetImgLabel_8h-source"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="263">
+        <label>QtGui</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>targetImgLabel.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>15,<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>carlos</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;targetImgLabel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" kindref="member" tooltip="Constructor for the TargetImgLabel class.">TargetImgLabel::TargetImgLabel</ref>(QWidget<sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>QLabel(parent)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" kindref="member" tooltip="indicates whether correlation results exist so an overlaid image can be composed...">m_bHasCorrResults</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" kindref="member" tooltip="indicates whether this TargetImgLabel class has a target (main) image">m_bHasImage</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kindref="member" tooltip="indicates whether this TargetImgLabel class has an overlaid image (Usually, a correlation...">m_bHasOverlayImage</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">TargetImgLabel::~TargetImgLabel()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" kindref="member" tooltip="Sets background image on this TargetImgLabel class.">TargetImgLabel::setImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QImage<sp/>&amp;labelImage)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" kindref="member" tooltip="the right image (a.k.a target image)">m_image</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QImage(labelImage);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>this-&gt;resize(<ref refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" kindref="member" tooltip="the right image (a.k.a target image)">m_image</ref>-&gt;size());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" kindref="member" tooltip="indicates whether this TargetImgLabel class has a target (main) image">m_bHasImage</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kindref="member" tooltip="indicates whether this TargetImgLabel class has an overlaid image (Usually, a correlation...">m_bHasOverlayImage</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>update();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" kindref="member" tooltip="Overlays an Image ontop of the current one.">TargetImgLabel::overlayImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QImage<sp/>&amp;otherImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nXoffset,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nYoffset)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" kindref="member" tooltip="the overlaid correlation map image">m_overlayImage</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QImage(otherImage);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" kindref="member" tooltip="X offset for overlay image.">m_nXoffset</ref><sp/>=<sp/>nXoffset;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" kindref="member" tooltip="Y offset for overlay image.">m_nYoffset</ref><sp/>=<sp/>nYoffset;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kindref="member" tooltip="indicates whether this TargetImgLabel class has an overlaid image (Usually, a correlation...">m_bHasOverlayImage</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>update();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CARLOS:<sp/>just<sp/>for<sp/>testing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//void<sp/>TargetImgLabel::mousePressEvent(QMouseEvent<sp/>*event)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>m_bHasCorrResults<sp/>=<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>m_originPoint<sp/>=<sp/>event-&gt;pos();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>update();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" kindref="member" tooltip="Handles the paint events by refreshing/updating the contents of this TargetImgLabel...">TargetImgLabel::paintEvent</ref>(QPaintEvent<sp/>*<sp/></highlight><highlight class="comment">/*<sp/>event<sp/>*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" kindref="member" tooltip="indicates whether this TargetImgLabel class has a target (main) image">m_bHasImage</ref>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>imageWithOverlay<sp/>=<sp/>QImage(<ref refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" kindref="member" tooltip="the right image (a.k.a target image)">m_image</ref>-&gt;size(),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QImage::Format_ARGB32_Premultiplied);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QPainter<sp/>painter(&amp;imageWithOverlay);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setCompositionMode(QPainter::CompositionMode_Source);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.fillRect(imageWithOverlay.rect(),<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setCompositionMode(QPainter::CompositionMode_SourceOver);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.drawImage(0,<sp/>0,<sp/>*<ref refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" kindref="member" tooltip="the right image (a.k.a target image)">m_image</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kindref="member" tooltip="indicates whether this TargetImgLabel class has an overlaid image (Usually, a correlation...">m_bHasOverlayImage</ref>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setCompositionMode(QPainter::CompositionMode_Screen);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.drawImage(<ref refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" kindref="member" tooltip="X offset for overlay image.">m_nXoffset</ref>,<sp/><ref refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" kindref="member" tooltip="Y offset for overlay image.">m_nYoffset</ref>,<sp/>*<ref refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" kindref="member" tooltip="the overlaid correlation map image">m_overlayImage</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" kindref="member" tooltip="indicates whether correlation results exist so an overlaid image can be composed...">m_bHasCorrResults</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setCompositionMode(QPainter::CompositionMode_SourceOver);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setPen(QPen(Qt::green,<sp/>3,<sp/>Qt::DashDotLine,<sp/>Qt::RoundCap,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Qt::RoundJoin));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.setBrush(Qt::NoBrush);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QRect<sp/>rect(<ref refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" kindref="member" tooltip="the point that indicates the top-left coordinates of the matching rectangle">m_originPoint</ref>,<sp/><ref refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" kindref="member" tooltip="the size of the enclosing match rectangle">m_rectSize</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.drawRect(rect);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter.end();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QPainter<sp/>painter2(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter2.drawImage(0,<sp/>0,<sp/>imageWithOverlay);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>painter2.end();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" kindref="member" tooltip="Draws a dashed, green rectangle to indicate the position of a matching template on...">TargetImgLabel::drawEnclosedMatch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QPoint<sp/>originPoint,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QSize<sp/>rectSize)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" kindref="member" tooltip="the point that indicates the top-left coordinates of the matching rectangle">m_originPoint</ref><sp/>=<sp/>originPoint;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" kindref="member" tooltip="the size of the enclosing match rectangle">m_rectSize</ref><sp/>=<sp/>rectSize;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" kindref="member" tooltip="indicates whether correlation results exist so an overlaid image can be composed...">m_bHasCorrResults</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/>update();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" refkind="member"><highlight class="normal"><ref refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" kindref="member" tooltip="Erases the green rectangle that indicated a matching template on the target image...">TargetImgLabel::eraseEnclosedMatch</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" kindref="member" tooltip="indicates whether correlation results exist so an overlaid image can be composed...">m_bHasCorrResults</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><ref refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kindref="member" tooltip="indicates whether this TargetImgLabel class has an overlaid image (Usually, a correlation...">m_bHasOverlayImage</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp"/>
+  </compounddef>
+</doxygen>

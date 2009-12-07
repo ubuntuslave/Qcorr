@@ -2,139 +2,159 @@
 \section{TargetImgLabel Class Reference}
 \label{classTargetImgLabel}\index{TargetImgLabel@{TargetImgLabel}}
 }
+A sub-classed label widget implemented with the purpose of displaying the target image on the right panel.  
 
 
-A sub-\/classed label widget implemented with the purpose of displaying the target image on the right panel.  
+{\tt \#include $<$src/targetImgLabel.h$>$}
 
-
-{\ttfamily \#include $<$src/targetImgLabel.h$>$}\subsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
 \item 
-\hypertarget{classTargetImgLabel_acb3dcfa8b9616be0a355c90db81aaba2}{
-\hyperlink{classTargetImgLabel_acb3dcfa8b9616be0a355c90db81aaba2}{TargetImgLabel} (QWidget $\ast$parent=0)}
-\label{classTargetImgLabel_acb3dcfa8b9616be0a355c90db81aaba2}
+\hypertarget{classTargetImgLabel_cb3dcfa8b9616be0a355c90db81aaba2}{
+\hyperlink{classTargetImgLabel_cb3dcfa8b9616be0a355c90db81aaba2}{TargetImgLabel} (QWidget $\ast$parent=0)}
+\label{classTargetImgLabel_cb3dcfa8b9616be0a355c90db81aaba2}
 
-\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{DoxyCompactList}\item 
-void \hyperlink{classTargetImgLabel_a2ec40d8850e3d9cc4d5c9984412c0cfb}{setImage} (const QImage \&labelImage)
-\begin{DoxyCompactList}\small\item\em Sets background image on this \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{DoxyCompactList}\item 
-void \hyperlink{classTargetImgLabel_a09dbad77c225942d7a604e06a119f60d}{overlayImage} (const QImage \&otherImage, int nXoffset=0, int nYoffset=0)
-\begin{DoxyCompactList}\small\item\em Overlays an Image ontop of the current one. \item\end{DoxyCompactList}\item 
-void \hyperlink{classTargetImgLabel_ab835774d14df1e93cb0fd010d1a2e699}{drawEnclosedMatch} (const QPoint originPoint, const QSize rectSize)
-\begin{DoxyCompactList}\small\item\em Draws a dashed, green rectangle to indicate the position of a matching template on the target image. \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_ad060485d97c7797339243b23f3ea05ef}{
-void \hyperlink{classTargetImgLabel_ad060485d97c7797339243b23f3ea05ef}{eraseEnclosedMatch} ()}
-\label{classTargetImgLabel_ad060485d97c7797339243b23f3ea05ef}
+\begin{CompactList}\small\item\em Constructor for the \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{CompactList}\item 
+void \hyperlink{classTargetImgLabel_2ec40d8850e3d9cc4d5c9984412c0cfb}{setImage} (const QImage \&labelImage)
+\begin{CompactList}\small\item\em Sets background image on this \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{CompactList}\item 
+void \hyperlink{classTargetImgLabel_09dbad77c225942d7a604e06a119f60d}{overlayImage} (const QImage \&otherImage, int nXoffset=0, int nYoffset=0)
+\begin{CompactList}\small\item\em Overlays an Image ontop of the current one. \item\end{CompactList}\item 
+void \hyperlink{classTargetImgLabel_b835774d14df1e93cb0fd010d1a2e699}{drawEnclosedMatch} (const QPoint originPoint, const QSize rectSize)
+\begin{CompactList}\small\item\em Draws a dashed, green rectangle to indicate the position of a matching template on the target image. \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_d060485d97c7797339243b23f3ea05ef}{
+void \hyperlink{classTargetImgLabel_d060485d97c7797339243b23f3ea05ef}{eraseEnclosedMatch} ()}
+\label{classTargetImgLabel_d060485d97c7797339243b23f3ea05ef}
 
-\begin{DoxyCompactList}\small\item\em Erases the green rectangle that indicated a matching template on the target image. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em Erases the green rectangle that indicated a matching template on the target image. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classTargetImgLabel_a30f9fc1657bdf5a9459bd78d5a94c65b}{
-void \hyperlink{classTargetImgLabel_a30f9fc1657bdf5a9459bd78d5a94c65b}{paintEvent} (QPaintEvent $\ast$)}
-\label{classTargetImgLabel_a30f9fc1657bdf5a9459bd78d5a94c65b}
+\hypertarget{classTargetImgLabel_30f9fc1657bdf5a9459bd78d5a94c65b}{
+void \hyperlink{classTargetImgLabel_30f9fc1657bdf5a9459bd78d5a94c65b}{paintEvent} (QPaintEvent $\ast$)}
+\label{classTargetImgLabel_30f9fc1657bdf5a9459bd78d5a94c65b}
 
-\begin{DoxyCompactList}\small\item\em Handles the paint events by refreshing/updating the contents of this \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em Handles the paint events by refreshing/updating the contents of this \hyperlink{classTargetImgLabel}{TargetImgLabel} class. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
+\begin{CompactItemize}
 \item 
-\hypertarget{classTargetImgLabel_ae532d541556a3647cff5a83bcf1306c3}{
-QImage $\ast$ \hyperlink{classTargetImgLabel_ae532d541556a3647cff5a83bcf1306c3}{m\_\-image}}
-\label{classTargetImgLabel_ae532d541556a3647cff5a83bcf1306c3}
+\hypertarget{classTargetImgLabel_e532d541556a3647cff5a83bcf1306c3}{
+QImage $\ast$ \hyperlink{classTargetImgLabel_e532d541556a3647cff5a83bcf1306c3}{m\_\-image}}
+\label{classTargetImgLabel_e532d541556a3647cff5a83bcf1306c3}
 
-\begin{DoxyCompactList}\small\item\em the right image (a.k.a target image) \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a94cf2b5841057d54bf3172aa2fef1e83}{
-QImage $\ast$ \hyperlink{classTargetImgLabel_a94cf2b5841057d54bf3172aa2fef1e83}{m\_\-overlayImage}}
-\label{classTargetImgLabel_a94cf2b5841057d54bf3172aa2fef1e83}
+\begin{CompactList}\small\item\em the right image (a.k.a target image) \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_94cf2b5841057d54bf3172aa2fef1e83}{
+QImage $\ast$ \hyperlink{classTargetImgLabel_94cf2b5841057d54bf3172aa2fef1e83}{m\_\-overlayImage}}
+\label{classTargetImgLabel_94cf2b5841057d54bf3172aa2fef1e83}
 
-\begin{DoxyCompactList}\small\item\em the overlaid correlation map image \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a0ed69ba29f03494cdd3ec22d9df4e15f}{
-QPoint \hyperlink{classTargetImgLabel_a0ed69ba29f03494cdd3ec22d9df4e15f}{m\_\-originPoint}}
-\label{classTargetImgLabel_a0ed69ba29f03494cdd3ec22d9df4e15f}
+\begin{CompactList}\small\item\em the overlaid correlation map image \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_0ed69ba29f03494cdd3ec22d9df4e15f}{
+QPoint \hyperlink{classTargetImgLabel_0ed69ba29f03494cdd3ec22d9df4e15f}{m\_\-originPoint}}
+\label{classTargetImgLabel_0ed69ba29f03494cdd3ec22d9df4e15f}
 
-\begin{DoxyCompactList}\small\item\em the point that indicates the top-\/left coordinates of the matching rectangle \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_ae9e4109bdd7a8a6b5d0bd59850c6abba}{
-QSize \hyperlink{classTargetImgLabel_ae9e4109bdd7a8a6b5d0bd59850c6abba}{m\_\-rectSize}}
-\label{classTargetImgLabel_ae9e4109bdd7a8a6b5d0bd59850c6abba}
+\begin{CompactList}\small\item\em the point that indicates the top-left coordinates of the matching rectangle \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_e9e4109bdd7a8a6b5d0bd59850c6abba}{
+QSize \hyperlink{classTargetImgLabel_e9e4109bdd7a8a6b5d0bd59850c6abba}{m\_\-rectSize}}
+\label{classTargetImgLabel_e9e4109bdd7a8a6b5d0bd59850c6abba}
 
-\begin{DoxyCompactList}\small\item\em the size of the enclosing match rectangle \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a303d7686a3dd92560851dabe82425d89}{
-int \hyperlink{classTargetImgLabel_a303d7686a3dd92560851dabe82425d89}{m\_\-nXoffset}}
-\label{classTargetImgLabel_a303d7686a3dd92560851dabe82425d89}
+\begin{CompactList}\small\item\em the size of the enclosing match rectangle \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_303d7686a3dd92560851dabe82425d89}{
+int \hyperlink{classTargetImgLabel_303d7686a3dd92560851dabe82425d89}{m\_\-nXoffset}}
+\label{classTargetImgLabel_303d7686a3dd92560851dabe82425d89}
 
-\begin{DoxyCompactList}\small\item\em X offset for overlay image. \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a46624a74854a56d43895ecea4b2a3da5}{
-int \hyperlink{classTargetImgLabel_a46624a74854a56d43895ecea4b2a3da5}{m\_\-nYoffset}}
-\label{classTargetImgLabel_a46624a74854a56d43895ecea4b2a3da5}
+\begin{CompactList}\small\item\em X offset for overlay image. \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_46624a74854a56d43895ecea4b2a3da5}{
+int \hyperlink{classTargetImgLabel_46624a74854a56d43895ecea4b2a3da5}{m\_\-nYoffset}}
+\label{classTargetImgLabel_46624a74854a56d43895ecea4b2a3da5}
 
-\begin{DoxyCompactList}\small\item\em Y offset for overlay image. \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a34a2b6061eb38412b7f7e88fbf741c2f}{
-bool \hyperlink{classTargetImgLabel_a34a2b6061eb38412b7f7e88fbf741c2f}{m\_\-bHasCorrResults}}
-\label{classTargetImgLabel_a34a2b6061eb38412b7f7e88fbf741c2f}
+\begin{CompactList}\small\item\em Y offset for overlay image. \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_34a2b6061eb38412b7f7e88fbf741c2f}{
+bool \hyperlink{classTargetImgLabel_34a2b6061eb38412b7f7e88fbf741c2f}{m\_\-bHasCorrResults}}
+\label{classTargetImgLabel_34a2b6061eb38412b7f7e88fbf741c2f}
 
-\begin{DoxyCompactList}\small\item\em indicates whether correlation results exist so an overlaid image can be composed on top of the target image \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a3b0b34d9c2f7c4f6c9aea8bc75d91d99}{
-bool \hyperlink{classTargetImgLabel_a3b0b34d9c2f7c4f6c9aea8bc75d91d99}{m\_\-bHasImage}}
-\label{classTargetImgLabel_a3b0b34d9c2f7c4f6c9aea8bc75d91d99}
+\begin{CompactList}\small\item\em indicates whether correlation results exist so an overlaid image can be composed on top of the target image \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_3b0b34d9c2f7c4f6c9aea8bc75d91d99}{
+bool \hyperlink{classTargetImgLabel_3b0b34d9c2f7c4f6c9aea8bc75d91d99}{m\_\-bHasImage}}
+\label{classTargetImgLabel_3b0b34d9c2f7c4f6c9aea8bc75d91d99}
 
-\begin{DoxyCompactList}\small\item\em indicates whether this \hyperlink{classTargetImgLabel}{TargetImgLabel} class has a target (main) image \item\end{DoxyCompactList}\item 
-\hypertarget{classTargetImgLabel_a1c34173d16f00af22f7db9e1bb3e7b30}{
-bool \hyperlink{classTargetImgLabel_a1c34173d16f00af22f7db9e1bb3e7b30}{m\_\-bHasOverlayImage}}
-\label{classTargetImgLabel_a1c34173d16f00af22f7db9e1bb3e7b30}
+\begin{CompactList}\small\item\em indicates whether this \hyperlink{classTargetImgLabel}{TargetImgLabel} class has a target (main) image \item\end{CompactList}\item 
+\hypertarget{classTargetImgLabel_1c34173d16f00af22f7db9e1bb3e7b30}{
+bool \hyperlink{classTargetImgLabel_1c34173d16f00af22f7db9e1bb3e7b30}{m\_\-bHasOverlayImage}}
+\label{classTargetImgLabel_1c34173d16f00af22f7db9e1bb3e7b30}
 
-\begin{DoxyCompactList}\small\item\em indicates whether this \hyperlink{classTargetImgLabel}{TargetImgLabel} class has an overlaid image (Usually, a correlation results map) \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{CompactList}\small\item\em indicates whether this \hyperlink{classTargetImgLabel}{TargetImgLabel} class has an overlaid image (Usually, a correlation results map) \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
-A sub-\/classed label widget implemented with the purpose of displaying the target image on the right panel. A sub-\/classed label widget implemented with the purpose of displaying the target image in the right panel with added functionality such as the enclosing match visualization and overlaid correlation map images 
+A sub-classed label widget implemented with the purpose of displaying the target image on the right panel. 
 
-Definition at line 22 of file targetImgLabel.h.
+A sub-classed label widget implemented with the purpose of displaying the target image in the right panel with added functionality such as the enclosing match visualization and overlaid correlation map images 
+
+Definition at line 23 of file targetImgLabel.h.
 
 \subsection{Member Function Documentation}
-\hypertarget{classTargetImgLabel_ab835774d14df1e93cb0fd010d1a2e699}{
+\hypertarget{classTargetImgLabel_b835774d14df1e93cb0fd010d1a2e699}{
 \index{TargetImgLabel@{TargetImgLabel}!drawEnclosedMatch@{drawEnclosedMatch}}
 \index{drawEnclosedMatch@{drawEnclosedMatch}!TargetImgLabel@{TargetImgLabel}}
 \subsubsection[{drawEnclosedMatch}]{\setlength{\rightskip}{0pt plus 5cm}void TargetImgLabel::drawEnclosedMatch (const QPoint {\em originPoint}, \/  const QSize {\em rectSize})}}
-\label{classTargetImgLabel_ab835774d14df1e93cb0fd010d1a2e699}
+\label{classTargetImgLabel_b835774d14df1e93cb0fd010d1a2e699}
 
 
 Draws a dashed, green rectangle to indicate the position of a matching template on the target image. 
-\begin{DoxyParams}{Parameters}
-\item[{\em originPoint}]A QPoint that indicates the top-\/left coordinates of the matching rectangle \item[{\em rectSize}]A QSize for the matching rectangle to be drawn \end{DoxyParams}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em originPoint}]A QPoint that indicates the top-left coordinates of the matching rectangle \item[{\em rectSize}]A QSize for the matching rectangle to be drawn \end{description}
+\end{Desc}
 
 
-Definition at line 107 of file targetImgLabel.cpp.
+Definition at line 99 of file targetImgLabel.cpp.
 
-References m\_\-bHasCorrResults, m\_\-originPoint, and m\_\-rectSize.\hypertarget{classTargetImgLabel_a09dbad77c225942d7a604e06a119f60d}{
+References m\_\-bHasCorrResults, m\_\-originPoint, and m\_\-rectSize.
+
+Referenced by Qcorr::correlate(), and Qcorr::disparity().\hypertarget{classTargetImgLabel_09dbad77c225942d7a604e06a119f60d}{
 \index{TargetImgLabel@{TargetImgLabel}!overlayImage@{overlayImage}}
 \index{overlayImage@{overlayImage}!TargetImgLabel@{TargetImgLabel}}
-\subsubsection[{overlayImage}]{\setlength{\rightskip}{0pt plus 5cm}void TargetImgLabel::overlayImage (const QImage \& {\em otherImage}, \/  int {\em nXoffset} = {\ttfamily 0}, \/  int {\em nYoffset} = {\ttfamily 0})}}
-\label{classTargetImgLabel_a09dbad77c225942d7a604e06a119f60d}
+\subsubsection[{overlayImage}]{\setlength{\rightskip}{0pt plus 5cm}void TargetImgLabel::overlayImage (const QImage \& {\em otherImage}, \/  int {\em nXoffset} = {\tt 0}, \/  int {\em nYoffset} = {\tt 0})}}
+\label{classTargetImgLabel_09dbad77c225942d7a604e06a119f60d}
 
 
 Overlays an Image ontop of the current one. 
-\begin{DoxyParams}{Parameters}
-\item[{\em otherImage}]Pointer to a QImage instance that will overlay the current one using Qt::CompositionMode\_\-Screen mode \item[{\em nXoffset}]X offset for overlay image. Default is 0 \item[{\em nYoffset}]Y offset for overlay image. Default is 0 \end{DoxyParams}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em otherImage}]Pointer to a QImage instance that will overlay the current one using Qt::CompositionMode\_\-Screen mode \item[{\em nXoffset}]X offset for overlay image. Default is 0 \item[{\em nYoffset}]Y offset for overlay image. Default is 0 \end{description}
+\end{Desc}
 
 
 Definition at line 37 of file targetImgLabel.cpp.
 
-References m\_\-bHasOverlayImage, m\_\-nXoffset, m\_\-nYoffset, and m\_\-overlayImage.\hypertarget{classTargetImgLabel_a2ec40d8850e3d9cc4d5c9984412c0cfb}{
+References m\_\-bHasOverlayImage, m\_\-nXoffset, m\_\-nYoffset, and m\_\-overlayImage.
+
+Referenced by Qcorr::viewMap().\hypertarget{classTargetImgLabel_2ec40d8850e3d9cc4d5c9984412c0cfb}{
 \index{TargetImgLabel@{TargetImgLabel}!setImage@{setImage}}
 \index{setImage@{setImage}!TargetImgLabel@{TargetImgLabel}}
 \subsubsection[{setImage}]{\setlength{\rightskip}{0pt plus 5cm}void TargetImgLabel::setImage (const QImage \& {\em labelImage})}}
-\label{classTargetImgLabel_a2ec40d8850e3d9cc4d5c9984412c0cfb}
+\label{classTargetImgLabel_2ec40d8850e3d9cc4d5c9984412c0cfb}
 
 
 Sets background image on this \hyperlink{classTargetImgLabel}{TargetImgLabel} class. 
-\begin{DoxyParams}{Parameters}
-\item[{\em labelImage}]Pointer to a QImage instance that will be used as the label's background \end{DoxyParams}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em labelImage}]Pointer to a QImage instance that will be used as the label's background \end{description}
+\end{Desc}
 
 
-Definition at line 25 of file targetImgLabel.cpp.
+Definition at line 26 of file targetImgLabel.cpp.
 
 References m\_\-bHasImage, m\_\-bHasOverlayImage, and m\_\-image.
 
-The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+Referenced by Qcorr::browseRightImage(), Qcorr::changeMouse(), Qcorr::correlate(), and Qcorr::viewMap().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
 src/targetImgLabel.h\item 
-src/targetImgLabel.cpp\end{DoxyCompactItemize}
+src/targetImgLabel.cpp\end{CompactItemize}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="group__qcorr__mainwindow" kind="group">
+    <compoundname>qcorr_mainwindow</compoundname>
+    <title>Qcorr</title>
+    <innerclass refid="classQcorr" prot="public">Qcorr</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

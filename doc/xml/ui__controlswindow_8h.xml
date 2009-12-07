@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="ui__controlswindow_8h" kind="file">
+    <compoundname>ui_controlswindow.h</compoundname>
+    <includes local="no">QtCore/QVariant</includes>
+    <includes local="no">QtGui/QAction</includes>
+    <includes local="no">QtGui/QApplication</includes>
+    <includes local="no">QtGui/QButtonGroup</includes>
+    <includes local="no">QtGui/QDialog</includes>
+    <includes local="no">QtGui/QFrame</includes>
+    <includes local="no">QtGui/QHBoxLayout</includes>
+    <includes local="no">QtGui/QHeaderView</includes>
+    <includes local="no">QtGui/QLabel</includes>
+    <includes local="no">QtGui/QPushButton</includes>
+    <includes local="no">QtGui/QSpacerItem</includes>
+    <includes local="no">QtGui/QSpinBox</includes>
+    <includes local="no">QtGui/QVBoxLayout</includes>
+    <includedby refid="controlswindow_8h" local="yes">src/controlswindow.h</includedby>
+    <incdepgraph>
+      <node id="289">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="287">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="282">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="288">
+        <label>QtGui/QSpinBox</label>
+      </node>
+      <node id="279">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="286">
+        <label>QtGui/QPushButton</label>
+      </node>
+      <node id="281">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="277">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="285">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="278">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="280">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="276">
+        <label>ui_controlswindow.h</label>
+        <link refid="ui_controlswindow.h"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>QtGui/QHeaderView</label>
+      </node>
+      <node id="283">
+        <label>QtGui/QHBoxLayout</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="295">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp-source"/>
+      </node>
+      <node id="294">
+        <label>src/imgLabel.cpp</label>
+        <link refid="imgLabel_8cpp-source"/>
+      </node>
+      <node id="296">
+        <label>src/qcorr.cpp</label>
+        <link refid="qcorr_8cpp-source"/>
+      </node>
+      <node id="292">
+        <label>src/controlswindow.cpp</label>
+        <link refid="controlswindow_8cpp-source"/>
+      </node>
+      <node id="293">
+        <label>src/qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>src/controlswindow.h</label>
+        <link refid="controlswindow_8h-source"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>ui_controlswindow.h</label>
+        <link refid="ui_controlswindow.h"/>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classUi__ControlsWindowClass" prot="public">Ui_ControlsWindowClass</innerclass>
+    <innerclass refid="classUi_1_1ControlsWindowClass" prot="public">Ui::ControlsWindowClass</innerclass>
+    <innernamespace refid="namespaceUi">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Form<sp/>generated<sp/>from<sp/>reading<sp/>ui<sp/>file<sp/>&apos;controlswindow.ui&apos;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Sun<sp/>Dec<sp/>6<sp/>22:55:07<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>Qt<sp/>User<sp/>Interface<sp/>Compiler<sp/>version<sp/>4.5.0</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost<sp/>when<sp/>recompiling<sp/>ui<sp/>file!</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UI_CONTROLSWINDOW_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UI_CONTROLSWINDOW_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QVariant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QAction&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QButtonGroup&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QFrame&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QHBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QHeaderView&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QLabel&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QPushButton&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QSpacerItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QSpinBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QVBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">QT_BEGIN_NAMESPACE</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Ui_ControlsWindowClass</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QFrame<sp/>*controlsWindow_frame;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*verticalLayout;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*scanInterval_horizontalLayout;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*scanInterval_label;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QSpinBox<sp/>*scanInterval_spinBox;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*templateSize_horizontalLayout;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*templateSize_label;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>QSpinBox<sp/>*templateSize_spinBox;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>QSpacerItem<sp/>*verticalSpacer;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*close_pushButton;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setupUi(QDialog<sp/>*ControlsWindowClass)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ControlsWindowClass-&gt;objectName().isEmpty())</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ControlsWindowClass-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;ControlsWindowClass&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ControlsWindowClass-&gt;resize(212,<sp/>124);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>controlsWindow_frame<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QFrame(ControlsWindowClass);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>controlsWindow_frame-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;controlsWindow_frame&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>controlsWindow_frame-&gt;setGeometry(QRect(10,<sp/>10,<sp/>196,<sp/>106));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QVBoxLayout(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setSpacing(6);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setMargin(11);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;verticalLayout&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_horizontalLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QHBoxLayout();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_horizontalLayout-&gt;setSpacing(6);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_horizontalLayout-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;scanInterval_horizontalLayout&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_label<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QLabel(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_label-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;scanInterval_label&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSizePolicy<sp/>sizePolicy(QSizePolicy::Expanding,<sp/>QSizePolicy::Preferred);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setHorizontalStretch(0);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setVerticalStretch(0);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setHeightForWidth(scanInterval_label-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_label-&gt;setSizePolicy(sizePolicy);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QFont<sp/>font;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setFamily(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.setPointSize(12);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_label-&gt;setFont(font);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_horizontalLayout-&gt;addWidget(scanInterval_label);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSpinBox(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;scanInterval_spinBox&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setEnabled(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSizePolicy<sp/>sizePolicy1(QSizePolicy::Expanding,<sp/>QSizePolicy::Fixed);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setHorizontalStretch(0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setVerticalStretch(0);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setHeightForWidth(scanInterval_spinBox-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setSizePolicy(sizePolicy1);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QFont<sp/>font1;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font1.setFamily(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setFont(font1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setMinimum(1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_spinBox-&gt;setValue(10);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_horizontalLayout-&gt;addWidget(scanInterval_spinBox);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addLayout(scanInterval_horizontalLayout);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_horizontalLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QHBoxLayout();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_horizontalLayout-&gt;setSpacing(6);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_horizontalLayout-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;templateSize_horizontalLayout&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_label<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QLabel(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_label-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;templateSize_label&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy.setHeightForWidth(templateSize_label-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_label-&gt;setSizePolicy(sizePolicy);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_label-&gt;setFont(font);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_horizontalLayout-&gt;addWidget(templateSize_label);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSpinBox(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;templateSize_spinBox&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox-&gt;setEnabled(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizePolicy1.setHeightForWidth(templateSize_spinBox-&gt;sizePolicy().hasHeightForWidth());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox-&gt;setSizePolicy(sizePolicy1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox-&gt;setFont(font1);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_spinBox-&gt;setValue(32);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_horizontalLayout-&gt;addWidget(templateSize_spinBox);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addLayout(templateSize_horizontalLayout);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalSpacer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QSpacerItem(20,<sp/>40,<sp/>QSizePolicy::Minimum,<sp/>QSizePolicy::Expanding);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addItem(verticalSpacer);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close_pushButton<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QPushButton(controlsWindow_frame);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close_pushButton-&gt;setObjectName(QString::fromUtf8(</highlight><highlight class="stringliteral">&quot;close_pushButton&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verticalLayout-&gt;addWidget(close_pushButton);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retranslateUi(ControlsWindowClass);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QMetaObject::connectSlotsByName(ControlsWindowClass);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>setupUi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>retranslateUi(QDialog<sp/>*ControlsWindowClass)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ControlsWindowClass-&gt;setWindowTitle(QApplication::translate(</highlight><highlight class="stringliteral">&quot;ControlsWindowClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Qcorr<sp/>Controls&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanInterval_label-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;ControlsWindowClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&lt;!DOCTYPE<sp/>HTML<sp/>PUBLIC<sp/>\&quot;-//W3C//DTD<sp/>HTML<sp/>4.0//EN\&quot;<sp/>\&quot;http://www.w3.org/TR/REC-html40/strict.dtd\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;head&gt;&lt;meta<sp/>name=\&quot;qrichtext\&quot;<sp/>content=\&quot;1\&quot;<sp/>/&gt;&lt;style<sp/>type=\&quot;text/css\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;p,<sp/>li<sp/>{<sp/>white-space:<sp/>pre-wrap;<sp/>}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;/style&gt;&lt;/head&gt;&lt;body<sp/>style=\&quot;<sp/>font-family:&apos;Arial&apos;;<sp/>font-size:12pt;<sp/>font-weight:400;<sp/>font-style:normal;\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;p<sp/>style=\&quot;<sp/>margin-top:0px;<sp/>margin-bottom:0px;<sp/>margin-left:0px;<sp/>margin-right:0px;<sp/>-qt-block-indent:0;<sp/>text-indent:0px;\&quot;&gt;Scan<sp/>Interval:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>templateSize_label-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;ControlsWindowClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&lt;!DOCTYPE<sp/>HTML<sp/>PUBLIC<sp/>\&quot;-//W3C//DTD<sp/>HTML<sp/>4.0//EN\&quot;<sp/>\&quot;http://www.w3.org/TR/REC-html40/strict.dtd\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;head&gt;&lt;meta<sp/>name=\&quot;qrichtext\&quot;<sp/>content=\&quot;1\&quot;<sp/>/&gt;&lt;style<sp/>type=\&quot;text/css\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;p,<sp/>li<sp/>{<sp/>white-space:<sp/>pre-wrap;<sp/>}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;/style&gt;&lt;/head&gt;&lt;body<sp/>style=\&quot;<sp/>font-family:&apos;Arial&apos;;<sp/>font-size:12pt;<sp/>font-weight:400;<sp/>font-style:normal;\&quot;&gt;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;p<sp/>style=\&quot;<sp/>margin-top:0px;<sp/>margin-bottom:0px;<sp/>margin-left:0px;<sp/>margin-right:0px;<sp/>-qt-block-indent:0;<sp/>text-indent:0px;\&quot;&gt;Template<sp/>Size:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close_pushButton-&gt;setText(QApplication::translate(</highlight><highlight class="stringliteral">&quot;ControlsWindowClass&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&amp;Close&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>QApplication::UnicodeUTF8));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q_UNUSED(ControlsWindowClass);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>retranslateUi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Ui<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ControlsWindowClass:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Ui_ControlsWindowClass<sp/>{};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Ui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">QT_END_NAMESPACE</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>UI_CONTROLSWINDOW_H</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_controlswindow.h"/>
+  </compounddef>
+</doxygen>

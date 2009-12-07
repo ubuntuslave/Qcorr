@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="moc__corrmethod_8cpp" kind="file">
+    <compoundname>moc_corrmethod.cpp</compoundname>
+    <includes refid="corrmethod_8h" local="yes">../src/corrmethod.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="31">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="25">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="26">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="18">
+        <label>../src/corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="23">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="19">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="21">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="29">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="22">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="27">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="24">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="17">
+        <label>debug/moc_corrmethod.cpp</label>
+        <link refid="moc_corrmethod.cpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>QtGui/QHeaderView</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="moc__corrmethod_8cpp_10878d048506c5eadf76a5885a1d31984" prot="public" static="yes" mutable="no">
+        <type>QT_BEGIN_MOC_NAMESPACE const uint</type>
+        <definition>QT_BEGIN_MOC_NAMESPACE const uint qt_meta_data_CorrMethod[]</definition>
+        <argsstring>[]</argsstring>
+        <name>qt_meta_data_CorrMethod</name>
+        <initializer> {
+
+ 
+       2,       
+       0,       
+       0,    0, 
+       2,   12, 
+       0,    0, 
+       0,    0, 
+       0,    0, 
+
+ 
+      12,   11,   11,   11, 0x08,
+      27,   11,   11,   11, 0x08,
+
+       0        
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_corrmethod.cpp" line="36" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_corrmethod.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="moc__corrmethod_8cpp_1cb56f7e09aff688721436b0eb48401b7" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char qt_meta_stringdata_CorrMethod[]</definition>
+        <argsstring>[]</argsstring>
+        <name>qt_meta_stringdata_CorrMethod</name>
+        <initializer> {
+    &quot;CorrMethod\0\0cancelMethod()\0chooseMethod()\0&quot;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_corrmethod.cpp" line="40" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_corrmethod.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Meta<sp/>object<sp/>code<sp/>from<sp/>reading<sp/>C++<sp/>file<sp/>&apos;corrmethod.h&apos;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>Created:<sp/>Mon<sp/>Dec<sp/>7<sp/>00:23:34<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>by:<sp/>The<sp/>Qt<sp/>Meta<sp/>Object<sp/>Compiler<sp/>version<sp/>61<sp/>(Qt<sp/>4.5.0)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>WARNING!<sp/>All<sp/>changes<sp/>made<sp/>in<sp/>this<sp/>file<sp/>will<sp/>be<sp/>lost!</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/corrmethod.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(Q_MOC_OUTPUT_REVISION)</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;The<sp/>header<sp/>file<sp/>&apos;corrmethod.h&apos;<sp/>doesn&apos;t<sp/>include<sp/>&lt;QObject&gt;.&quot;</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#elif<sp/>Q_MOC_OUTPUT_REVISION<sp/>!=<sp/>61</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;This<sp/>file<sp/>was<sp/>generated<sp/>using<sp/>the<sp/>moc<sp/>from<sp/>4.5.0.<sp/>It&quot;</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;cannot<sp/>be<sp/>used<sp/>with<sp/>the<sp/>include<sp/>files<sp/>from<sp/>this<sp/>version<sp/>of<sp/>Qt.&quot;</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;(The<sp/>moc<sp/>has<sp/>changed<sp/>too<sp/>much.)&quot;</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">QT_BEGIN_MOC_NAMESPACE</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint<sp/>qt_meta_data_CorrMethod[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>content:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>revision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>classname</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>classinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/><sp/><sp/>12,<sp/></highlight><highlight class="comment">//<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>enums/sets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>slots:<sp/>signature,<sp/>parameters,<sp/>type,<sp/>tag,<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/><sp/><sp/>11,<sp/><sp/><sp/>11,<sp/><sp/><sp/>11,<sp/>0x08,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>27,<sp/><sp/><sp/>11,<sp/><sp/><sp/>11,<sp/><sp/><sp/>11,<sp/>0x08,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>eod</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qt_meta_stringdata_CorrMethod[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CorrMethod\0\0cancelMethod()\0chooseMethod()\0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QMetaObject<sp/>CorrMethod::staticMetaObject<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>&amp;QDialog::staticMetaObject,<sp/>qt_meta_stringdata_CorrMethod,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>qt_meta_data_CorrMethod,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QMetaObject<sp/>*CorrMethod::metaObject()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="48"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;staticMetaObject;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*CorrMethod::qt_metacast(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_clname)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_clname)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(_clname,<sp/>qt_meta_stringdata_CorrMethod))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classCorrMethod" kindref="compound" tooltip="Dialog to select a method in which the correlation &amp;quot;template matching&amp;quot;...">CorrMethod</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QDialog::qt_metacast(_clname);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CorrMethod::qt_metacall(QMetaObject::Call<sp/>_c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**_a)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>_id<sp/>=<sp/>QDialog::qt_metacall(_c,<sp/>_id,<sp/>_a);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_id<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_id;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_c<sp/>==<sp/>QMetaObject::InvokeMetaMethod)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(_id)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><ref refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" kindref="member" tooltip="Q_SLOT to cancel the method selection dialog.">cancelMethod</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/><ref refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" kindref="member" tooltip="Q_SLOT to store the method selection from the dialog.">chooseMethod</ref>();<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_id<sp/>-=<sp/>2;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_id;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">QT_END_MOC_NAMESPACE</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/moc_corrmethod.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classCorrMethod" kind="class" prot="public">
+    <compoundname>CorrMethod</compoundname>
+    <includes refid="corrmethod_8h" local="no">src/corrmethod.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CorrMethod::m_nChosenMethod</definition>
+        <argsstring></argsstring>
+        <name>m_nChosenMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The selected method in which the correlation &quot;template matching&quot; operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="61" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" compoundref="corrmethod_8cpp" startline="29" endline="33">cancelMethod</referencedby>
+        <referencedby refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" compoundref="corrmethod_8cpp" startline="36" endline="56">chooseMethod</referencedby>
+        <referencedby refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" compoundref="corrmethod_8cpp" startline="4" endline="14">CorrMethod</referencedby>
+        <referencedby refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" compoundref="corrmethod_8cpp" startline="22" endline="25">getMethod</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" prot="private" static="no" mutable="no">
+        <type>Ui::CorrMethodClass</type>
+        <definition>Ui::CorrMethodClass CorrMethod::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+<para>The Qt GUI form for this class, so its widgets can be accessed and manipulated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="63" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" compoundref="corrmethod_8cpp" startline="36" endline="56">chooseMethod</referencedby>
+        <referencedby refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" compoundref="corrmethod_8cpp" startline="4" endline="14">CorrMethod</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCorrMethod_1bdc14398267291249d40158e133cf68b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CorrMethod::CorrMethod</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>CorrMethod</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classCorrMethod" kindref="compound">CorrMethod</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="35" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="4" bodyend="14"/>
+        <references refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" compoundref="corrmethod_8cpp" startline="29" endline="33">cancelMethod</references>
+        <references refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" compoundref="corrmethod_8cpp" startline="36" endline="56">chooseMethod</references>
+        <references refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" compoundref="corrmethod_8h" startline="61">m_nChosenMethod</references>
+        <references refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" compoundref="corrmethod_8h" startline="63">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="classCorrMethod_194c368b0950c4e62573dc94cbab4a38e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CorrMethod::~CorrMethod</definition>
+        <argsstring>()</argsstring>
+        <name>~CorrMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="36" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CorrMethod::getMethod</definition>
+        <argsstring>()</argsstring>
+        <name>getMethod</name>
+        <briefdescription>
+<para>Retrieve the selected method to be used in the correlation process. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the selected method in which the correlation &quot;template matching&quot; operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3</para><para><simplesect kind="return"><para>selected correlation method (from global enumeration MethodOfCorrelation defined in <ref refid="globals_8h-source" kindref="compound">globals.h</ref>). The available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="48" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="22" bodyend="25"/>
+        <references refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" compoundref="corrmethod_8h" startline="61">m_nChosenMethod</references>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CorrMethod::cancelMethod</definition>
+        <argsstring>()</argsstring>
+        <name>cancelMethod</name>
+        <briefdescription>
+<para>Q_SLOT to cancel the method selection dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="29" bodyend="33"/>
+        <references refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" compoundref="corrmethod_8h" startline="61">m_nChosenMethod</references>
+        <referencedby refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" compoundref="corrmethod_8cpp" startline="4" endline="14">CorrMethod</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CorrMethod::chooseMethod</definition>
+        <argsstring>()</argsstring>
+        <name>chooseMethod</name>
+        <briefdescription>
+<para>Q_SLOT to store the method selection from the dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="54" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="36" bodyend="56"/>
+        <references refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" compoundref="corrmethod_8h" startline="61">m_nChosenMethod</references>
+        <references refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" compoundref="corrmethod_8h" startline="63">ui</references>
+        <referencedby refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" compoundref="corrmethod_8cpp" startline="4" endline="14">CorrMethod</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Dialog to select a method in which the correlation &quot;template matching&quot; operation will be based upon. The available correlation methods are the following:<itemizedlist>
+<listitem><para>CROSS_CORR (cross correlation): <formula id="0">\[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]</formula></para></listitem><listitem><para>SUM_SQ_DIFF (sum of squared differences): <formula id="1">\[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]</formula></para></listitem><listitem><para>CORR_COEFF (correlation coefficient): <formula id="2">\[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]</formula>. </para></listitem></itemizedlist>
+</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="18">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>CorrMethod</label>
+        <link refid="classCorrMethod"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>ui</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="31" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" bodystart="30" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" prot="private" virt="non-virtual"><scope>CorrMethod</scope><name>cancelMethod</name></member>
+      <member refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" prot="private" virt="non-virtual"><scope>CorrMethod</scope><name>chooseMethod</name></member>
+      <member refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" prot="public" virt="non-virtual"><scope>CorrMethod</scope><name>CorrMethod</name></member>
+      <member refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" prot="public" virt="non-virtual"><scope>CorrMethod</scope><name>getMethod</name></member>
+      <member refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" prot="private" virt="non-virtual"><scope>CorrMethod</scope><name>m_nChosenMethod</name></member>
+      <member refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" prot="private" virt="non-virtual"><scope>CorrMethod</scope><name>ui</name></member>
+      <member refid="classCorrMethod_194c368b0950c4e62573dc94cbab4a38e" prot="public" virt="non-virtual"><scope>CorrMethod</scope><name>~CorrMethod</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

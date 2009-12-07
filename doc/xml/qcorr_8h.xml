@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="qcorr_8h" kind="file">
+    <compoundname>qcorr.h</compoundname>
+    <includes local="no">QtGui/QMainWindow</includes>
+    <includes refid="ui__qcorr_8h" local="yes">../ui_qcorr.h</includes>
+    <includes refid="imgLabel_8h" local="yes">imgLabel.h</includes>
+    <includes refid="targetImgLabel_8h" local="yes">targetImgLabel.h</includes>
+    <includes refid="corrmethod_8h" local="yes">corrmethod.h</includes>
+    <includes refid="controlswindow_8h" local="yes">controlswindow.h</includes>
+    <includes local="no">QtCore/QVector</includes>
+    <includes local="no">QtGui/QRgb</includes>
+    <includedby refid="controlswindow_8cpp" local="yes">src/controlswindow.cpp</includedby>
+    <includedby refid="imgLabel_8cpp" local="yes">src/imgLabel.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="qcorr_8cpp" local="yes">src/qcorr.cpp</includedby>
+    <incdepgraph>
+      <node id="242">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="239">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="224">
+        <label>QtGui/QMainWindow</label>
+      </node>
+      <node id="249">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="230">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="246">
+        <label>corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>QtGui/QSpinBox</label>
+      </node>
+      <node id="225">
+        <label>../ui_qcorr.h</label>
+        <link refid="ui__qcorr_8h-source"/>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+      </node>
+      <node id="234">
+        <label>QtGui/QLineEdit</label>
+      </node>
+      <node id="251">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="228">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="237">
+        <label>QtGui/QPushButton</label>
+      </node>
+      <node id="247">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="226">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="255">
+        <label>QtCore/QVector</label>
+      </node>
+      <node id="243">
+        <label>QtGui/QWidget</label>
+      </node>
+      <node id="236">
+        <label>QtGui/QMenuBar</label>
+      </node>
+      <node id="240">
+        <label>QtGui/QSplitter</label>
+      </node>
+      <node id="245">
+        <label>targetImgLabel.h</label>
+        <link refid="targetImgLabel_8h-source"/>
+        <childnode refid="233" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="227">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="250">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="238">
+        <label>QtGui/QScrollArea</label>
+      </node>
+      <node id="256">
+        <label>QtGui/QRgb</label>
+      </node>
+      <node id="235">
+        <label>QtGui/QMenu</label>
+      </node>
+      <node id="223">
+        <label>src/qcorr.h</label>
+        <link refid="qcorr.h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="252">
+        <label>controlswindow.h</label>
+        <link refid="controlswindow_8h-source"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>../ui_controlswindow.h</label>
+        <link refid="ui__controlswindow_8h-source"/>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>QtGui/QStatusBar</label>
+      </node>
+      <node id="244">
+        <label>imgLabel.h</label>
+        <link refid="imgLabel_8h-source"/>
+        <childnode refid="233" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>QtGui/QHeaderView</label>
+      </node>
+      <node id="231">
+        <label>QtGui/QHBoxLayout</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="260">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp-source"/>
+      </node>
+      <node id="259">
+        <label>src/imgLabel.cpp</label>
+        <link refid="imgLabel_8cpp-source"/>
+      </node>
+      <node id="261">
+        <label>src/qcorr.cpp</label>
+        <link refid="qcorr_8cpp-source"/>
+      </node>
+      <node id="258">
+        <label>src/controlswindow.cpp</label>
+        <link refid="controlswindow_8cpp-source"/>
+      </node>
+      <node id="257">
+        <label>src/qcorr.h</label>
+        <link refid="qcorr.h"/>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQcorr" prot="public">Qcorr</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>QCORR_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QCORR_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ui_qcorr.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UIC<sp/>is<sp/>always<sp/>spiting<sp/>out<sp/>this<sp/>form<sp/>header<sp/>files<sp/>on<sp/>the<sp/>root<sp/>of<sp/>the<sp/>project<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;imgLabel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;targetImgLabel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;corrmethod.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;controlswindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QImage;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QPainter;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QSize;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QPoint;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QString;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QActionGroup;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QRgb&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classQcorr" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QMainWindow,<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Ui::QcorrClass</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_13b5d03aed21bfd00497ff265d898e45b" kindref="member" tooltip="Constructor of the Qcorr class.">Qcorr</ref>(QWidget<sp/>*parent<sp/>=<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1c228e26878cd0b63b162f1680ab4f4fd" kindref="member" tooltip="Destructor: House keeping that should be done when the Qcorr main window is closed...">~Qcorr</ref>();<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Q_SLOTS:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1395de1dc21d85fa766fb6558c5e302e5" kindref="member" tooltip="Q_SLOT that closes the main Qcorr window and the controls Window;.">closeWindows</ref>();<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_101b57fcc6bedf40f5c175c3fb4667a94" kindref="member" tooltip="Q_SLOT that shows the controls window and raises it to the foreground if already...">showControlsWindow</ref>();<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" kindref="member" tooltip="Q_SLOT that allows to browse and load an image on the left panel.">browseLeftImage</ref>();<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" kindref="member" tooltip="Q_SLOT that allows to browse and load an image on the right panel.">browseRightImage</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" kindref="member" tooltip="Q_SLOT used to change the mouse pointer according to the current operation mode.">changeMouse</ref>();<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_13275244fd6183a4fef92b85578fea864" kindref="member" tooltip="Q_SLOT that selectively provides the appropriate existent map of results from correlation...">viewMap</ref>();<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" kindref="member" tooltip="Q_SLOT that starts the chosen operation according to the mode chosen, either template...">operate</ref>();<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" kindref="member" tooltip="Q_SLOT triggers the flag to abort the current operation.">abortOperation</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="classQcorr_15b4b2caf4c596b601dd096785e4a32b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classQcorr_1ce49e9a34b2d2df1e7683be4cacba1d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classControlsWindow" kindref="compound" tooltip="allows to modify parameters for the correlation operations, such as template size...">ControlsWindow</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1925b0715143a0afa981851547f8b9256" kindref="member" tooltip="Displays any QImage on a Qlabel.">displayImage</ref>(QImage<sp/>*image,<sp/>QLabel<sp/>*label);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" kindref="member" tooltip="Displays the reference image on the left panel&amp;#39;s label. which is a sub-classed...">displayImageLabel</ref>(QImage<sp/>*image,<sp/><ref refid="classImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</ref><sp/>*label);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_154af608880477563fa8ebcb0d066b447" kindref="member" tooltip="Sets up actions and Q_SIGNAL-Q_SLOT connections.">createActions</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_12de6d6969bdf48b225acc5ebbae063f7" kindref="member" tooltip="Enables/Disables operation modes actions related widgets.">setEnableActions</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bEnable);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" kindref="member" tooltip="Instantiates label widgets and initializes other member variables pertinent to the...">setImageLabels</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" kindref="member" tooltip="emergency stop to abort the disparity operation process">showEStop</ref>();<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1ce91b9d83b34887735737323bac5431e" kindref="member" tooltip="Performs template matching through correlation of the selected template against the...">correlate</ref>();<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" kindref="member" tooltip="Pixel-disparity finding operation. It should be mainly be used with stereo images...">disparity</ref>();<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_105dcc1b0be4596b355df235264180da4" kindref="member" tooltip="Cross-correlation of target image with template image.">findCorrelation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>imgTarget,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nWI,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nHI,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nDepthI,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>imgTemplate,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nWT,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nHT,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nDepthT,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;rnDx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;rnDy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMethod,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bMultires<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nInitialXPosition<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nInitialYPosition<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNumberOfRows<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kindref="member" tooltip="Cast images to an 8-bit gray-scale channel of type float.">convertToGrayScaleFloat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pchImgOriginalBits,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nDepth);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" kindref="member" tooltip="Updates Status Bar with Information about parameters for the disparity operation...">updateStatusLabelWithDisparityInfo</ref>();<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQcorr_187229fc918fa4011e96fbadb325fd52e" kindref="member" tooltip="Used for testing and investing the bits stored in QImages or other Qt Widgets.">fileDumpQImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;fileName);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classQcorr_153798525ce189307cf597e71aabca91b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classQcorr_153798525ce189307cf597e71aabca91b" kindref="member" tooltip="the resulting x-coordinate match obtained from correlation of a template against...">m_nXCorrelationCoordinate</ref>;<sp/></highlight></codeline>
+<codeline lineno="204" refid="classQcorr_129f34cc7b765d5a64856696c48bfc191" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classQcorr_129f34cc7b765d5a64856696c48bfc191" kindref="member" tooltip="the resulting y-coordinate match obtained from correlation of a template against...">m_nYCorrelationCoordinate</ref>;<sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="classQcorr_16509fcbf4cd8925aa109cc53e638b69a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCorrMethod" kindref="compound" tooltip="Dialog to select a method in which the correlation &amp;quot;template matching&amp;quot;...">CorrMethod</ref><sp/>*<ref refid="classQcorr_16509fcbf4cd8925aa109cc53e638b69a" kindref="member" tooltip="Dialog Box to choose a correlation method.">m_corrMethodDialog</ref>;<sp/></highlight></codeline>
+<codeline lineno="207" refid="classQcorr_15b43654ac42b41b945cd58ce62b18ed0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow" kindref="compound" tooltip="allows to modify parameters for the correlation operations, such as template size...">ControlsWindow</ref><sp/>*<ref refid="classQcorr_15b43654ac42b41b945cd58ce62b18ed0" kindref="member" tooltip="Dialog Box to modify correlation parameters such as template size and scan interval...">m_controlsWindow</ref>;<sp/></highlight></codeline>
+<codeline lineno="208" refid="classQcorr_13430716ddbe203f677095c163da87f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classQcorr_13430716ddbe203f677095c163da87f86" kindref="member" tooltip="String that saves the path for the first file image that has been loaded.">initialName</ref>;<sp/></highlight></codeline>
+<codeline lineno="209" refid="classQcorr_1e8bdd4be8a0c3023be34a1301b28c913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>*<ref refid="classQcorr_1e8bdd4be8a0c3023be34a1301b28c913" kindref="member" tooltip="Left Panel&amp;#39;s Image (a.k.a. &amp;quot;reference image&amp;quot; when performing template...">m_leftImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="210" refid="classQcorr_1ae1695d731f191c694186e00b96f469e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>*<ref refid="classQcorr_1ae1695d731f191c694186e00b96f469e" kindref="member" tooltip="Right Panel&amp;#39;s Image (a.k.a &amp;quot;target image&amp;quot;).">m_rightImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="211" refid="classQcorr_15594d939890f10991da0009e4c32bea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>*<ref refid="classQcorr_15594d939890f10991da0009e4c32bea3" kindref="member" tooltip="Template Image that is selected from the reference image (in the left panel) that...">m_templateImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="212" refid="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>*<ref refid="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" kindref="member" tooltip="Correlation Map resulting from the Template Matching action.">m_corrMapImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="213" refid="classQcorr_1731915641051962d6a03a31b772640d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QImage<sp/>*<ref refid="classQcorr_1731915641051962d6a03a31b772640d4" kindref="member" tooltip="Disparity Map that results from the pixel disparities found between the left and...">m_disparityMapImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="214" refid="classQcorr_1cadb3032fbf41f8f1b27067c2784efef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</ref><sp/>*<ref refid="classQcorr_1cadb3032fbf41f8f1b27067c2784efef" kindref="member" tooltip="label used to display the left image. This is sub-classed widget implemented with...">m_leftImage_label</ref>;<sp/></highlight></codeline>
+<codeline lineno="215" refid="classQcorr_18d1e1ab866a811003c435c45de1e958e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTargetImgLabel" kindref="compound" tooltip="A sub-classed label widget implemented with the purpose of displaying the target...">TargetImgLabel</ref><sp/>*<ref refid="classQcorr_18d1e1ab866a811003c435c45de1e958e" kindref="member" tooltip="a sub-classed label widget implemented with the purpose of displaying the target...">m_targetImage_label</ref>;<sp/></highlight></codeline>
+<codeline lineno="216" refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" kindref="member" tooltip="status label that updates the mouse-pointer&amp;#39;s position coordinates as it moves...">m_status_label</ref>;<sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="classQcorr_1fa1be55387e39ce5b81e72ecab75b5bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QVector&lt;QRgb&gt;<sp/>*<ref refid="classQcorr_1fa1be55387e39ce5b81e72ecab75b5bc" kindref="member" tooltip="8-bit gray-scale color table">m_grayColorTab</ref>;<sp/></highlight></codeline>
+<codeline lineno="219" refid="classQcorr_1795a9f4f9805a241f55c59a0a520f3d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QVector&lt;QRgb&gt;<sp/>*<ref refid="classQcorr_1795a9f4f9805a241f55c59a0a520f3d4" kindref="member" tooltip="8-bit green-scale color table">m_greenColorTab</ref>;<sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="classQcorr_18a7f00160ae46441cef038149cf28bdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/><ref refid="classQcorr_18a7f00160ae46441cef038149cf28bdc" kindref="member" tooltip="upper-left corner point where the correlation match was found">m_matchingPoint</ref>;<sp/></highlight></codeline>
+<codeline lineno="222" refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QSize<sp/><ref refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" kindref="member" tooltip="the current template&amp;#39;s size as a QSize object">m_templateSize</ref>;<sp/></highlight></codeline>
+<codeline lineno="223" refid="classQcorr_13a964df80562c062d5f1f4f6cbf841bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QActionGroup<sp/>*<ref refid="classQcorr_13a964df80562c062d5f1f4f6cbf841bb" kindref="member" tooltip="group of menu actions for the mode of operation.">modes_actionGroup</ref>;<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="classQcorr_1496beab48555a8c9abbd6f6aa48e52fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QDialogButtonBox<sp/>*<ref refid="classQcorr_1496beab48555a8c9abbd6f6aa48e52fb" kindref="member" tooltip="A dialogue to stop the current correlation process.">m_eStopDialog</ref>;<sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="classQcorr_1b5325b11a64e24eeb6b9bdc27a77d0ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQcorr_1b5325b11a64e24eeb6b9bdc27a77d0ad" kindref="member" tooltip="indicates that an image is loaded in the left panel">m_bHasLeftImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="228" refid="classQcorr_1a4afa1daa72ecf6caae74f6ced4ec251" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQcorr_1a4afa1daa72ecf6caae74f6ced4ec251" kindref="member" tooltip="indicates that an image is loaded in the right panel">m_bHasRightImage</ref>;<sp/></highlight></codeline>
+<codeline lineno="229" refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" kindref="member" tooltip="indicates that a correlation map exists">m_bHasCorrMap</ref>;<sp/></highlight></codeline>
+<codeline lineno="230" refid="classQcorr_142ef5dadd6c1ff9f560de8cb1f43c2c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQcorr_142ef5dadd6c1ff9f560de8cb1f43c2c6" kindref="member" tooltip="indicates that a disparity map exists">m_bHasDisparityMap</ref>;<sp/></highlight></codeline>
+<codeline lineno="231" refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" kindref="member" tooltip="emergency stop for the">m_bEstop</ref>;<sp/></highlight></codeline>
+<codeline lineno="232" refid="classQcorr_1b07379fbbd7be906023eb5ec4d555931" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classQcorr_1b07379fbbd7be906023eb5ec4d555931" kindref="member" tooltip="interval of scan traversal by the template">m_nScanInterval</ref>;<sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>QCORR_H</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h"/>
+  </compounddef>
+</doxygen>
