@@ -10,6 +10,9 @@
 #ifndef GLOBALS_H_
 #define GLOBALS_H_
 
+/** @brief Provides a global enumeration for the implemented methods of digital image correlation in the Qcorr class.
+ *  The enumerated correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3
+ */
 enum MethodOfCorrelation{
       N0_CORR_METHOD = 0,
       CROSS_CORR = 1,

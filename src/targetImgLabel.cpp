@@ -34,9 +34,11 @@ void TargetImgLabel::setImage(const QImage &labelImage)
 
    update();
 }
-void TargetImgLabel::overlayImage(const QImage &otherImage)
+void TargetImgLabel::overlayImage(const QImage &otherImage, int nXoffset, int nYoffset)
 {
    m_overlayImage = new QImage(otherImage);
+   m_nXoffset = nXoffset;
+   m_nYoffset = nYoffset;
 //   m_overlayImage = new QImage(otherImage.size(), QImage::Format_ARGB32_Premultiplied);
 //   *m_overlayImage = otherImage;
 
@@ -78,7 +80,7 @@ void TargetImgLabel::paintEvent(QPaintEvent * /* event */)
 //         painter.setCompositionMode(QPainter::CompositionMode_SourceOver);  // Opaque image
 //         painter.setCompositionMode(QPainter::CompositionMode_Exclusion);   // Bluish transparency overlay
          painter.setCompositionMode(QPainter::CompositionMode_Screen);
-         painter.drawImage(0, 0, *m_overlayImage);
+         painter.drawImage(m_nXoffset, m_nYoffset, *m_overlayImage);
          }
 
 

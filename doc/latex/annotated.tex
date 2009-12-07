@@ -3,14 +3,19 @@ Here are the classes, structs, unions and interfaces with brief descriptions:\be
 \item\contentsline{section}{\hyperlink{classControlsWindow}{ControlsWindow} (Allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of \hyperlink{classQcorr}{Qcorr} )}{\pageref{classControlsWindow}}{}
 \item\contentsline{section}{\hyperlink{classControlsWindow}{ControlsWindow} (Allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of \hyperlink{classQcorr}{Qcorr} )}{\pageref{classControlsWindow}}{}
 \item\contentsline{section}{\hyperlink{classUi_1_1ControlsWindowClass}{Ui::ControlsWindowClass} }{\pageref{classUi_1_1ControlsWindowClass}}{}
-\item\contentsline{section}{\hyperlink{classCorrMethod}{CorrMethod} }{\pageref{classCorrMethod}}{}
+\item\contentsline{section}{\hyperlink{classCorrMethod}{CorrMethod} (Dialog to select a method in which the correlation \char`\"{}template matching\char`\"{} operation will be based upon. The available correlation methods are the following:
+\begin{DoxyItemize}
+\item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]
+\item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]
+\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \] 
+\end{DoxyItemize})}{\pageref{classCorrMethod}}{}
 \item\contentsline{section}{\hyperlink{classUi_1_1CorrMethodClass}{Ui::CorrMethodClass} }{\pageref{classUi_1_1CorrMethodClass}}{}
 \item\contentsline{section}{\hyperlink{classImgLabel}{ImgLabel} (\hyperlink{classImgLabel}{ImgLabel} class is a friend of \hyperlink{classQcorr}{Qcorr} in order to make all members of \hyperlink{classQcorr}{Qcorr} accessible by an \hyperlink{classImgLabel}{ImgLabel} object )}{\pageref{classImgLabel}}{}
-\item\contentsline{section}{\hyperlink{classImgLabel}{ImgLabel} }{\pageref{classImgLabel}}{}
+\item\contentsline{section}{\hyperlink{classImgLabel}{ImgLabel} (A sub-\/classed label widget implemented with the purpose of displaying the reference image on the left panel )}{\pageref{classImgLabel}}{}
 \item\contentsline{section}{\hyperlink{classQcorr}{Qcorr} }{\pageref{classQcorr}}{}
 \item\contentsline{section}{\hyperlink{classQcorr}{Qcorr} (Friend of this \hyperlink{classImgLabel}{ImgLabel} class, so all members from \hyperlink{classImgLabel}{ImgLabel} are accessible by a \hyperlink{classQcorr}{Qcorr} object )}{\pageref{classQcorr}}{}
 \item\contentsline{section}{\hyperlink{classUi_1_1QcorrClass}{Ui::QcorrClass} }{\pageref{classUi_1_1QcorrClass}}{}
-\item\contentsline{section}{\hyperlink{classTargetImgLabel}{TargetImgLabel} }{\pageref{classTargetImgLabel}}{}
+\item\contentsline{section}{\hyperlink{classTargetImgLabel}{TargetImgLabel} (A sub-\/classed label widget implemented with the purpose of displaying the target image on the right panel )}{\pageref{classTargetImgLabel}}{}
 \item\contentsline{section}{\hyperlink{classUi__ControlsWindowClass}{Ui\_\-ControlsWindowClass} }{\pageref{classUi__ControlsWindowClass}}{}
 \item\contentsline{section}{\hyperlink{classUi__CorrMethodClass}{Ui\_\-CorrMethodClass} }{\pageref{classUi__CorrMethodClass}}{}
 \item\contentsline{section}{\hyperlink{classUi__QcorrClass}{Ui\_\-QcorrClass} }{\pageref{classUi__QcorrClass}}{}

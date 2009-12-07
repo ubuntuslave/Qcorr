@@ -14,7 +14,7 @@ class ControlsWindow : public QDialog
     Q_OBJECT
 
 public:
-    ControlsWindow(Qcorr *parentWindow, QWidget *parent = 0);  ///< Constructor of ControlsWindow Class must point to a parentWindow
+    ControlsWindow(Qcorr *parentWindow, QWidget *parent = 0);  ///< Constructor of ControlsWindow class must point to a Qcorr parentWindow
     ~ControlsWindow();  ///< Closes and Destroys itself
 
     /** @brief  Enables/Disables control spinBoxes
@@ -37,7 +37,7 @@ private Q_SLOTS:
     void setTemplateSize(int nValue);   ///< Q_SLOT that sets template size parameter in its friend Qcorr class according to the corresponding spinBox's value.
 
 private:
-    Ui::ControlsWindowClass ui;
+    Ui::ControlsWindowClass ui;  ///< The Qt GUI form for this class, so its widgets can be accessed and manipulated.
     void createActions();     ///< Create Signal-Slot connections
 
     Qcorr *m_parentWindow;  ///< Pointer to Main Window Object

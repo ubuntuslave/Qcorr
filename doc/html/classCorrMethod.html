@@ -28,27 +28,65 @@
 </div>
 <div class="contents">
 <h1>CorrMethod Class Reference</h1><!-- doxytag: class="CorrMethod" -->
+<p>Dialog to select a method in which the correlation "template matching" operation will be based upon. The available correlation methods are the following:</p>
+<ul>
+<li>CROSS_CORR (cross correlation): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]" src="form_3.png"/>
+</p>
+</li>
+<li>SUM_SQ_DIFF (sum of squared differences): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]" src="form_5.png"/>
+</p>
+</li>
+<li>CORR_COEFF (correlation coefficient): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]" src="form_8.png"/>
+</p>
+. </li>
+</ul>
+ 
+<a href="#_details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="corrmethod_8h_source.html">src/corrmethod.h</a>&gt;</code></p>
+
 <p><a href="classCorrMethod-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc14398267291249d40158e133cf68b"></a><!-- doxytag: member="CorrMethod::CorrMethod" ref="abdc14398267291249d40158e133cf68b" args="(QWidget *parent=0)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>CorrMethod</b> (QWidget *parent=0)</td></tr>
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#abdc14398267291249d40158e133cf68b">CorrMethod</a> (QWidget *parent=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor for the <a class="el" href="classCorrMethod.html" title="Dialog to select a method in which the correlation &quot;template matching&quot;...">CorrMethod</a> class. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#a3eeafdd901560c1fa92be75d4ed58872">getMethod</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve the selected method to be used in the correlation process.  <a href="#a3eeafdd901560c1fa92be75d4ed58872"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Private Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87e628d7ef6facc9a402880d7e01ea36"></a><!-- doxytag: member="CorrMethod::cancelMethod" ref="a87e628d7ef6facc9a402880d7e01ea36" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>cancelMethod</b> ()</td></tr>
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#a87e628d7ef6facc9a402880d7e01ea36">cancelMethod</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Q_SLOT to cancel the method selection dialog. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7522197ac15c7563aee8d15d0cff3d95"></a><!-- doxytag: member="CorrMethod::chooseMethod" ref="a7522197ac15c7563aee8d15d0cff3d95" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>chooseMethod</b> ()</td></tr>
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#a7522197ac15c7563aee8d15d0cff3d95">chooseMethod</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Q_SLOT to store the method selection from the dialog. <br/></td></tr>
 <tr><td colspan="2"><h2>Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e64e1a2c9eabff57b7e58eaff13f45f"></a><!-- doxytag: member="CorrMethod::m_nChosenMethod" ref="a3e64e1a2c9eabff57b7e58eaff13f45f" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_nChosenMethod</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#a3e64e1a2c9eabff57b7e58eaff13f45f">m_nChosenMethod</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a866bb1b72235d777ca96a6ce9701f9f6"></a><!-- doxytag: member="CorrMethod::ui" ref="a866bb1b72235d777ca96a6ce9701f9f6" args="" -->
-<a class="el" href="classUi_1_1CorrMethodClass.html">Ui::CorrMethodClass</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
+<a class="el" href="classUi_1_1CorrMethodClass.html">Ui::CorrMethodClass</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorrMethod.html#a866bb1b72235d777ca96a6ce9701f9f6">ui</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The Qt GUI form for this class, so its widgets can be accessed and manipulated. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>Dialog to select a method in which the correlation "template matching" operation will be based upon. The available correlation methods are the following:</p>
+<ul>
+<li>CROSS_CORR (cross correlation): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]" src="form_3.png"/>
+</p>
+</li>
+<li>SUM_SQ_DIFF (sum of squared differences): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]" src="form_5.png"/>
+</p>
+</li>
+<li>CORR_COEFF (correlation coefficient): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]" src="form_8.png"/>
+</p>
+. </li>
+</ul>
 
-<p>Definition at line <a class="el" href="corrmethod_8h_source.html#l00007">7</a> of file <a class="el" href="corrmethod_8h_source.html">corrmethod.h</a>.</p>
+<p>Definition at line <a class="el" href="corrmethod_8h_source.html#l00030">30</a> of file <a class="el" href="corrmethod_8h_source.html">corrmethod.h</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a3eeafdd901560c1fa92be75d4ed58872"></a><!-- doxytag: member="CorrMethod::getMethod" ref="a3eeafdd901560c1fa92be75d4ed58872" args="()" -->
 <div class="memitem">
@@ -66,9 +104,33 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_nChosenMethod</b></t
 <div class="memdoc">
 
 <p>Retrieve the selected method to be used in the correlation process. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>selected correlation method (from global enumeration defined in <a class="el" href="globals_8h_source.html">globals.h</a>) </dd></dl>
+<p>Returns the selected method in which the correlation "template matching" operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>selected correlation method (from global enumeration MethodOfCorrelation defined in <a class="el" href="globals_8h_source.html">globals.h</a>). The available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3</dd>
+<dd>
+selected correlation method (from global enumeration defined in <a class="el" href="globals_8h_source.html">globals.h</a>) </dd></dl>
 
 <p>Definition at line <a class="el" href="corrmethod_8cpp_source.html#l00024">24</a> of file <a class="el" href="corrmethod_8cpp_source.html">corrmethod.cpp</a>.</p>
+
+<p>References <a class="el" href="corrmethod_8h_source.html#l00058">m_nChosenMethod</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a3e64e1a2c9eabff57b7e58eaff13f45f"></a><!-- doxytag: member="CorrMethod::m_nChosenMethod" ref="a3e64e1a2c9eabff57b7e58eaff13f45f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classCorrMethod.html#a3e64e1a2c9eabff57b7e58eaff13f45f">CorrMethod::m_nChosenMethod</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The selected method in which the correlation "template matching" operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0_CORR_METHOD = 0, CROSS_CORR = 1, SUM_SQ_DIFF = 2, or CORR_COEFF = 3 </p>
+
+<p>Definition at line <a class="el" href="corrmethod_8h_source.html#l00058">58</a> of file <a class="el" href="corrmethod_8h_source.html">corrmethod.h</a>.</p>
+
+<p>Referenced by <a class="el" href="corrmethod_8cpp_source.html#l00031">cancelMethod()</a>, <a class="el" href="corrmethod_8cpp_source.html#l00036">chooseMethod()</a>, <a class="el" href="corrmethod_8cpp_source.html#l00004">CorrMethod()</a>, and <a class="el" href="corrmethod_8cpp_source.html#l00024">getMethod()</a>.</p>
 
 </div>
 </div>
@@ -77,7 +139,7 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_nChosenMethod</b></t
 <li>src/<a class="el" href="corrmethod_8cpp_source.html">corrmethod.cpp</a></li>
 </ul>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 00:22:29 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 21:50:55 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

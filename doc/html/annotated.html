@@ -31,20 +31,35 @@
   <tr><td class="indexkey"><a class="el" href="classControlsWindow.html">ControlsWindow</a></td><td class="indexvalue">Allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr...">Qcorr</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="classControlsWindow.html">ControlsWindow</a></td><td class="indexvalue">Allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr...">Qcorr</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi_1_1ControlsWindowClass.html">Ui::ControlsWindowClass</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="classCorrMethod.html">CorrMethod</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classCorrMethod.html">CorrMethod</a></td><td class="indexvalue">Dialog to select a method in which the correlation "template matching" operation will be based upon. The available correlation methods are the following:</p>
+<ul>
+<li>CROSS_CORR (cross correlation): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]" src="form_3.png"/>
+</p>
+</li>
+<li>SUM_SQ_DIFF (sum of squared differences): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]" src="form_5.png"/>
+</p>
+</li>
+<li>CORR_COEFF (correlation coefficient): <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]" src="form_8.png"/>
+</p>
+ </li>
+</ul>
+</td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi_1_1CorrMethodClass.html">Ui::CorrMethodClass</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classImgLabel.html">ImgLabel</a></td><td class="indexvalue"><a class="el" href="classImgLabel.html" title="the ImgLabel class is a friend of Qcorr in order to make all members of Qcorr accessible...">ImgLabel</a> class is a friend of <a class="el" href="classQcorr.html" title="friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr...">Qcorr</a> in order to make all members of <a class="el" href="classQcorr.html" title="friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr...">Qcorr</a> accessible by an <a class="el" href="classImgLabel.html" title="the ImgLabel class is a friend of Qcorr in order to make all members of Qcorr accessible...">ImgLabel</a> object </td></tr>
-  <tr><td class="indexkey"><a class="el" href="classImgLabel.html">ImgLabel</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classImgLabel.html">ImgLabel</a></td><td class="indexvalue">A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel </td></tr>
   <tr><td class="indexkey"><a class="el" href="classQcorr.html">Qcorr</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classQcorr.html">Qcorr</a></td><td class="indexvalue">Friend of this <a class="el" href="classImgLabel.html" title="the ImgLabel class is a friend of Qcorr in order to make all members of Qcorr accessible...">ImgLabel</a> class, so all members from <a class="el" href="classImgLabel.html" title="the ImgLabel class is a friend of Qcorr in order to make all members of Qcorr accessible...">ImgLabel</a> are accessible by a <a class="el" href="classQcorr.html" title="friend of this ImgLabel class, so all members from ImgLabel are accessible by a Qcorr...">Qcorr</a> object </td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi_1_1QcorrClass.html">Ui::QcorrClass</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="classTargetImgLabel.html">TargetImgLabel</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classTargetImgLabel.html">TargetImgLabel</a></td><td class="indexvalue">A sub-classed label widget implemented with the purpose of displaying the target image on the right panel </td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi__ControlsWindowClass.html">Ui_ControlsWindowClass</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi__CorrMethodClass.html">Ui_CorrMethodClass</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classUi__QcorrClass.html">Ui_QcorrClass</a></td><td class="indexvalue"></td></tr>
 </table>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 00:22:29 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Sun Dec 6 21:50:55 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

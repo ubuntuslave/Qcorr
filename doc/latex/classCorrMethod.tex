@@ -2,48 +2,60 @@
 \section{CorrMethod Class Reference}
 \label{classCorrMethod}\index{CorrMethod@{CorrMethod}}
 }
-\subsection*{Public Member Functions}
+
+
+Dialog to select a method in which the correlation \char`\"{}template matching\char`\"{} operation will be based upon. The available correlation methods are the following:
+\begin{DoxyItemize}
+\item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]
+\item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]
+\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]. 
+\end{DoxyItemize} 
+
+
+{\ttfamily \#include $<$src/corrmethod.h$>$}\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classCorrMethod_abdc14398267291249d40158e133cf68b}{
-{\bfseries CorrMethod} (QWidget $\ast$parent=0)}
+\hyperlink{classCorrMethod_abdc14398267291249d40158e133cf68b}{CorrMethod} (QWidget $\ast$parent=0)}
 \label{classCorrMethod_abdc14398267291249d40158e133cf68b}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{classCorrMethod}{CorrMethod} class. \item\end{DoxyCompactList}\item 
 int \hyperlink{classCorrMethod_a3eeafdd901560c1fa92be75d4ed58872}{getMethod} ()
 \begin{DoxyCompactList}\small\item\em Retrieve the selected method to be used in the correlation process. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classCorrMethod_a87e628d7ef6facc9a402880d7e01ea36}{
-void {\bfseries cancelMethod} ()}
+void \hyperlink{classCorrMethod_a87e628d7ef6facc9a402880d7e01ea36}{cancelMethod} ()}
 \label{classCorrMethod_a87e628d7ef6facc9a402880d7e01ea36}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Q\_\-SLOT to cancel the method selection dialog. \item\end{DoxyCompactList}\item 
 \hypertarget{classCorrMethod_a7522197ac15c7563aee8d15d0cff3d95}{
-void {\bfseries chooseMethod} ()}
+void \hyperlink{classCorrMethod_a7522197ac15c7563aee8d15d0cff3d95}{chooseMethod} ()}
 \label{classCorrMethod_a7522197ac15c7563aee8d15d0cff3d95}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Q\_\-SLOT to store the method selection from the dialog. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCorrMethod_a3e64e1a2c9eabff57b7e58eaff13f45f}{
-int {\bfseries m\_\-nChosenMethod}}
-\label{classCorrMethod_a3e64e1a2c9eabff57b7e58eaff13f45f}
-
+int \hyperlink{classCorrMethod_a3e64e1a2c9eabff57b7e58eaff13f45f}{m\_\-nChosenMethod}
 \item 
 \hypertarget{classCorrMethod_a866bb1b72235d777ca96a6ce9701f9f6}{
-\hyperlink{classUi_1_1CorrMethodClass}{Ui::CorrMethodClass} {\bfseries ui}}
+\hyperlink{classUi_1_1CorrMethodClass}{Ui::CorrMethodClass} \hyperlink{classCorrMethod_a866bb1b72235d777ca96a6ce9701f9f6}{ui}}
 \label{classCorrMethod_a866bb1b72235d777ca96a6ce9701f9f6}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The Qt GUI form for this class, so its widgets can be accessed and manipulated. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Dialog to select a method in which the correlation \char`\"{}template matching\char`\"{} operation will be based upon. The available correlation methods are the following:
+\begin{DoxyItemize}
+\item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]
+\item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]
+\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \]. 
+\end{DoxyItemize}
 
-
-Definition at line 7 of file corrmethod.h.
+Definition at line 30 of file corrmethod.h.
 
 \subsection{Member Function Documentation}
 \hypertarget{classCorrMethod_a3eeafdd901560c1fa92be75d4ed58872}{
@@ -53,12 +65,30 @@ Definition at line 7 of file corrmethod.h.
 \label{classCorrMethod_a3eeafdd901560c1fa92be75d4ed58872}
 
 
-Retrieve the selected method to be used in the correlation process. \begin{DoxyReturn}{Returns}
+Retrieve the selected method to be used in the correlation process. Returns the selected method in which the correlation \char`\"{}template matching\char`\"{} operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0\_\-CORR\_\-METHOD = 0, CROSS\_\-CORR = 1, SUM\_\-SQ\_\-DIFF = 2, or CORR\_\-COEFF = 3
+
+\begin{DoxyReturn}{Returns}
+selected correlation method (from global enumeration MethodOfCorrelation defined in \hyperlink{globals_8h_source}{globals.h}). The available correlation methods are: N0\_\-CORR\_\-METHOD = 0, CROSS\_\-CORR = 1, SUM\_\-SQ\_\-DIFF = 2, or CORR\_\-COEFF = 3
+
 selected correlation method (from global enumeration defined in \hyperlink{globals_8h_source}{globals.h}) 
 \end{DoxyReturn}
 
 
 Definition at line 24 of file corrmethod.cpp.
+
+References m\_\-nChosenMethod.
+
+\subsection{Member Data Documentation}
+\hypertarget{classCorrMethod_a3e64e1a2c9eabff57b7e58eaff13f45f}{
+\index{CorrMethod@{CorrMethod}!m\_\-nChosenMethod@{m\_\-nChosenMethod}}
+\index{m\_\-nChosenMethod@{m\_\-nChosenMethod}!CorrMethod@{CorrMethod}}
+\subsubsection[{m\_\-nChosenMethod}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CorrMethod::m\_\-nChosenMethod}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{classCorrMethod_a3e64e1a2c9eabff57b7e58eaff13f45f}
+The selected method in which the correlation \char`\"{}template matching\char`\"{} operation will be based upon. From the global enumeration MethodOfCorrelation, the available correlation methods are: N0\_\-CORR\_\-METHOD = 0, CROSS\_\-CORR = 1, SUM\_\-SQ\_\-DIFF = 2, or CORR\_\-COEFF = 3 
+
+Definition at line 58 of file corrmethod.h.
+
+Referenced by cancelMethod(), chooseMethod(), CorrMethod(), and getMethod().
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'controlswindow.ui'
 **
-** Created: Sun Dec 6 00:10:18 2009
+** Created: Sun Dec 6 11:43:55 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -77,6 +77,9 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(scanInterval_spinBox->sizePolicy().hasHeightForWidth());
         scanInterval_spinBox->setSizePolicy(sizePolicy1);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Arial"));
+        scanInterval_spinBox->setFont(font1);
         scanInterval_spinBox->setMinimum(1);
         scanInterval_spinBox->setValue(10);
 
@@ -101,6 +104,7 @@ public:
         templateSize_spinBox->setEnabled(false);
         sizePolicy1.setHeightForWidth(templateSize_spinBox->sizePolicy().hasHeightForWidth());
         templateSize_spinBox->setSizePolicy(sizePolicy1);
+        templateSize_spinBox->setFont(font1);
         templateSize_spinBox->setValue(32);
 
         templateSize_horizontalLayout->addWidget(templateSize_spinBox);

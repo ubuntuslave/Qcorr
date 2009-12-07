@@ -85,7 +85,6 @@ void Qcorr::setImageLabels()
    // Color Tables:
    // Gray-scale Color Table
    m_grayColorTab = new QVector<QRgb>(256); // for an 8-bit scale color table
-
    QVector<QRgb> fillerGrayColorTab(256);
    for(int i=0; i<= 255; i++)
       {
@@ -93,23 +92,37 @@ void Qcorr::setImageLabels()
       }
    *m_grayColorTab = fillerGrayColorTab;
 
-   // eStop Dialog:
-   setEStop();
-}
+   // Green-scale Color Table
+   m_greenColorTab = new QVector<QRgb>(256); // for an 8-bit scale color table
+   QVector<QRgb> fillerGreenColorTab(256);
+   for(int i=0; i<= 255; i++)
+      {
+      fillerGreenColorTab[i] = qRgb(0,i,0); // For a green-scale color table
+      }
+   *m_greenColorTab = fillerGreenColorTab;
 
-void Qcorr::setEStop()
-{
    // eStop Dialog:
-   m_bEstop = false; // Default
    m_eStopDialog = new QDialogButtonBox(this);
    m_eStopDialog->addButton(QDialogButtonBox::Abort);
    m_eStopDialog->setCenterButtons(true);
+   m_eStopDialog->close();
+   m_bEstop = false;  // Intialize m_bEstop flag to false
+}
+
+// Set dialog's position on window
+void Qcorr::showEStop()
+{
+   // eStop Dialog:
+   m_bEstop = false; // Allows this operation to proceed until it changes via the Abort QDialog
+
    int w = this->width();
    int h = this->height();
    int x = (this->width() - w) / 2;
    int y = (this->height() - h) / 2;
    m_eStopDialog->setGeometry(x, y, w, h);
-   m_eStopDialog->close();
+
+   m_eStopDialog->show();     // Pops-up the Abort Dialogue
+   m_eStopDialog->raise();
 }
 
 void Qcorr::createActions()
@@ -117,7 +130,7 @@ void Qcorr::createActions()
    connect(quit_pushButton, SIGNAL(clicked()), this, SLOT(closeWindows()));
    connect(leftBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseLeftImage()));
    connect(rightBrowse_pushButton, SIGNAL(clicked()), this, SLOT(browseRightImage()));
-   connect(start_pushButton, SIGNAL(clicked()), this, SLOT(correlate()));
+   connect(start_pushButton, SIGNAL(clicked()), this, SLOT(operate()));
    connect(controls_pushButton, SIGNAL(clicked()), this, SLOT(showControlsWindow()));
 
    action_Quit->setShortcut(tr("Ctrl+Q"));
@@ -158,8 +171,6 @@ void Qcorr::showControlsWindow()
    m_controlsWindow->show();
    m_controlsWindow->raise(); // the widget will be visually in front of any overlapping widgets
 }
-
-
 
 
 void Qcorr::closeWindows()
@@ -241,7 +252,11 @@ void Qcorr::browseRightImage()
      m_bHasRightImage = true;
 
      if(m_bHasLeftImage)
+        {
         setEnableActions(true);
+        action_Map->setChecked(false); // So the image we're openning can be shown
+        viewMap();
+        }
 
       // CARLOS: just for testing:
       // To verify if the data has been converted to grayscale,
@@ -301,9 +316,10 @@ void Qcorr::viewMap()
 
    if(actionTemplate_Matching->isChecked() && action_Map->isChecked())
       {
-      // TODO: offset the correlation map's position by half the height and width of the template
+      // Display Correlation Level Map over Right Panel's Image
+      //       offset the correlation map's position by half the height and width of the template
       //       so it's center around the matching area instead of being at the top-left corner of it
-      m_targetImage_label->overlayImage(*m_corrMapImage); // Display Correlation Level Map over Right Panel's Image
+      m_targetImage_label->overlayImage(*m_corrMapImage, m_templateSize.width() / 2, m_templateSize.height() / 2);
       }
    else if(action_Disparity_Finder->isChecked() && action_Map->isChecked())
       {
@@ -317,92 +333,15 @@ void Qcorr::viewMap()
 
 }
 
-void Qcorr::correlate()
+void Qcorr::operate()
 {
 
    if(actionTemplate_Matching->isChecked())
       {
-      if(m_leftImage_label->m_rubberBand->isVisible())
-         {
-         m_templateImage = new QImage(m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry()));
-
-         m_templateSize = m_templateImage->size();
-
-         m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
-                                       // Otherwise, a dialog is not modal if it's invoked using show()
-
-         if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
-            {
-            if(!m_leftImage_label->m_rubberBand->isVisible())
-               m_targetImage_label->eraseEnclosedMatch();
-            }
-         else
-            {
-            m_bEstop = false; // Allows this operation to proceed until it changes via the Abort QDialog
-            m_eStopDialog->show();     // Pops-up the Abort Dialogue
-            m_eStopDialog->raise();
-
-            // Target Image dimensions:
-            int wI = m_rightImage->width();
-            int hI = m_rightImage->height();
-            int depthI = m_rightImage->depth();
-
-            // Template Image dimensions:
-            int wT = m_templateImage->width();
-            int hT = m_templateImage->height();
-            int depthT = m_templateImage->depth();
-
-            QApplication::setOverrideCursor(Qt::WaitCursor);
-
-            float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
-                                                   m_templateImage->bits(), wT, hT, depthT,
-                                                   m_nXCorrelationCoordinate, m_nYCorrelationCoordinate,
-                                                   m_corrMethodDialog->getMethod(),
-                                                   false);
-            QApplication::restoreOverrideCursor();
-
-            m_bHasCorrMap = true;
-
-               // CARLOS: just for testing:
-      //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
-      //
-      //         this->m_status_label->setText(
-      //               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
-      //               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
-
-
-               // Validate the results before allowing to draw the enclosing rectangle around the match
-               if(fCorrLevel >= 0.0 && !m_bEstop)
-                  {
-                  m_targetImage_label->setImage(*m_rightImage);   // reset Image
-
-                  m_matchingPoint.setX(m_nXCorrelationCoordinate);
-                  m_matchingPoint.setY(m_nYCorrelationCoordinate);
-                  m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
-
-                  this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
-                                                   + "\tat <b>(" + QString::number(m_nXCorrelationCoordinate) + ", "
-                                                   + QString::number(m_nYCorrelationCoordinate) + ")px</b>"
-                                                   );
-      //            m_targetImage_label->setImage(*m_corrMapImage);
-
-                  action_Map->setEnabled(true);
-                  emit this->viewMap();  // emit this signal so it refreshes the correlation map automatically
-
-                  }
-               else
-                  m_targetImage_label->eraseEnclosedMatch();
-
-            m_eStopDialog->close();
-            }
-         }
-      else
-         {
-         this->m_status_label->setText("There is No template!");
-         this->corrResults_label->clear();
-         }
+      correlate();
       }
 
+   // Otherwise, perform other Action: Disparity Finder:
    if(action_Disparity_Finder->isChecked())
       {
       disparity();
@@ -410,13 +349,95 @@ void Qcorr::correlate()
 
 }
 
+// end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+void Qcorr::correlate()
+{
+   if(m_leftImage_label->m_rubberBand->isVisible())
+            {
+            m_templateImage = new QImage(m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry()));
+
+            m_templateSize = m_templateImage->size();
+
+            m_corrMethodDialog->exec();   // Making sure that this dialog behaves modally
+                                          // Otherwise, a dialog is not modal if it's invoked using show()
+
+            if(m_corrMethodDialog->getMethod() == N0_CORR_METHOD)
+               {
+               if(!m_leftImage_label->m_rubberBand->isVisible())
+                  m_targetImage_label->eraseEnclosedMatch();
+               }
+            else
+               {
+               showEStop(); // Set dialog's position on window and reset m_bEstop flag to false
+
+               // Target Image dimensions:
+               int wI = m_rightImage->width();
+               int hI = m_rightImage->height();
+               int depthI = m_rightImage->depth();
+
+               // Template Image dimensions:
+               int wT = m_templateImage->width();
+               int hT = m_templateImage->height();
+               int depthT = m_templateImage->depth();
+
+               QApplication::setOverrideCursor(Qt::WaitCursor);
+
+               float fCorrLevel = findCorrelation( m_rightImage->bits(), wI, hI, depthI,
+                                                      m_templateImage->bits(), wT, hT, depthT,
+                                                      m_nXCorrelationCoordinate, m_nYCorrelationCoordinate,
+                                                      m_corrMethodDialog->getMethod(),
+                                                      false);
+               QApplication::restoreOverrideCursor();
+
+               m_bHasCorrMap = true;
+
+                  // CARLOS: just for testing:
+         //         m_targetImage_label->setImage(*m_templateImage);   // Draw Template on Right Label
+         //
+         //         this->m_status_label->setText(
+         //               "Finding Correlation for the <b>(" + QString::number(m_templateImage->width()) + "x"
+         //               + QString::number(m_templateImage->height()) + ")px </b>Template ..." );
+
+
+                  // Validate the results before allowing to draw the enclosing rectangle around the match
+                  if(fCorrLevel >= 0.0 && !m_bEstop)
+                     {
+                     m_targetImage_label->setImage(*m_rightImage);   // reset Image
+
+                     m_matchingPoint.setX(m_nXCorrelationCoordinate);
+                     m_matchingPoint.setY(m_nYCorrelationCoordinate);
+                     m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
+                     this->corrResults_label->setText( "Correlation level: " + QString::number(fCorrLevel)
+                                                      + "\tat <b>(" + QString::number(m_nXCorrelationCoordinate) + ", "
+                                                      + QString::number(m_nYCorrelationCoordinate) + ")px</b>"
+                                                      );
+         //            m_targetImage_label->setImage(*m_corrMapImage);
+
+                     action_Map->setEnabled(true);
+                     emit this->viewMap();  // emit this signal so it refreshes the correlation map automatically
+
+                     }
+                  else
+                     m_targetImage_label->eraseEnclosedMatch();
+
+               m_eStopDialog->close();
+               }
+            }
+         else
+            {
+            this->m_status_label->setText("There is No template!");
+            this->corrResults_label->clear();
+            }
+}
+
 void Qcorr::disparity()
 {
    QApplication::setOverrideCursor(Qt::WaitCursor);
 
-   m_bEstop = false; // Allows this operation to proceed until it changes via the Abort QDialog
-   m_eStopDialog->show();     // Pops-up the Abort Dialogue
-   m_eStopDialog->raise();
+   showEStop(); // Set dialog's position on window and reset m_bEstop flag to false
 
    m_templateImage = new QImage();  // Create instance of template image
 
@@ -435,8 +456,8 @@ void Qcorr::disparity()
    int depthT = m_leftImage->depth();
 
    // Traverse a number of times determined by the number of intervals that fit on the target image
-   int nXTraverse = (wI - wT) / m_nScanInterval;
-   int nYTraverse = (hI - hT) / m_nScanInterval;
+   int nXTraverse = ((wI - wT) / m_nScanInterval) - 1;   // must substract one from this value, so it doesn't go beyond the margins
+   int nYTraverse = ((hI - hT) / m_nScanInterval)- 1;   // must substract one from this value, so it doesn't go beyond the margins;
 
    // Store the disparities along the rows of pixels
    int nDispArraySize = nXTraverse * nYTraverse;
@@ -448,11 +469,12 @@ void Qcorr::disparity()
 
    QImage *resultImage = new QImage(nXTraverse, nYTraverse, QImage::Format_Indexed8);  // Empty Image
    // For now, using only gray-scale color table
-   resultImage->setColorTable(*m_grayColorTab);
+   resultImage->setColorTable(*m_greenColorTab);
 
    m_leftImage_label->m_rubberBand->show();  // to visualize the template traversal
 
    int nPixelDisparity; // used to temporarily store the disparity result from each iteration
+//   int nPixelMaxDisparity = 0;   // to store the maximum disparity and normalize the results
    int nIndexYOffset;   // Used to save up recalculation of y-index offset for each row
    float fCorrLevel;      // to temporarily store the strongest level of correlation
    // Traverse the template of the reference (left) and target(right) images with respect to rows only
@@ -471,28 +493,27 @@ void Qcorr::disparity()
          // Set template coordinates
          templateCoordsPoint.setX(xIndex);
          templateCoordsPoint.setY(yIndex);
-         // Draw rubber band to indicate current template correlation
+         // Draw rubber band and match rectangle to indicate current template correlation
+         // to visualize the template traversal across the images
          m_leftImage_label->m_rubberBand->setGeometry(QRect(templateCoordsPoint,m_templateSize));
+         m_targetImage_label->drawEnclosedMatch(templateCoordsPoint, m_templateSize);
 
          // Extract current template image
          *m_templateImage = m_leftImage->copy(m_leftImage_label->m_rubberBand->geometry());
 
          qApp->processEvents(QEventLoop::DialogExec); // Stay Responsive
-         // Visualize the template traversal across the images
-         m_leftImage_label->m_rubberBand->setGeometry(QRect(templateCoordsPoint, m_templateSize));
-         m_targetImage_label->drawEnclosedMatch(templateCoordsPoint, m_templateSize);
+
 
          // the next correlation position on the line has to pay attention to the correlation level return,
          // so when the previous match is not perfect (in this case 1.0), the line should be scanned from the beginning
          if(fCorrLevel < 0.9)
-            {
             m_nXCorrelationCoordinate = 0;   // The previous template matching was not perfect, so start from the beginning of the row
-            }
 
          fCorrLevel = findCorrelation( achRightImage_bits, wI, hI, depthI,  // force to correlate 1 row of the height of the template
                                     m_templateImage->bits(), wT, hT, depthT,
                                     m_nXCorrelationCoordinate, m_nYCorrelationCoordinate, // don't care about the vertical coordinates
                                     CORR_COEFF, // correlation method
+//                                    CROSS_CORR, // correlation method
                                     false, m_nXCorrelationCoordinate, yIndex, 1);     // in order to save time,
                                  // nInitialXPosition can be the previously matched pixel
 
@@ -506,27 +527,60 @@ void Qcorr::disparity()
             nPixelDisparity = 0;
             }
 
+//         if (nPixelDisparity > nPixelMaxDisparity)
+//            {
+//            nPixelMaxDisparity = nPixelDisparity;
+//            }
 
-         std::cout << "Xl=" << xIndex << ":" << "Xr=" << m_nXCorrelationCoordinate << "Yr=" << m_nYCorrelationCoordinate << " : ";
+//         std::cout << "Xl=" << xIndex << ":" << "Xr=" << m_nXCorrelationCoordinate << "Yr=" << m_nYCorrelationCoordinate << " : ";
 
          anDisparityXValues[nIndexYOffset + x] = nPixelDisparity;
-         resultImage->setPixel(x, y, nPixelDisparity);
+//         resultImage->setPixel(x, y, anDisparityXValues[nIndexYOffset + x]);
+
          }
       }
+
+
    // Clean up enclosing visualizations of template traversal
    m_targetImage_label->eraseEnclosedMatch();
    m_leftImage_label->m_rubberBand->hide();
 
    if(!m_bEstop && !(resultImage->isNull()))
       {
+//      if(nPixelMaxDisparity == 0)
+//         {
+//         QApplication::restoreOverrideCursor();
+//         qDebug() << "Illegal Division by zero";
+//         return;   // avoid division by zero
+//         }
+
+      // Normalize disparity values and store them in result Image:
+      for (int y = 0; y < nYTraverse; y++) // Traverses the height
+           { // visit rows
+           nIndexYOffset = y * nXTraverse;
+           for (int x = 0; x < nXTraverse; x++)    // Traverses a row of the target
+              { // visit columns
+              // Interpolate value from 0 to 255, based on maximum disparity found
+              // equation used:
+//              // x = 255 - (255(max - disp)/max)
+//              anDisparityXValues[nIndexYOffset + x] = 255 - (255*(nPixelMaxDisparity-anDisparityXValues[nIndexYOffset + x])/nPixelMaxDisparity);
+              // Normalize disparity value from 0 to 255, based on maximum disparity being the width of the Image
+              // equation used:
+              //  x = 255 - (255(wI - disp)/wI)
+              anDisparityXValues[nIndexYOffset + x] = 255 - (255*(wI-anDisparityXValues[nIndexYOffset + x])/ wI);
+              resultImage->setPixel(x, y, anDisparityXValues[nIndexYOffset + x]);
+              }
+           }
+
       for(int i=0; i<nDispArraySize ;i++)
          {
          std::cout << anDisparityXValues[i] << " : ";
          //         qDebug() << anDisparityXValues[i] << " : ";
          }
       // Draw disparity map:
-      // Should be eventually scaled uniformly from the smaller result disparity image
+      // The smaller result disparity image gets scaled uniformly to the width and height of the original reference image
          m_disparityMapImage = new QImage(resultImage->scaledToWidth(wI, Qt::SmoothTransformation));
+         *m_disparityMapImage = m_disparityMapImage->scaledToHeight(hI, Qt::SmoothTransformation);
                                                                         // ^^^^ either Qt::FastTransformation or Qt::SmoothTransformation
          m_bHasDisparityMap = true;
 
@@ -542,8 +596,6 @@ void Qcorr::disparity()
 
 
 }
-
-// end Q_SLOTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, const int nHI, const int nDepthI,
       const unsigned char * imgTemplate, const int nWT, const int nHT, const int nDepthT, int &rnDx, int &rnDy,
@@ -585,11 +637,11 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
    float fAverage, fTemplatePower, fTargetPower;
    float *pfImgTarget, *pfImgTemplate, mag, *pfTraversedTarget, *pfTraversingTemplate;
    float fMin, fMax;
-   double dXSize, dYSize;
+//   double dXSize, dYSize;
 
 
 //   QImage II1, II2, Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
-   QImage Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
+//   QImage Ifft1, Ifft2, Iblur, pyramidTarget[8], pyramidTemplate[8];
 
    // Images' size:
    int sizeI = nWI*nHI;
@@ -667,15 +719,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
       nYTraverse = nNumberOfRows - 1;
    // ---------------------------------------------
    // To be used to display a brightness map based on correlation values at each evaluated pixel
-//   if((nInitialXPosition == 0) && (nInitialYPosition == 0))
-//      {
       m_corrMapImage = new QImage(nXTraverse+1, nYTraverse+1 , QImage::Format_Indexed8);
 
       // If the image's format is either monochrome or 8-bit, the given index_or_rgb value must be an index in the image's color table
       m_corrMapImage->setColorTable(*m_grayColorTab);
-//      }
    // Array size is correct based on the number of correlations to be performed on the target
-   float *afCorrValues = new float[(nXTraverse+1) * (nYTraverse+1)]; // Array to save results of each correlation operation at certain pixel
+   float *afCorrValues = new float[(nXTraverse-nInitialXPosition +1) * (nYTraverse+1)]; // Array to save results of each correlation operation at certain pixel
+//   float *afCorrValues = new float[(nXTraverse+1) * (nYTraverse+1)]; // Array to save results of each correlation operation at certain pixel
    int nCorrCounter = 0;
    uint nValue;    // to paint the pixels of the correlation map image
    // ---------------------------------------------
@@ -806,18 +856,17 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
 //                  if((nInitialXPosition == 0) && (nInitialYPosition == 0))
 //                     {
                      // Normalize all the correlation values stored in the array afCorrValues
-                     //                  for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                      for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                         { // visit rows
-                        for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                        for (x = 0 + nInitialXPosition; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
                            afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
 
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
-                           if( afCorrValues[nCorrCounter] < 0)
-                              afCorrValues[nCorrCounter] = 0;
+                           if( afCorrValues[nCorrCounter] < 0.0)
+                              afCorrValues[nCorrCounter] = 0.0;
                            else
                               afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
@@ -922,7 +971,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                      // Normalize all the correlation values stored in the array afCorrValues
                      for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                         { // visit rows
-                           for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                           for (x = 0  + nInitialXPosition; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                               { // visit columns
                               // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
                               afCorrValues[nCorrCounter] = afCorrValues[nCorrCounter] / fSquareRootOfTemplatePower;
@@ -1051,6 +1100,7 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                         }
 
                      afCorrValues[nCorrCounter] = fCorr; // Save correlation value of this round
+//                     std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
                      nCorrCounter++;
                      } // next column
                   } // next row
@@ -1076,16 +1126,13 @@ float Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI, con
                   // there is no need to divide by the square root of the powers
                   for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
                      { // visit rows
-                        for (x = 0; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
+                        for (x = 0  + nInitialXPosition; x <= nXTraverse; x++)    // Traverses the width until the template's right edge is on the right edge of the target
                            { // visit columns
                            // Interpolate values from 0 to 1 between fMin and fMax
                            // x_normalized = (x - min) / (max - min)
                            if(afCorrValues[nCorrCounter] <= 0.0)
                               afCorrValues[nCorrCounter] = 0.0;  // Lowest normalized value. There is no correlation match
                            // All other values are already normalized between 0 and 1
-                           // Just interpolate them:
-                           else
-                              afCorrValues[nCorrCounter] = (afCorrValues[nCorrCounter] - fMin) / (fMax - fMin);
 
 //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 

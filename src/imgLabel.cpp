@@ -246,13 +246,13 @@ ImgLabel::mouseReleaseEvent(QMouseEvent *event)
       }
 }
 
-void ImgLabel::setTemplateFlags(bool status)
+void ImgLabel::setTemplateFlags(bool bStatus)
 {
-   m_bMouseInTemplateRegion = status;
-   m_bMouseAtTemplateTopEdge = status;
-   m_bMouseAtTemplateBottomEdge = status;
-   m_bMouseAtTemplateLeftEdge = status;
-   m_bMouseAtTemplateRightEdge = status;
+   m_bMouseInTemplateRegion = bStatus;
+   m_bMouseAtTemplateTopEdge = bStatus;
+   m_bMouseAtTemplateBottomEdge = bStatus;
+   m_bMouseAtTemplateLeftEdge = bStatus;
+   m_bMouseAtTemplateRightEdge = bStatus;
 }
 
 void ImgLabel::checkTemplateRegions(int mouseX, int mouseY)

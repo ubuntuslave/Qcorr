@@ -64,9 +64,8 @@ private Q_SLOTS:
     void browseRightImage();///< Q_SLOT that allows to browse and load an image on the right panel
     void changeMouse(); ///< Q_SLOT used to change the mouse pointer according to the current operation mode
     void viewMap();  ///< Q_SLOT that selectively provides the appropriate existent map of results from correlation (template matching) or pixel disparity
-    void correlate(); ///< Q_SLOT that process the correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image.
-    void disparity(); ///< Q_SLOT that is connected in the pixel-disparity finding operation mode. It should be mainly be used with dataset stereo images that get correlated row-by-row by using findCorrelation() with the pertinent parameters and the appropriate Q_SLOT function implementation.
-    void abortOperation(); ///< Q_SLOT triggers the flag to abort the current operation
+    void operate(); ///< Q_SLOT that starts the chosen operation according to the mode chosen, either template matching or disparity finder
+     void abortOperation(); ///< Q_SLOT triggers the flag to abort the current operation
 
 private:
     /** @class ImgLabel
@@ -99,11 +98,16 @@ private:
       * @param bEnable boolean flag to enable or disable the operation mode's actions widgets as well as the related widgets such as, start_pushButton and controls_pushButton
       */
     void setEnableActions(bool bEnable);
+
     /** @brief  Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself
         */
     void setImageLabels();
 
-    void setEStop(); ///<  emergency stop to abort the disparity operation process
+    void showEStop(); ///<  emergency stop to abort the disparity operation process
+
+    void correlate(); ///< Performs template matching through correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image.
+    void disparity(); ///< Pixel-disparity finding operation. It should be mainly be used with stereo images that can get correlated row-by-row by using findCorrelation() with the pertinent parameters and the appropriate Q_SLOT function implementation.
+
 
 
     /** @brief  Cross-correlation of target image with template image.
@@ -144,6 +148,7 @@ private:
     *          calculate the aggregate accuracy of a measurement when the accuracies of the all the measuring devices are known.
     *          The average accuracy is not merely the arithmetic average of the accuracies (or uncertainties), nor is it the sum of them.
     *          Note how the RSS result in this case is greater than the largest of the values under the radical.
+    *
     * @param bMultires Determines if multiresolution correlation should be applied, by making use of image pyramids.
     *                 With multiresoltion, the correlation can be determined faster than direct correlation.
     *                 Default is false.
@@ -188,6 +193,7 @@ private:
     QLabel *m_status_label;   ///< status label that updates the mouse-pointer's position coordinates as it moves and selects templates. It also provides other types of information when required.
 
     QVector<QRgb> *m_grayColorTab;  ///< 8-bit gray-scale color table
+    QVector<QRgb> *m_greenColorTab;  ///< 8-bit green-scale color table
 
     QPoint m_matchingPoint;   ///< upper-left corner point where the correlation match was found
     QSize m_templateSize;  ///< the current template's size as a QSize object

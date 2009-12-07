@@ -56,16 +56,11 @@ void \hyperlink{classQcorr_a3275244fd6183a4fef92b85578fea864}{viewMap} ()}
 \label{classQcorr_a3275244fd6183a4fef92b85578fea864}
 
 \begin{DoxyCompactList}\small\item\em Q\_\-SLOT that selectively provides the appropriate existent map of results from correlation (template matching) or pixel disparity. \item\end{DoxyCompactList}\item 
-\hypertarget{classQcorr_ace91b9d83b34887735737323bac5431e}{
-void \hyperlink{classQcorr_ace91b9d83b34887735737323bac5431e}{correlate} ()}
-\label{classQcorr_ace91b9d83b34887735737323bac5431e}
+\hypertarget{classQcorr_af71bf39d4955ab90b859e8137b6e0761}{
+void \hyperlink{classQcorr_af71bf39d4955ab90b859e8137b6e0761}{operate} ()}
+\label{classQcorr_af71bf39d4955ab90b859e8137b6e0761}
 
-\begin{DoxyCompactList}\small\item\em Q\_\-SLOT that process the correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image. \item\end{DoxyCompactList}\item 
-\hypertarget{classQcorr_a640ee4c76350e5886deddbf4f0d50594}{
-void \hyperlink{classQcorr_a640ee4c76350e5886deddbf4f0d50594}{disparity} ()}
-\label{classQcorr_a640ee4c76350e5886deddbf4f0d50594}
-
-\begin{DoxyCompactList}\small\item\em Q\_\-SLOT that is connected in the pixel-\/disparity finding operation mode. It should be mainly be used with dataset stereo images that get correlated row-\/by-\/row by using findCorrelation() with the pertinent parameters and the appropriate Q\_\-SLOT function implementation. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Q\_\-SLOT that starts the chosen operation according to the mode chosen, either template matching or disparity finder. \item\end{DoxyCompactList}\item 
 \hypertarget{classQcorr_ad6e0fb9461faffd01afbf62e1a0be4c3}{
 void \hyperlink{classQcorr_ad6e0fb9461faffd01afbf62e1a0be4c3}{abortOperation} ()}
 \label{classQcorr_ad6e0fb9461faffd01afbf62e1a0be4c3}
@@ -90,11 +85,21 @@ void \hyperlink{classQcorr_a17beb7cf946cdd82f587e3b4e5ee7f19}{setImageLabels} ()
 \label{classQcorr_a17beb7cf946cdd82f587e3b4e5ee7f19}
 
 \begin{DoxyCompactList}\small\item\em Instantiates label widgets and initializes other member variables pertinent to the overall GUI functionality of the main window itself. \item\end{DoxyCompactList}\item 
-\hypertarget{classQcorr_a6d6b50dbf553c37218aed1faaf147c55}{
-void \hyperlink{classQcorr_a6d6b50dbf553c37218aed1faaf147c55}{setEStop} ()}
-\label{classQcorr_a6d6b50dbf553c37218aed1faaf147c55}
+\hypertarget{classQcorr_a78c77e6843a6413dbf2de14ecfd4d1d8}{
+void \hyperlink{classQcorr_a78c77e6843a6413dbf2de14ecfd4d1d8}{showEStop} ()}
+\label{classQcorr_a78c77e6843a6413dbf2de14ecfd4d1d8}
 
 \begin{DoxyCompactList}\small\item\em emergency stop to abort the disparity operation process \item\end{DoxyCompactList}\item 
+\hypertarget{classQcorr_ace91b9d83b34887735737323bac5431e}{
+void \hyperlink{classQcorr_ace91b9d83b34887735737323bac5431e}{correlate} ()}
+\label{classQcorr_ace91b9d83b34887735737323bac5431e}
+
+\begin{DoxyCompactList}\small\item\em Performs template matching through correlation of the selected template against the target image. It calls findCorrelation() with the appropriate parameters to do a single template correlation across the entire target image. \item\end{DoxyCompactList}\item 
+\hypertarget{classQcorr_a640ee4c76350e5886deddbf4f0d50594}{
+void \hyperlink{classQcorr_a640ee4c76350e5886deddbf4f0d50594}{disparity} ()}
+\label{classQcorr_a640ee4c76350e5886deddbf4f0d50594}
+
+\begin{DoxyCompactList}\small\item\em Pixel-\/disparity finding operation. It should be mainly be used with stereo images that can get correlated row-\/by-\/row by using findCorrelation() with the pertinent parameters and the appropriate Q\_\-SLOT function implementation. \item\end{DoxyCompactList}\item 
 float \hyperlink{classQcorr_a05dcc1b0be4596b355df235264180da4}{findCorrelation} (const unsigned char $\ast$imgTarget, const int nWI, const int nHI, const int nDepthI, const unsigned char $\ast$imgTemplate, const int nWT, const int nHT, const int nDepthT, int \&rnDx, int \&rnDy, int nMethod, bool bMultires=false, int nInitialXPosition=0, int nInitialYPosition=0, int nNumberOfRows=0)
 \begin{DoxyCompactList}\small\item\em Cross-\/correlation of target image with template image. \item\end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classQcorr_a0f203c8a83cd1e6b503aee0a4c873402}{convertToGrayScaleFloat} (const unsigned char $\ast$pchImgOriginalBits, int nSize, int nDepth)
@@ -174,6 +179,11 @@ QVector$<$ QRgb $>$ $\ast$ \hyperlink{classQcorr_afa1be55387e39ce5b81e72ecab75b5
 \label{classQcorr_afa1be55387e39ce5b81e72ecab75b5bc}
 
 \begin{DoxyCompactList}\small\item\em 8-\/bit gray-\/scale color table \item\end{DoxyCompactList}\item 
+\hypertarget{classQcorr_a795a9f4f9805a241f55c59a0a520f3d4}{
+QVector$<$ QRgb $>$ $\ast$ \hyperlink{classQcorr_a795a9f4f9805a241f55c59a0a520f3d4}{m\_\-greenColorTab}}
+\label{classQcorr_a795a9f4f9805a241f55c59a0a520f3d4}
+
+\begin{DoxyCompactList}\small\item\em 8-\/bit green-\/scale color table \item\end{DoxyCompactList}\item 
 \hypertarget{classQcorr_a8a7f00160ae46441cef038149cf28bdc}{
 QPoint \hyperlink{classQcorr_a8a7f00160ae46441cef038149cf28bdc}{m\_\-matchingPoint}}
 \label{classQcorr_a8a7f00160ae46441cef038149cf28bdc}
@@ -274,7 +284,7 @@ Joel Gonzalez
 \end{DoxyAuthor}
 
 
-Definition at line 33 of file imgLabel.h.
+Definition at line 41 of file imgLabel.h.
 
 \subsection{Member Function Documentation}
 \hypertarget{classQcorr_adb32e7bfe6afb84f306a9eb5bcd9b322}{
@@ -346,7 +356,7 @@ Correlation is performed on gray-\/scale (1 channel image) that are computed in 
 \begin{DoxyItemize}
 \item CROSS\_\-CORR (cross correlation): \[ C(u,v) = \frac {\sum{\left\{T(x,y) * I(x-u,y-v)\right\}}} {\sqrt{ \sum{I(x-u,y-v)^2}}} \]
 \item SUM\_\-SQ\_\-DIFF (sum of squared differences): \[ C(u,v) = \frac {\sum{\left\{T(x,y)-I(x-u,y-v)\right\}^2}} {\sqrt{\sum{I(x-u,y-v)^2}}} \]
-\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \] Remark: The square root of the sum of the squares (RSS) is being used to calculate the aggregate accuracy of a measurement when the accuracies of the all the measuring devices are known. The average accuracy is not merely the arithmetic average of the accuracies (or uncertainties), nor is it the sum of them. Note how the RSS result in this case is greater than the largest of the values under the radical. 
+\item CORR\_\-COEFF (correlation coefficient): \[ C(u,v) = \frac {\sum{\left\{(T(x,y)-T_{avg}) * (I(x-u,y-v)-I_{avg})\right\}}} {\sqrt{\sum{(T(x,y)-T_{avg})^2} * \sum{(I(x-u,y-v)-I_{avg})^2}}} \] Remark: The square root of the sum of the squares (RSS) is being used to calculate the aggregate accuracy of a measurement when the accuracies of the all the measuring devices are known. The average accuracy is not merely the arithmetic average of the accuracies (or uncertainties), nor is it the sum of them. Note how the RSS result in this case is greater than the largest of the values under the radical.
 \end{DoxyItemize}\item[{\em bMultires}]Determines if multiresolution correlation should be applied, by making use of image pyramids. With multiresoltion, the correlation can be determined faster than direct correlation. Default is false. \item[{\em nInitialXPosition}]Indicates the x-\/coordinate of the pixel on the target image where correlation should start. Default is 0 \item[{\em nInitialYPosition}]Indicates the y-\/coordinate of the pixel on the target image where correlation should start. Default is 0 \item[{\em nNumberOfRows}]Indicates the number of rows on the target image to be scanned. Default is 0, which means all of them. \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 a float array resulting from the conversion of the source image into an 8-\/bit gray-\/scale image. 
