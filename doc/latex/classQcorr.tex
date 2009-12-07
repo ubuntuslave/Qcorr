@@ -2,7 +2,7 @@
 \section{Qcorr Class Reference}
 \label{classQcorr}\index{Qcorr@{Qcorr}}
 }
-A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4.  
+A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4.  
 
 
 {\tt \#include $<$src/qcorr.h$>$}
@@ -252,9 +252,9 @@ class \hyperlink{classQcorr_ce49e9a34b2d2df1e7683be4cacba1d8}{ControlsWindow}
 
 
 \subsection{Detailed Description}
-A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4. 
+A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4. 
 
-This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()}
+This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation used in the \char`\"{}Template matching\char`\"{} and \char`\"{}Disparity Finder\char`\"{} modes rely strongly in the functionality implemented in this class through the procedure \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()}
 
 \begin{Desc}
 \item[Note:]Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the \hyperlink{classQcorr_d1b26ace597c0c4a0f64a0bd9576d4fc}{convertToGrayScaleFloat()} function.\end{Desc}
@@ -297,7 +297,7 @@ Cast images to an 8-bit gray-scale channel of type float.
 \item[Returns:]the correlation number computed by method (directly). Additionally, the (dx,dy) offset of the template for which there exists a best match. \end{Desc}
 
 
-Definition at line 1257 of file qcorr.cpp.
+Definition at line 1296 of file qcorr.cpp.
 
 Referenced by findCorrelation().\hypertarget{classQcorr_925b0715143a0afa981851547f8b9256}{
 \index{Qcorr@{Qcorr}!displayImage@{displayImage}}
@@ -315,7 +315,7 @@ Displays any QImage on a Qlabel.
 \end{Desc}
 
 
-Definition at line 1240 of file qcorr.cpp.\hypertarget{classQcorr_fddb022a6024a32be3b47016308d6c50}{
+Definition at line 1279 of file qcorr.cpp.\hypertarget{classQcorr_fddb022a6024a32be3b47016308d6c50}{
 \index{Qcorr@{Qcorr}!displayImageLabel@{displayImageLabel}}
 \index{displayImageLabel@{displayImageLabel}!Qcorr@{Qcorr}}
 \subsubsection[{displayImageLabel}]{\setlength{\rightskip}{0pt plus 5cm}void Qcorr::displayImageLabel (QImage $\ast$ {\em image}, \/  {\bf ImgLabel} $\ast$ {\em label})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
@@ -331,7 +331,7 @@ Displays the reference image on the left panel's label. which is a sub-classed w
 \end{Desc}
 
 
-Definition at line 1247 of file qcorr.cpp.
+Definition at line 1286 of file qcorr.cpp.
 
 References ImgLabel::m\_\-labelLowerRightCornerPoint.
 
@@ -353,7 +353,7 @@ Used for testing and investing the bits stored in QImages or other Qt Widgets.
 \item[Returns:]true if the bits were properly dumped to the specified fileName \end{Desc}
 
 
-Definition at line 1314 of file qcorr.cpp.
+Definition at line 1353 of file qcorr.cpp.
 
 References m\_\-rightImage.\hypertarget{classQcorr_05dcc1b0be4596b355df235264180da4}{
 \index{Qcorr@{Qcorr}!findCorrelation@{findCorrelation}}
@@ -377,9 +377,9 @@ Cross-correlation of target image with template image.
 \item[Returns:]a float array resulting from the conversion of the source image into an 8-bit gray-scale image. \end{Desc}
 
 
-Definition at line 609 of file qcorr.cpp.
+Definition at line 643 of file qcorr.cpp.
 
-References convertToGrayScaleFloat(), m\_\-bEstop, m\_\-corrMapImage, and m\_\-grayColorTab.
+References convertToGrayScaleFloat(), m\_\-bEstop, m\_\-bHasCorrMap, m\_\-corrMapImage, and m\_\-grayColorTab.
 
 Referenced by correlate(), and disparity().\hypertarget{classQcorr_2de6d6969bdf48b225acc5ebbae063f7}{
 \index{Qcorr@{Qcorr}!setEnableActions@{setEnableActions}}

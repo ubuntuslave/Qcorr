@@ -209,9 +209,9 @@
         <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
         <references refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" compoundref="targetImgLabel_8h" startline="55">m_image</references>
         <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">Qcorr::browseRightImage</referencedby>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">Qcorr::viewMap</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">Qcorr::viewMap</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -265,7 +265,7 @@
         <references refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" compoundref="targetImgLabel_8h" startline="59">m_nXoffset</references>
         <references refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" compoundref="targetImgLabel_8h" startline="60">m_nYoffset</references>
         <references refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" compoundref="targetImgLabel_8h" startline="56">m_overlayImage</references>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">Qcorr::viewMap</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">Qcorr::viewMap</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,8 +305,8 @@
         <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
         <references refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" compoundref="targetImgLabel_8h" startline="57">m_originPoint</references>
         <references refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" compoundref="targetImgLabel_8h" startline="58">m_rectSize</references>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">Qcorr::disparity</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -322,9 +322,9 @@
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="111" bodyend="115"/>
         <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
         <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">Qcorr::disparity</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">

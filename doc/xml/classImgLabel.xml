@@ -46,8 +46,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="46" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">Qcorr::disparity</referencedby>
         <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
         <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
         <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
@@ -129,7 +129,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="52" bodyend="-1"/>
-        <referencedby refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" compoundref="qcorr_8cpp" startline="1247" endline="1254">Qcorr::displayImageLabel</referencedby>
+        <referencedby refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" compoundref="qcorr_8cpp" startline="1286" endline="1293">Qcorr::displayImageLabel</referencedby>
         <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classImgLabel_1d58eb83a86663876080a2e24ad016b39" prot="private" static="no" mutable="no">
@@ -390,7 +390,7 @@
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="39" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="43" bodyend="55"/>
         <references refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" compoundref="imgLabel_8h" startline="63">m_bHasRubberBand</references>
         <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">Qcorr::changeMouse</referencedby>
         <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
       </memberdef>
       </sectiondef>

@@ -299,7 +299,7 @@
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QRgb&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="classQcorr" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QMainWindow,<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Ui::QcorrClass</highlight></codeline>
+<codeline lineno="52" refid="classQcorr" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QMainWindow,<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Ui::QcorrClass</highlight></codeline>
 <codeline lineno="53"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>

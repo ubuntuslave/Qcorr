@@ -47,8 +47,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="203" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="203" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_129f34cc7b765d5a64856696c48bfc191" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -62,8 +62,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="204" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="204" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_16509fcbf4cd8925aa109cc53e638b69a" prot="private" static="no" mutable="no">
         <type><ref refid="classCorrMethod" kindref="compound">CorrMethod</ref> *</type>
@@ -77,7 +77,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="206" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="206" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_15b43654ac42b41b945cd58ce62b18ed0" prot="private" static="no" mutable="no">
@@ -92,12 +92,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="207" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="207" bodyend="-1"/>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
         <referencedby refid="classQcorr_1395de1dc21d85fa766fb6558c5e302e5" compoundref="qcorr_8cpp" startline="188" endline="192">closeWindows</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
         <referencedby refid="classQcorr_101b57fcc6bedf40f5c175c3fb4667a94" compoundref="qcorr_8cpp" startline="181" endline="185">showControlsWindow</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</referencedby>
         <referencedby refid="classQcorr_1c228e26878cd0b63b162f1680ab4f4fd" compoundref="qcorr_8cpp" startline="22" endline="26">~Qcorr</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_13430716ddbe203f677095c163da87f86" prot="private" static="no" mutable="no">
@@ -128,8 +128,8 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="209" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="209" bodyend="-1"/>
         <referencedby refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" compoundref="qcorr_8cpp" startline="195" endline="233">browseLeftImage</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1ae1695d731f191c694186e00b96f469e" prot="private" static="no" mutable="no">
         <type>QImage *</type>
@@ -144,12 +144,12 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="210" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="210" bodyend="-1"/>
         <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">browseRightImage</referencedby>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
-        <referencedby refid="classQcorr_187229fc918fa4011e96fbadb325fd52e" compoundref="qcorr_8cpp" startline="1314" endline="1343">fileDumpQImage</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
+        <referencedby refid="classQcorr_187229fc918fa4011e96fbadb325fd52e" compoundref="qcorr_8cpp" startline="1353" endline="1382">fileDumpQImage</referencedby>
         <referencedby refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" compoundref="controlswindow_8cpp" startline="43" endline="59">ControlsWindow::setEnableSpinBoxes</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_15594d939890f10991da0009e4c32bea3" prot="private" static="no" mutable="no">
         <type>QImage *</type>
@@ -163,8 +163,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="211" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="211" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" prot="private" static="no" mutable="no">
         <type>QImage *</type>
@@ -178,8 +178,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="212" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="212" bodyend="-1"/>
-        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</referencedby>
+        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1731915641051962d6a03a31b772640d4" prot="private" static="no" mutable="no">
         <type>QImage *</type>
@@ -193,8 +193,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="213" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="213" bodyend="-1"/>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1cadb3032fbf41f8f1b27067c2784efef" prot="private" static="no" mutable="no">
         <type><ref refid="classImgLabel" kindref="compound">ImgLabel</ref> *</type>
@@ -209,9 +209,9 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="214" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="214" bodyend="-1"/>
         <referencedby refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" compoundref="qcorr_8cpp" startline="195" endline="233">browseLeftImage</referencedby>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_18d1e1ab866a811003c435c45de1e958e" prot="private" static="no" mutable="no">
@@ -227,11 +227,11 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="215" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="215" bodyend="-1"/>
         <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">browseRightImage</referencedby>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" prot="private" static="no" mutable="no">
         <type>QLabel *</type>
@@ -245,11 +245,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="216" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="216" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
         <referencedby refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" compoundref="imgLabel_8cpp" startline="302" endline="311">ImgLabel::displayCoordinatesOnStatusLabel</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
         <referencedby refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" compoundref="controlswindow_8cpp" startline="80" endline="86">ControlsWindow::updateParentStatusLabel</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1fa1be55387e39ce5b81e72ecab75b5bc" prot="private" static="no" mutable="no">
         <type>QVector&lt; QRgb &gt; *</type>
@@ -263,7 +263,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="218" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="218" bodyend="-1"/>
-        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</referencedby>
+        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1795a9f4f9805a241f55c59a0a520f3d4" prot="private" static="no" mutable="no">
@@ -278,7 +278,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="219" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="219" bodyend="-1"/>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_18a7f00160ae46441cef038149cf28bdc" prot="private" static="no" mutable="no">
@@ -293,7 +293,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="221" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="221" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" prot="private" static="no" mutable="no">
         <type>QSize</type>
@@ -307,10 +308,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="222" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="222" bodyend="-1"/>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</referencedby>
-        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_13a964df80562c062d5f1f4f6cbf841bb" prot="private" static="no" mutable="no">
         <type>QActionGroup *</type>
@@ -339,9 +340,9 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="225" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="225" bodyend="-1"/>
         <referencedby refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" compoundref="qcorr_8cpp" startline="160" endline="164">abortOperation</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
         <referencedby refid="classQcorr_154af608880477563fa8ebcb0d066b447" compoundref="qcorr_8cpp" startline="132" endline="158">createActions</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
         <referencedby refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" compoundref="qcorr_8cpp" startline="116" endline="129">showEStop</referencedby>
       </memberdef>
@@ -389,8 +390,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="229" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="229" bodyend="-1"/>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_142ef5dadd6c1ff9f560de8cb1f43c2c6" prot="private" static="no" mutable="no">
@@ -405,8 +407,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="230" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="230" bodyend="-1"/>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classQcorr_1db31096514465f8c4a1993345d98f1eb" prot="private" static="no" mutable="no">
@@ -422,9 +424,9 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="231" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="231" bodyend="-1"/>
         <referencedby refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" compoundref="qcorr_8cpp" startline="160" endline="164">abortOperation</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
-        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
+        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</referencedby>
         <referencedby refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" compoundref="qcorr_8cpp" startline="29" endline="112">setImageLabels</referencedby>
         <referencedby refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" compoundref="qcorr_8cpp" startline="116" endline="129">showEStop</referencedby>
       </memberdef>
@@ -440,8 +442,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="232" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" bodystart="232" bodyend="-1"/>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -523,7 +525,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="66" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="195" bodyend="233"/>
-        <references refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" compoundref="qcorr_8cpp" startline="1247" endline="1254">displayImageLabel</references>
+        <references refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" compoundref="qcorr_8cpp" startline="1286" endline="1293">displayImageLabel</references>
         <references refid="classQcorr_13430716ddbe203f677095c163da87f86" compoundref="qcorr_8h" startline="208">initialName</references>
         <references refid="classQcorr_1b5325b11a64e24eeb6b9bdc27a77d0ad" compoundref="qcorr_8h" startline="227">m_bHasLeftImage</references>
         <references refid="classQcorr_1a4afa1daa72ecf6caae74f6ced4ec251" compoundref="qcorr_8h" startline="228">m_bHasRightImage</references>
@@ -551,7 +553,7 @@
         <references refid="classQcorr_18d1e1ab866a811003c435c45de1e958e" compoundref="qcorr_8h" startline="215">m_targetImage_label</references>
         <references refid="classQcorr_12de6d6969bdf48b225acc5ebbae063f7" compoundref="qcorr_8cpp" startline="167" endline="177">setEnableActions</references>
         <references refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">TargetImgLabel::setImage</references>
-        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</references>
+        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</references>
         <referencedby refid="classQcorr_154af608880477563fa8ebcb0d066b447" compoundref="qcorr_8cpp" startline="132" endline="158">createActions</referencedby>
       </memberdef>
       <memberdef kind="slot" id="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -565,7 +567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="70" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="293" bodyend="326"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="70" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="293" bodyend="331"/>
         <references refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" compoundref="targetImgLabel_8cpp" startline="111" endline="115">TargetImgLabel::eraseEnclosedMatch</references>
         <references refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" compoundref="qcorr_8h" startline="229">m_bHasCorrMap</references>
         <references refid="classQcorr_142ef5dadd6c1ff9f560de8cb1f43c2c6" compoundref="qcorr_8h" startline="230">m_bHasDisparityMap</references>
@@ -576,8 +578,8 @@
         <references refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" compoundref="controlswindow_8cpp" startline="43" endline="59">ControlsWindow::setEnableSpinBoxes</references>
         <references refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">TargetImgLabel::setImage</references>
         <references refid="classImgLabel_13e5988fc63515a300e69593c9236e126" compoundref="imgLabel_8cpp" startline="43" endline="55">ImgLabel::setSelectable</references>
-        <references refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</references>
-        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</references>
+        <references refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</references>
+        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</references>
         <referencedby refid="classQcorr_154af608880477563fa8ebcb0d066b447" compoundref="qcorr_8cpp" startline="132" endline="158">createActions</referencedby>
         <referencedby refid="classQcorr_12de6d6969bdf48b225acc5ebbae063f7" compoundref="qcorr_8cpp" startline="167" endline="177">setEnableActions</referencedby>
       </memberdef>
@@ -592,7 +594,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="72" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="329" bodyend="348"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="72" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="334" bodyend="353"/>
         <references refid="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" compoundref="qcorr_8h" startline="212">m_corrMapImage</references>
         <references refid="classQcorr_1731915641051962d6a03a31b772640d4" compoundref="qcorr_8h" startline="213">m_disparityMapImage</references>
         <references refid="classQcorr_1ae1695d731f191c694186e00b96f469e" compoundref="qcorr_8h" startline="210">m_rightImage</references>
@@ -601,10 +603,10 @@
         <references refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" compoundref="targetImgLabel_8cpp" startline="37" endline="45">TargetImgLabel::overlayImage</references>
         <references refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">TargetImgLabel::setImage</references>
         <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">browseRightImage</referencedby>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
         <referencedby refid="classQcorr_154af608880477563fa8ebcb0d066b447" compoundref="qcorr_8cpp" startline="132" endline="158">createActions</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="slot" id="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -617,9 +619,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="74" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="351" bodyend="365"/>
-        <references refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</references>
-        <references refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</references>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="74" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="356" bodyend="370"/>
+        <references refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</references>
+        <references refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</references>
         <referencedby refid="classQcorr_154af608880477563fa8ebcb0d066b447" compoundref="qcorr_8cpp" startline="132" endline="158">createActions</referencedby>
       </memberdef>
       <memberdef kind="slot" id="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -674,7 +676,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="94" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1240" bodyend="1244"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="94" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1279" bodyend="1283"/>
       </memberdef>
       <memberdef kind="function" id="classQcorr_1fddb022a6024a32be3b47016308d6c50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -710,7 +712,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="101" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1247" bodyend="1254"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="101" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1286" bodyend="1293"/>
         <references refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" compoundref="imgLabel_8h" startline="52">ImgLabel::m_labelLowerRightCornerPoint</references>
         <referencedby refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" compoundref="qcorr_8cpp" startline="195" endline="233">browseLeftImage</referencedby>
       </memberdef>
@@ -729,12 +731,12 @@
         <references refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" compoundref="qcorr_8cpp" startline="160" endline="164">abortOperation</references>
         <references refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" compoundref="qcorr_8cpp" startline="195" endline="233">browseLeftImage</references>
         <references refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">browseRightImage</references>
-        <references refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</references>
+        <references refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</references>
         <references refid="classQcorr_1395de1dc21d85fa766fb6558c5e302e5" compoundref="qcorr_8cpp" startline="188" endline="192">closeWindows</references>
         <references refid="classQcorr_1496beab48555a8c9abbd6f6aa48e52fb" compoundref="qcorr_8h" startline="225">m_eStopDialog</references>
-        <references refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="351" endline="365">operate</references>
+        <references refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="356" endline="370">operate</references>
         <references refid="classQcorr_101b57fcc6bedf40f5c175c3fb4667a94" compoundref="qcorr_8cpp" startline="181" endline="185">showControlsWindow</references>
-        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</references>
+        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</references>
         <referencedby refid="classQcorr_13b5d03aed21bfd00497ff265d898e45b" compoundref="qcorr_8cpp" startline="8" endline="20">Qcorr</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_12de6d6969bdf48b225acc5ebbae063f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -761,7 +763,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="112" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="167" bodyend="177"/>
-        <references refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</references>
+        <references refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</references>
         <referencedby refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" compoundref="qcorr_8cpp" startline="195" endline="233">browseLeftImage</referencedby>
         <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">browseRightImage</referencedby>
       </memberdef>
@@ -809,8 +811,8 @@
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="120" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="116" bodyend="129"/>
         <references refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" compoundref="qcorr_8h" startline="231">m_bEstop</references>
         <references refid="classQcorr_1496beab48555a8c9abbd6f6aa48e52fb" compoundref="qcorr_8h" startline="225">m_eStopDialog</references>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_1ce91b9d83b34887735737323bac5431e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -823,10 +825,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="123" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="371" bodyend="450"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="123" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="376" bodyend="458"/>
         <references refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" compoundref="targetImgLabel_8cpp" startline="99" endline="108">TargetImgLabel::drawEnclosedMatch</references>
         <references refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" compoundref="targetImgLabel_8cpp" startline="111" endline="115">TargetImgLabel::eraseEnclosedMatch</references>
-        <references refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</references>
+        <references refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</references>
         <references refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" compoundref="corrmethod_8cpp" startline="22" endline="25">CorrMethod::getMethod</references>
         <references refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" compoundref="qcorr_8h" startline="231">m_bEstop</references>
         <references refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" compoundref="qcorr_8h" startline="229">m_bHasCorrMap</references>
@@ -845,8 +847,8 @@
         <references refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" compoundref="qcorr_8h" startline="222">m_templateSize</references>
         <references refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">TargetImgLabel::setImage</references>
         <references refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" compoundref="qcorr_8cpp" startline="116" endline="129">showEStop</references>
-        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</references>
-        <referencedby refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="351" endline="365">operate</referencedby>
+        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</references>
+        <referencedby refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="356" endline="370">operate</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_1640ee4c76350e5886deddbf4f0d50594" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -859,10 +861,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="125" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="453" bodyend="606"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="125" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="461" bodyend="640"/>
         <references refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" compoundref="targetImgLabel_8cpp" startline="99" endline="108">TargetImgLabel::drawEnclosedMatch</references>
         <references refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" compoundref="targetImgLabel_8cpp" startline="111" endline="115">TargetImgLabel::eraseEnclosedMatch</references>
-        <references refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</references>
+        <references refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</references>
         <references refid="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" compoundref="controlswindow_8h" startline="31" endline="34">ControlsWindow::getScanInterval</references>
         <references refid="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" compoundref="controlswindow_8h" startline="41" endline="44">ControlsWindow::getTemplateSize</references>
         <references refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" compoundref="qcorr_8h" startline="231">m_bEstop</references>
@@ -873,6 +875,7 @@
         <references refid="classQcorr_1795a9f4f9805a241f55c59a0a520f3d4" compoundref="qcorr_8h" startline="219">m_greenColorTab</references>
         <references refid="classQcorr_1e8bdd4be8a0c3023be34a1301b28c913" compoundref="qcorr_8h" startline="209">m_leftImage</references>
         <references refid="classQcorr_1cadb3032fbf41f8f1b27067c2784efef" compoundref="qcorr_8h" startline="214">m_leftImage_label</references>
+        <references refid="classQcorr_18a7f00160ae46441cef038149cf28bdc" compoundref="qcorr_8h" startline="221">m_matchingPoint</references>
         <references refid="classQcorr_1b07379fbbd7be906023eb5ec4d555931" compoundref="qcorr_8h" startline="232">m_nScanInterval</references>
         <references refid="classQcorr_153798525ce189307cf597e71aabca91b" compoundref="qcorr_8h" startline="203">m_nXCorrelationCoordinate</references>
         <references refid="classQcorr_129f34cc7b765d5a64856696c48bfc191" compoundref="qcorr_8h" startline="204">m_nYCorrelationCoordinate</references>
@@ -882,9 +885,9 @@
         <references refid="classQcorr_15594d939890f10991da0009e4c32bea3" compoundref="qcorr_8h" startline="211">m_templateImage</references>
         <references refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" compoundref="qcorr_8h" startline="222">m_templateSize</references>
         <references refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" compoundref="qcorr_8cpp" startline="116" endline="129">showEStop</references>
-        <references refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">updateStatusLabelWithDisparityInfo</references>
-        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">viewMap</references>
-        <referencedby refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="351" endline="365">operate</referencedby>
+        <references refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">updateStatusLabelWithDisparityInfo</references>
+        <references refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="334" endline="353">viewMap</references>
+        <referencedby refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" compoundref="qcorr_8cpp" startline="356" endline="370">operate</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_105dcc1b0be4596b355df235264180da4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -1071,13 +1074,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="180" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="609" bodyend="1237"/>
-        <references refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" compoundref="qcorr_8cpp" startline="1257" endline="1298">convertToGrayScaleFloat</references>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="180" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="643" bodyend="1276"/>
+        <references refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" compoundref="qcorr_8cpp" startline="1296" endline="1337">convertToGrayScaleFloat</references>
         <references refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" compoundref="qcorr_8h" startline="231">m_bEstop</references>
+        <references refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" compoundref="qcorr_8h" startline="229">m_bHasCorrMap</references>
         <references refid="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" compoundref="qcorr_8h" startline="212">m_corrMapImage</references>
         <references refid="classQcorr_1fa1be55387e39ce5b81e72ecab75b5bc" compoundref="qcorr_8h" startline="218">m_grayColorTab</references>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">correlate</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float *</type>
@@ -1125,8 +1129,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="191" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1257" bodyend="1298"/>
-        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="609" endline="1237">findCorrelation</referencedby>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="191" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1296" bodyend="1337"/>
+        <referencedby refid="classQcorr_105dcc1b0be4596b355df235264180da4" compoundref="qcorr_8cpp" startline="643" endline="1276">findCorrelation</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1139,15 +1143,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="194" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1301" bodyend="1310"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="194" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1340" bodyend="1349"/>
         <references refid="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" compoundref="controlswindow_8h" startline="31" endline="34">ControlsWindow::getScanInterval</references>
         <references refid="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" compoundref="controlswindow_8h" startline="41" endline="44">ControlsWindow::getTemplateSize</references>
         <references refid="classQcorr_15b43654ac42b41b945cd58ce62b18ed0" compoundref="qcorr_8h" startline="207">m_controlsWindow</references>
         <references refid="classQcorr_1b07379fbbd7be906023eb5ec4d555931" compoundref="qcorr_8h" startline="232">m_nScanInterval</references>
         <references refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" compoundref="qcorr_8h" startline="216">m_status_label</references>
         <references refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" compoundref="qcorr_8h" startline="222">m_templateSize</references>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">changeMouse</referencedby>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">disparity</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">changeMouse</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">disparity</referencedby>
       </memberdef>
       <memberdef kind="function" id="classQcorr_187229fc918fa4011e96fbadb325fd52e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1173,14 +1177,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="201" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1314" bodyend="1343"/>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.h" line="201" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/qcorr.cpp" bodystart="1353" bodyend="1382"/>
         <references refid="classQcorr_1ae1695d731f191c694186e00b96f469e" compoundref="qcorr_8h" startline="210">m_rightImage</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4. </para>    </briefdescription>
+<para>A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4. </para>    </briefdescription>
     <detaileddescription>
-<para>This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure <ref refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kindref="member">convertToGrayScaleFloat()</ref></para><para><simplesect kind="note"><para>Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the <ref refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kindref="member">convertToGrayScaleFloat()</ref> function.</para></simplesect>
+<para>This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation used in the &quot;Template matching&quot; and &quot;Disparity Finder&quot; modes rely strongly in the functionality implemented in this class through the procedure <ref refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kindref="member">convertToGrayScaleFloat()</ref></para><para><simplesect kind="note"><para>Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the <ref refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kindref="member">convertToGrayScaleFloat()</ref> function.</para></simplesect>
 <simplesect kind="par"><title>Compile-time dependencies</title><para><itemizedlist>
 <listitem><para>The QT4 Framework</para></listitem><listitem><para>g++</para></listitem></itemizedlist>
 </para></simplesect>

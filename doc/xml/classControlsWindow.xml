@@ -140,7 +140,7 @@
         <references refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" compoundref="controlswindow_8h" startline="60">m_parentWindow</references>
         <references refid="classQcorr_1ae1695d731f191c694186e00b96f469e" compoundref="qcorr_8h" startline="210">Qcorr::m_rightImage</references>
         <references refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" compoundref="controlswindow_8h" startline="54">ui</references>
-        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="331">Qcorr::changeMouse</referencedby>
         <referencedby refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" compoundref="controlswindow_8cpp" startline="4" endline="21">ControlsWindow</referencedby>
       </memberdef>
       <memberdef kind="function" id="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -157,8 +157,8 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="32" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="31" bodyend="34"/>
         <references refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" compoundref="controlswindow_8h" startline="61">m_nScanInterval</references>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
       </memberdef>
       <memberdef kind="function" id="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -174,8 +174,8 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.h" bodystart="41" bodyend="44"/>
         <references refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" compoundref="controlswindow_8h" startline="62">m_nTemplateSize</references>
-        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
-        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1301" endline="1310">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="461" endline="640">Qcorr::disparity</referencedby>
+        <referencedby refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" compoundref="qcorr_8cpp" startline="1340" endline="1349">Qcorr::updateStatusLabelWithDisparityInfo</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">

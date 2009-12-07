@@ -25,9 +25,9 @@ class QActionGroup;
 
  @ingroup qcorr_mainwindow
 
- @brief A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4
+ @brief A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4
 
- This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure convertToGrayScaleFloat()
+ This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation used in the "Template matching" and "Disparity Finder" modes rely strongly in the functionality implemented in this class through the procedure convertToGrayScaleFloat()
 
  @note Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the convertToGrayScaleFloat() function.
 

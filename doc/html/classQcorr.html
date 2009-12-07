@@ -27,7 +27,7 @@
 <h1>Qcorr Class Reference<br>
 <small>
 [<a class="el" href="group__qcorr__mainwindow.html">Qcorr</a>]</small>
-</h1><!-- doxytag: class="Qcorr" --><!-- doxytag: inherits="Ui::QcorrClass" -->A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4.  
+</h1><!-- doxytag: class="Qcorr" --><!-- doxytag: inherits="Ui::QcorrClass" -->A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;<a class="el" href="qcorr_8h-source.html">src/qcorr.h</a>&gt;</code>
@@ -48,16 +48,16 @@ Inheritance diagram for Qcorr:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3b5d03aed21bfd00497ff265d898e45b"></a><!-- doxytag: member="Qcorr::Qcorr" ref="3b5d03aed21bfd00497ff265d898e45b" args="(QWidget *parent=0)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#3b5d03aed21bfd00497ff265d898e45b">Qcorr</a> (QWidget *parent=0)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor of the <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> class. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor of the <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> class. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c228e26878cd0b63b162f1680ab4f4fd"></a><!-- doxytag: member="Qcorr::~Qcorr" ref="c228e26878cd0b63b162f1680ab4f4fd" args="()" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#c228e26878cd0b63b162f1680ab4f4fd">~Qcorr</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor: House keeping that should be done when the <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> main window is closed -- specifically, it closes the controlsWindow;. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor: House keeping that should be done when the <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> main window is closed -- specifically, it closes the controlsWindow;. <br></td></tr>
 <tr><td colspan="2"><br><h2>Private Slots</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="395de1dc21d85fa766fb6558c5e302e5"></a><!-- doxytag: member="Qcorr::closeWindows" ref="395de1dc21d85fa766fb6558c5e302e5" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#395de1dc21d85fa766fb6558c5e302e5">closeWindows</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Q_SLOT that closes the main <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> window and the controls Window;. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Q_SLOT that closes the main <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> window and the controls Window;. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="01b57fcc6bedf40f5c175c3fb4667a94"></a><!-- doxytag: member="Qcorr::showControlsWindow" ref="01b57fcc6bedf40f5c175c3fb4667a94" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#01b57fcc6bedf40f5c175c3fb4667a94">showControlsWindow</a> ()</td></tr>
 
@@ -233,15 +233,15 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td colspan="2"><br><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#5b4b2caf4c596b601dd096785e4a32b9">ImgLabel</a></td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">the <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> in order to make all members of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> accessible by an <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> object  <a href="#5b4b2caf4c596b601dd096785e4a32b9"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">the <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> in order to make all members of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> accessible by an <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> object  <a href="#5b4b2caf4c596b601dd096785e4a32b9"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQcorr.html#ce49e9a34b2d2df1e7683be4cacba1d8">ControlsWindow</a></td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a>.  <a href="#ce49e9a34b2d2df1e7683be4cacba1d8"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a>.  <a href="#ce49e9a34b2d2df1e7683be4cacba1d8"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping) implemented in QT4. 
+A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder) implemented in QT4. 
 <p>
-This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation (template matching) functionality is implemented in this class through the procedure <a class="el" href="classQcorr.html#d1b26ace597c0c4a0f64a0bd9576d4fc" title="Cast images to an 8-bit gray-scale channel of type float.">convertToGrayScaleFloat()</a><p>
+This class combines all other sub-classed QWidgets implemented throughout the program. The main correlation used in the "Template matching" and "Disparity Finder" modes rely strongly in the functionality implemented in this class through the procedure <a class="el" href="classQcorr.html#d1b26ace597c0c4a0f64a0bd9576d4fc" title="Cast images to an 8-bit gray-scale channel of type float.">convertToGrayScaleFloat()</a><p>
 <dl class="note" compact><dt><b>Note:</b></dt><dd>Correlation is performed on gray-scale (1 channel image) that are computed in this procedure through the <a class="el" href="classQcorr.html#d1b26ace597c0c4a0f64a0bd9576d4fc" title="Cast images to an 8-bit gray-scale channel of type float.">convertToGrayScaleFloat()</a> function.</dd></dl>
 <dl class="user" compact><dt><b>Compile-time dependencies</b></dt><dd><ul>
 <li>The QT4 Framework</li><li>g++</li></ul>
@@ -300,9 +300,9 @@ Cast images to an 8-bit gray-scale channel of type float.
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>the correlation number computed by method (directly). Additionally, the (dx,dy) offset of the template for which there exists a best match. </dd></dl>
 
-<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01257">1257</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01296">1296</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="qcorr_8cpp-source.html#l00609">findCorrelation()</a>.</p>
+<p>Referenced by <a class="el" href="qcorr_8cpp-source.html#l00643">findCorrelation()</a>.</p>
 
 </div>
 </div><p>
@@ -341,7 +341,7 @@ Displays any QImage on a Qlabel.
   </table>
 </dl>
 
-<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01240">1240</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01279">1279</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
 
 </div>
 </div><p>
@@ -380,7 +380,7 @@ Displays the reference image on the left panel's label. which is a sub-classed w
   </table>
 </dl>
 
-<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01247">1247</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01286">1286</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
 
 <p>References <a class="el" href="imgLabel_8h-source.html#l00052">ImgLabel::m_labelLowerRightCornerPoint</a>.</p>
 
@@ -414,7 +414,7 @@ Used for testing and investing the bits stored in QImages or other Qt Widgets.
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true if the bits were properly dumped to the specified fileName </dd></dl>
 
-<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01314">1314</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l01353">1353</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
 
 <p>References <a class="el" href="qcorr_8h-source.html#l00210">m_rightImage</a>.</p>
 
@@ -559,11 +559,11 @@ Cross-correlation of target image with template image.
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>a float array resulting from the conversion of the source image into an 8-bit gray-scale image. </dd></dl>
 
-<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l00609">609</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
+<p>Definition at line <a class="el" href="qcorr_8cpp-source.html#l00643">643</a> of file <a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a>.</p>
 
-<p>References <a class="el" href="qcorr_8cpp-source.html#l01257">convertToGrayScaleFloat()</a>, <a class="el" href="qcorr_8h-source.html#l00231">m_bEstop</a>, <a class="el" href="qcorr_8h-source.html#l00212">m_corrMapImage</a>, and <a class="el" href="qcorr_8h-source.html#l00218">m_grayColorTab</a>.</p>
+<p>References <a class="el" href="qcorr_8cpp-source.html#l01296">convertToGrayScaleFloat()</a>, <a class="el" href="qcorr_8h-source.html#l00231">m_bEstop</a>, <a class="el" href="qcorr_8h-source.html#l00229">m_bHasCorrMap</a>, <a class="el" href="qcorr_8h-source.html#l00212">m_corrMapImage</a>, and <a class="el" href="qcorr_8h-source.html#l00218">m_grayColorTab</a>.</p>
 
-<p>Referenced by <a class="el" href="qcorr_8cpp-source.html#l00371">correlate()</a>, and <a class="el" href="qcorr_8cpp-source.html#l00453">disparity()</a>.</p>
+<p>Referenced by <a class="el" href="qcorr_8cpp-source.html#l00376">correlate()</a>, and <a class="el" href="qcorr_8cpp-source.html#l00461">disparity()</a>.</p>
 
 </div>
 </div><p>
@@ -613,7 +613,7 @@ Enables/Disables operation modes actions related widgets.
 <div class="memdoc">
 
 <p>
-allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a>. 
+allows to modify parameters for the correlation operations, such as template size and scan interval. This class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a>. 
 <p>
 <a class="el" href="classControlsWindow.html" title="allows to modify parameters for the correlation operations, such as template size...">ControlsWindow</a> 
 <p>Definition at line <a class="el" href="qcorr_8h-source.html#l00087">87</a> of file <a class="el" href="qcorr_8h-source.html">qcorr.h</a>.</p>
@@ -634,7 +634,7 @@ allows to modify parameters for the correlation operations, such as template siz
 <div class="memdoc">
 
 <p>
-the <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> in order to make all members of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</a> accessible by an <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> object 
+the <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> class is a friend of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> in order to make all members of <a class="el" href="classQcorr.html" title="A Digital Image Correlation Program (Template Matching and Pixel Disparity Finder)...">Qcorr</a> accessible by an <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> object 
 <p>
 <a class="el" href="classImgLabel.html" title="A sub-classed label widget implemented with the purpose of displaying the reference...">ImgLabel</a> 
 <p>Definition at line <a class="el" href="qcorr_8h-source.html#l00082">82</a> of file <a class="el" href="qcorr_8h-source.html">qcorr.h</a>.</p>
@@ -646,7 +646,7 @@ the <a class="el" href="classImgLabel.html" title="A sub-classed label widget im
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="qcorr_8h-source.html">qcorr.h</a><li>src/<a class="el" href="qcorr_8cpp-source.html">qcorr.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Dec 7 00:32:15 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Dec 7 13:47:37 2009 for Qcorr: A Digital Image Correlation Program implemented in QT4 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -87,7 +87,7 @@
         </inbodydescription>
         <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.h" line="48" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/corrmethod.cpp" bodystart="22" bodyend="25"/>
         <references refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" compoundref="corrmethod_8h" startline="61">m_nChosenMethod</references>
-        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="376" endline="458">Qcorr::correlate</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">

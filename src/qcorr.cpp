@@ -296,7 +296,10 @@ Qcorr::changeMouse()
       {
          m_leftImage_label->setSelectable(true);
          m_targetImage_label->setImage(*m_rightImage); // Present a Clean Image
+         // Don't clear previous results just here in case we're curious about finding the highest disparity pixel through this mode
+         //         this->corrResults_label->clear();   // Clear any results from a "Disparity Finder" operation
          m_controlsWindow->setEnableSpinBoxes(false); // Disable control spinBoxes because the following thorough correlation doesn't need them
+
          if (m_bHasCorrMap)
             {
                action_Map->setEnabled(true);
@@ -310,6 +313,8 @@ Qcorr::changeMouse()
          m_leftImage_label->setSelectable(false);
          m_targetImage_label->eraseEnclosedMatch();
          m_targetImage_label->setImage(*m_rightImage); // Present a Clean Image
+         // Don't clear previous results here just in case we're curious about finding the highest disparity pixel through this mode
+         //         this->corrResults_label->clear();    // And clear any results from a "Template Matching" operation
 
          m_controlsWindow->setEnableSpinBoxes(true); // Enable spinBoxes and specigy maximum values according to m_rightImage's size
 
@@ -387,6 +392,9 @@ Qcorr::correlate()
             }
          else
             {
+               this->corrResults_label->clear(); // Clear any results from a "Disparity Finder" operation
+               m_bHasCorrMap = false; // Allow to create a new correlation map
+
                showEStop(); // Set dialog's position on window and reset m_bEstop flag to false
 
                // Target Image dimensions:
@@ -427,8 +435,8 @@ Qcorr::correlate()
                      m_targetImage_label->drawEnclosedMatch(m_matchingPoint,
                            m_templateSize);
 
-                     this->corrResults_label->setText("Correlation level: "
-                           + QString::number(fCorrLevel) + "\tat <b>("
+                     this->corrResults_label->setText("Correlation level: <b>"
+                           + QString::number(fCorrLevel) + "</b>\tat <b>("
                            + QString::number(m_nXCorrelationCoordinate) + ", "
                            + QString::number(m_nYCorrelationCoordinate)
                            + ")px</b>");
@@ -455,6 +463,8 @@ Qcorr::disparity()
    QApplication::setOverrideCursor(Qt::WaitCursor);
 
    showEStop(); // Set dialog's position on window and reset m_bEstop flag to false
+
+   this->corrResults_label->clear(); // And clear any results from a "Template Matching" operation
 
    m_templateImage = new QImage(); // Create instance of template image
 
@@ -496,6 +506,11 @@ Qcorr::disparity()
    int nPixelDisparity; // used to temporarily store the disparity result from each iteration
    int nIndexYOffset; // Used to save up recalculation of y-index offset for each row
    float fCorrLevel; // to temporarily store the strongest level of correlation
+   int nMaxDisparity = 0; // To store the highest pixel-disparity found
+   // and location coordinates
+   int nMaxDispXcoord = 0;
+   int nMaxDispYcoord = 0;
+
    // Traverse the template of the reference (left) and target(right) images with respect to rows only
    // The template traverses an entire row, and then a new template at the next pixel is created and traversed on the raw
    // This process repeats for all the pixels in the row, and then correlate the next row's pixels in the same fashion.
@@ -553,6 +568,14 @@ Qcorr::disparity()
 
                anDisparityXValues[nIndexYOffset + x] = nPixelDisparity;
 
+               if (nPixelDisparity > nMaxDisparity)
+                  {
+                     nMaxDisparity = nPixelDisparity; // Keep track of highest pixel-disparity value
+                     // and location coordinates:
+                     nMaxDispXcoord = m_nXCorrelationCoordinate;
+                     nMaxDispYcoord = m_nYCorrelationCoordinate;
+                  }
+
             }
       }
 
@@ -562,6 +585,17 @@ Qcorr::disparity()
 
    if (!m_bEstop && !(resultImage->isNull()))
       {
+         // Display Maximum Disparity found and Coordinates of such point
+         this->corrResults_label->setText("Highest Disparity Found: <b>"
+               + QString::number(nMaxDisparity) + "px</b>\tat <b>("
+               + QString::number(nMaxDispXcoord) + ", " + QString::number(
+               nMaxDispYcoord) + ")px</b>");
+
+         // Enclosed template of highest disparity
+         m_matchingPoint.setX(nMaxDispXcoord);
+         m_matchingPoint.setY(nMaxDispYcoord);
+         m_targetImage_label->drawEnclosedMatch(m_matchingPoint, m_templateSize);
+
          // Normalize disparity values and store them in result Image:
          for (int y = 0; y < nYTraverse; y++) // Traverses the height
             { // visit rows
@@ -733,8 +767,9 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
       nYTraverse = nNumberOfRows - 1;
    // ---------------------------------------------
    // To be used to display a brightness map based on correlation values at each evaluated pixel
-   m_corrMapImage = new QImage(nXTraverse + 1, nYTraverse + 1,
-         QImage::Format_Indexed8);
+   if (!m_bHasCorrMap) // Don't destroy previous correlation image if existing
+      m_corrMapImage = new QImage(nXTraverse + 1, nYTraverse + 1,
+            QImage::Format_Indexed8);
 
    // If the image's format is either monochrome or 8-bit, the given index_or_rgb value must be an index in the image's color table
    m_corrMapImage->setColorTable(*m_grayColorTab);
@@ -838,7 +873,7 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
                            nCorrCounter++;
 
                         } //next column
-                        //                     std::cout << std::endl;
+                     //                     std::cout << std::endl;
                   } //next row
 
 
@@ -848,10 +883,10 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
 
                if (n)
                   { // set search window for next pyramid level
-                  //                     xI = MAX(0, 2 * rnDx - n);
-                  //                     yI = MAX(0, 2 * rnDy - n);
-                  //                     nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
-                  //                     nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
+                     //                     xI = MAX(0, 2 * rnDx - n);
+                     //                     yI = MAX(0, 2 * rnDy - n);
+                     //                     nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
+                     //                     nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
                   }
                else
                   {
@@ -871,34 +906,36 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
                      nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
                      // Normalize all the correlation values stored in the array afCorrValues
-                     for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
-                        { // visit rows
-                           for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
-                              { // visit columns
-                                 // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
-                                 afCorrValues[nCorrCounter]
-                                       = afCorrValues[nCorrCounter]
-                                             / fSquareRootOfTemplatePower;
 
-                                 // Interpolate values from 0 to 1 between fMin and fMax
-                                 // x_normalized = (x - min) / (max - min)
-                                 if (afCorrValues[nCorrCounter] < 0.0)
-                                    afCorrValues[nCorrCounter] = 0.0;
-                                 else
+                     if (!m_bHasCorrMap) // Don't destroy previous correlation image if existing
+                        for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                           { // visit rows
+                              for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
+                                 { // visit columns
+                                    // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
                                     afCorrValues[nCorrCounter]
-                                          = (afCorrValues[nCorrCounter] - fMin)
-                                                / (fMax - fMin);
+                                          = afCorrValues[nCorrCounter]
+                                                / fSquareRootOfTemplatePower;
 
-                                 //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                                    // Interpolate values from 0 to 1 between fMin and fMax
+                                    // x_normalized = (x - min) / (max - min)
+                                    if (afCorrValues[nCorrCounter] < 0.0)
+                                       afCorrValues[nCorrCounter] = 0.0;
+                                    else
+                                       afCorrValues[nCorrCounter]
+                                             = (afCorrValues[nCorrCounter]
+                                                   - fMin) / (fMax - fMin);
 
-                                 // Paint pixel in gray-scale correlation map
-                                 nValue = (int) (afCorrValues[nCorrCounter]
-                                       * 255.0); // normalized correlation value for a grayscale
-                                 m_corrMapImage->setPixel(x, y, nValue);
-                                 nCorrCounter++;
-                              }
-                           //                        std::cout << std::endl;
-                        }
+                                    //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+
+                                    // Paint pixel in gray-scale correlation map
+                                    nValue = (int) (afCorrValues[nCorrCounter]
+                                          * 255.0); // normalized correlation value for a grayscale
+                                    m_corrMapImage->setPixel(x, y, nValue);
+                                    nCorrCounter++;
+                                 }
+                              //                        std::cout << std::endl;
+                           }
                   }
                break;
 
@@ -986,32 +1023,33 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
 
                      nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
-                     // Normalize all the correlation values stored in the array afCorrValues
-                     for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
-                        { // visit rows
-                           for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
-                              { // visit columns
-                                 // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
-                                 afCorrValues[nCorrCounter]
-                                       = afCorrValues[nCorrCounter]
-                                             / fSquareRootOfTemplatePower;
+                     if (!m_bHasCorrMap) // Don't destroy previous correlation image if existing
+                        // Normalize all the correlation values stored in the array afCorrValues
+                        for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                           { // visit rows
+                              for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
+                                 { // visit columns
+                                    // Normalized each correlation value in the array with respect to the sqrt(fTemplatePower)
+                                    afCorrValues[nCorrCounter]
+                                          = afCorrValues[nCorrCounter]
+                                                / fSquareRootOfTemplatePower;
 
-                                 // Interpolate values from 0 to 1 between fMin and fMax, where 0 in this case indicates a higher correlation level
-                                 // x_normalized = [(min-x) / (max - min)] + 1
-                                 afCorrValues[nCorrCounter] = ((fMin
-                                       - afCorrValues[nCorrCounter]) / (fMax
-                                       - fMin)) + 1;
+                                    // Interpolate values from 0 to 1 between fMin and fMax, where 0 in this case indicates a higher correlation level
+                                    // x_normalized = [(min-x) / (max - min)] + 1
+                                    afCorrValues[nCorrCounter] = ((fMin
+                                          - afCorrValues[nCorrCounter]) / (fMax
+                                          - fMin)) + 1;
 
-                                 //                              std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                                    //                              std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
-                                 // Paint pixel in gray-scale correlation map
-                                 nValue = (int) (afCorrValues[nCorrCounter]
-                                       * 255.0); // normalized correlation value for a grayscale
-                                 m_corrMapImage->setPixel(x, y, nValue);
-                                 nCorrCounter++;
-                              }
-                           //                           std::cout << std::endl;
-                        }
+                                    // Paint pixel in gray-scale correlation map
+                                    nValue = (int) (afCorrValues[nCorrCounter]
+                                          * 255.0); // normalized correlation value for a grayscale
+                                    m_corrMapImage->setPixel(x, y, nValue);
+                                    nCorrCounter++;
+                                 }
+                              //                           std::cout << std::endl;
+                           }
                   }
                break;
 
@@ -1135,10 +1173,10 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
                // update search window or set final correlation value
                if (n)
                   { // set search window for next pyramid level
-                  //                  xI = MAX(0, 2 * rnDx - n);
-                  //                  yI = MAX(0, 2 * rnDy - n);
-                  //                  nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
-                  //                  nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
+                     //                  xI = MAX(0, 2 * rnDx - n);
+                     //                  yI = MAX(0, 2 * rnDy - n);
+                     //                  nXTraverse = MIN(2 * nWI, 2 * rnDx + n);
+                     //                  nYTraverse = MIN(2 * nHI, 2 * rnDy + n);
                   }
                else
                   { // set correlation value at final level
@@ -1146,28 +1184,29 @@ Qcorr::findCorrelation(const unsigned char * imgTarget, const int nWI,
 
                      nCorrCounter = 0; // Reset nCorrCounter before it starts counting again
 
-                     // The correlation values stored in the array afCorrValues are already normalized
-                     // there is no need to divide by the square root of the powers
-                     for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
-                        { // visit rows
-                           for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
-                              { // visit columns
-                                 // Interpolate values from 0 to 1 between fMin and fMax
-                                 // x_normalized = (x - min) / (max - min)
-                                 if (afCorrValues[nCorrCounter] <= 0.0)
-                                    afCorrValues[nCorrCounter] = 0.0; // Lowest normalized value. There is no correlation match
-                                 // All other values are already normalized between 0 and 1
+                     if (!m_bHasCorrMap) // Don't destroy previous correlation image if existing
+                        // The correlation values stored in the array afCorrValues are already normalized
+                        // there is no need to divide by the square root of the powers
+                        for (y = 0; y <= nYTraverse; y++) // Traverses the height until the template's bottom is sitting on the bottom edge of the target
+                           { // visit rows
+                              for (x = 0 + nInitialXPosition; x <= nXTraverse; x++) // Traverses the width until the template's right edge is on the right edge of the target
+                                 { // visit columns
+                                    // Interpolate values from 0 to 1 between fMin and fMax
+                                    // x_normalized = (x - min) / (max - min)
+                                    if (afCorrValues[nCorrCounter] <= 0.0)
+                                       afCorrValues[nCorrCounter] = 0.0; // Lowest normalized value. There is no correlation match
+                                    // All other values are already normalized between 0 and 1
 
-                                 //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
+                                    //                           std::cout << nCorrCounter << ": " << afCorrValues[nCorrCounter] << " | ";
 
-                                 // Paint pixel in gray-scale correlation map
-                                 nValue = (int) (afCorrValues[nCorrCounter]
-                                       * 255.0); // normalized correlation value for a grayscale
-                                 m_corrMapImage->setPixel(x, y, nValue);
-                                 nCorrCounter++;
-                              }
-                           //                        std::cout << std::endl;
-                        }
+                                    // Paint pixel in gray-scale correlation map
+                                    nValue = (int) (afCorrValues[nCorrCounter]
+                                          * 255.0); // normalized correlation value for a grayscale
+                                    m_corrMapImage->setPixel(x, y, nValue);
+                                    nCorrCounter++;
+                                 }
+                              //                        std::cout << std::endl;
+                           }
                   }
                break;
                //
