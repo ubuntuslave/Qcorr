@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="dir_2dc80499ebc7eaf8be3781784a0d4e84" kind="dir">
+    <compoundname>src/</compoundname>
+    <innerfile refid="controlswindow_8cpp">controlswindow.cpp</innerfile>
+    <innerfile refid="controlswindow_8h">controlswindow.h</innerfile>
+    <innerfile refid="corrmethod_8cpp">corrmethod.cpp</innerfile>
+    <innerfile refid="corrmethod_8h">corrmethod.h</innerfile>
+    <innerfile refid="globals_8h">globals.h</innerfile>
+    <innerfile refid="imgLabel_8cpp">imgLabel.cpp</innerfile>
+    <innerfile refid="imgLabel_8h">imgLabel.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="qcorr_8cpp">qcorr.cpp</innerfile>
+    <innerfile refid="qcorr_8h">qcorr.h</innerfile>
+    <innerfile refid="targetImgLabel_8cpp">targetImgLabel.cpp</innerfile>
+    <innerfile refid="targetImgLabel_8h">targetImgLabel.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/"/>
+  </compounddef>
+</doxygen>

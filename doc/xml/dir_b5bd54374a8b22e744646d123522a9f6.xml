@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="dir_b5bd54374a8b22e744646d123522a9f6" kind="dir">
+    <compoundname>debug/</compoundname>
+    <innerfile refid="moc__controlswindow_8cpp">moc_controlswindow.cpp</innerfile>
+    <innerfile refid="moc__corrmethod_8cpp">moc_corrmethod.cpp</innerfile>
+    <innerfile refid="moc__imgLabel_8cpp">moc_imgLabel.cpp</innerfile>
+    <innerfile refid="moc__qcorr_8cpp">moc_qcorr.cpp</innerfile>
+    <innerfile refid="moc__targetImgLabel_8cpp">moc_targetImgLabel.cpp</innerfile>
+    <innerfile refid="moc__test_8cpp">moc_test.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/debug/"/>
+  </compounddef>
+</doxygen>

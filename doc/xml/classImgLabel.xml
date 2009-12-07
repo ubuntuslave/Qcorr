@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classImgLabel" kind="class" prot="public">
+    <compoundname>ImgLabel</compoundname>
+    <includes refid="imgLabel_8h" local="no">src/imgLabel.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classImgLabel_1e86bc9b92f374c5f78097881af49364d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Qcorr</definition>
+        <argsstring></argsstring>
+        <name>Qcorr</name>
+        <briefdescription>
+<para><ref refid="classQcorr" kindref="compound">Qcorr</ref> is a friend class of this <ref refid="classImgLabel" kindref="compound">ImgLabel</ref> class, so all members from <ref refid="classImgLabel" kindref="compound">ImgLabel</ref> are accessible by a <ref refid="classQcorr" kindref="compound">Qcorr</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" prot="private" static="no" mutable="no">
+        <type><ref refid="classQcorr" kindref="compound">Qcorr</ref> *</type>
+        <definition>Qcorr* ImgLabel::m_parentWindow</definition>
+        <argsstring></argsstring>
+        <name>m_parentWindow</name>
+        <briefdescription>
+<para>Pointer to Main Window Object (There should be only one on these). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="44" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" compoundref="imgLabel_8cpp" startline="302" endline="311">displayCoordinatesOnStatusLabel</referencedby>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" prot="private" static="no" mutable="no">
+        <type>QRubberBand *</type>
+        <definition>QRubberBand* ImgLabel::m_rubberBand</definition>
+        <argsstring></argsstring>
+        <name>m_rubberBand</name>
+        <briefdescription>
+<para>the rubberBand object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="46" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+        <referencedby refid="classImgLabel_13e5988fc63515a300e69593c9236e126" compoundref="imgLabel_8cpp" startline="43" endline="55">setSelectable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_originPoint</definition>
+        <argsstring></argsstring>
+        <name>m_originPoint</name>
+        <briefdescription>
+<para>rubberBand&apos;s top-left corner point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="47" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_finalPoint</definition>
+        <argsstring></argsstring>
+        <name>m_finalPoint</name>
+        <briefdescription>
+<para>rubberBand&apos;s bottom-right corner point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="48" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_124136f0f97b3f157721c07091a8261ac" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_currentPressedPoint</definition>
+        <argsstring></argsstring>
+        <name>m_currentPressedPoint</name>
+        <briefdescription>
+<para>the coordinates of the current mouse pointer when it&apos;s pressed (held-down) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="49" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_labelUpperLeftCornerPoint</definition>
+        <argsstring></argsstring>
+        <name>m_labelUpperLeftCornerPoint</name>
+        <briefdescription>
+<para>Top-left corner of the label. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="51" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_labelLowerRightCornerPoint</definition>
+        <argsstring></argsstring>
+        <name>m_labelLowerRightCornerPoint</name>
+        <briefdescription>
+<para>Bottom-right corner of the label. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" compoundref="qcorr_8cpp" startline="1247" endline="1254">Qcorr::displayImageLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1d58eb83a86663876080a2e24ad016b39" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_mousePosPoint1</definition>
+        <argsstring></argsstring>
+        <name>m_mousePosPoint1</name>
+        <briefdescription>
+<para>First mouse position point of the template selection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="53" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint ImgLabel::m_mousePosPoint2</definition>
+        <argsstring></argsstring>
+        <name>m_mousePosPoint2</name>
+        <briefdescription>
+<para>Final mouse position point of the template selection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="54" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseIsPressed</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseIsPressed</name>
+        <briefdescription>
+<para>indicates whether the mouse is currently being pressed (held-down) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="56" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_145fe85b4d6b6da14b556c13284624145" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bStartedTemplateSelection</definition>
+        <argsstring></argsstring>
+        <name>m_bStartedTemplateSelection</name>
+        <briefdescription>
+<para>indicates whether the template selection has begun </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="57" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1990abf371f11243a65aa323bfad1cf10" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseInTemplateRegion</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseInTemplateRegion</name>
+        <briefdescription>
+<para>indicates whether the mouse pointer is inside the rubberBand selection area </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="58" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseAtTemplateTopEdge</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseAtTemplateTopEdge</name>
+        <briefdescription>
+<para>indicates whether the mouse pointer is at the top edge of the rubberBand selection area </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="59" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_16d005e4bb487858c70d4d14564e4a095" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseAtTemplateBottomEdge</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseAtTemplateBottomEdge</name>
+        <briefdescription>
+<para>indicates whether the mouse pointer is at the bottom edge of the rubberBand selection area </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="60" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1921c1163775a86236d44d84e11172177" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseAtTemplateLeftEdge</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseAtTemplateLeftEdge</name>
+        <briefdescription>
+<para>indicates whether the mouse pointer is at the left edge of the rubberBand selection area </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="61" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bMouseAtTemplateRightEdge</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseAtTemplateRightEdge</name>
+        <briefdescription>
+<para>indicates whether the mouse pointer is at the right edge of the rubberBand selection area </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="62" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ImgLabel::m_bHasRubberBand</definition>
+        <argsstring></argsstring>
+        <name>m_bHasRubberBand</name>
+        <briefdescription>
+<para>indicates whether the rubberBand is enabled/disabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="63" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" compoundref="imgLabel_8cpp" startline="302" endline="311">displayCoordinatesOnStatusLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" compoundref="imgLabel_8cpp" startline="58" endline="84">mousePressEvent</referencedby>
+        <referencedby refid="classImgLabel_13e5988fc63515a300e69593c9236e126" compoundref="imgLabel_8cpp" startline="43" endline="55">setSelectable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ImgLabel::m_nXNewPos</definition>
+        <argsstring></argsstring>
+        <name>m_nXNewPos</name>
+        <briefdescription>
+<para>X-value used in the rubberBand movement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="65" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classImgLabel_12060dad81295d4e6f87328108f97d15f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ImgLabel::m_nYNewPos</definition>
+        <argsstring></argsstring>
+        <name>m_nYNewPos</name>
+        <briefdescription>
+<para>Y-value used in the rubberBand movement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="66" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classImgLabel_169e37830ecfccbd824166d03fc9c248d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ImgLabel::ImgLabel</definition>
+        <argsstring>(Qcorr *parentWindow, QWidget *parent=0)</argsstring>
+        <name>ImgLabel</name>
+        <param>
+          <type><ref refid="classQcorr" kindref="compound">Qcorr</ref> *</type>
+          <declname>parentWindow</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor of <ref refid="classImgLabel" kindref="compound">ImgLabel</ref> class must point to a <ref refid="classQcorr" kindref="compound">Qcorr</ref> parentWindow. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="30" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="13" bodyend="35"/>
+        <references refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" compoundref="imgLabel_8h" startline="56">m_bMouseIsPressed</references>
+        <references refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" compoundref="imgLabel_8h" startline="57">m_bStartedTemplateSelection</references>
+        <references refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" compoundref="imgLabel_8h" startline="51">m_labelUpperLeftCornerPoint</references>
+        <references refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" compoundref="imgLabel_8h" startline="44">m_parentWindow</references>
+        <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
+        <references refid="classImgLabel_13e5988fc63515a300e69593c9236e126" compoundref="imgLabel_8cpp" startline="43" endline="55">setSelectable</references>
+        <references refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</references>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_14ba71a5a8438c6cf030491a26e94d19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ImgLabel::~ImgLabel</definition>
+        <argsstring>()</argsstring>
+        <name>~ImgLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="33" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_13e5988fc63515a300e69593c9236e126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::setSelectable</definition>
+        <argsstring>(bool bHasRubberBand)</argsstring>
+        <name>setSelectable</name>
+        <param>
+          <type>bool</type>
+          <declname>bHasRubberBand</declname>
+        </param>
+        <briefdescription>
+<para>Allows to enable/disable the ImgLabel&apos;s rubberBand selection functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bHasRubberBand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean flag to enable or disable the rubberBand selection functionality. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="39" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="43" bodyend="55"/>
+        <references refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" compoundref="imgLabel_8h" startline="63">m_bHasRubberBand</references>
+        <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::setTemplateFlags</definition>
+        <argsstring>(bool bStatus)</argsstring>
+        <name>setTemplateFlags</name>
+        <param>
+          <type>bool</type>
+          <declname>bStatus</declname>
+        </param>
+        <briefdescription>
+<para>Sets a group of flags used for the mouse pointer in relation to the template&apos;s region and edges. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>template region&apos;s status </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="72" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="257" bodyend="264"/>
+        <references refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" compoundref="imgLabel_8h" startline="60">m_bMouseAtTemplateBottomEdge</references>
+        <references refid="classImgLabel_1921c1163775a86236d44d84e11172177" compoundref="imgLabel_8h" startline="61">m_bMouseAtTemplateLeftEdge</references>
+        <references refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" compoundref="imgLabel_8h" startline="62">m_bMouseAtTemplateRightEdge</references>
+        <references refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" compoundref="imgLabel_8h" startline="59">m_bMouseAtTemplateTopEdge</references>
+        <references refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" compoundref="imgLabel_8h" startline="58">m_bMouseInTemplateRegion</references>
+        <referencedby refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</referencedby>
+        <referencedby refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" compoundref="imgLabel_8cpp" startline="13" endline="35">ImgLabel</referencedby>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_1a71c0202c48be349b4fb0813891df43a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::checkTemplateRegions</definition>
+        <argsstring>(int mouseX, int mouseY)</argsstring>
+        <name>checkTemplateRegions</name>
+        <param>
+          <type>int</type>
+          <declname>mouseX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mouseY</declname>
+        </param>
+        <briefdescription>
+<para>Used to check the mouse pointer in relation to the template&apos;s region and edges. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mouseX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-coordinates of the mouse pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mouseY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-coordinates of the mouse pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="79" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="267" bodyend="299"/>
+        <references refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" compoundref="imgLabel_8h" startline="60">m_bMouseAtTemplateBottomEdge</references>
+        <references refid="classImgLabel_1921c1163775a86236d44d84e11172177" compoundref="imgLabel_8h" startline="61">m_bMouseAtTemplateLeftEdge</references>
+        <references refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" compoundref="imgLabel_8h" startline="62">m_bMouseAtTemplateRightEdge</references>
+        <references refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" compoundref="imgLabel_8h" startline="59">m_bMouseAtTemplateTopEdge</references>
+        <references refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" compoundref="imgLabel_8h" startline="58">m_bMouseInTemplateRegion</references>
+        <references refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" compoundref="imgLabel_8h" startline="48">m_finalPoint</references>
+        <references refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" compoundref="imgLabel_8h" startline="47">m_originPoint</references>
+        <references refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</references>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+        <referencedby refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" compoundref="imgLabel_8cpp" startline="240" endline="254">mouseReleaseEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::displayCoordinatesOnStatusLabel</definition>
+        <argsstring>(QPoint &amp;point0, QPoint &amp;point1)</argsstring>
+        <name>displayCoordinatesOnStatusLabel</name>
+        <param>
+          <type>QPoint &amp;</type>
+          <declname>point0</declname>
+        </param>
+        <param>
+          <type>QPoint &amp;</type>
+          <declname>point1</declname>
+        </param>
+        <briefdescription>
+<para>Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates of the mouse pointer (relative to the <ref refid="classImgLabel" kindref="compound">ImgLabel</ref>) in the status bar of the friend-parent&apos;s main window. It only display the mouse pointer coordinate information if rubberBand actions are enabled. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the coordinates of the origin point of the rubberBand selection </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the coordinates of the final point of the rubberBand selection </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="87" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="302" bodyend="311"/>
+        <references refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" compoundref="imgLabel_8h" startline="63">m_bHasRubberBand</references>
+        <references refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" compoundref="imgLabel_8h" startline="44">m_parentWindow</references>
+        <references refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" compoundref="qcorr_8h" startline="216">Qcorr::m_status_label</references>
+        <referencedby refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" compoundref="imgLabel_8cpp" startline="87" endline="237">mouseMoveEvent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::mousePressEvent</definition>
+        <argsstring>(QMouseEvent *event)</argsstring>
+        <name>mousePressEvent</name>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>press mouse event handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="91" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="58" bodyend="84"/>
+        <references refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" compoundref="imgLabel_8h" startline="63">m_bHasRubberBand</references>
+        <references refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" compoundref="imgLabel_8h" startline="56">m_bMouseIsPressed</references>
+        <references refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" compoundref="imgLabel_8h" startline="57">m_bStartedTemplateSelection</references>
+        <references refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" compoundref="imgLabel_8h" startline="49">m_currentPressedPoint</references>
+        <references refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" compoundref="imgLabel_8h" startline="53">m_mousePosPoint1</references>
+        <references refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" compoundref="imgLabel_8h" startline="47">m_originPoint</references>
+        <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::mouseMoveEvent</definition>
+        <argsstring>(QMouseEvent *event)</argsstring>
+        <name>mouseMoveEvent</name>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>move mouse event handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="93" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="87" bodyend="237"/>
+        <references refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</references>
+        <references refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" compoundref="imgLabel_8cpp" startline="302" endline="311">displayCoordinatesOnStatusLabel</references>
+        <references refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" compoundref="imgLabel_8h" startline="63">m_bHasRubberBand</references>
+        <references refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" compoundref="imgLabel_8h" startline="60">m_bMouseAtTemplateBottomEdge</references>
+        <references refid="classImgLabel_1921c1163775a86236d44d84e11172177" compoundref="imgLabel_8h" startline="61">m_bMouseAtTemplateLeftEdge</references>
+        <references refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" compoundref="imgLabel_8h" startline="62">m_bMouseAtTemplateRightEdge</references>
+        <references refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" compoundref="imgLabel_8h" startline="59">m_bMouseAtTemplateTopEdge</references>
+        <references refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" compoundref="imgLabel_8h" startline="58">m_bMouseInTemplateRegion</references>
+        <references refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" compoundref="imgLabel_8h" startline="56">m_bMouseIsPressed</references>
+        <references refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" compoundref="imgLabel_8h" startline="57">m_bStartedTemplateSelection</references>
+        <references refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" compoundref="imgLabel_8h" startline="49">m_currentPressedPoint</references>
+        <references refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" compoundref="imgLabel_8h" startline="48">m_finalPoint</references>
+        <references refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" compoundref="imgLabel_8h" startline="52">m_labelLowerRightCornerPoint</references>
+        <references refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" compoundref="imgLabel_8h" startline="51">m_labelUpperLeftCornerPoint</references>
+        <references refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" compoundref="imgLabel_8h" startline="53">m_mousePosPoint1</references>
+        <references refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" compoundref="imgLabel_8h" startline="54">m_mousePosPoint2</references>
+        <references refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" compoundref="imgLabel_8h" startline="65">m_nXNewPos</references>
+        <references refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" compoundref="imgLabel_8h" startline="66">m_nYNewPos</references>
+        <references refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" compoundref="imgLabel_8h" startline="47">m_originPoint</references>
+        <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
+        <references refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" compoundref="imgLabel_8cpp" startline="257" endline="264">setTemplateFlags</references>
+      </memberdef>
+      <memberdef kind="function" id="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImgLabel::mouseReleaseEvent</definition>
+        <argsstring>(QMouseEvent *event)</argsstring>
+        <name>mouseReleaseEvent</name>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>release mouse event handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="95" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp" bodystart="240" bodyend="254"/>
+        <references refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" compoundref="imgLabel_8cpp" startline="267" endline="299">checkTemplateRegions</references>
+        <references refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" compoundref="imgLabel_8h" startline="56">m_bMouseIsPressed</references>
+        <references refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" compoundref="imgLabel_8h" startline="57">m_bStartedTemplateSelection</references>
+        <references refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" compoundref="imgLabel_8h" startline="48">m_finalPoint</references>
+        <references refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" compoundref="imgLabel_8h" startline="47">m_originPoint</references>
+        <references refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" compoundref="imgLabel_8h" startline="46">m_rubberBand</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel. </para>    </briefdescription>
+    <detaileddescription>
+<para>A sub-classed label widget implemented with the purpose of displaying the reference image on the left panel with added functionality such as the rubberBand selection and coordinate tracking of the mouse pointer. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="31">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="26">
+        <label>Qcorr</label>
+        <link refid="classQcorr"/>
+        <childnode refid="27" relation="private-inheritance">
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>m_leftImage_label</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_corrMethodDialog</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_targetImage_label</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>m_controlsWindow</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ImgLabel</label>
+        <link refid="classImgLabel"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_parentWindow</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Ui_QcorrClass</label>
+      </node>
+      <node id="35">
+        <label>Ui_ControlsWindowClass</label>
+      </node>
+      <node id="32">
+        <label>TargetImgLabel</label>
+        <link refid="classTargetImgLabel"/>
+      </node>
+      <node id="27">
+        <label>Ui::QcorrClass</label>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>CorrMethod</label>
+        <link refid="classCorrMethod"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>ui</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ControlsWindow</label>
+        <link refid="classControlsWindow"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_parentWindow</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>ui</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Ui::ControlsWindowClass</label>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" line="26" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.h" bodystart="25" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>checkTemplateRegions</name></member>
+      <member refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>displayCoordinatesOnStatusLabel</name></member>
+      <member refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" prot="public" virt="non-virtual"><scope>ImgLabel</scope><name>ImgLabel</name></member>
+      <member refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bHasRubberBand</name></member>
+      <member refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseAtTemplateBottomEdge</name></member>
+      <member refid="classImgLabel_1921c1163775a86236d44d84e11172177" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseAtTemplateLeftEdge</name></member>
+      <member refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseAtTemplateRightEdge</name></member>
+      <member refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseAtTemplateTopEdge</name></member>
+      <member refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseInTemplateRegion</name></member>
+      <member refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bMouseIsPressed</name></member>
+      <member refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_bStartedTemplateSelection</name></member>
+      <member refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_currentPressedPoint</name></member>
+      <member refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_finalPoint</name></member>
+      <member refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_labelLowerRightCornerPoint</name></member>
+      <member refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_labelUpperLeftCornerPoint</name></member>
+      <member refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_mousePosPoint1</name></member>
+      <member refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_mousePosPoint2</name></member>
+      <member refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_nXNewPos</name></member>
+      <member refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_nYNewPos</name></member>
+      <member refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_originPoint</name></member>
+      <member refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_parentWindow</name></member>
+      <member refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>m_rubberBand</name></member>
+      <member refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" prot="protected" virt="non-virtual"><scope>ImgLabel</scope><name>mouseMoveEvent</name></member>
+      <member refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" prot="protected" virt="non-virtual"><scope>ImgLabel</scope><name>mousePressEvent</name></member>
+      <member refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" prot="protected" virt="non-virtual"><scope>ImgLabel</scope><name>mouseReleaseEvent</name></member>
+      <member refid="classImgLabel_1e86bc9b92f374c5f78097881af49364d" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>Qcorr</name></member>
+      <member refid="classImgLabel_13e5988fc63515a300e69593c9236e126" prot="public" virt="non-virtual"><scope>ImgLabel</scope><name>setSelectable</name></member>
+      <member refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" prot="private" virt="non-virtual"><scope>ImgLabel</scope><name>setTemplateFlags</name></member>
+      <member refid="classImgLabel_14ba71a5a8438c6cf030491a26e94d19c" prot="public" virt="virtual"><scope>ImgLabel</scope><name>~ImgLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

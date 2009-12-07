@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="imgLabel_8cpp" kind="file">
+    <compoundname>imgLabel.cpp</compoundname>
+    <includes local="no">QtGui</includes>
+    <includes refid="imgLabel_8h" local="yes">imgLabel.h</includes>
+    <includes refid="qcorr_8h" local="yes">qcorr.h</includes>
+    <incdepgraph>
+      <node id="123">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="120">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="106">
+        <label>QtGui/QMainWindow</label>
+      </node>
+      <node id="129">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="112">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="126">
+        <label>corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>QtGui/QSpinBox</label>
+      </node>
+      <node id="107">
+        <label>../ui_qcorr.h</label>
+        <link refid="ui__qcorr_8h-source"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>QtGui/QLineEdit</label>
+      </node>
+      <node id="131">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="110">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="118">
+        <label>QtGui/QPushButton</label>
+      </node>
+      <node id="127">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="101">
+        <label>src/imgLabel.cpp</label>
+        <link refid="imgLabel.cpp"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="135">
+        <label>QtCore/QVector</label>
+      </node>
+      <node id="124">
+        <label>QtGui/QWidget</label>
+      </node>
+      <node id="117">
+        <label>QtGui/QMenuBar</label>
+      </node>
+      <node id="121">
+        <label>QtGui/QSplitter</label>
+      </node>
+      <node id="125">
+        <label>targetImgLabel.h</label>
+        <link refid="targetImgLabel_8h-source"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="109">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="130">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="119">
+        <label>QtGui/QScrollArea</label>
+      </node>
+      <node id="136">
+        <label>QtGui/QRgb</label>
+      </node>
+      <node id="116">
+        <label>QtGui/QMenu</label>
+      </node>
+      <node id="105">
+        <label>qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="132">
+        <label>controlswindow.h</label>
+        <link refid="controlswindow_8h-source"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>../ui_controlswindow.h</label>
+        <link refid="ui__controlswindow_8h-source"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>QtGui/QStatusBar</label>
+      </node>
+      <node id="103">
+        <label>imgLabel.h</label>
+        <link refid="imgLabel_8h-source"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>QtGui</label>
+      </node>
+      <node id="114">
+        <label>QtGui/QHeaderView</label>
+      </node>
+      <node id="113">
+        <label>QtGui/QHBoxLayout</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>imgLabel.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>11,<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>carlos</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;imgLabel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;qcorr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" refkind="member"><highlight class="normal"><ref refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" kindref="member" tooltip="Constructor of ImgLabel class must point to a Qcorr parentWindow.">ImgLabel::ImgLabel</ref>(<ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>*parentWindow,<sp/>QWidget<sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>QLabel(parent)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" kindref="member" tooltip="Pointer to Main Window Object (There should be only one on these).">m_parentWindow</ref><sp/>=<sp/>parentWindow;<sp/></highlight><highlight class="comment">//<sp/>Point<sp/>to<sp/>the<sp/>Qcorr<sp/>MainWindow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QRubberBand(QRubberBand::Rectangle,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>m_rubberBand-&gt;setCursor(Qt::CrossCursor);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>this-&gt;<ref refid="classImgLabel_13e5988fc63515a300e69593c9236e126" kindref="member" tooltip="Allows to enable/disable the ImgLabel&amp;#39;s rubberBand selection functionality.">setSelectable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setMouseTracking(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_13e5988fc63515a300e69593c9236e126" kindref="member" tooltip="Allows to enable/disable the ImgLabel&amp;#39;s rubberBand selection functionality.">setSelectable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kindref="member" tooltip="indicates whether the mouse is currently being pressed (held-down)">m_bMouseIsPressed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">setTemplateFlags</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref><sp/>=<sp/>QPoint(0,<sp/>0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m_labelLowerRightCornerPoint<sp/>must<sp/>be<sp/>RESET<sp/>from<sp/>the<sp/>parent<sp/>(since<sp/>the<sp/>label<sp/>size<sp/>can<sp/>dynamically<sp/>change)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>m_labelUpperLeftCornerPoint<sp/>=<sp/>QPoint(this-&gt;width(),<sp/>this-&gt;height());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">ImgLabel::~ImgLabel()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classImgLabel_13e5988fc63515a300e69593c9236e126" refkind="member"><highlight class="normal"><ref refid="classImgLabel_13e5988fc63515a300e69593c9236e126" kindref="member" tooltip="Allows to enable/disable the ImgLabel&amp;#39;s rubberBand selection functionality.">ImgLabel::setSelectable</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bHasRubberBand)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>needs<sp/>reviewing<sp/>(it&apos;s<sp/>just<sp/>a<sp/>place<sp/>holder<sp/>for<sp/>now)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref><sp/>=<sp/>bHasRubberBand;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::CrossCursor);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::ArrowCursor);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;hide();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" refkind="member"><highlight class="normal"><ref refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" kindref="member" tooltip="press mouse event handler">ImgLabel::mousePressEvent</ref>(QMouseEvent<sp/>*event)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kindref="member" tooltip="indicates whether the mouse is currently being pressed (held-down)">m_bMouseIsPressed</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kindref="member" tooltip="First mouse position point of the template selection.">m_mousePosPoint1</ref>.setX(-1);<sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>flag<sp/>used<sp/>to<sp/>know<sp/>when<sp/>the<sp/>mouse<sp/>is<sp/>being<sp/>dragged<sp/>around</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;isHidden()<sp/>&amp;&amp;<sp/>(<ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>,<sp/>QSize()));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::CrossCursor);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::ArrowCursor);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::CrossCursor);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;hide();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/>update();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" refkind="member"><highlight class="normal"><ref refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" kindref="member" tooltip="move mouse event handler">ImgLabel::mouseMoveEvent</ref>(QMouseEvent<sp/>*event)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kindref="member" tooltip="indicates whether the mouse is currently being pressed (held-down)">m_bMouseIsPressed</ref><sp/>&amp;&amp;<sp/><ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;show();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/>newOriginPoint<sp/>=<sp/>QPoint(0,<sp/>0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kindref="member" tooltip="First mouse position point of the template selection.">m_mousePosPoint1</ref>.x()<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kindref="member" tooltip="First mouse position point of the template selection.">m_mousePosPoint1</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos();<sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>to<sp/>the<sp/>position<sp/>of<sp/>the<sp/>mouse<sp/>position<sp/>when<sp/>it&apos;s<sp/>dragged<sp/>for<sp/>the<sp/>first<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" kindref="member" tooltip="Final mouse position point of the template selection.">m_mousePosPoint2</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/>offsetPoint<sp/>=<sp/><ref refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kindref="member" tooltip="First mouse position point of the template selection.">m_mousePosPoint1</ref><sp/>-<sp/><ref refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" kindref="member" tooltip="Final mouse position point of the template selection.">m_mousePosPoint2</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint<sp/>=<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref><sp/>-<sp/>offsetPoint;<sp/></highlight><highlight class="comment">//m_currentPressedPoint<sp/>-<sp/>(m_finalPoint<sp/>-<sp/>event-&gt;pos());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QPoint<sp/>movedFinalPoint;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movedFinalPoint.setX(newOriginPoint.x()</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;width());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movedFinalPoint.setY(newOriginPoint.y()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;height());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>new<sp/>template&apos;s<sp/>position<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.x()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.x())</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(movedFinalPoint.x()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.x()))</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kindref="member" tooltip="X-value used in the rubberBand movement.">m_nXNewPos</ref><sp/>=<sp/>newOriginPoint.x();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.y()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.y())</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(movedFinalPoint.y()</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.y()))</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kindref="member" tooltip="Y-value used in the rubberBand movement.">m_nYNewPos</ref><sp/>=<sp/>newOriginPoint.y();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint.setX(<ref refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kindref="member" tooltip="X-value used in the rubberBand movement.">m_nXNewPos</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint.setY(<ref refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kindref="member" tooltip="Y-value used in the rubberBand movement.">m_nYNewPos</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;move(newOriginPoint);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(newOriginPoint,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movedFinalPoint);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kindref="member" tooltip="indicates whether the mouse pointer is at the top edge of the rubberBand selection...">m_bMouseAtTemplateTopEdge</ref>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint<sp/>=<sp/>QPoint(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.x(),<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().y());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>new<sp/>template&apos;s<sp/>size<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.y()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.y())</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(newOriginPoint.y()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.y()))</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(newOriginPoint,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>).normalized());</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(newOriginPoint,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kindref="member" tooltip="indicates whether the mouse pointer is at the bottom edge of the rubberBand selection...">m_bMouseAtTemplateBottomEdge</ref>)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint<sp/>=<sp/>QPoint(<ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.x(),<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().y());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>new<sp/>template&apos;s<sp/>size<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.y()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.y())</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(newOriginPoint.y()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.y()))</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint).normalized());</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1921c1163775a86236d44d84e11172177" kindref="member" tooltip="indicates whether the mouse pointer is at the left edge of the rubberBand selection...">m_bMouseAtTemplateLeftEdge</ref>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint<sp/>=<sp/>QPoint(event-&gt;pos().x(),<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.y());</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>new<sp/>template&apos;s<sp/>size<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.x()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.x())</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(newOriginPoint.x()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.x()))</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(newOriginPoint,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>).normalized());</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(newOriginPoint,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kindref="member" tooltip="indicates whether the mouse pointer is at the right edge of the rubberBand selection...">m_bMouseAtTemplateRightEdge</ref>)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint<sp/>=<sp/>QPoint(event-&gt;pos().x(),<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.y());</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>new<sp/>template&apos;s<sp/>size<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((newOriginPoint.x()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.x())</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(newOriginPoint.x()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.x()))</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint).normalized());</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newOriginPoint);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="comment">//<sp/>Making<sp/>a<sp/>selection<sp/>with<sp/>the<sp/>rubber<sp/>band</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>rubber-band<sp/>selection<sp/>to<sp/>be<sp/>within<sp/>the<sp/>label&apos;s<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((event-&gt;pos().x()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.x())</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(event-&gt;pos().x()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.x()))</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kindref="member" tooltip="X-value used in the rubberBand movement.">m_nXNewPos</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().x();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((event-&gt;pos().y()<sp/>&gt;=<sp/><ref refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kindref="member" tooltip="Top-left corner of the label.">m_labelUpperLeftCornerPoint</ref>.y())</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(event-&gt;pos().y()<sp/>&lt;=<sp/><ref refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kindref="member" tooltip="Bottom-right corner of the label.">m_labelLowerRightCornerPoint</ref>.y()))</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kindref="member" tooltip="Y-value used in the rubberBand movement.">m_nYNewPos</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().y();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_finalPoint<sp/>=<sp/>event-&gt;pos();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.setX(<ref refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kindref="member" tooltip="X-value used in the rubberBand movement.">m_nXNewPos</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.setY(<ref refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kindref="member" tooltip="Y-value used in the rubberBand movement.">m_nYNewPos</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;setGeometry(QRect(<ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref>,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>).normalized());</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">setTemplateFlags</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(<ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref>,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;isVisible())</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" kindref="member" tooltip="Used to check the mouse pointer in relation to the template&amp;#39;s region and edges...">checkTemplateRegions</ref>(event-&gt;pos().x(),<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().y());</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">displayCoordinatesOnStatusLabel</ref>(<ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref>,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kindref="member" tooltip="the coordinates of the current mouse pointer when it&amp;#39;s pressed (held-down)">m_currentPressedPoint</ref>);<sp/></highlight><highlight class="comment">//<sp/>Show<sp/>mouse<sp/>moving<sp/>position<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">setTemplateFlags</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" refkind="member"><highlight class="normal"><ref refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" kindref="member" tooltip="release mouse event handler">ImgLabel::mouseReleaseEvent</ref>(QMouseEvent<sp/>*event)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kindref="member" tooltip="indicates whether the mouse is currently being pressed (held-down)">m_bMouseIsPressed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kindref="member" tooltip="indicates whether the template selection has begun">m_bStartedTemplateSelection</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;isVisible())</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Obtain<sp/>actual<sp/>origin<sp/>and<sp/>final<sp/>Points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref><sp/>=<sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;pos();<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>new<sp/>position<sp/>of<sp/>the<sp/>Points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.setX(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.x()<sp/>+<sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;width());</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.setY(<ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.y()<sp/>+<sp/><ref refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kindref="member" tooltip="the rubberBand object.">m_rubberBand</ref>-&gt;height());</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" kindref="member" tooltip="Used to check the mouse pointer in relation to the template&amp;#39;s region and edges...">checkTemplateRegions</ref>(event-&gt;pos().x(),<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pos().y());</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" refkind="member"><highlight class="normal"><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">ImgLabel::setTemplateFlags</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bStatus)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref><sp/>=<sp/>bStatus;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kindref="member" tooltip="indicates whether the mouse pointer is at the top edge of the rubberBand selection...">m_bMouseAtTemplateTopEdge</ref><sp/>=<sp/>bStatus;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kindref="member" tooltip="indicates whether the mouse pointer is at the bottom edge of the rubberBand selection...">m_bMouseAtTemplateBottomEdge</ref><sp/>=<sp/>bStatus;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1921c1163775a86236d44d84e11172177" kindref="member" tooltip="indicates whether the mouse pointer is at the left edge of the rubberBand selection...">m_bMouseAtTemplateLeftEdge</ref><sp/>=<sp/>bStatus;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kindref="member" tooltip="indicates whether the mouse pointer is at the right edge of the rubberBand selection...">m_bMouseAtTemplateRightEdge</ref><sp/>=<sp/>bStatus;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" refkind="member"><highlight class="normal"><ref refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" kindref="member" tooltip="Used to check the mouse pointer in relation to the template&amp;#39;s region and edges...">ImgLabel::checkTemplateRegions</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouseX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouseY)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kindref="member" tooltip="indicates whether the mouse pointer is at the top edge of the rubberBand selection...">m_bMouseAtTemplateTopEdge</ref><sp/>=<sp/>(mouseY<sp/>==<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.y());</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kindref="member" tooltip="indicates whether the mouse pointer is at the bottom edge of the rubberBand selection...">m_bMouseAtTemplateBottomEdge</ref><sp/>=<sp/>(mouseY<sp/>==<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.y());</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1921c1163775a86236d44d84e11172177" kindref="member" tooltip="indicates whether the mouse pointer is at the left edge of the rubberBand selection...">m_bMouseAtTemplateLeftEdge</ref><sp/>=<sp/>(mouseX<sp/>==<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.x());</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><ref refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kindref="member" tooltip="indicates whether the mouse pointer is at the right edge of the rubberBand selection...">m_bMouseAtTemplateRightEdge</ref><sp/>=<sp/>(mouseX<sp/>==<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.x());</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hackish<sp/>way<sp/>of<sp/>changing<sp/>the<sp/>mouse<sp/>cursor<sp/>when<sp/>inside<sp/>the<sp/>QRubberBand<sp/>region:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((mouseX<sp/>&gt;<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.x())<sp/>&amp;&amp;<sp/>(mouseY<sp/>&gt;<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.y())<sp/>&amp;&amp;<sp/>(mouseX</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.x())<sp/>&amp;&amp;<sp/>(mouseY<sp/>&lt;<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.y()))<sp/>||<sp/></highlight><highlight class="comment">//<sp/>When<sp/>the<sp/>region<sp/>was<sp/>selected<sp/>from<sp/>bottom<sp/>to<sp/>top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((mouseX<sp/>&lt;<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.x())<sp/>&amp;&amp;<sp/>(mouseY<sp/>&lt;<sp/><ref refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kindref="member" tooltip="rubberBand&amp;#39;s top-left corner point">m_originPoint</ref>.y())</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(mouseX<sp/>&gt;<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.x())<sp/>&amp;&amp;<sp/>(mouseY<sp/>&gt;<sp/><ref refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kindref="member" tooltip="rubberBand&amp;#39;s bottom-right corner point">m_finalPoint</ref>.y())))</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::SizeAllCursor);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Change<sp/>the<sp/>cursor<sp/>at<sp/>the<sp/>edges:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1921c1163775a86236d44d84e11172177" kindref="member" tooltip="indicates whether the mouse pointer is at the left edge of the rubberBand selection...">m_bMouseAtTemplateLeftEdge</ref><sp/>||<sp/><ref refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kindref="member" tooltip="indicates whether the mouse pointer is at the right edge of the rubberBand selection...">m_bMouseAtTemplateRightEdge</ref>)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::SizeHorCursor);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kindref="member" tooltip="indicates whether the mouse pointer is at the top edge of the rubberBand selection...">m_bMouseAtTemplateTopEdge</ref><sp/>||<sp/><ref refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kindref="member" tooltip="indicates whether the mouse pointer is at the bottom edge of the rubberBand selection...">m_bMouseAtTemplateBottomEdge</ref>)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::SizeVerCursor);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kindref="member" tooltip="indicates whether the mouse pointer is inside the rubberBand selection area">m_bMouseInTemplateRegion</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;setCursor(Qt::CrossCursor);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kindref="member" tooltip="Sets a group of flags used for the mouse pointer in relation to the template&amp;#39;s...">setTemplateFlags</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" refkind="member"><highlight class="normal"><ref refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kindref="member" tooltip="Displays the XY-coordinates of the mouse pointer on the status bar Displays the XY-coordinates...">ImgLabel::displayCoordinatesOnStatusLabel</ref>(QPoint<sp/>&amp;point0,<sp/>QPoint<sp/>&amp;point1)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kindref="member" tooltip="indicates whether the rubberBand is enabled/disabled.">m_bHasRubberBand</ref>)<sp/></highlight><highlight class="comment">//<sp/>Only<sp/>display<sp/>the<sp/>mouse<sp/>pointer<sp/>coordinate<sp/>information<sp/>if<sp/>rubberBand<sp/>actions<sp/>are<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" kindref="member" tooltip="Pointer to Main Window Object (There should be only one on these).">m_parentWindow</ref>-&gt;<ref refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" kindref="member" tooltip="status label that updates the mouse-pointer&amp;#39;s position coordinates as it moves...">m_status_label</ref>-&gt;setText(</highlight><highlight class="stringliteral">&quot;Template:<sp/>(&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>QString::number(point0.x())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>QString::number(</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point0.y())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)px<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&lt;b&gt;<sp/>to<sp/>&lt;/b&gt;&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>QString::number(</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point1.x())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>QString::number(point1.y())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)px&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/imgLabel.cpp"/>
+  </compounddef>
+</doxygen>

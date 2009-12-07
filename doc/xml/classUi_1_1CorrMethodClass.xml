@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classUi_1_1CorrMethodClass" kind="class" prot="public">
+    <compoundname>Ui::CorrMethodClass</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Ui_CorrMethodClass</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="20">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="22">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="132" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="132" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classUi__CorrMethodClass_1c4d190aefc50d332cfdc73d7370f4ca2" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>buttonBox</name></member>
+      <member refid="classUi__CorrMethodClass_1b3e404afe1c6fafb99e02a2a9315e8d1" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>dialog_Frame</name></member>
+      <member refid="classUi__CorrMethodClass_1091300f07ee518675317d2001e486a42" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>method1_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_1cced16b55f7c8baa3c789435616c35c6" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>method2_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_1a260d1145f60cdc7137a93d50f66b2e9" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>method3_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_155e61e05e9ff340d17b08f7489e84039" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>methods_groupBox</name></member>
+      <member refid="classUi__CorrMethodClass_14ac1c93be0509c13a248873b5dd7e2fb" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>retranslateUi</name></member>
+      <member refid="classUi__CorrMethodClass_1dd008cc6d16e9265345255c6fbc2e0b5" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>selectMethod_label</name></member>
+      <member refid="classUi__CorrMethodClass_195a6bbb76de087aa2f8f5ea4780a4d09" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>setupUi</name></member>
+      <member refid="classUi__CorrMethodClass_1ab4f631b545d0545adde08190ecab6fa" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>verticalLayout</name></member>
+      <member refid="classUi__CorrMethodClass_1c98460426d7a9f1c1a2763d9e3c0c2ef" prot="public" virt="non-virtual"><scope>Ui::CorrMethodClass</scope><name>verticalSpacer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

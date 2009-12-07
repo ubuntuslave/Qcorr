@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classTargetImgLabel" kind="class" prot="public">
+    <compoundname>TargetImgLabel</compoundname>
+    <includes refid="targetImgLabel_8h" local="no">src/targetImgLabel.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" prot="private" static="no" mutable="no">
+        <type>QImage *</type>
+        <definition>QImage* TargetImgLabel::m_image</definition>
+        <argsstring></argsstring>
+        <name>m_image</name>
+        <briefdescription>
+<para>the right image (a.k.a target image) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="55" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+        <referencedby refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">setImage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" prot="private" static="no" mutable="no">
+        <type>QImage *</type>
+        <definition>QImage* TargetImgLabel::m_overlayImage</definition>
+        <argsstring></argsstring>
+        <name>m_overlayImage</name>
+        <briefdescription>
+<para>the overlaid correlation map image </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="56" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" compoundref="targetImgLabel_8cpp" startline="37" endline="45">overlayImage</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint TargetImgLabel::m_originPoint</definition>
+        <argsstring></argsstring>
+        <name>m_originPoint</name>
+        <briefdescription>
+<para>the point that indicates the top-left coordinates of the matching rectangle </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="57" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" compoundref="targetImgLabel_8cpp" startline="99" endline="108">drawEnclosedMatch</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize TargetImgLabel::m_rectSize</definition>
+        <argsstring></argsstring>
+        <name>m_rectSize</name>
+        <briefdescription>
+<para>the size of the enclosing match rectangle </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="58" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" compoundref="targetImgLabel_8cpp" startline="99" endline="108">drawEnclosedMatch</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TargetImgLabel::m_nXoffset</definition>
+        <argsstring></argsstring>
+        <name>m_nXoffset</name>
+        <briefdescription>
+<para>X offset for overlay image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="59" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" compoundref="targetImgLabel_8cpp" startline="37" endline="45">overlayImage</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TargetImgLabel::m_nYoffset</definition>
+        <argsstring></argsstring>
+        <name>m_nYoffset</name>
+        <briefdescription>
+<para>Y offset for overlay image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="60" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" compoundref="targetImgLabel_8cpp" startline="37" endline="45">overlayImage</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TargetImgLabel::m_bHasCorrResults</definition>
+        <argsstring></argsstring>
+        <name>m_bHasCorrResults</name>
+        <briefdescription>
+<para>indicates whether correlation results exist so an overlaid image can be composed on top of the target image </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="62" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" compoundref="targetImgLabel_8cpp" startline="99" endline="108">drawEnclosedMatch</referencedby>
+        <referencedby refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" compoundref="targetImgLabel_8cpp" startline="111" endline="115">eraseEnclosedMatch</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+        <referencedby refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" compoundref="targetImgLabel_8cpp" startline="12" endline="18">TargetImgLabel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TargetImgLabel::m_bHasImage</definition>
+        <argsstring></argsstring>
+        <name>m_bHasImage</name>
+        <briefdescription>
+<para>indicates whether this <ref refid="classTargetImgLabel" kindref="compound">TargetImgLabel</ref> class has a target (main) image </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="63" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+        <referencedby refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">setImage</referencedby>
+        <referencedby refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" compoundref="targetImgLabel_8cpp" startline="12" endline="18">TargetImgLabel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TargetImgLabel::m_bHasOverlayImage</definition>
+        <argsstring></argsstring>
+        <name>m_bHasOverlayImage</name>
+        <briefdescription>
+<para>indicates whether this <ref refid="classTargetImgLabel" kindref="compound">TargetImgLabel</ref> class has an overlaid image (Usually, a correlation results map) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="64" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" compoundref="targetImgLabel_8cpp" startline="111" endline="115">eraseEnclosedMatch</referencedby>
+        <referencedby refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" compoundref="targetImgLabel_8cpp" startline="37" endline="45">overlayImage</referencedby>
+        <referencedby refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" compoundref="targetImgLabel_8cpp" startline="58" endline="96">paintEvent</referencedby>
+        <referencedby refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" compoundref="targetImgLabel_8cpp" startline="26" endline="35">setImage</referencedby>
+        <referencedby refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" compoundref="targetImgLabel_8cpp" startline="12" endline="18">TargetImgLabel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TargetImgLabel::TargetImgLabel</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>TargetImgLabel</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classTargetImgLabel" kindref="compound">TargetImgLabel</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="28" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="12" bodyend="18"/>
+        <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
+        <references refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" compoundref="targetImgLabel_8h" startline="63">m_bHasImage</references>
+        <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
+      </memberdef>
+      <memberdef kind="function" id="classTargetImgLabel_190d714931fd87147e644b0d1a2815eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>TargetImgLabel::~TargetImgLabel</definition>
+        <argsstring>()</argsstring>
+        <name>~TargetImgLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="30" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TargetImgLabel::setImage</definition>
+        <argsstring>(const QImage &amp;labelImage)</argsstring>
+        <name>setImage</name>
+        <param>
+          <type>const QImage &amp;</type>
+          <declname>labelImage</declname>
+        </param>
+        <briefdescription>
+<para>Sets background image on this <ref refid="classTargetImgLabel" kindref="compound">TargetImgLabel</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>labelImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a QImage instance that will be used as the label&apos;s background </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="35" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="26" bodyend="35"/>
+        <references refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" compoundref="targetImgLabel_8h" startline="63">m_bHasImage</references>
+        <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
+        <references refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" compoundref="targetImgLabel_8h" startline="55">m_image</references>
+        <referencedby refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" compoundref="qcorr_8cpp" startline="236" endline="290">Qcorr::browseRightImage</referencedby>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">Qcorr::viewMap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TargetImgLabel::overlayImage</definition>
+        <argsstring>(const QImage &amp;otherImage, int nXoffset=0, int nYoffset=0)</argsstring>
+        <name>overlayImage</name>
+        <param>
+          <type>const QImage &amp;</type>
+          <declname>otherImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nXoffset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nYoffset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Overlays an Image ontop of the current one. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otherImage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a QImage instance that will overlay the current one using Qt::CompositionMode_Screen mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nXoffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X offset for overlay image. Default is 0 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nYoffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y offset for overlay image. Default is 0 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="37" bodyend="45"/>
+        <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
+        <references refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" compoundref="targetImgLabel_8h" startline="59">m_nXoffset</references>
+        <references refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" compoundref="targetImgLabel_8h" startline="60">m_nYoffset</references>
+        <references refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" compoundref="targetImgLabel_8h" startline="56">m_overlayImage</references>
+        <referencedby refid="classQcorr_13275244fd6183a4fef92b85578fea864" compoundref="qcorr_8cpp" startline="329" endline="348">Qcorr::viewMap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TargetImgLabel::drawEnclosedMatch</definition>
+        <argsstring>(const QPoint originPoint, const QSize rectSize)</argsstring>
+        <name>drawEnclosedMatch</name>
+        <param>
+          <type>const QPoint</type>
+          <declname>originPoint</declname>
+        </param>
+        <param>
+          <type>const QSize</type>
+          <declname>rectSize</declname>
+        </param>
+        <briefdescription>
+<para>Draws a dashed, green rectangle to indicate the position of a matching template on the target image. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>originPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A QPoint that indicates the top-left coordinates of the matching rectangle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rectSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A QSize for the matching rectangle to be drawn </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="48" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="99" bodyend="108"/>
+        <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
+        <references refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" compoundref="targetImgLabel_8h" startline="57">m_originPoint</references>
+        <references refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" compoundref="targetImgLabel_8h" startline="58">m_rectSize</references>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TargetImgLabel::eraseEnclosedMatch</definition>
+        <argsstring>()</argsstring>
+        <name>eraseEnclosedMatch</name>
+        <briefdescription>
+<para>Erases the green rectangle that indicated a matching template on the target image. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="111" bodyend="115"/>
+        <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
+        <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
+        <referencedby refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" compoundref="qcorr_8cpp" startline="293" endline="326">Qcorr::changeMouse</referencedby>
+        <referencedby refid="classQcorr_1ce91b9d83b34887735737323bac5431e" compoundref="qcorr_8cpp" startline="371" endline="450">Qcorr::correlate</referencedby>
+        <referencedby refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" compoundref="qcorr_8cpp" startline="453" endline="606">Qcorr::disparity</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TargetImgLabel::paintEvent</definition>
+        <argsstring>(QPaintEvent *)</argsstring>
+        <name>paintEvent</name>
+        <param>
+          <type>QPaintEvent *</type>
+        </param>
+        <briefdescription>
+<para>Handles the paint events by refreshing/updating the contents of this <ref refid="classTargetImgLabel" kindref="compound">TargetImgLabel</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="69" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.cpp" bodystart="58" bodyend="96"/>
+        <references refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" compoundref="targetImgLabel_8h" startline="62">m_bHasCorrResults</references>
+        <references refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" compoundref="targetImgLabel_8h" startline="63">m_bHasImage</references>
+        <references refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" compoundref="targetImgLabel_8h" startline="64">m_bHasOverlayImage</references>
+        <references refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" compoundref="targetImgLabel_8h" startline="55">m_image</references>
+        <references refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" compoundref="targetImgLabel_8h" startline="59">m_nXoffset</references>
+        <references refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" compoundref="targetImgLabel_8h" startline="60">m_nYoffset</references>
+        <references refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" compoundref="targetImgLabel_8h" startline="57">m_originPoint</references>
+        <references refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" compoundref="targetImgLabel_8h" startline="56">m_overlayImage</references>
+        <references refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" compoundref="targetImgLabel_8h" startline="58">m_rectSize</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A sub-classed label widget implemented with the purpose of displaying the target image on the right panel. </para>    </briefdescription>
+    <detaileddescription>
+<para>A sub-classed label widget implemented with the purpose of displaying the target image in the right panel with added functionality such as the enclosing match visualization and overlaid correlation map images </para>    </detaileddescription>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" line="24" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/src/targetImgLabel.h" bodystart="23" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" prot="public" virt="non-virtual"><scope>TargetImgLabel</scope><name>drawEnclosedMatch</name></member>
+      <member refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" prot="public" virt="non-virtual"><scope>TargetImgLabel</scope><name>eraseEnclosedMatch</name></member>
+      <member refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_bHasCorrResults</name></member>
+      <member refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_bHasImage</name></member>
+      <member refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_bHasOverlayImage</name></member>
+      <member refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_image</name></member>
+      <member refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_nXoffset</name></member>
+      <member refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_nYoffset</name></member>
+      <member refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_originPoint</name></member>
+      <member refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_overlayImage</name></member>
+      <member refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" prot="private" virt="non-virtual"><scope>TargetImgLabel</scope><name>m_rectSize</name></member>
+      <member refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" prot="public" virt="non-virtual"><scope>TargetImgLabel</scope><name>overlayImage</name></member>
+      <member refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" prot="protected" virt="non-virtual"><scope>TargetImgLabel</scope><name>paintEvent</name></member>
+      <member refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" prot="public" virt="non-virtual"><scope>TargetImgLabel</scope><name>setImage</name></member>
+      <member refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" prot="public" virt="non-virtual"><scope>TargetImgLabel</scope><name>TargetImgLabel</name></member>
+      <member refid="classTargetImgLabel_190d714931fd87147e644b0d1a2815eeb" prot="public" virt="virtual"><scope>TargetImgLabel</scope><name>~TargetImgLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

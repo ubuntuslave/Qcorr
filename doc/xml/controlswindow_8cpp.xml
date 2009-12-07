@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="controlswindow_8cpp" kind="file">
+    <compoundname>controlswindow.cpp</compoundname>
+    <includes refid="controlswindow_8h" local="yes">controlswindow.h</includes>
+    <includes refid="qcorr_8h" local="yes">qcorr.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>QtGui/QVBoxLayout</label>
+      </node>
+      <node id="13">
+        <label>QtGui/QSpacerItem</label>
+      </node>
+      <node id="17">
+        <label>QtGui/QMainWindow</label>
+      </node>
+      <node id="30">
+        <label>QtGui/QDialogButtonBox</label>
+      </node>
+      <node id="8">
+        <label>QtGui/QFrame</label>
+      </node>
+      <node id="28">
+        <label>corrmethod.h</label>
+        <link refid="corrmethod_8h-source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../ui_corrmethod.h</label>
+        <link refid="ui__corrmethod_8h-source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QtGui/QSpinBox</label>
+      </node>
+      <node id="18">
+        <label>../ui_qcorr.h</label>
+        <link refid="ui__qcorr_8h-source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>QtGui/QLineEdit</label>
+      </node>
+      <node id="32">
+        <label>QtGui/QRadioButton</label>
+      </node>
+      <node id="6">
+        <label>QtGui/QApplication</label>
+      </node>
+      <node id="12">
+        <label>QtGui/QPushButton</label>
+      </node>
+      <node id="2">
+        <label>QtGui/QDialog</label>
+      </node>
+      <node id="4">
+        <label>QtCore/QVariant</label>
+      </node>
+      <node id="33">
+        <label>QtCore/QVector</label>
+      </node>
+      <node id="25">
+        <label>QtGui/QWidget</label>
+      </node>
+      <node id="21">
+        <label>QtGui/QMenuBar</label>
+      </node>
+      <node id="23">
+        <label>QtGui/QSplitter</label>
+      </node>
+      <node id="27">
+        <label>targetImgLabel.h</label>
+        <link refid="targetImgLabel_8h-source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QtGui/QLabel</label>
+      </node>
+      <node id="5">
+        <label>QtGui/QAction</label>
+      </node>
+      <node id="31">
+        <label>QtGui/QGroupBox</label>
+      </node>
+      <node id="22">
+        <label>QtGui/QScrollArea</label>
+      </node>
+      <node id="0">
+        <label>src/controlswindow.cpp</label>
+        <link refid="controlswindow.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>QtGui/QRgb</label>
+      </node>
+      <node id="20">
+        <label>QtGui/QMenu</label>
+      </node>
+      <node id="16">
+        <label>qcorr.h</label>
+        <link refid="qcorr_8h-source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QtGui/QButtonGroup</label>
+      </node>
+      <node id="1">
+        <label>controlswindow.h</label>
+        <link refid="controlswindow_8h-source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../ui_controlswindow.h</label>
+        <link refid="ui__controlswindow_8h-source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>QtGui/QStatusBar</label>
+      </node>
+      <node id="26">
+        <label>imgLabel.h</label>
+        <link refid="imgLabel_8h-source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QtGui/QHeaderView</label>
+      </node>
+      <node id="9">
+        <label>QtGui/QHBoxLayout</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;controlswindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;qcorr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" kindref="member" tooltip="Constructor of ControlsWindow class must point to a Qcorr parentWindow.">ControlsWindow::ControlsWindow</ref>(<ref refid="classQcorr" kindref="compound" tooltip="A Digital Image Correlation Program (Template Matcher and Pixel Disparity Mapping)...">Qcorr</ref><sp/>*parentWindow,<sp/>QWidget<sp/>*parent)<sp/>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/>QDialog(parent)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" kindref="member" tooltip="Pointer to Main Window Object.">m_parentWindow</ref><sp/>=<sp/>parentWindow;<sp/></highlight><highlight class="comment">//<sp/>Point<sp/>to<sp/>the<sp/>Qcorr<sp/>MainWindow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>this-&gt;setMinimumSize(<ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.controlsWindow_frame-&gt;size());</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" kindref="member" tooltip="Enables/Disables control spinBoxes.">setEnableSpinBoxes</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" kindref="member" tooltip="Create Signal-Slot connections.">createActions</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>values:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" kindref="member" tooltip="interval of scan traversal by the template">m_nScanInterval</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" kindref="member" tooltip="the template&amp;#39;s size (for the width)">m_nTemplateSize</ref><sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classControlsWindow_1e95b3f485ea3006bb7b1884e70f8873d" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_1e95b3f485ea3006bb7b1884e70f8873d" kindref="member" tooltip="Closes and Destroys itself.">ControlsWindow::~ControlsWindow</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>emit<sp/>this-&gt;close();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Destroys<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" kindref="member" tooltip="Create Signal-Slot connections.">ControlsWindow::createActions</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>connect(<ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.close_pushButton,<sp/>SIGNAL(clicked()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(close()));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>connect(<ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.scanInterval_spinBox,<sp/>SIGNAL(valueChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SLOT(<ref refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" kindref="member" tooltip="Q_SLOT that sets scan interval parameter in its friend Qcorr class according to the...">setScanInterval</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>connect(<ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.templateSize_spinBox,<sp/>SIGNAL(valueChanged(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SLOT(<ref refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" kindref="member" tooltip="Q_SLOT that sets template size parameter in its friend Qcorr class according to the...">setTemplateSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" kindref="member" tooltip="Enables/Disables control spinBoxes.">ControlsWindow::setEnableSpinBoxes</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bEnable)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>default<sp/>values<sp/>for<sp/>spinBoxes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.scanInterval_spinBox-&gt;setEnabled(bEnable);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.templateSize_spinBox-&gt;setEnabled(bEnable);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bEnable)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>maximum<sp/>value<sp/>of<sp/>scanInterval_spinBox<sp/>according<sp/>to<sp/>the<sp/>right<sp/>image&apos;s<sp/>width</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.scanInterval_spinBox-&gt;setMaximum(</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" kindref="member" tooltip="Pointer to Main Window Object.">m_parentWindow</ref>-&gt;<ref refid="classQcorr_1ae1695d731f191c694186e00b96f469e" kindref="member" tooltip="Right Panel&amp;#39;s Image (a.k.a &amp;quot;target image&amp;quot;).">m_rightImage</ref>-&gt;width());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>maximum<sp/>value<sp/>of<sp/>templateSize_spinBox<sp/>according<sp/>to<sp/>the<sp/>right<sp/>image&apos;s<sp/>width</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kindref="member" tooltip="The Qt GUI form for this class, so its widgets can be accessed and manipulated.">ui</ref>.templateSize_spinBox-&gt;setMaximum(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" kindref="member" tooltip="Pointer to Main Window Object.">m_parentWindow</ref>-&gt;<ref refid="classQcorr_1ae1695d731f191c694186e00b96f469e" kindref="member" tooltip="Right Panel&amp;#39;s Image (a.k.a &amp;quot;target image&amp;quot;).">m_rightImage</ref>-&gt;width());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>begin<sp/>Q_SLOTS<sp/>vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" kindref="member" tooltip="Q_SLOT that sets scan interval parameter in its friend Qcorr class according to the...">ControlsWindow::setScanInterval</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nValue)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" kindref="member" tooltip="interval of scan traversal by the template">m_nScanInterval</ref><sp/>=<sp/>nValue;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" kindref="member" tooltip="Updates Parent&amp;#39;s status bar with the corresponding values from the control spin...">updateParentStatusLabel</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" kindref="member" tooltip="Q_SLOT that sets template size parameter in its friend Qcorr class according to the...">ControlsWindow::setTemplateSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nValue)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" kindref="member" tooltip="the template&amp;#39;s size (for the width)">m_nTemplateSize</ref><sp/>=<sp/>nValue;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" kindref="member" tooltip="Updates Parent&amp;#39;s status bar with the corresponding values from the control spin...">updateParentStatusLabel</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>end<sp/>Q_SLOTS<sp/>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" refkind="member"><highlight class="normal"><ref refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" kindref="member" tooltip="Updates Parent&amp;#39;s status bar with the corresponding values from the control spin...">ControlsWindow::updateParentStatusLabel</ref>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><ref refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" kindref="member" tooltip="Pointer to Main Window Object.">m_parentWindow</ref>-&gt;<ref refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" kindref="member" tooltip="status label that updates the mouse-pointer&amp;#39;s position coordinates as it moves...">m_status_label</ref>-&gt;setText(</highlight><highlight class="stringliteral">&quot;Template<sp/>Size:<sp/>&lt;b&gt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>QString::number(<ref refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" kindref="member" tooltip="the template&amp;#39;s size (for the width)">m_nTemplateSize</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal"><sp/>+<sp/>QString::number(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" kindref="member" tooltip="the template&amp;#39;s size (for the width)">m_nTemplateSize</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&lt;/b&gt;px<sp/><sp/>|<sp/><sp/><sp/>Scan<sp/>Interval:<sp/>&lt;b&gt;&quot;</highlight><highlight class="normal"><sp/>+<sp/>QString::number(</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" kindref="member" tooltip="interval of scan traversal by the template">m_nScanInterval</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&lt;/b&gt;px&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/src/controlswindow.cpp"/>
+  </compounddef>
+</doxygen>

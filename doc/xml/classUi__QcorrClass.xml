@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classUi__QcorrClass" kind="class" prot="public">
+    <compoundname>Ui_QcorrClass</compoundname>
+    <derivedcompoundref refid="classUi_1_1QcorrClass" prot="public" virt="non-virtual">Ui::QcorrClass</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classUi__QcorrClass_1e725a71d3bb44a43e2d65ce4d1284b85" prot="public" static="no" mutable="no">
+        <type>QAction *</type>
+        <definition>QAction* Ui_QcorrClass::action_Quit</definition>
+        <argsstring></argsstring>
+        <name>action_Quit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="38" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1a2e514c1c784f746eec5abed0bf57190" prot="public" static="no" mutable="no">
+        <type>QAction *</type>
+        <definition>QAction* Ui_QcorrClass::action_Map</definition>
+        <argsstring></argsstring>
+        <name>action_Map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="39" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_134a38652dc16add16ee2ca325c1e4b31" prot="public" static="no" mutable="no">
+        <type>QAction *</type>
+        <definition>QAction* Ui_QcorrClass::actionTemplate_Matching</definition>
+        <argsstring></argsstring>
+        <name>actionTemplate_Matching</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="40" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1f3eff626499d6ad7b19db0a828a5794a" prot="public" static="no" mutable="no">
+        <type>QAction *</type>
+        <definition>QAction* Ui_QcorrClass::action_Disparity_Finder</definition>
+        <argsstring></argsstring>
+        <name>action_Disparity_Finder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="41" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1885bdbbc4267078f102878ad126b23bb" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_QcorrClass::centralwidget</definition>
+        <argsstring></argsstring>
+        <name>centralwidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="42" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1cb93f5008511c2654ac8a51c17dc11ef" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_QcorrClass::main_frame</definition>
+        <argsstring></argsstring>
+        <name>main_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="43" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1fd1d2aad88a740a9f33d9f91370c7ea9" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_QcorrClass::main_verticalLayout</definition>
+        <argsstring></argsstring>
+        <name>main_verticalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="44" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1b4e96571e7dd58d9ec798cf6ede3cbe6" prot="public" static="no" mutable="no">
+        <type>QSplitter *</type>
+        <definition>QSplitter* Ui_QcorrClass::splitter</definition>
+        <argsstring></argsstring>
+        <name>splitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="45" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_181e59812852e521cced5e1f912bffb99" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_QcorrClass::layoutWidget</definition>
+        <argsstring></argsstring>
+        <name>layoutWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="46" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1e7eb5196b5e392a40fa3e3a77f40c3cc" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_QcorrClass::left_verticalLayout</definition>
+        <argsstring></argsstring>
+        <name>left_verticalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="47" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1aad53db0cbf018c38d75aebbe78959b3" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_QcorrClass::leftImg_horizontalLayout</definition>
+        <argsstring></argsstring>
+        <name>leftImg_horizontalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="48" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_112d1c71e330c76e65484418502338a31" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_QcorrClass::leftImage_lineEdit</definition>
+        <argsstring></argsstring>
+        <name>leftImage_lineEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="49" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1e05243dcb19bfd6fd6d1c3257f25338a" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_QcorrClass::leftBrowse_pushButton</definition>
+        <argsstring></argsstring>
+        <name>leftBrowse_pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="50" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1cb12117880660e7d8fec35de7eee51c6" prot="public" static="no" mutable="no">
+        <type>QScrollArea *</type>
+        <definition>QScrollArea* Ui_QcorrClass::leftImage_scrollArea</definition>
+        <argsstring></argsstring>
+        <name>leftImage_scrollArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="51" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1ab5ae2e7dc3baefb6ada5e1a758e826f" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_QcorrClass::scrollAreaWidgetContents_3</definition>
+        <argsstring></argsstring>
+        <name>scrollAreaWidgetContents_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="52" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_124caba38fd151a2ab5b577b1425bd07c" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_QcorrClass::layoutWidget1</definition>
+        <argsstring></argsstring>
+        <name>layoutWidget1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="53" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1232c26905d00f6608b8ba97a6546daa0" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_QcorrClass::right_verticalLayout</definition>
+        <argsstring></argsstring>
+        <name>right_verticalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="54" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_16885fe1dcc883e2f927c2fb943b206e0" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_QcorrClass::rightImg_horizontalLayout</definition>
+        <argsstring></argsstring>
+        <name>rightImg_horizontalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="55" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1690e51bd7f4916ca89f876f39afee05d" prot="public" static="no" mutable="no">
+        <type>QLineEdit *</type>
+        <definition>QLineEdit* Ui_QcorrClass::rightImage_lineEdit</definition>
+        <argsstring></argsstring>
+        <name>rightImage_lineEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="56" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_15018f953d94c196394a638212a45fd9d" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_QcorrClass::rightBrowse_pushButton</definition>
+        <argsstring></argsstring>
+        <name>rightBrowse_pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="57" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1227cae34e275c9e0713ee279435f41cc" prot="public" static="no" mutable="no">
+        <type>QScrollArea *</type>
+        <definition>QScrollArea* Ui_QcorrClass::rightImage_scrollArea</definition>
+        <argsstring></argsstring>
+        <name>rightImage_scrollArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="58" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1bf4b50d1ea6274629f687ac66ce12e80" prot="public" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* Ui_QcorrClass::scrollAreaWidgetContents_2</definition>
+        <argsstring></argsstring>
+        <name>scrollAreaWidgetContents_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="59" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1a4247652a1ed71c6b6704aa3273544bd" prot="public" static="no" mutable="no">
+        <type>QHBoxLayout *</type>
+        <definition>QHBoxLayout* Ui_QcorrClass::bottom_horizontalLayout</definition>
+        <argsstring></argsstring>
+        <name>bottom_horizontalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="60" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1c0e4a500d8e9364fc22f9386d7ca3e9a" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_QcorrClass::controls_pushButton</definition>
+        <argsstring></argsstring>
+        <name>controls_pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="61" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1d0993e39276097fdfa4553fce89cea71" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_QcorrClass::start_pushButton</definition>
+        <argsstring></argsstring>
+        <name>start_pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="62" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_14ddf4aae819f6b25476a5a3e76c600d7" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_QcorrClass::corrResults_label</definition>
+        <argsstring></argsstring>
+        <name>corrResults_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="63" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_180762eea1a44f16ceffed065d0459a69" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_QcorrClass::horizontalSpacer</definition>
+        <argsstring></argsstring>
+        <name>horizontalSpacer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="64" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1d032c2f5b8f1aed8decad689900d7017" prot="public" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* Ui_QcorrClass::quit_pushButton</definition>
+        <argsstring></argsstring>
+        <name>quit_pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="65" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_18567acdc882322bab775dd04569433da" prot="public" static="no" mutable="no">
+        <type>QMenuBar *</type>
+        <definition>QMenuBar* Ui_QcorrClass::menubar</definition>
+        <argsstring></argsstring>
+        <name>menubar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="66" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_11d52a371f0d1e29cdf70d1be2a85a45e" prot="public" static="no" mutable="no">
+        <type>QMenu *</type>
+        <definition>QMenu* Ui_QcorrClass::menu_Menu</definition>
+        <argsstring></argsstring>
+        <name>menu_Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="67" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_18c1dd90b9ea2130b6fe6e8e6553fbf13" prot="public" static="no" mutable="no">
+        <type>QMenu *</type>
+        <definition>QMenu* Ui_QcorrClass::menu_View</definition>
+        <argsstring></argsstring>
+        <name>menu_View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="68" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_134c81836d3bddde0adb968fe98fba156" prot="public" static="no" mutable="no">
+        <type>QMenu *</type>
+        <definition>QMenu* Ui_QcorrClass::menu_Mode</definition>
+        <argsstring></argsstring>
+        <name>menu_Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="69" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__QcorrClass_1e220680c312c600f015f0413ad6cd2cf" prot="public" static="no" mutable="no">
+        <type>QStatusBar *</type>
+        <definition>QStatusBar* Ui_QcorrClass::statusbar</definition>
+        <argsstring></argsstring>
+        <name>statusbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="70" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUi__QcorrClass_180aee2ed06f3c4f9b1f516405d888c13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_QcorrClass::setupUi</definition>
+        <argsstring>(QMainWindow *QcorrClass)</argsstring>
+        <name>setupUi</name>
+        <param>
+          <type>QMainWindow *</type>
+          <declname>QcorrClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="73" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="72" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classUi__QcorrClass_1defed69462e2297254f0d5bce3131e05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_QcorrClass::retranslateUi</definition>
+        <argsstring>(QMainWindow *QcorrClass)</argsstring>
+        <name>retranslateUi</name>
+        <param>
+          <type>QMainWindow *</type>
+          <declname>QcorrClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="268" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="267" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="65">
+        <label>Qcorr</label>
+        <link refid="classQcorr"/>
+        <childnode refid="64" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>Ui_QcorrClass</label>
+      </node>
+      <node id="64">
+        <label>Ui::QcorrClass</label>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" line="36" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_qcorr.h" bodystart="35" bodyend="285"/>
+    <listofallmembers>
+      <member refid="classUi__QcorrClass_1f3eff626499d6ad7b19db0a828a5794a" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>action_Disparity_Finder</name></member>
+      <member refid="classUi__QcorrClass_1a2e514c1c784f746eec5abed0bf57190" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>action_Map</name></member>
+      <member refid="classUi__QcorrClass_1e725a71d3bb44a43e2d65ce4d1284b85" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>action_Quit</name></member>
+      <member refid="classUi__QcorrClass_134a38652dc16add16ee2ca325c1e4b31" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>actionTemplate_Matching</name></member>
+      <member refid="classUi__QcorrClass_1a4247652a1ed71c6b6704aa3273544bd" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>bottom_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1885bdbbc4267078f102878ad126b23bb" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>centralwidget</name></member>
+      <member refid="classUi__QcorrClass_1c0e4a500d8e9364fc22f9386d7ca3e9a" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>controls_pushButton</name></member>
+      <member refid="classUi__QcorrClass_14ddf4aae819f6b25476a5a3e76c600d7" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>corrResults_label</name></member>
+      <member refid="classUi__QcorrClass_180762eea1a44f16ceffed065d0459a69" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>horizontalSpacer</name></member>
+      <member refid="classUi__QcorrClass_181e59812852e521cced5e1f912bffb99" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>layoutWidget</name></member>
+      <member refid="classUi__QcorrClass_124caba38fd151a2ab5b577b1425bd07c" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>layoutWidget1</name></member>
+      <member refid="classUi__QcorrClass_1e7eb5196b5e392a40fa3e3a77f40c3cc" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>left_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_1e05243dcb19bfd6fd6d1c3257f25338a" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>leftBrowse_pushButton</name></member>
+      <member refid="classUi__QcorrClass_112d1c71e330c76e65484418502338a31" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>leftImage_lineEdit</name></member>
+      <member refid="classUi__QcorrClass_1cb12117880660e7d8fec35de7eee51c6" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>leftImage_scrollArea</name></member>
+      <member refid="classUi__QcorrClass_1aad53db0cbf018c38d75aebbe78959b3" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>leftImg_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1cb93f5008511c2654ac8a51c17dc11ef" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>main_frame</name></member>
+      <member refid="classUi__QcorrClass_1fd1d2aad88a740a9f33d9f91370c7ea9" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>main_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_11d52a371f0d1e29cdf70d1be2a85a45e" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>menu_Menu</name></member>
+      <member refid="classUi__QcorrClass_134c81836d3bddde0adb968fe98fba156" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>menu_Mode</name></member>
+      <member refid="classUi__QcorrClass_18c1dd90b9ea2130b6fe6e8e6553fbf13" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>menu_View</name></member>
+      <member refid="classUi__QcorrClass_18567acdc882322bab775dd04569433da" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>menubar</name></member>
+      <member refid="classUi__QcorrClass_1d032c2f5b8f1aed8decad689900d7017" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>quit_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1defed69462e2297254f0d5bce3131e05" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>retranslateUi</name></member>
+      <member refid="classUi__QcorrClass_1232c26905d00f6608b8ba97a6546daa0" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>right_verticalLayout</name></member>
+      <member refid="classUi__QcorrClass_15018f953d94c196394a638212a45fd9d" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>rightBrowse_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1690e51bd7f4916ca89f876f39afee05d" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>rightImage_lineEdit</name></member>
+      <member refid="classUi__QcorrClass_1227cae34e275c9e0713ee279435f41cc" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>rightImage_scrollArea</name></member>
+      <member refid="classUi__QcorrClass_16885fe1dcc883e2f927c2fb943b206e0" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>rightImg_horizontalLayout</name></member>
+      <member refid="classUi__QcorrClass_1bf4b50d1ea6274629f687ac66ce12e80" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>scrollAreaWidgetContents_2</name></member>
+      <member refid="classUi__QcorrClass_1ab5ae2e7dc3baefb6ada5e1a758e826f" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>scrollAreaWidgetContents_3</name></member>
+      <member refid="classUi__QcorrClass_180aee2ed06f3c4f9b1f516405d888c13" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>setupUi</name></member>
+      <member refid="classUi__QcorrClass_1b4e96571e7dd58d9ec798cf6ede3cbe6" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>splitter</name></member>
+      <member refid="classUi__QcorrClass_1d0993e39276097fdfa4553fce89cea71" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>start_pushButton</name></member>
+      <member refid="classUi__QcorrClass_1e220680c312c600f015f0413ad6cd2cf" prot="public" virt="non-virtual"><scope>Ui_QcorrClass</scope><name>statusbar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

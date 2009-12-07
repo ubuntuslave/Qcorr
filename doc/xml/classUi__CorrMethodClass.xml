@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="classUi__CorrMethodClass" kind="class" prot="public">
+    <compoundname>Ui_CorrMethodClass</compoundname>
+    <derivedcompoundref refid="classUi_1_1CorrMethodClass" prot="public" virt="non-virtual">Ui::CorrMethodClass</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1b3e404afe1c6fafb99e02a2a9315e8d1" prot="public" static="no" mutable="no">
+        <type>QFrame *</type>
+        <definition>QFrame* Ui_CorrMethodClass::dialog_Frame</definition>
+        <argsstring></argsstring>
+        <name>dialog_Frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="32" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1ab4f631b545d0545adde08190ecab6fa" prot="public" static="no" mutable="no">
+        <type>QVBoxLayout *</type>
+        <definition>QVBoxLayout* Ui_CorrMethodClass::verticalLayout</definition>
+        <argsstring></argsstring>
+        <name>verticalLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="33" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1dd008cc6d16e9265345255c6fbc2e0b5" prot="public" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* Ui_CorrMethodClass::selectMethod_label</definition>
+        <argsstring></argsstring>
+        <name>selectMethod_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="34" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_155e61e05e9ff340d17b08f7489e84039" prot="public" static="no" mutable="no">
+        <type>QGroupBox *</type>
+        <definition>QGroupBox* Ui_CorrMethodClass::methods_groupBox</definition>
+        <argsstring></argsstring>
+        <name>methods_groupBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="35" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1a260d1145f60cdc7137a93d50f66b2e9" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_CorrMethodClass::method3_radioButton</definition>
+        <argsstring></argsstring>
+        <name>method3_radioButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="36" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1cced16b55f7c8baa3c789435616c35c6" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_CorrMethodClass::method2_radioButton</definition>
+        <argsstring></argsstring>
+        <name>method2_radioButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="37" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1091300f07ee518675317d2001e486a42" prot="public" static="no" mutable="no">
+        <type>QRadioButton *</type>
+        <definition>QRadioButton* Ui_CorrMethodClass::method1_radioButton</definition>
+        <argsstring></argsstring>
+        <name>method1_radioButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="38" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1c4d190aefc50d332cfdc73d7370f4ca2" prot="public" static="no" mutable="no">
+        <type>QDialogButtonBox *</type>
+        <definition>QDialogButtonBox* Ui_CorrMethodClass::buttonBox</definition>
+        <argsstring></argsstring>
+        <name>buttonBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="39" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUi__CorrMethodClass_1c98460426d7a9f1c1a2763d9e3c0c2ef" prot="public" static="no" mutable="no">
+        <type>QSpacerItem *</type>
+        <definition>QSpacerItem* Ui_CorrMethodClass::verticalSpacer</definition>
+        <argsstring></argsstring>
+        <name>verticalSpacer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="40" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUi__CorrMethodClass_195a6bbb76de087aa2f8f5ea4780a4d09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_CorrMethodClass::setupUi</definition>
+        <argsstring>(QDialog *CorrMethodClass)</argsstring>
+        <name>setupUi</name>
+        <param>
+          <type>QDialog *</type>
+          <declname>CorrMethodClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="43" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="42" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classUi__CorrMethodClass_14ac1c93be0509c13a248873b5dd7e2fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ui_CorrMethodClass::retranslateUi</definition>
+        <argsstring>(QDialog *CorrMethodClass)</argsstring>
+        <name>retranslateUi</name>
+        <param>
+          <type>QDialog *</type>
+          <declname>CorrMethodClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="119" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="118" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="60">
+        <label>Ui_CorrMethodClass</label>
+      </node>
+      <node id="61">
+        <label>Ui::CorrMethodClass</label>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" line="30" bodyfile="/media/truecrypt6/ccny/workspace/Qcorr/ui_corrmethod.h" bodystart="29" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classUi__CorrMethodClass_1c4d190aefc50d332cfdc73d7370f4ca2" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>buttonBox</name></member>
+      <member refid="classUi__CorrMethodClass_1b3e404afe1c6fafb99e02a2a9315e8d1" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>dialog_Frame</name></member>
+      <member refid="classUi__CorrMethodClass_1091300f07ee518675317d2001e486a42" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>method1_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_1cced16b55f7c8baa3c789435616c35c6" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>method2_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_1a260d1145f60cdc7137a93d50f66b2e9" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>method3_radioButton</name></member>
+      <member refid="classUi__CorrMethodClass_155e61e05e9ff340d17b08f7489e84039" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>methods_groupBox</name></member>
+      <member refid="classUi__CorrMethodClass_14ac1c93be0509c13a248873b5dd7e2fb" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>retranslateUi</name></member>
+      <member refid="classUi__CorrMethodClass_1dd008cc6d16e9265345255c6fbc2e0b5" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>selectMethod_label</name></member>
+      <member refid="classUi__CorrMethodClass_195a6bbb76de087aa2f8f5ea4780a4d09" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>setupUi</name></member>
+      <member refid="classUi__CorrMethodClass_1ab4f631b545d0545adde08190ecab6fa" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>verticalLayout</name></member>
+      <member refid="classUi__CorrMethodClass_1c98460426d7a9f1c1a2763d9e3c0c2ef" prot="public" virt="non-virtual"><scope>Ui_CorrMethodClass</scope><name>verticalSpacer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="namespaceUi" kind="namespace">
+    <compoundname>Ui</compoundname>
+    <innerclass refid="classUi_1_1ControlsWindowClass" prot="public">Ui::ControlsWindowClass</innerclass>
+    <innerclass refid="classUi_1_1CorrMethodClass" prot="public">Ui::CorrMethodClass</innerclass>
+    <innerclass refid="classUi_1_1QcorrClass" prot="public">Ui::QcorrClass</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/truecrypt6/ccny/workspace/Qcorr/ui_controlswindow.h" line="149"/>
+  </compounddef>
+</doxygen>

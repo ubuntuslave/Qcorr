@@ -14,6 +14,7 @@
 class QPoint;
 class QImage;
 
+/** @ingroup classes */
 /** @class TargetImgLabel "src/targetImgLabel.h"
  * @brief  A sub-classed label widget implemented with the purpose of displaying the target image on the right panel.
  *

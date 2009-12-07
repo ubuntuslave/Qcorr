@@ -9,8 +9,8 @@
 
 #include "targetImgLabel.h"
 
-//TargetImgLabel::TargetImgLabel(const QImage &labelImage, QWidget *parent) :
-TargetImgLabel::TargetImgLabel(QWidget *parent) : QLabel(parent)
+TargetImgLabel::TargetImgLabel(QWidget *parent) :
+   QLabel(parent)
 {
    m_bHasCorrResults = false;
    m_bHasImage = false;
@@ -22,11 +22,10 @@ TargetImgLabel::~TargetImgLabel()
    // TODO Auto-generated destructor stub
 }
 
-void TargetImgLabel::setImage(const QImage &labelImage)
+void
+TargetImgLabel::setImage(const QImage &labelImage)
 {
    m_image = new QImage(labelImage);
-//   m_image = new QImage(labelImage.size(), QImage::Format_ARGB32_Premultiplied);
-//   *m_image = labelImage;
 
    this->resize(m_image->size());
    m_bHasImage = true;
@@ -34,15 +33,13 @@ void TargetImgLabel::setImage(const QImage &labelImage)
 
    update();
 }
-void TargetImgLabel::overlayImage(const QImage &otherImage, int nXoffset, int nYoffset)
+void
+TargetImgLabel::overlayImage(const QImage &otherImage, int nXoffset,
+      int nYoffset)
 {
    m_overlayImage = new QImage(otherImage);
    m_nXoffset = nXoffset;
    m_nYoffset = nYoffset;
-//   m_overlayImage = new QImage(otherImage.size(), QImage::Format_ARGB32_Premultiplied);
-//   *m_overlayImage = otherImage;
-
-//   this->resize(m_overlayImage->size());
    m_bHasOverlayImage = true;
    update();
 }
@@ -57,54 +54,50 @@ void TargetImgLabel::overlayImage(const QImage &otherImage, int nXoffset, int nY
 //
 //}
 
-void TargetImgLabel::paintEvent(QPaintEvent * /* event */)
+void
+TargetImgLabel::paintEvent(QPaintEvent * /* event */)
 {
-   if(m_bHasImage)
+   if (m_bHasImage)
       {
+         QImage imageWithOverlay = QImage(m_image->size(),
+               QImage::Format_ARGB32_Premultiplied);
+         QPainter painter(&imageWithOverlay);
 
-      // had originally only this:
-//      QPainter painter(this);
-//      painter.drawImage(0, 0, *m_image);
+         painter.setCompositionMode(QPainter::CompositionMode_Source);
+         painter.fillRect(imageWithOverlay.rect(), Qt::transparent);
 
-          QImage imageWithOverlay = QImage(m_image->size(), QImage::Format_ARGB32_Premultiplied);
-          QPainter painter(&imageWithOverlay);
+         painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+         painter.drawImage(0, 0, *m_image);
 
-          painter.setCompositionMode(QPainter::CompositionMode_Source);
-          painter.fillRect(imageWithOverlay.rect(), Qt::transparent);
+         if (m_bHasOverlayImage)
+            {
+               painter.setCompositionMode(QPainter::CompositionMode_Screen);
+               painter.drawImage(m_nXoffset, m_nYoffset, *m_overlayImage);
+            }
 
-          painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-          painter.drawImage(0, 0, *m_image);
+         if (m_bHasCorrResults)
+            {
+               painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
 
-      if(m_bHasOverlayImage)
-         {
-//         painter.setCompositionMode(QPainter::CompositionMode_SourceOver);  // Opaque image
-//         painter.setCompositionMode(QPainter::CompositionMode_Exclusion);   // Bluish transparency overlay
-         painter.setCompositionMode(QPainter::CompositionMode_Screen);
-         painter.drawImage(m_nXoffset, m_nYoffset, *m_overlayImage);
-         }
+               painter.setPen(QPen(Qt::green, 3, Qt::DashDotLine, Qt::RoundCap,
+                     Qt::RoundJoin));
+               painter.setBrush(Qt::NoBrush);
+               QRect rect(m_originPoint, m_rectSize);
+               painter.drawRect(rect);
+            }
 
+         painter.end();
 
-       if(m_bHasCorrResults)
-          {
-          painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-
-          painter.setPen(QPen(Qt::green, 3, Qt::DashDotLine, Qt::RoundCap,
-           Qt::RoundJoin));
-          painter.setBrush( Qt::NoBrush);
-           QRect rect(m_originPoint, m_rectSize);
-          painter.drawRect(rect);
-         }
-
-       painter.end();
-
-       QPainter painter2(this);
-       painter2.drawImage(0, 0, imageWithOverlay);
-       painter2.end();
+         QPainter painter2(this);
+         painter2.drawImage(0, 0, imageWithOverlay);
+         painter2.end();
 
       }
 }
 
-void TargetImgLabel::drawEnclosedMatch(const QPoint originPoint, const QSize rectSize)
+void
+TargetImgLabel::drawEnclosedMatch(const QPoint originPoint,
+      const QSize rectSize)
 {
    m_originPoint = originPoint;
    m_rectSize = rectSize;
@@ -114,10 +107,10 @@ void TargetImgLabel::drawEnclosedMatch(const QPoint originPoint, const QSize rec
    update();
 }
 
-void TargetImgLabel::eraseEnclosedMatch()
+void
+TargetImgLabel::eraseEnclosedMatch()
 {
    m_bHasCorrResults = false;
    m_bHasOverlayImage = false;
 }
-
 

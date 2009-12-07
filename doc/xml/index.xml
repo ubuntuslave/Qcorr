@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.8">
+  <compound refid="classControlsWindow" kind="class"><name>ControlsWindow</name>
+    <member refid="classControlsWindow_14fc4e2ed00b8518d98e5cfb1f6595597" kind="variable"><name>ui</name></member>
+    <member refid="classControlsWindow_1bb46b57593b44940967eb1f85bf5ba00" kind="variable"><name>m_parentWindow</name></member>
+    <member refid="classControlsWindow_1b8c777f3faa37f2a0988e8b2736db9d7" kind="variable"><name>m_nScanInterval</name></member>
+    <member refid="classControlsWindow_11e41d1d1e5b6875516acf1324a7d8d52" kind="variable"><name>m_nTemplateSize</name></member>
+    <member refid="classControlsWindow_13556c067cee55d7ea87c66b8c2a743fe" kind="function"><name>ControlsWindow</name></member>
+    <member refid="classControlsWindow_1e95b3f485ea3006bb7b1884e70f8873d" kind="function"><name>~ControlsWindow</name></member>
+    <member refid="classControlsWindow_118ff937aaf396db11d4f260b7c8a0755" kind="function"><name>setEnableSpinBoxes</name></member>
+    <member refid="classControlsWindow_16d6ca34d32ec0941a1bf6ac381f47143" kind="function"><name>getScanInterval</name></member>
+    <member refid="classControlsWindow_14b7c236e000926efe62ca9f05e15821c" kind="function"><name>getTemplateSize</name></member>
+    <member refid="classControlsWindow_1e24aeb4f7639481f57ff6ec6f8d1373d" kind="slot"><name>setScanInterval</name></member>
+    <member refid="classControlsWindow_12324bca2db040b73ffb9411102a26abf" kind="slot"><name>setTemplateSize</name></member>
+    <member refid="classControlsWindow_1166eabd008e63fc846798eba267bac24" kind="function"><name>createActions</name></member>
+    <member refid="classControlsWindow_1b04f618a1eccee9aac8818d504c7da6a" kind="function"><name>updateParentStatusLabel</name></member>
+  </compound>
+  <compound refid="classUi_1_1ControlsWindowClass" kind="class"><name>Ui::ControlsWindowClass</name>
+  </compound>
+  <compound refid="classCorrMethod" kind="class"><name>CorrMethod</name>
+    <member refid="classCorrMethod_13e64e1a2c9eabff57b7e58eaff13f45f" kind="variable"><name>m_nChosenMethod</name></member>
+    <member refid="classCorrMethod_1866bb1b72235d777ca96a6ce9701f9f6" kind="variable"><name>ui</name></member>
+    <member refid="classCorrMethod_1bdc14398267291249d40158e133cf68b" kind="function"><name>CorrMethod</name></member>
+    <member refid="classCorrMethod_194c368b0950c4e62573dc94cbab4a38e" kind="function"><name>~CorrMethod</name></member>
+    <member refid="classCorrMethod_13eeafdd901560c1fa92be75d4ed58872" kind="function"><name>getMethod</name></member>
+    <member refid="classCorrMethod_187e628d7ef6facc9a402880d7e01ea36" kind="slot"><name>cancelMethod</name></member>
+    <member refid="classCorrMethod_17522197ac15c7563aee8d15d0cff3d95" kind="slot"><name>chooseMethod</name></member>
+  </compound>
+  <compound refid="classUi_1_1CorrMethodClass" kind="class"><name>Ui::CorrMethodClass</name>
+  </compound>
+  <compound refid="classImgLabel" kind="class"><name>ImgLabel</name>
+    <member refid="classImgLabel_1e86bc9b92f374c5f78097881af49364d" kind="friend"><name>Qcorr</name></member>
+    <member refid="classImgLabel_1bf77749e36bca018728bde2fc9a974eb" kind="variable"><name>m_parentWindow</name></member>
+    <member refid="classImgLabel_1a62e5311b110d0551158c93c6c90e4cf" kind="variable"><name>m_rubberBand</name></member>
+    <member refid="classImgLabel_1fbbcbd660b7ef7c6048286ac5e350343" kind="variable"><name>m_originPoint</name></member>
+    <member refid="classImgLabel_16309ebb41fd14f64eb552e772c3bad25" kind="variable"><name>m_finalPoint</name></member>
+    <member refid="classImgLabel_124136f0f97b3f157721c07091a8261ac" kind="variable"><name>m_currentPressedPoint</name></member>
+    <member refid="classImgLabel_15818aa44b47111a75d4f1d4b749f6ba1" kind="variable"><name>m_labelUpperLeftCornerPoint</name></member>
+    <member refid="classImgLabel_1e9c219000c7ccb81a73f9784ba9df23b" kind="variable"><name>m_labelLowerRightCornerPoint</name></member>
+    <member refid="classImgLabel_1d58eb83a86663876080a2e24ad016b39" kind="variable"><name>m_mousePosPoint1</name></member>
+    <member refid="classImgLabel_15d8c18646dda1aaf5c574ed88b63b0ee" kind="variable"><name>m_mousePosPoint2</name></member>
+    <member refid="classImgLabel_1b7550fba92f0346edd4a61c1a84eee4d" kind="variable"><name>m_bMouseIsPressed</name></member>
+    <member refid="classImgLabel_145fe85b4d6b6da14b556c13284624145" kind="variable"><name>m_bStartedTemplateSelection</name></member>
+    <member refid="classImgLabel_1990abf371f11243a65aa323bfad1cf10" kind="variable"><name>m_bMouseInTemplateRegion</name></member>
+    <member refid="classImgLabel_1d4858784cd8aa7a53f948bb42ae7b996" kind="variable"><name>m_bMouseAtTemplateTopEdge</name></member>
+    <member refid="classImgLabel_16d005e4bb487858c70d4d14564e4a095" kind="variable"><name>m_bMouseAtTemplateBottomEdge</name></member>
+    <member refid="classImgLabel_1921c1163775a86236d44d84e11172177" kind="variable"><name>m_bMouseAtTemplateLeftEdge</name></member>
+    <member refid="classImgLabel_1fa3d9dc393d218e31b71f3e34bc79f9c" kind="variable"><name>m_bMouseAtTemplateRightEdge</name></member>
+    <member refid="classImgLabel_1e9d9356f7e968bd4416d2b875efcf535" kind="variable"><name>m_bHasRubberBand</name></member>
+    <member refid="classImgLabel_18440c20742b16b7b2bdceebe3e9f3302" kind="variable"><name>m_nXNewPos</name></member>
+    <member refid="classImgLabel_12060dad81295d4e6f87328108f97d15f" kind="variable"><name>m_nYNewPos</name></member>
+    <member refid="classImgLabel_169e37830ecfccbd824166d03fc9c248d" kind="function"><name>ImgLabel</name></member>
+    <member refid="classImgLabel_14ba71a5a8438c6cf030491a26e94d19c" kind="function"><name>~ImgLabel</name></member>
+    <member refid="classImgLabel_13e5988fc63515a300e69593c9236e126" kind="function"><name>setSelectable</name></member>
+    <member refid="classImgLabel_11d35f5565e1f0fd6234667b40386b2a4" kind="function"><name>setTemplateFlags</name></member>
+    <member refid="classImgLabel_1a71c0202c48be349b4fb0813891df43a" kind="function"><name>checkTemplateRegions</name></member>
+    <member refid="classImgLabel_1f8fb1abf00b305d1ba4d8b4745b59692" kind="function"><name>displayCoordinatesOnStatusLabel</name></member>
+    <member refid="classImgLabel_120d52d626aa1a1d6cebe3f7e2c33e295" kind="function"><name>mousePressEvent</name></member>
+    <member refid="classImgLabel_1935514f1ec077f7c817fb057a16d8c4d" kind="function"><name>mouseMoveEvent</name></member>
+    <member refid="classImgLabel_1ccc9e0b19e5e7873a8493f0d7e03c65b" kind="function"><name>mouseReleaseEvent</name></member>
+  </compound>
+  <compound refid="classQcorr" kind="class"><name>Qcorr</name>
+    <member refid="classQcorr_15b4b2caf4c596b601dd096785e4a32b9" kind="friend"><name>ImgLabel</name></member>
+    <member refid="classQcorr_1ce49e9a34b2d2df1e7683be4cacba1d8" kind="friend"><name>ControlsWindow</name></member>
+    <member refid="classQcorr_153798525ce189307cf597e71aabca91b" kind="variable"><name>m_nXCorrelationCoordinate</name></member>
+    <member refid="classQcorr_129f34cc7b765d5a64856696c48bfc191" kind="variable"><name>m_nYCorrelationCoordinate</name></member>
+    <member refid="classQcorr_16509fcbf4cd8925aa109cc53e638b69a" kind="variable"><name>m_corrMethodDialog</name></member>
+    <member refid="classQcorr_15b43654ac42b41b945cd58ce62b18ed0" kind="variable"><name>m_controlsWindow</name></member>
+    <member refid="classQcorr_13430716ddbe203f677095c163da87f86" kind="variable"><name>initialName</name></member>
+    <member refid="classQcorr_1e8bdd4be8a0c3023be34a1301b28c913" kind="variable"><name>m_leftImage</name></member>
+    <member refid="classQcorr_1ae1695d731f191c694186e00b96f469e" kind="variable"><name>m_rightImage</name></member>
+    <member refid="classQcorr_15594d939890f10991da0009e4c32bea3" kind="variable"><name>m_templateImage</name></member>
+    <member refid="classQcorr_1c7dc2785613864bea2d8bb0b5f009f36" kind="variable"><name>m_corrMapImage</name></member>
+    <member refid="classQcorr_1731915641051962d6a03a31b772640d4" kind="variable"><name>m_disparityMapImage</name></member>
+    <member refid="classQcorr_1cadb3032fbf41f8f1b27067c2784efef" kind="variable"><name>m_leftImage_label</name></member>
+    <member refid="classQcorr_18d1e1ab866a811003c435c45de1e958e" kind="variable"><name>m_targetImage_label</name></member>
+    <member refid="classQcorr_11bf4a70aa6c4e171f2e0613109bb57e9" kind="variable"><name>m_status_label</name></member>
+    <member refid="classQcorr_1fa1be55387e39ce5b81e72ecab75b5bc" kind="variable"><name>m_grayColorTab</name></member>
+    <member refid="classQcorr_1795a9f4f9805a241f55c59a0a520f3d4" kind="variable"><name>m_greenColorTab</name></member>
+    <member refid="classQcorr_18a7f00160ae46441cef038149cf28bdc" kind="variable"><name>m_matchingPoint</name></member>
+    <member refid="classQcorr_1bc48bdd2110cfdaf7b98dde1cdf42f18" kind="variable"><name>m_templateSize</name></member>
+    <member refid="classQcorr_13a964df80562c062d5f1f4f6cbf841bb" kind="variable"><name>modes_actionGroup</name></member>
+    <member refid="classQcorr_1496beab48555a8c9abbd6f6aa48e52fb" kind="variable"><name>m_eStopDialog</name></member>
+    <member refid="classQcorr_1b5325b11a64e24eeb6b9bdc27a77d0ad" kind="variable"><name>m_bHasLeftImage</name></member>
+    <member refid="classQcorr_1a4afa1daa72ecf6caae74f6ced4ec251" kind="variable"><name>m_bHasRightImage</name></member>
+    <member refid="classQcorr_140e40bfd5cc79d8abf6e7b41465f440e" kind="variable"><name>m_bHasCorrMap</name></member>
+    <member refid="classQcorr_142ef5dadd6c1ff9f560de8cb1f43c2c6" kind="variable"><name>m_bHasDisparityMap</name></member>
+    <member refid="classQcorr_1db31096514465f8c4a1993345d98f1eb" kind="variable"><name>m_bEstop</name></member>
+    <member refid="classQcorr_1b07379fbbd7be906023eb5ec4d555931" kind="variable"><name>m_nScanInterval</name></member>
+    <member refid="classQcorr_13b5d03aed21bfd00497ff265d898e45b" kind="function"><name>Qcorr</name></member>
+    <member refid="classQcorr_1c228e26878cd0b63b162f1680ab4f4fd" kind="function"><name>~Qcorr</name></member>
+    <member refid="classQcorr_1395de1dc21d85fa766fb6558c5e302e5" kind="slot"><name>closeWindows</name></member>
+    <member refid="classQcorr_101b57fcc6bedf40f5c175c3fb4667a94" kind="slot"><name>showControlsWindow</name></member>
+    <member refid="classQcorr_1db32e7bfe6afb84f306a9eb5bcd9b322" kind="slot"><name>browseLeftImage</name></member>
+    <member refid="classQcorr_160583105115d8d14c5fa2a959dc0f285" kind="slot"><name>browseRightImage</name></member>
+    <member refid="classQcorr_13f27a3e9b548f80998a0266c9c4165a8" kind="slot"><name>changeMouse</name></member>
+    <member refid="classQcorr_13275244fd6183a4fef92b85578fea864" kind="slot"><name>viewMap</name></member>
+    <member refid="classQcorr_1f71bf39d4955ab90b859e8137b6e0761" kind="slot"><name>operate</name></member>
+    <member refid="classQcorr_1d6e0fb9461faffd01afbf62e1a0be4c3" kind="slot"><name>abortOperation</name></member>
+    <member refid="classQcorr_1925b0715143a0afa981851547f8b9256" kind="function"><name>displayImage</name></member>
+    <member refid="classQcorr_1fddb022a6024a32be3b47016308d6c50" kind="function"><name>displayImageLabel</name></member>
+    <member refid="classQcorr_154af608880477563fa8ebcb0d066b447" kind="function"><name>createActions</name></member>
+    <member refid="classQcorr_12de6d6969bdf48b225acc5ebbae063f7" kind="function"><name>setEnableActions</name></member>
+    <member refid="classQcorr_117beb7cf946cdd82f587e3b4e5ee7f19" kind="function"><name>setImageLabels</name></member>
+    <member refid="classQcorr_178c77e6843a6413dbf2de14ecfd4d1d8" kind="function"><name>showEStop</name></member>
+    <member refid="classQcorr_1ce91b9d83b34887735737323bac5431e" kind="function"><name>correlate</name></member>
+    <member refid="classQcorr_1640ee4c76350e5886deddbf4f0d50594" kind="function"><name>disparity</name></member>
+    <member refid="classQcorr_105dcc1b0be4596b355df235264180da4" kind="function"><name>findCorrelation</name></member>
+    <member refid="classQcorr_1d1b26ace597c0c4a0f64a0bd9576d4fc" kind="function"><name>convertToGrayScaleFloat</name></member>
+    <member refid="classQcorr_1bdd5c95c41d1103249d54c1ce34eecb2" kind="function"><name>updateStatusLabelWithDisparityInfo</name></member>
+    <member refid="classQcorr_187229fc918fa4011e96fbadb325fd52e" kind="function"><name>fileDumpQImage</name></member>
+  </compound>
+  <compound refid="classUi_1_1QcorrClass" kind="class"><name>Ui::QcorrClass</name>
+  </compound>
+  <compound refid="classTargetImgLabel" kind="class"><name>TargetImgLabel</name>
+    <member refid="classTargetImgLabel_1e532d541556a3647cff5a83bcf1306c3" kind="variable"><name>m_image</name></member>
+    <member refid="classTargetImgLabel_194cf2b5841057d54bf3172aa2fef1e83" kind="variable"><name>m_overlayImage</name></member>
+    <member refid="classTargetImgLabel_10ed69ba29f03494cdd3ec22d9df4e15f" kind="variable"><name>m_originPoint</name></member>
+    <member refid="classTargetImgLabel_1e9e4109bdd7a8a6b5d0bd59850c6abba" kind="variable"><name>m_rectSize</name></member>
+    <member refid="classTargetImgLabel_1303d7686a3dd92560851dabe82425d89" kind="variable"><name>m_nXoffset</name></member>
+    <member refid="classTargetImgLabel_146624a74854a56d43895ecea4b2a3da5" kind="variable"><name>m_nYoffset</name></member>
+    <member refid="classTargetImgLabel_134a2b6061eb38412b7f7e88fbf741c2f" kind="variable"><name>m_bHasCorrResults</name></member>
+    <member refid="classTargetImgLabel_13b0b34d9c2f7c4f6c9aea8bc75d91d99" kind="variable"><name>m_bHasImage</name></member>
+    <member refid="classTargetImgLabel_11c34173d16f00af22f7db9e1bb3e7b30" kind="variable"><name>m_bHasOverlayImage</name></member>
+    <member refid="classTargetImgLabel_1cb3dcfa8b9616be0a355c90db81aaba2" kind="function"><name>TargetImgLabel</name></member>
+    <member refid="classTargetImgLabel_190d714931fd87147e644b0d1a2815eeb" kind="function"><name>~TargetImgLabel</name></member>
+    <member refid="classTargetImgLabel_12ec40d8850e3d9cc4d5c9984412c0cfb" kind="function"><name>setImage</name></member>
+    <member refid="classTargetImgLabel_109dbad77c225942d7a604e06a119f60d" kind="function"><name>overlayImage</name></member>
+    <member refid="classTargetImgLabel_1b835774d14df1e93cb0fd010d1a2e699" kind="function"><name>drawEnclosedMatch</name></member>
+    <member refid="classTargetImgLabel_1d060485d97c7797339243b23f3ea05ef" kind="function"><name>eraseEnclosedMatch</name></member>
+    <member refid="classTargetImgLabel_130f9fc1657bdf5a9459bd78d5a94c65b" kind="function"><name>paintEvent</name></member>
+  </compound>
+  <compound refid="classUi__ControlsWindowClass" kind="class"><name>Ui_ControlsWindowClass</name>
+    <member refid="classUi__ControlsWindowClass_1b9c538ac65c9cde77821b2e16262ac08" kind="variable"><name>controlsWindow_frame</name></member>
+    <member refid="classUi__ControlsWindowClass_10f06d7355126dcfe25d7567991bba33d" kind="variable"><name>verticalLayout</name></member>
+    <member refid="classUi__ControlsWindowClass_12566822b1b666eca772c08120403c735" kind="variable"><name>scanInterval_horizontalLayout</name></member>
+    <member refid="classUi__ControlsWindowClass_1326222f9ba3635e166e17716a09765be" kind="variable"><name>scanInterval_label</name></member>
+    <member refid="classUi__ControlsWindowClass_1cc5285944728dd361279698067c3738b" kind="variable"><name>scanInterval_spinBox</name></member>
+    <member refid="classUi__ControlsWindowClass_1279c17270b9965a086a7614253a55574" kind="variable"><name>templateSize_horizontalLayout</name></member>
+    <member refid="classUi__ControlsWindowClass_1d8764ef289d5848062ac9e642eeec403" kind="variable"><name>templateSize_label</name></member>
+    <member refid="classUi__ControlsWindowClass_18d56994b33173ceda3d35f55100dfaf1" kind="variable"><name>templateSize_spinBox</name></member>
+    <member refid="classUi__ControlsWindowClass_15312f5cf8c04075ce10d31f02a049e6f" kind="variable"><name>verticalSpacer</name></member>
+    <member refid="classUi__ControlsWindowClass_131b8b23a08edb9b25122282b84a40257" kind="variable"><name>close_pushButton</name></member>
+    <member refid="classUi__ControlsWindowClass_10d781c408d52051d9ae2e182059035a3" kind="function"><name>setupUi</name></member>
+    <member refid="classUi__ControlsWindowClass_1ef87f449396ab0e6eaf7d430cd0d3181" kind="function"><name>retranslateUi</name></member>
+  </compound>
+  <compound refid="classUi__CorrMethodClass" kind="class"><name>Ui_CorrMethodClass</name>
+    <member refid="classUi__CorrMethodClass_1b3e404afe1c6fafb99e02a2a9315e8d1" kind="variable"><name>dialog_Frame</name></member>
+    <member refid="classUi__CorrMethodClass_1ab4f631b545d0545adde08190ecab6fa" kind="variable"><name>verticalLayout</name></member>
+    <member refid="classUi__CorrMethodClass_1dd008cc6d16e9265345255c6fbc2e0b5" kind="variable"><name>selectMethod_label</name></member>
+    <member refid="classUi__CorrMethodClass_155e61e05e9ff340d17b08f7489e84039" kind="variable"><name>methods_groupBox</name></member>
+    <member refid="classUi__CorrMethodClass_1a260d1145f60cdc7137a93d50f66b2e9" kind="variable"><name>method3_radioButton</name></member>
+    <member refid="classUi__CorrMethodClass_1cced16b55f7c8baa3c789435616c35c6" kind="variable"><name>method2_radioButton</name></member>
+    <member refid="classUi__CorrMethodClass_1091300f07ee518675317d2001e486a42" kind="variable"><name>method1_radioButton</name></member>
+    <member refid="classUi__CorrMethodClass_1c4d190aefc50d332cfdc73d7370f4ca2" kind="variable"><name>buttonBox</name></member>
+    <member refid="classUi__CorrMethodClass_1c98460426d7a9f1c1a2763d9e3c0c2ef" kind="variable"><name>verticalSpacer</name></member>
+    <member refid="classUi__CorrMethodClass_195a6bbb76de087aa2f8f5ea4780a4d09" kind="function"><name>setupUi</name></member>
+    <member refid="classUi__CorrMethodClass_14ac1c93be0509c13a248873b5dd7e2fb" kind="function"><name>retranslateUi</name></member>
+  </compound>
+  <compound refid="classUi__QcorrClass" kind="class"><name>Ui_QcorrClass</name>
+    <member refid="classUi__QcorrClass_1e725a71d3bb44a43e2d65ce4d1284b85" kind="variable"><name>action_Quit</name></member>
+    <member refid="classUi__QcorrClass_1a2e514c1c784f746eec5abed0bf57190" kind="variable"><name>action_Map</name></member>
+    <member refid="classUi__QcorrClass_134a38652dc16add16ee2ca325c1e4b31" kind="variable"><name>actionTemplate_Matching</name></member>
+    <member refid="classUi__QcorrClass_1f3eff626499d6ad7b19db0a828a5794a" kind="variable"><name>action_Disparity_Finder</name></member>
+    <member refid="classUi__QcorrClass_1885bdbbc4267078f102878ad126b23bb" kind="variable"><name>centralwidget</name></member>
+    <member refid="classUi__QcorrClass_1cb93f5008511c2654ac8a51c17dc11ef" kind="variable"><name>main_frame</name></member>
+    <member refid="classUi__QcorrClass_1fd1d2aad88a740a9f33d9f91370c7ea9" kind="variable"><name>main_verticalLayout</name></member>
+    <member refid="classUi__QcorrClass_1b4e96571e7dd58d9ec798cf6ede3cbe6" kind="variable"><name>splitter</name></member>
+    <member refid="classUi__QcorrClass_181e59812852e521cced5e1f912bffb99" kind="variable"><name>layoutWidget</name></member>
+    <member refid="classUi__QcorrClass_1e7eb5196b5e392a40fa3e3a77f40c3cc" kind="variable"><name>left_verticalLayout</name></member>
+    <member refid="classUi__QcorrClass_1aad53db0cbf018c38d75aebbe78959b3" kind="variable"><name>leftImg_horizontalLayout</name></member>
+    <member refid="classUi__QcorrClass_112d1c71e330c76e65484418502338a31" kind="variable"><name>leftImage_lineEdit</name></member>
+    <member refid="classUi__QcorrClass_1e05243dcb19bfd6fd6d1c3257f25338a" kind="variable"><name>leftBrowse_pushButton</name></member>
+    <member refid="classUi__QcorrClass_1cb12117880660e7d8fec35de7eee51c6" kind="variable"><name>leftImage_scrollArea</name></member>
+    <member refid="classUi__QcorrClass_1ab5ae2e7dc3baefb6ada5e1a758e826f" kind="variable"><name>scrollAreaWidgetContents_3</name></member>
+    <member refid="classUi__QcorrClass_124caba38fd151a2ab5b577b1425bd07c" kind="variable"><name>layoutWidget1</name></member>
+    <member refid="classUi__QcorrClass_1232c26905d00f6608b8ba97a6546daa0" kind="variable"><name>right_verticalLayout</name></member>
+    <member refid="classUi__QcorrClass_16885fe1dcc883e2f927c2fb943b206e0" kind="variable"><name>rightImg_horizontalLayout</name></member>
+    <member refid="classUi__QcorrClass_1690e51bd7f4916ca89f876f39afee05d" kind="variable"><name>rightImage_lineEdit</name></member>
+    <member refid="classUi__QcorrClass_15018f953d94c196394a638212a45fd9d" kind="variable"><name>rightBrowse_pushButton</name></member>
+    <member refid="classUi__QcorrClass_1227cae34e275c9e0713ee279435f41cc" kind="variable"><name>rightImage_scrollArea</name></member>
+    <member refid="classUi__QcorrClass_1bf4b50d1ea6274629f687ac66ce12e80" kind="variable"><name>scrollAreaWidgetContents_2</name></member>
+    <member refid="classUi__QcorrClass_1a4247652a1ed71c6b6704aa3273544bd" kind="variable"><name>bottom_horizontalLayout</name></member>
+    <member refid="classUi__QcorrClass_1c0e4a500d8e9364fc22f9386d7ca3e9a" kind="variable"><name>controls_pushButton</name></member>
+    <member refid="classUi__QcorrClass_1d0993e39276097fdfa4553fce89cea71" kind="variable"><name>start_pushButton</name></member>
+    <member refid="classUi__QcorrClass_14ddf4aae819f6b25476a5a3e76c600d7" kind="variable"><name>corrResults_label</name></member>
+    <member refid="classUi__QcorrClass_180762eea1a44f16ceffed065d0459a69" kind="variable"><name>horizontalSpacer</name></member>
+    <member refid="classUi__QcorrClass_1d032c2f5b8f1aed8decad689900d7017" kind="variable"><name>quit_pushButton</name></member>
+    <member refid="classUi__QcorrClass_18567acdc882322bab775dd04569433da" kind="variable"><name>menubar</name></member>
+    <member refid="classUi__QcorrClass_11d52a371f0d1e29cdf70d1be2a85a45e" kind="variable"><name>menu_Menu</name></member>
+    <member refid="classUi__QcorrClass_18c1dd90b9ea2130b6fe6e8e6553fbf13" kind="variable"><name>menu_View</name></member>
+    <member refid="classUi__QcorrClass_134c81836d3bddde0adb968fe98fba156" kind="variable"><name>menu_Mode</name></member>
+    <member refid="classUi__QcorrClass_1e220680c312c600f015f0413ad6cd2cf" kind="variable"><name>statusbar</name></member>
+    <member refid="classUi__QcorrClass_180aee2ed06f3c4f9b1f516405d888c13" kind="function"><name>setupUi</name></member>
+    <member refid="classUi__QcorrClass_1defed69462e2297254f0d5bce3131e05" kind="function"><name>retranslateUi</name></member>
+  </compound>
+  <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="controlswindow_8cpp" kind="file"><name>controlswindow.cpp</name>
+  </compound>
+  <compound refid="controlswindow_8h" kind="file"><name>controlswindow.h</name>
+  </compound>
+  <compound refid="corrmethod_8cpp" kind="file"><name>corrmethod.cpp</name>
+  </compound>
+  <compound refid="corrmethod_8h" kind="file"><name>corrmethod.h</name>
+  </compound>
+  <compound refid="globals_8h" kind="file"><name>globals.h</name>
+    <member refid="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e" kind="enum"><name>MethodOfCorrelation</name></member>
+    <member refid="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e0feec759d07d0eb4b63f2adf16ffeb4d" kind="enumvalue"><name>N0_CORR_METHOD</name></member>
+    <member refid="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e71056184cf3a134611ccfea3e38bb9d9" kind="enumvalue"><name>CROSS_CORR</name></member>
+    <member refid="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3edff1aff6a0d75f20ea2f494524362fdc" kind="enumvalue"><name>SUM_SQ_DIFF</name></member>
+    <member refid="globals_8h_18dfdc7b22e66249a0ea988fce7de3a3e9d7c918a0ed81725beca0ab457d4b313" kind="enumvalue"><name>CORR_COEFF</name></member>
+  </compound>
+  <compound refid="imgLabel_8cpp" kind="file"><name>imgLabel.cpp</name>
+  </compound>
+  <compound refid="imgLabel_8h" kind="file"><name>imgLabel.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="qcorr_8cpp" kind="file"><name>qcorr.cpp</name>
+  </compound>
+  <compound refid="qcorr_8h" kind="file"><name>qcorr.h</name>
+  </compound>
+  <compound refid="targetImgLabel_8cpp" kind="file"><name>targetImgLabel.cpp</name>
+  </compound>
+  <compound refid="targetImgLabel_8h" kind="file"><name>targetImgLabel.h</name>
+  </compound>
+  <compound refid="ui__controlswindow_8h" kind="file"><name>ui_controlswindow.h</name>
+  </compound>
+  <compound refid="ui__corrmethod_8h" kind="file"><name>ui_corrmethod.h</name>
+  </compound>
+  <compound refid="ui__qcorr_8h" kind="file"><name>ui_qcorr.h</name>
+  </compound>
+  <compound refid="group__qcorr__mainwindow" kind="group"><name>qcorr_mainwindow</name>
+  </compound>
+  <compound refid="bug" kind="page"><name>bug</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_2dc80499ebc7eaf8be3781784a0d4e84" kind="dir"><name>src/</name>
+  </compound>
+</doxygenindex>
