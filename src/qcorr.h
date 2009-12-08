@@ -161,7 +161,6 @@ class Qcorr : public QMainWindow, private Ui::QcorrClass
        *          The square root of the sum of the squares (RSS) is being used to
        *          calculate the aggregate accuracy of a measurement when the accuracies of the all the measuring devices are known.
        *          The average accuracy is not merely the arithmetic average of the accuracies (or uncertainties), nor is it the sum of them.
-       *          Note how the RSS result in this case is greater than the largest of the values under the radical.
        *
        * @param bMultires Determines if multiresolution correlation should be applied, by making use of image pyramids.
        *                 With multiresoltion, the correlation can be determined faster than direct correlation.

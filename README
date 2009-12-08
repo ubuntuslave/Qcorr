@@ -1,10 +1,36 @@
-Senior Capstone Project.
+1. ABOUT Qcorr
+Qcorr is a Digital Image Correlation (DIC) Program implemented in QT4
+The following is a high-level overview of the program process:
+Upon running the program, Qcorr, the user loads two images taken from a stereo vision camera preferably (or similar means). Afterwards, a rectangular template must be extracted from the left (reference) image. The user then can work on any of the two available modes of operation, namely for template-matching or pixel-disparity mapping. Qcorr's relevant correlation functionality is based on three popular methods: Cross Correlation, Sum of Squared Differences, and Correlation Coefficient. The template traverses the target image and computes the correlation according to the selected method. During this time, the program can also display maps of the resulting process, either a correlation map or disparity map, depending on the operation. Values for correlation levels, which vary upon the method, as well as coordinates of the best match are also provided. More details on the use of Qcorr are provided in the "Using Qcorr" section of this document. Before that, we address the mathematical derivations for the relevant correlation methods used in this project. 
 
-This Project is not thoroughly implemented, so please don't even bother looking at it. The functionality is very basic and requires a lot of work on its actual usability.
+2. PACKAGE DEPENDENCIES
+In Linux, you n
+  a) the QT4 framework, in ubuntu you can go to a Pakage manager or install as following via the terminal
+    $ sudo apt-get install libqtcore4
+  b) g++
 
+3. COMPILING
+
+In Linux, through the command line, navigate to the directory (here) where you unpackaged the tar.gz
+  $ qmake Qcorr.pro    (pay attention to the capital "Q")
+  $ make
+Then, you can run Qcorr from here, by typing
+  $ ./Qcorr
+or
+  $ [complete_path_to_Qcorr]/Qcorr
+
+4. CLASSES DOCUMENTATION
+Found in the "doc" folder of this package
+
+5. REMARKS
+The functionality is very basic and requires more actual usability since it is actual implementation is only a proof of concept on correlation methods and pixel-disparity.
 Some basic methods of image correlation are implemented from the graceful source-code from Prof. G. Wolberg's IP_correlation procedure used in his extensive Image Processing Suite.
 
 Please, send comments to ubuntuslave@gmail.com
+or track the git repository by:
+  $ git clone git://github.com/ubuntuslave/Qcorr.git
+or Web access the repository via:
+  http://github.com/ubuntuslave/Qcorr.git/
 
 Regards,
 
