@@ -6,7 +6,7 @@
  */
 
 #include <QtGui>
-
+#include <QRubberBand>
 #include "imgLabel.h"
 #include "qcorr.h"
 

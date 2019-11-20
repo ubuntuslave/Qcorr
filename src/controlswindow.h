@@ -1,7 +1,7 @@
 #ifndef CONTROLSWINDOW_H
 #define CONTROLSWINDOW_H
 
-#include <QtGui/QDialog>
+#include <QDialog>
 #include "../ui_controlswindow.h"
 
 class Qcorr; // using this friend class

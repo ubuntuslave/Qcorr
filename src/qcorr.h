@@ -1,7 +1,7 @@
 #ifndef QCORR_H
 #define QCORR_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
 #include "../ui_qcorr.h"   // UIC is always spiting out this form header files on the root of the project folder
 #include "imgLabel.h"
 #include "targetImgLabel.h"

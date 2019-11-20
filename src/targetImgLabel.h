@@ -10,7 +10,7 @@
 #ifndef TARGETIMGLABEL_H_
 #define TARGETIMGLABEL_H_
 
-#include <QtGui/QLabel>
+#include <QLabel>
 class QPoint;
 class QImage;
 

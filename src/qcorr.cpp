@@ -1,7 +1,8 @@
 #include <QtGui>
-
+#include <QMessageBox>
+#include <QFileDialog>
 #include <iostream>
-
+#include <QRubberBand>
 #include "qcorr.h"
 #include "globals.h"
 
@@ -1371,7 +1372,8 @@ Qcorr::fileDumpQImage(const QString &fileName)
    const unsigned char * imgTarget = m_rightImage->bits();
 
    int mysalt = 0; // just to see if the image has extra bytes that might be missing
-   int imgBytes = m_rightImage->numBytes() + mysalt;
+   int imgBytes = m_rightImage->sizeInBytes() + mysalt;
+//   int imgBytes = m_rightImage->numBytes() + mysalt;
 
    for (int byteN = 0; byteN < imgBytes; ++byteN)
       {
