@@ -10,7 +10,7 @@
 #ifndef IMGLABEL_H_
 #define IMGLABEL_H_
 
-#include <QtGui/QLabel>
+#include <QLabel>
 class QRubberBand;
 class QPoint;
 

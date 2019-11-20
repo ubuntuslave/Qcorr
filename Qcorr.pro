@@ -1,7 +1,6 @@
 TEMPLATE = app
 TARGET = Qcorr
-QT += core \
-    gui
+QT += core gui widgets
 HEADERS += src/controlswindow.h \
     src/corrmethod.h \
     src/globals.h \
